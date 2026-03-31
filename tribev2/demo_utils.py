@@ -198,11 +198,19 @@ class TribeModel(TribeExperiment):
         else:
             from huggingface_hub import hf_hub_download
 
-            repo_id = str(checkpoint_dir)
+            repo_id = str(checkpoint_dir).replace("\\", "/")
             config_path = hf_hub_download(repo_id, "config.yaml")
             ckpt_path = hf_hub_download(repo_id, checkpoint_name)
+        # Patch PosixPath for Windows compatibility
+        import platform
+        if platform.system() == "Windows":
+            import pathlib
+            _orig_posix = getattr(pathlib, "PosixPath", None)
+            pathlib.PosixPath = pathlib.WindowsPath  # type: ignore[misc]
         with open(config_path, "r") as f:
             config = ConfDict(yaml.load(f, Loader=yaml.UnsafeLoader))
+        if platform.system() == "Windows" and _orig_posix is not None:
+            pathlib.PosixPath = _orig_posix
         for modality in ["text", "audio", "video"]:
             config[f"data.{modality}_feature.infra.folder"] = cache_folder
             config[f"data.{modality}_feature.infra.cluster"] = cluster
