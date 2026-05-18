@@ -486,28 +486,36 @@ with gr.Blocks(title="TRIBE v2", theme=gr.themes.Soft()) as demo:
     status_text = gr.Textbox(label="Status", interactive=False)
     output_image = gr.Image(label="Brain Activity", type="filepath")
 
-    # --- GPT-5.4 Pro Analysis Section ---
+    # --- Behavioral Analysis Section ---
     gr.Markdown("---")
-    gr.Markdown("## Behavioral Analysis (Claude Opus 4.6 via OpenRouter)")
+    gr.Markdown(
+        "## Behavioral Analysis\n"
+        "Each tab's **Predict Brain Response** button automatically runs the analysis after "
+        "prediction. Leave the API key empty to use the server's configured OpenRouter key."
+    )
     with gr.Row():
         api_key_input = gr.Textbox(
-            label="OpenRouter API Key",
-            placeholder="sk-or-...",
+            label="OpenRouter API Key (optional — server key used if empty)",
+            placeholder="sk-or-...  (leave blank to use server key)",
             type="password",
-            value=os.environ.get("OPENROUTER_API_KEY", ""),
+            value="",
             scale=3,
         )
-        analyze_btn = gr.Button("Analyze Brain Activity", variant="secondary", scale=1)
+        analyze_btn = gr.Button("Re-analyze last brain image", variant="secondary", scale=1)
     analysis_output = gr.Textbox(
-        label="Claude Opus 4.6 Analysis",
-        value="Run a prediction above, then click Analyze.",
+        label="Behavioral analysis (Markdown)",
+        value="Upload a stimulus above and click Predict — the analysis will appear here.",
         interactive=False,
         lines=15,
     )
 
-    # Analysis uses the most recent output image automatically (no State needed)
+    def _gradio_analyze_with_fallback(api_key, stimulus_desc=None):
+        key = (api_key or "").strip() or os.environ.get("OPENROUTER_API_KEY", "")
+        return analyze_brain_image(None, stimulus_desc, key)
+
+    # "Re-analyze" button — uses the most recent output image with the chosen API key.
     analyze_btn.click(
-        fn=lambda api_key: analyze_brain_image(None, None, api_key),
+        fn=_gradio_analyze_with_fallback,
         inputs=[api_key_input],
         outputs=[analysis_output],
     )
@@ -528,22 +536,40 @@ with gr.Blocks(title="TRIBE v2", theme=gr.themes.Soft()) as demo:
         api_name="analyze_text",
     )
 
-    # Wire prediction buttons
+    # Wire prediction buttons — each chains into LLM analysis automatically.
+    # The analysis step picks up the most recent output PNG via analyze_brain_image's
+    # fallback, and uses the server's OPENROUTER_API_KEY when the textbox is empty.
     text_btn.click(
         predict_text,
         inputs=[text_input, n_timesteps, view, cmap],
         outputs=[output_image, status_text],
         api_name="predict_text",
+    ).then(
+        fn=lambda api_key, stim: _gradio_analyze_with_fallback(api_key, stim or "text stimulus"),
+        inputs=[api_key_input, text_input],
+        outputs=[analysis_output],
     )
     audio_btn.click(
         predict_audio,
         inputs=[audio_input, n_timesteps, view, cmap],
         outputs=[output_image, status_text],
+    ).then(
+        fn=lambda api_key, f: _gradio_analyze_with_fallback(
+            api_key, f"Audio stimulus: {Path(f).name}" if f else "audio stimulus"
+        ),
+        inputs=[api_key_input, audio_input],
+        outputs=[analysis_output],
     )
     video_btn.click(
         predict_video,
         inputs=[video_input, n_timesteps, view, cmap],
         outputs=[output_image, status_text],
+    ).then(
+        fn=lambda api_key, f: _gradio_analyze_with_fallback(
+            api_key, f"Video stimulus: {Path(f).name}" if f else "video stimulus"
+        ),
+        inputs=[api_key_input, video_input],
+        outputs=[analysis_output],
     )
 
 
