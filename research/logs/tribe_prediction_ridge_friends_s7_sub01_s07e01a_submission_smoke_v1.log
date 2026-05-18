@@ -1,0 +1,196 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-14 21:20:01 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+cache/submissions/tribe_prediction_ridge_friends_s7_sub01_s07e01a_v1.npy
+cache/submissions/tribe_prediction_ridge_friends_s7_sub01_s07e01a_manifest_v1.json
+{
+  "created_at": "2026-05-15T01:20:01.934990+00:00",
+  "raw_submission": "cache/submissions/tribe_full_friends_s7_sub01_s07e01a_v1.npy",
+  "checkpoint": "facebook/tribev2",
+  "features": [
+    "text",
+    "audio",
+    "video"
+  ],
+  "metric_space": "native_fmri_tr_projected_schaefer1000_parcel",
+  "target_offset_seconds": 5.0,
+  "alpha_grid": [
+    1.0,
+    10.0,
+    100.0,
+    1000.0,
+    10000.0,
+    100000.0
+  ],
+  "candidate": "subject-specific prediction-ridge calibration over public TRIBE parcel predictions",
+  "caveat": "Fits only available labeled Friends season-1 runs and applies the map to hidden-stimulus predictions. Hidden Friends S7/OOD labels are not loaded.",
+  "subjects": {
+    "sub-01": {
+      "alpha_selection": {
+        "selected_alpha": 100.0,
+        "inner_scores": [
+          {
+            "alpha": 1.0,
+            "mean_score": 0.2068146593340685,
+            "fold_scores": [
+              {
+                "episode": "sub-01/s01/e01",
+                "mean_score": 0.19328456877161276,
+                "n_val_rows": 1184
+              },
+              {
+                "episode": "sub-01/s01/e02",
+                "mean_score": 0.22034474989652428,
+                "n_val_rows": 964
+              }
+            ]
+          },
+          {
+            "alpha": 10.0,
+            "mean_score": 0.21650274030316297,
+            "fold_scores": [
+              {
+                "episode": "sub-01/s01/e01",
+                "mean_score": 0.20286879158178572,
+                "n_val_rows": 1184
+              },
+              {
+                "episode": "sub-01/s01/e02",
+                "mean_score": 0.23013668902454024,
+                "n_val_rows": 964
+              }
+            ]
+          },
+          {
+            "alpha": 100.0,
+            "mean_score": 0.22369972235399158,
+            "fold_scores": [
+              {
+                "episode": "sub-01/s01/e01",
+                "mean_score": 0.20899699508598873,
+                "n_val_rows": 1184
+              },
+              {
+                "episode": "sub-01/s01/e02",
+                "mean_score": 0.23840244962199442,
+                "n_val_rows": 964
+              }
+            ]
+          },
+          {
+            "alpha": 1000.0,
+            "mean_score": 0.2220078074689431,
+            "fold_scores": [
+              {
+                "episode": "sub-01/s01/e01",
+                "mean_score": 0.2040393031490971,
+                "n_val_rows": 1184
+              },
+              {
+                "episode": "sub-01/s01/e02",
+                "mean_score": 0.23997631178878912,
+                "n_val_rows": 964
+              }
+            ]
+          },
+          {
+            "alpha": 10000.0,
+            "mean_score": 0.2051402221667398,
+            "fold_scores": [
+              {
+                "episode": "sub-01/s01/e01",
+                "mean_score": 0.18230067620060567,
+                "n_val_rows": 1184
+              },
+              {
+                "episode": "sub-01/s01/e02",
+                "mean_score": 0.22797976813287393,
+                "n_val_rows": 964
+              }
+            ]
+          },
+          {
+            "alpha": 100000.0,
+            "mean_score": 0.19279592601553813,
+            "fold_scores": [
+              {
+                "episode": "sub-01/s01/e01",
+                "mean_score": 0.1684641858691595,
+                "n_val_rows": 1184
+              },
+              {
+                "episode": "sub-01/s01/e02",
+                "mean_score": 0.21712766616191675,
+                "n_val_rows": 964
+              }
+            ]
+          }
+        ]
+      },
+      "n_train_rows": 2148,
+      "n_calibrated_units": 983,
+      "train_raw_score": {
+        "mean": 0.18502465399283488,
+        "median": 0.15161983664710768,
+        "n_vertices_total": 983,
+        "n_vertices_finite": 983
+      },
+      "train_calibrated_score": {
+        "mean": 0.31612515457460816,
+        "median": 0.29479549405348693,
+        "n_vertices_total": 983,
+        "n_vertices_finite": 983
+      },
+      "train_run_specs": [
+        {
+          "label": "e01a",
+          "subject": "sub-01",
+          "movie": "s01",
+          "chunk": "e01a",
+          "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01a_parcel_approx_v2.npz"
+        },
+        {
+          "label": "e01b",
+          "subject": "sub-01",
+          "movie": "s01",
+          "chunk": "e01b",
+          "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01b_parcel_approx_v1.npz"
+        },
+        {
+          "label": "e02a",
+          "subject": "sub-01",
+          "movie": "s01",
+          "chunk": "e02a",
+          "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e02a_parcel_approx_v1.npz"
+        },
+        {
+          "label": "e02b",
+          "subject": "sub-01",
+          "movie": "s01",
+          "chunk": "e02b",
+          "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e02b_parcel_approx_v1.npz"
+        }
+      ],
+      "fitted_calibrator_path": "cache/submissions/calibrators/prediction_ridge_sub-01_native_tr_s01e01e02_v1.npz",
+      "items": {
+        "s07e01a": {
+          "shape": [
+            460,
+            1000
+          ],
+          "raw_mean": -0.0038547285366803408,
+          "calibrated_mean": 0.0006368893664330244,
+          "raw_std": 0.18951940536499023,
+          "calibrated_std": 0.20409806072711945,
+          "calibrated_units": 983,
+          "uncalibrated_units_preserved": 17,
+          "item_seconds": 0.03265944204758853
+        }
+      },
+      "subject_seconds": 3.310410186997615
+    }
+  },
+  "runtime_seconds": 3.3108658399432898,
+  "out": "cache/submissions/tribe_prediction_ridge_friends_s7_sub01_s07e01a_v1.npy",
+  "zip_out": "cache/submissions/tribe_prediction_ridge_friends_s7_sub01_s07e01a_v1.zip"
+}

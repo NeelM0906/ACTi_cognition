@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/ripper/ACTi_cognition/experiments/tribe_frozen_readout_ablation.py", line 26, in <module>
+    from experiments.eval_pretrained_tribe_algonauts import (
+ModuleNotFoundError: No module named 'experiments'

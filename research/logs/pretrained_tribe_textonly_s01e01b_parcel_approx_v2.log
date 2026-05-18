@@ -1,0 +1,57 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-14 06:19:21 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+2026-05-14 06:19:21 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+INFO - Loading model from /home/ripper/.cache/huggingface/hub/models--facebook--tribev2/snapshots/f894e783020944dcd96e5568550afe2aa9743f9f/best.ckpt
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:439: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:461: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+Add context to words:   0%|          | 0/1533 [00:00<?, ?it/s]Add context to words: 100%|██████████| 1533/1533 [00:00<00:00, 95629.91it/s]
+[06:19:23 INFO] Preparing extractor: text
+[06:19:24 INFO] Preparing extractor: subject_id
+2026-05-14 06:19:24 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'Algonauts2025/sub-01'}. This was probably not intended.
+[06:19:24 INFO] Building dataloader for split all
+INFO - Predicted 863 / 900 segments (95.9% kept)
+cache/ablation_results/pretrained_tribe_textonly_s01e01b_parcel_approx_v2.json
+{
+  "created_at": "2026-05-14T10:19:25.120773+00:00",
+  "checkpoint": "facebook/tribev2",
+  "features": [
+    "text"
+  ],
+  "metric_space": "parcel",
+  "subject": "sub-01",
+  "movie": "s01",
+  "chunks": [
+    "e01b"
+  ],
+  "target_projection": "standard fsaverage5 prediction -> nearest projected Schaefer1000 parcel averages",
+  "target_projection_caveat": "Approximate local evaluation; not the official Algonauts surface preprocessing and not directly comparable to the public leaderboard.",
+  "target_offset_seconds": 5.0,
+  "n_prediction_samples": 863,
+  "prediction_shape": [
+    863,
+    20484
+  ],
+  "metric_prediction_shape": [
+    863,
+    1000
+  ],
+  "target_shape": [
+    863,
+    1000
+  ],
+  "n_finite_target_rows": 863,
+  "n_nonempty_projected_parcels": 983,
+  "metrics": {
+    "mean": 0.13804699179600863,
+    "median": 0.12672558137951223,
+    "n_vertices_total": 983,
+    "n_vertices_finite": 983
+  },
+  "load_seconds": 0.7801472189603373,
+  "predict_seconds": 1.101258345064707,
+  "target_projection_seconds": 0.3573801020393148,
+  "arrays_path": "cache/ablation_results/pretrained_tribe_textonly_s01e01b_parcel_approx_v2.npz"
+}

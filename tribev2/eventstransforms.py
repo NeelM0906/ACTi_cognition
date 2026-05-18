@@ -83,6 +83,101 @@ class SplitEvents(EventsTransform):
         return events
 
 
+class AssignSplitByValue(EventsTransform):
+    field: str
+    val_values: list[str]
+    train_label: str = "train"
+    val_label: str = "val"
+
+    def _run(self, events: pd.DataFrame) -> pd.DataFrame:
+        if self.field not in events.columns:
+            raise ValueError(f"Cannot split events by missing field: {self.field}")
+
+        val_values = {str(value) for value in self.val_values}
+        events = events.copy()
+        events["split_attr"] = events[self.field].astype(str)
+        events["split"] = events["split_attr"].apply(
+            lambda value: self.val_label if value in val_values else self.train_label
+        )
+        splits = set(events["split"].unique())
+        if self.train_label not in splits or self.val_label not in splits:
+            raise ValueError(
+                "AssignSplitByValue must create both train and val splits. "
+                f"Got {sorted(splits)} from field {self.field!r}."
+            )
+        return events
+
+
+class AssignSplitByEpisode(EventsTransform):
+    chunk_field: str = "chunk"
+    movie_field: str = "movie"
+    val_episodes: list[str]
+    train_label: str = "train"
+    val_label: str = "val"
+
+    @staticmethod
+    def _episode_from_chunk(chunk: str) -> str:
+        if chunk.startswith("e") and len(chunk) >= 3:
+            return chunk[:3]
+        return chunk
+
+    def _run(self, events: pd.DataFrame) -> pd.DataFrame:
+        missing = [
+            field
+            for field in (self.chunk_field, self.movie_field)
+            if field not in events.columns
+        ]
+        if missing:
+            raise ValueError(
+                "Cannot split events by episode with missing fields: "
+                f"{', '.join(missing)}"
+            )
+
+        val_episodes = {str(value) for value in self.val_episodes}
+        events = events.copy()
+        chunk_values = events[self.chunk_field]
+        movie_values = events[self.movie_field]
+        if "timeline" in events.columns:
+            chunk_values = chunk_values.fillna(
+                events.groupby("timeline")[self.chunk_field].transform(
+                    lambda values: values.ffill().bfill()
+                )
+            )
+            movie_values = movie_values.fillna(
+                events.groupby("timeline")[self.movie_field].transform(
+                    lambda values: values.ffill().bfill()
+                )
+            )
+        if chunk_values.isna().any() or movie_values.isna().any():
+            raise ValueError(
+                "Cannot split by episode because some events have no chunk/movie "
+                "value and it could not be inferred from their timeline."
+            )
+        chunk = chunk_values.astype(str)
+        movie = movie_values.astype(str)
+        episode = chunk.apply(self._episode_from_chunk)
+        split_attr = movie + ":" + episode
+        compact_attr = movie + episode
+        events["split_attr"] = split_attr
+        events["split"] = [
+            self.val_label
+            if (
+                episode_id in val_episodes
+                or full_id in val_episodes
+                or compact_id in val_episodes
+            )
+            else self.train_label
+            for episode_id, full_id, compact_id in zip(episode, split_attr, compact_attr)
+        ]
+        splits = set(events["split"].unique())
+        if self.train_label not in splits or self.val_label not in splits:
+            raise ValueError(
+                "AssignSplitByEpisode must create both train and val splits. "
+                f"Got {sorted(splits)} from val_episodes={self.val_episodes!r}."
+            )
+        return events
+
+
 class ExtractWordsFromAudio(EventsTransform):
     """
     Language is hard-coded because auto-detection in performed on first 30s of audio, which can be empty e.g. for movies.

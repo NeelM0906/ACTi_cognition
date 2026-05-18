@@ -58,3 +58,17 @@ base_config.update(
         },
     }
 )
+
+pearson_loss_config = ConfDict(copy.deepcopy(base_config))
+pearson_loss_config.update(
+    {
+        "loss": {
+            "name": "PearsonMSELoss",
+            "pearson_weight": 1.0,
+            "mse_weight": 0.05,
+            "dim": 0,
+            "reduction": "none",
+        },
+        "monitor": "val/pearson",
+    }
+)

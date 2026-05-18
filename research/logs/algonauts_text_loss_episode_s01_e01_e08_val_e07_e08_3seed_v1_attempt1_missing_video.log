@@ -1,0 +1,494 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-13 20:49:45 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+Seed set to 33
+2026-05-13 20:49:46 - INFO - exca.map:500 - Sent 16 items for tribev2.studies.algonauts2025.Algonauts2025._load_timelines,text_loss_episode_s01_e01_e08_val_e07_e08_v1/name=Algonauts2025,infra_timelines.version=text_loss_episode_s01_e01_e08_val_e07_e08_v1-6d9f20f8 into a processpool
+  0%|          | 0/16 [00:00<?, ?it/s]2026-05-13 20:49:46 - WARNING - neuralset.events.etypes:140 - Event.from_dict parsing failed for input type                                                     Video
+filepath     /home/ripper/data/tribe_benchmarks/download/al...
+start                                                      0.0
+frequency                                                  NaN
+text                                                       NaN
+duration                                                   NaN
+stop                                                       NaN
+language                                                   NaN
+split                                                    train
+modality                                                   NaN
+subject                                   Algonauts2025/sub-01
+timeline     Algonauts2025:chunk=e06b,movie=s01,run=0,subje...
+study                                            Algonauts2025
+task                                                   friends
+movie                                                      s01
+chunk                                                     e06b
+run                                                          0
+session                                                       
+mapped to {'filepath': '/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e06b.mkv', 'start': 0.0, 'timeline': 'Algonauts2025:chunk=e06b,movie=s01,run=0,subject=sub-01,task=friends', 'extra': {'split': 'train', 'subject': 'Algonauts2025/sub-01', 'study': 'Algonauts2025', 'task': 'friends', 'movie': 's01', 'chunk': 'e06b', 'run': '0', 'session': ''}}
+ with error: 1 validation error for Video
+  Value error, File missing for Video event: /home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e06b.mkv [type=value_error, input_value={'filepath': '/home/rippe...n': '0', 'session': ''}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error)
+2026-05-13 20:49:46 - WARNING - neuralset.events.etypes:140 - Event.from_dict parsing failed for input type                                                     Video
+filepath     /home/ripper/data/tribe_benchmarks/download/al...
+start                                                      0.0
+frequency                                                  NaN
+text                                                       NaN
+duration                                                   NaN
+stop                                                       NaN
+language                                                   NaN
+split                                                    train
+modality                                                   NaN
+subject                                   Algonauts2025/sub-01
+timeline     Algonauts2025:chunk=e06a,movie=s01,run=0,subje...
+study                                            Algonauts2025
+task                                                   friends
+movie                                                      s01
+chunk                                                     e06a
+run                                                          0
+session                                                       
+mapped to {'filepath': '/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e06a.mkv', 'start': 0.0, 'timeline': 'Algonauts2025:chunk=e06a,movie=s01,run=0,subject=sub-01,task=friends', 'extra': {'split': 'train', 'subject': 'Algonauts2025/sub-01', 'study': 'Algonauts2025', 'task': 'friends', 'movie': 's01', 'chunk': 'e06a', 'run': '0', 'session': ''}}
+ with error: 1 validation error for Video
+  Value error, File missing for Video event: /home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e06a.mkv [type=value_error, input_value={'filepath': '/home/rippe...n': '0', 'session': ''}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error)
+2026-05-13 20:49:46 - WARNING - neuralset.events.etypes:140 - Event.from_dict parsing failed for input type                                                     Video
+filepath     /home/ripper/data/tribe_benchmarks/download/al...
+start                                                      0.0
+frequency                                                  NaN
+text                                                       NaN
+duration                                                   NaN
+stop                                                       NaN
+language                                                   NaN
+split                                                    train
+modality                                                   NaN
+subject                                   Algonauts2025/sub-01
+timeline     Algonauts2025:chunk=e05b,movie=s01,run=0,subje...
+study                                            Algonauts2025
+task                                                   friends
+movie                                                      s01
+chunk                                                     e05b
+run                                                          0
+session                                                       
+mapped to {'filepath': '/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e05b.mkv', 'start': 0.0, 'timeline': 'Algonauts2025:chunk=e05b,movie=s01,run=0,subject=sub-01,task=friends', 'extra': {'split': 'train', 'subject': 'Algonauts2025/sub-01', 'study': 'Algonauts2025', 'task': 'friends', 'movie': 's01', 'chunk': 'e05b', 'run': '0', 'session': ''}}
+ with error: 1 validation error for Video
+  Value error, File missing for Video event: /home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e05b.mkv [type=value_error, input_value={'filepath': '/home/rippe...n': '0', 'session': ''}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error)
+2026-05-13 20:49:46 - WARNING - neuralset.events.etypes:140 - Event.from_dict parsing failed for input type                                                     Video
+filepath     /home/ripper/data/tribe_benchmarks/download/al...
+start                                                      0.0
+frequency                                                  NaN
+text                                                       NaN
+duration                                                   NaN
+stop                                                       NaN
+language                                                   NaN
+split                                                    train
+modality                                                   NaN
+subject                                   Algonauts2025/sub-01
+timeline     Algonauts2025:chunk=e08a,movie=s01,run=0,subje...
+study                                            Algonauts2025
+task                                                   friends
+movie                                                      s01
+chunk                                                     e08a
+run                                                          0
+session                                                       
+mapped to {'filepath': '/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e08a.mkv', 'start': 0.0, 'timeline': 'Algonauts2025:chunk=e08a,movie=s01,run=0,subject=sub-01,task=friends', 'extra': {'split': 'train', 'subject': 'Algonauts2025/sub-01', 'study': 'Algonauts2025', 'task': 'friends', 'movie': 's01', 'chunk': 'e08a', 'run': '0', 'session': ''}}
+ with error: 1 validation error for Video
+  Value error, File missing for Video event: /home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e08a.mkv [type=value_error, input_value={'filepath': '/home/rippe...n': '0', 'session': ''}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error)
+  0%|          | 0/16 [00:00<?, ?it/s]
+2026-05-13 20:49:46 - WARNING - neuralset.events.etypes:140 - Event.from_dict parsing failed for input type                                                     Video
+filepath     /home/ripper/data/tribe_benchmarks/download/al...
+start                                                      0.0
+frequency                                                  NaN
+text                                                       NaN
+duration                                                   NaN
+stop                                                       NaN
+language                                                   NaN
+split                                                    train
+modality                                                   NaN
+subject                                   Algonauts2025/sub-01
+timeline     Algonauts2025:chunk=e05a,movie=s01,run=0,subje...
+study                                            Algonauts2025
+task                                                   friends
+movie                                                      s01
+chunk                                                     e05a
+run                                                          0
+session                                                       
+mapped to {'filepath': '/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e05a.mkv', 'start': 0.0, 'timeline': 'Algonauts2025:chunk=e05a,movie=s01,run=0,subject=sub-01,task=friends', 'extra': {'split': 'train', 'subject': 'Algonauts2025/sub-01', 'study': 'Algonauts2025', 'task': 'friends', 'movie': 's01', 'chunk': 'e05a', 'run': '0', 'session': ''}}
+ with error: 1 validation error for Video
+  Value error, File missing for Video event: /home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e05a.mkv [type=value_error, input_value={'filepath': '/home/rippe...n': '0', 'session': ''}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error)
+2026-05-13 20:49:46 - WARNING - neuralset.events.etypes:140 - Event.from_dict parsing failed for input type                                                     Video
+filepath     /home/ripper/data/tribe_benchmarks/download/al...
+start                                                      0.0
+frequency                                                  NaN
+text                                                       NaN
+duration                                                   NaN
+stop                                                       NaN
+language                                                   NaN
+split                                                    train
+modality                                                   NaN
+subject                                   Algonauts2025/sub-01
+timeline     Algonauts2025:chunk=e07b,movie=s01,run=0,subje...
+study                                            Algonauts2025
+task                                                   friends
+movie                                                      s01
+chunk                                                     e07b
+run                                                          0
+session                                                       
+mapped to {'filepath': '/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e07b.mkv', 'start': 0.0, 'timeline': 'Algonauts2025:chunk=e07b,movie=s01,run=0,subject=sub-01,task=friends', 'extra': {'split': 'train', 'subject': 'Algonauts2025/sub-01', 'study': 'Algonauts2025', 'task': 'friends', 'movie': 's01', 'chunk': 'e07b', 'run': '0', 'session': ''}}
+ with error: 1 validation error for Video
+  Value error, File missing for Video event: /home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e07b.mkv [type=value_error, input_value={'filepath': '/home/rippe...n': '0', 'session': ''}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error)
+2026-05-13 20:49:46 - WARNING - neuralset.events.etypes:140 - Event.from_dict parsing failed for input type                                                     Video
+filepath     /home/ripper/data/tribe_benchmarks/download/al...
+start                                                      0.0
+frequency                                                  NaN
+text                                                       NaN
+duration                                                   NaN
+stop                                                       NaN
+language                                                   NaN
+split                                                    train
+modality                                                   NaN
+subject                                   Algonauts2025/sub-01
+timeline     Algonauts2025:chunk=e08b,movie=s01,run=0,subje...
+study                                            Algonauts2025
+task                                                   friends
+movie                                                      s01
+chunk                                                     e08b
+run                                                          0
+session                                                       
+mapped to {'filepath': '/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e08b.mkv', 'start': 0.0, 'timeline': 'Algonauts2025:chunk=e08b,movie=s01,run=0,subject=sub-01,task=friends', 'extra': {'split': 'train', 'subject': 'Algonauts2025/sub-01', 'study': 'Algonauts2025', 'task': 'friends', 'movie': 's01', 'chunk': 'e08b', 'run': '0', 'session': ''}}
+ with error: 1 validation error for Video
+  Value error, File missing for Video event: /home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e08b.mkv [type=value_error, input_value={'filepath': '/home/rippe...n': '0', 'session': ''}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error)
+2026-05-13 20:49:46 - WARNING - neuralset.events.etypes:140 - Event.from_dict parsing failed for input type                                                     Video
+filepath     /home/ripper/data/tribe_benchmarks/download/al...
+start                                                      0.0
+frequency                                                  NaN
+text                                                       NaN
+duration                                                   NaN
+stop                                                       NaN
+language                                                   NaN
+split                                                    train
+modality                                                   NaN
+subject                                   Algonauts2025/sub-01
+timeline     Algonauts2025:chunk=e07a,movie=s01,run=0,subje...
+study                                            Algonauts2025
+task                                                   friends
+movie                                                      s01
+chunk                                                     e07a
+run                                                          0
+session                                                       
+mapped to {'filepath': '/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e07a.mkv', 'start': 0.0, 'timeline': 'Algonauts2025:chunk=e07a,movie=s01,run=0,subject=sub-01,task=friends', 'extra': {'split': 'train', 'subject': 'Algonauts2025/sub-01', 'study': 'Algonauts2025', 'task': 'friends', 'movie': 's01', 'chunk': 'e07a', 'run': '0', 'session': ''}}
+ with error: 1 validation error for Video
+  Value error, File missing for Video event: /home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e07a.mkv [type=value_error, input_value={'filepath': '/home/rippe...n': '0', 'session': ''}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error)
+2026-05-13 20:49:46 - WARNING - exca.task:79 - Computation failed for tribev2.main.TribeExperiment.run with traceback:
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/concurrent/futures/process.py", line 263, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/map.py", line 541, in _call_and_store
+    for item, output in in_out:
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/study.py", line 624, in _load_timelines
+    out = _events.standardize_events(out)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/utils.py", line 143, in standardize_events
+    validated = events.apply(_coerce_event, axis=1)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 12423, in apply
+    return op.apply().__finalize__(self, method="apply")
+           ^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1015, in apply
+    return self.apply_standard()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1167, in apply_standard
+    results, res_index = self.apply_series_generator()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1183, in apply_series_generator
+    results[i] = self.func(v, *self.args, **self.kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/utils.py", line 201, in _coerce_event
+    event_obj = event_class.from_dict(event).to_dict()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/etypes.py", line 138, in from_dict
+    out = cls_(**kwargs)
+          ^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Video
+  Value error, File missing for Video event: /home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e06b.mkv [type=value_error, input_value={'filepath': '/home/rippe...n': '0', 'session': ''}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/task.py", line 49, in __init__
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/slurm.py", line 245, in _run_method
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/main.py", line 644, in run
+    loaders = self.data.get_loaders(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/main.py", line 168, in get_loaders
+    events = self.get_events()
+             ^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/main.py", line 151, in get_events
+    events = self.study.run()
+             ^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/steps/base.py", line 250, in run
+    result = step._run(*args)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/utils.py", line 128, in _run
+    df = chain.run()
+         ^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/steps/base.py", line 487, in run
+    result = chain._run()
+             ^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/steps/base.py", line 464, in _run
+    args = (step._run(*args),)
+            ^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/study.py", line 629, in _run
+    df = self.build()
+         ^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/study.py", line 668, in build
+    timelines_events = list(self._load_timelines(timelines))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/map.py", line 350, in _method_override
+    return self._method_override_futures(items)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/map.py", line 503, in _method_override_futures
+    out.update(job.result())  # raise asap
+               ^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Video
+  Value error, File missing for Video event: /home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e06b.mkv [type=value_error, input_value={'filepath': '/home/rippe...n': '0', 'session': ''}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error
+  -> while running step 1/5: Algonauts2025
+  -> in MultiStudyLoader(**
+{ 'infra': None,
+  'infra_timelines': { 'cluster': 'processpool',
+                       'conda_env': None,
+                       'cpus_per_task': None,
+                       'folder': '/home/ripper/data/tribe_runs/cache/tribe_release',
+                       'forbid_single_item_computation': False,
+                       'gpus_per_node': None,
+                       'job_name': None,
+                       'keep_in_ram': True,
+                       'logs': '{folder}/logs/{user}/%j',
+                       'max_jobs': 1024,
+                       'max_pickle_size_gb': None,
+                       'mem_gb': None,
+                       'min_samples_per_job': 4,
+                       'mode': 'cached',
+                       'nodes': 1,
+                       'permissions': 511,
+                       'slurm_account': None,
+                       'slurm_additional_parameters': None,
+                       'slurm_constraint': None,
+                       'slurm_partition': None,
+                       'slurm_qos': None,
+                       'slurm_use_srun': False,
+                       'tasks_per_node': 1,
+                       'timeout_min': 720,
+                       'version': 'text_loss_episode_s01_e01_e08_val_e07_e08_v1',
+                       'workdir': None},
+  'name': 'MultiStudyLoader',
+  'names': 'Algonauts2025',
+  'path': '/home/ripper/data/tribe_benchmarks',
+  'query': "subject == 'Algonauts2025/sub-01' and task == 'friends' and movie "
+           "== 's01' and chunk in ['e01a', 'e01b', 'e02a', 'e02b', 'e03a', "
+           "'e03b', 'e04a', 'e04b', 'e05a', 'e05b', 'e06a', 'e06b', 'e07a', "
+           "'e07b', 'e08a', 'e08b']",
+  'studies_to_include': None,
+  'transforms': { 'addcontext': { 'infra': None,
+                                  'max_context_len': 1024,
+                                  'name': 'AddContextToWords',
+                                  'sentence_only': False,
+                                  'split_field': ''},
+                  'addsentence': { 'infra': None,
+                                   'max_unmatched_ratio': 0.05,
+                                   'name': 'AddSentenceToWords',
+                                   'override_sentences': False},
+                  'removemissing': { 'event_types': 'Word',
+                                     'field': 'context',
+                                     'infra': None,
+                                     'name': 'RemoveMissing'},
+                  'split': { 'chunk_field': 'chunk',
+                             'infra': None,
+                             'movie_field': 'movie',
+                             'name': 'AssignSplitByEpisode',
+                             'train_label': 'train',
+                             'val_episodes': ['s01e07', 's01e08'],
+                             'val_label': 'val'}}}
+)
+
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/concurrent/futures/process.py", line 263, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/map.py", line 541, in _call_and_store
+    for item, output in in_out:
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/study.py", line 624, in _load_timelines
+    out = _events.standardize_events(out)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/utils.py", line 143, in standardize_events
+    validated = events.apply(_coerce_event, axis=1)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 12423, in apply
+    return op.apply().__finalize__(self, method="apply")
+           ^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1015, in apply
+    return self.apply_standard()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1167, in apply_standard
+    results, res_index = self.apply_series_generator()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1183, in apply_series_generator
+    results[i] = self.func(v, *self.args, **self.kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/utils.py", line 201, in _coerce_event
+    event_obj = event_class.from_dict(event).to_dict()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/etypes.py", line 138, in from_dict
+    out = cls_(**kwargs)
+          ^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Video
+  Value error, File missing for Video event: /home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e06b.mkv [type=value_error, input_value={'filepath': '/home/rippe...n': '0', 'session': ''}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ripper/ACTi_cognition/experiments/algonauts_text_loss_ablation.py", line 272, in <module>
+    main()
+  File "/home/ripper/ACTi_cognition/experiments/algonauts_text_loss_ablation.py", line 260, in main
+    run_one(args, loss_name, seed)
+  File "/home/ripper/ACTi_cognition/experiments/algonauts_text_loss_ablation.py", line 174, in run_one
+    task.run()
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/task.py", line 422, in _method_override
+    out = job.results()[0]  # only first for multi-tasks
+          ^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/task.py", line 68, in results
+    return (self.result(),)
+            ^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/task.py", line 64, in result
+    raise e
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/task.py", line 49, in __init__
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/slurm.py", line 245, in _run_method
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/main.py", line 644, in run
+    loaders = self.data.get_loaders(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/main.py", line 168, in get_loaders
+    events = self.get_events()
+             ^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/main.py", line 151, in get_events
+    events = self.study.run()
+             ^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/steps/base.py", line 250, in run
+    result = step._run(*args)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/utils.py", line 128, in _run
+    df = chain.run()
+         ^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/steps/base.py", line 487, in run
+    result = chain._run()
+             ^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/steps/base.py", line 464, in _run
+    args = (step._run(*args),)
+            ^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/study.py", line 629, in _run
+    df = self.build()
+         ^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/study.py", line 668, in build
+    timelines_events = list(self._load_timelines(timelines))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/map.py", line 350, in _method_override
+    return self._method_override_futures(items)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/map.py", line 503, in _method_override_futures
+    out.update(job.result())  # raise asap
+               ^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Video
+  Value error, File missing for Video event: /home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s1/friends_s01e06b.mkv [type=value_error, input_value={'filepath': '/home/rippe...n': '0', 'session': ''}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error
+  -> while running step 1/5: Algonauts2025
+  -> in MultiStudyLoader(**
+{ 'infra': None,
+  'infra_timelines': { 'cluster': 'processpool',
+                       'conda_env': None,
+                       'cpus_per_task': None,
+                       'folder': '/home/ripper/data/tribe_runs/cache/tribe_release',
+                       'forbid_single_item_computation': False,
+                       'gpus_per_node': None,
+                       'job_name': None,
+                       'keep_in_ram': True,
+                       'logs': '{folder}/logs/{user}/%j',
+                       'max_jobs': 1024,
+                       'max_pickle_size_gb': None,
+                       'mem_gb': None,
+                       'min_samples_per_job': 4,
+                       'mode': 'cached',
+                       'nodes': 1,
+                       'permissions': 511,
+                       'slurm_account': None,
+                       'slurm_additional_parameters': None,
+                       'slurm_constraint': None,
+                       'slurm_partition': None,
+                       'slurm_qos': None,
+                       'slurm_use_srun': False,
+                       'tasks_per_node': 1,
+                       'timeout_min': 720,
+                       'version': 'text_loss_episode_s01_e01_e08_val_e07_e08_v1',
+                       'workdir': None},
+  'name': 'MultiStudyLoader',
+  'names': 'Algonauts2025',
+  'path': '/home/ripper/data/tribe_benchmarks',
+  'query': "subject == 'Algonauts2025/sub-01' and task == 'friends' and movie "
+           "== 's01' and chunk in ['e01a', 'e01b', 'e02a', 'e02b', 'e03a', "
+           "'e03b', 'e04a', 'e04b', 'e05a', 'e05b', 'e06a', 'e06b', 'e07a', "
+           "'e07b', 'e08a', 'e08b']",
+  'studies_to_include': None,
+  'transforms': { 'addcontext': { 'infra': None,
+                                  'max_context_len': 1024,
+                                  'name': 'AddContextToWords',
+                                  'sentence_only': False,
+                                  'split_field': ''},
+                  'addsentence': { 'infra': None,
+                                   'max_unmatched_ratio': 0.05,
+                                   'name': 'AddSentenceToWords',
+                                   'override_sentences': False},
+                  'removemissing': { 'event_types': 'Word',
+                                     'field': 'context',
+                                     'infra': None,
+                                     'name': 'RemoveMissing'},
+                  'split': { 'chunk_field': 'chunk',
+                             'infra': None,
+                             'movie_field': 'movie',
+                             'name': 'AssignSplitByEpisode',
+                             'train_label': 'train',
+                             'val_episodes': ['s01e07', 's01e08'],
+                             'val_label': 'val'}}}
+)

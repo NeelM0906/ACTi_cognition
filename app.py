@@ -8,8 +8,9 @@ import tempfile
 from pathlib import Path
 
 # Environment setup - must come before any torch/matplotlib imports
+from dotenv import load_dotenv
+load_dotenv(Path(__file__).resolve().parent / ".env")
 os.environ.setdefault("HF_TOKEN", "")  # Set HF_TOKEN in your environment
-os.environ["PATH"] = os.environ.get("PATH", "") + ";C:/Users/Administrator/AppData/Local/Microsoft/WinGet/Links"
 os.environ["TMPDIR"] = str(Path(__file__).resolve().parent / "cache")
 os.environ["TEMP"] = str(Path(__file__).resolve().parent / "cache")
 os.environ["TMP"] = str(Path(__file__).resolve().parent / "cache")
@@ -22,9 +23,15 @@ import pyvista
 pyvista.OFF_SCREEN = True
 
 import base64
+import secrets
+from typing import Literal
+
 import numpy as np
 import gradio as gr
 from openai import OpenAI
+from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
+from pydantic import BaseModel, Field
 
 # ---------------------------------------------------------------------------
 # Global model & plotter (loaded once)
@@ -151,8 +158,8 @@ The image shows predicted BOLD activation across the cortex at 1-second interval
 Analyze the temporal pattern, identify the peak moment and what caused it, name the cognitive mechanisms at play, and tell me what this predicts about user behavior."""
 
 
-def analyze_brain_image(image_path, stimulus_desc, api_key):
-    """Send brain visualization to Claude Opus 4.6 via OpenRouter for analysis."""
+def analyze_brain_image(image_path, stimulus_desc, api_key, model=None):
+    """Send brain visualization to a vision-LLM via OpenRouter for analysis."""
     if not api_key or not api_key.strip():
         return "Error: Please enter your OpenRouter API key."
 
@@ -167,7 +174,8 @@ def analyze_brain_image(image_path, stimulus_desc, api_key):
     if not image_path or not Path(image_path).exists():
         return "Error: No brain image to analyze. Run a prediction first."
 
-    print(f"[Analysis] Starting Claude Opus 4.6 analysis on: {image_path}")
+    resolved_model = model or os.environ.get("OPENROUTER_ANALYSIS_MODEL", "anthropic/claude-opus-4")
+    print(f"[Analysis] Starting {resolved_model} analysis on: {image_path}")
     print(f"[Analysis] Stimulus: {stimulus_desc}")
 
     try:
@@ -180,7 +188,7 @@ def analyze_brain_image(image_path, stimulus_desc, api_key):
         )
 
         response = client.chat.completions.create(
-            model="anthropic/claude-opus-4",
+            model=resolved_model,
             max_tokens=25000,
             messages=[
                 {
@@ -210,12 +218,92 @@ def analyze_brain_image(image_path, stimulus_desc, api_key):
         result = response.choices[0].message.content or ""
         print(f"[Analysis] Complete. Length: {len(result)} chars")
         if not result:
-            return "Claude Opus 4.6 returned an empty response."
+            return f"{resolved_model} returned an empty response."
         return result
 
     except Exception as e:
         print(f"[Analysis] Error: {e}")
         return f"Analysis error: {e}"
+
+
+# ---------------------------------------------------------------------------
+# External-dev unified endpoint: text -> brain prediction -> LLM analysis
+# Returns ONLY the analysis text. Uses server-side OPENROUTER_API_KEY.
+# ---------------------------------------------------------------------------
+def analyze_text_endpoint(text, n_timesteps=10, view="left", cmap="fire"):
+    """Run TRIBE on text input and return only the LLM analysis of the brain image."""
+    if not text or not str(text).strip():
+        return "Error: Please provide non-empty input text."
+
+    server_key = os.environ.get("OPENROUTER_API_KEY", "").strip()
+    if not server_key:
+        return "Error: Server is missing OPENROUTER_API_KEY in .env."
+
+    image_path, status = run_inference("text", text, n_timesteps, view, cmap)
+    if not image_path:
+        return f"Error: brain prediction failed: {status}"
+
+    return analyze_brain_image(
+        image_path=image_path,
+        stimulus_desc=text,
+        api_key=server_key,
+        model=os.environ.get("OPENROUTER_ANALYSIS_MODEL", "xiaomi/mimo-v2.5-pro"),
+    )
+
+
+# ---------------------------------------------------------------------------
+# Clean REST API surface for external dev / agent integration.
+# A thin FastAPI layer in front of the existing Gradio app.
+# ---------------------------------------------------------------------------
+_security = HTTPBasic()
+
+
+def _check_auth(creds: HTTPBasicCredentials = Depends(_security)):
+    ok_user = secrets.compare_digest(creds.username, "user")
+    ok_pass = secrets.compare_digest(creds.password, "67420")
+    if not (ok_user and ok_pass):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid credentials",
+            headers={"WWW-Authenticate": "Basic"},
+        )
+
+
+class AnalysisRequest(BaseModel):
+    text: str = Field(..., min_length=1, description="Stimulus text. The brain response is predicted for this text, then analyzed.")
+    n_timesteps: int = Field(10, ge=1, le=30, description="How many predicted brain-activation timesteps to render (1-30).")
+    view: Literal["left", "right", "dorsal", "ventral", "medial_left", "medial_right"] = Field("left", description="Cortical surface view.")
+    cmap: Literal["fire", "hot", "seismic", "bwr", "coolwarm"] = Field("fire", description="Colormap for the activation heatmap.")
+
+
+class AnalysisResponse(BaseModel):
+    analysis: str = Field(..., description="Natural-language behavioral interpretation of the predicted brain response.")
+
+
+def build_api(gradio_demo):
+    app = FastAPI(
+        title="TRIBE Brain Analysis API",
+        version="1.0.0",
+        description="Predict brain response to a stimulus and return a behavioral interpretation.",
+    )
+
+    @app.post(
+        "/analysis",
+        response_model=AnalysisResponse,
+        dependencies=[Depends(_check_auth)],
+        summary="Predict brain response to text and return behavioral analysis",
+    )
+    def analysis(req: AnalysisRequest):
+        result = analyze_text_endpoint(req.text, req.n_timesteps, req.view, req.cmap)
+        if result.startswith("Error:") or result.startswith("Analysis error:"):
+            raise HTTPException(status_code=502, detail=result)
+        return AnalysisResponse(analysis=result)
+
+    @app.get("/healthz", summary="Liveness check")
+    def healthz():
+        return {"status": "ok", "model_loaded": MODEL is not None}
+
+    return gr.mount_gradio_app(app, gradio_demo, path="/", auth=("user", "67420"))
 
 
 # Tab wrappers
@@ -244,7 +332,7 @@ Upload text, audio, or video and visualize predicted cortical activity on the **
 *Inference takes 1-7 minutes depending on input length.*
 """
 
-with gr.Blocks(title="TRIBE v2") as demo:
+with gr.Blocks(title="TRIBE v2", theme=gr.themes.Soft()) as demo:
     gr.Markdown(DESCRIPTION)
 
     with gr.Row():
@@ -313,11 +401,28 @@ with gr.Blocks(title="TRIBE v2") as demo:
         outputs=[analysis_output],
     )
 
+    # --- Hidden API-only endpoint for external devs ---
+    # Single call: text -> TRIBE prediction -> LLM analysis -> return analysis string.
+    # Uses the server's OPENROUTER_API_KEY from .env; no auth-related params from caller.
+    _api_text = gr.Textbox(visible=False)
+    _api_n = gr.Number(value=10, visible=False)
+    _api_view = gr.Textbox(value="left", visible=False)
+    _api_cmap = gr.Textbox(value="fire", visible=False)
+    _api_out = gr.Textbox(visible=False)
+    _api_btn = gr.Button(visible=False)
+    _api_btn.click(
+        fn=analyze_text_endpoint,
+        inputs=[_api_text, _api_n, _api_view, _api_cmap],
+        outputs=[_api_out],
+        api_name="analyze_text",
+    )
+
     # Wire prediction buttons
     text_btn.click(
         predict_text,
         inputs=[text_input, n_timesteps, view, cmap],
         outputs=[output_image, status_text],
+        api_name="predict_text",
     )
     audio_btn.click(
         predict_audio,
@@ -335,18 +440,19 @@ if __name__ == "__main__":
     multiprocessing.freeze_support()
     _load_globals()
 
+    # Build the combined FastAPI app: REST API at the root + Gradio UI mounted under it.
+    api_app = build_api(demo)
+
     # Start ngrok tunnel
     import ngrok
     listener = ngrok.forward(
         7860,
         authtoken=os.environ.get("NGROK_AUTHTOKEN", ""),
-        domain="acti-cognition.ngrok.pro",
+        domain=os.environ.get("NGROK_DOMAIN", "acti.cognition.ngrok.pro"),
     )
     print(f"ngrok tunnel: {listener.url()}")
+    print(f"REST API:    {listener.url()}/analysis")
+    print(f"OpenAPI:     {listener.url()}/docs")
 
-    demo.launch(
-        server_name="0.0.0.0",
-        server_port=7860,
-        auth=("user", "67420"),
-        theme=gr.themes.Soft(),
-    )
+    import uvicorn
+    uvicorn.run(api_app, host="0.0.0.0", port=7860, log_level="info")

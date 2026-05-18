@@ -1,0 +1,17 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-14 06:26:12 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/ripper/ACTi_cognition/experiments/tribe_late_fusion_ablation.py", line 325, in <module>
+    main()
+  File "/home/ripper/ACTi_cognition/experiments/tribe_late_fusion_ablation.py", line 266, in main
+    val_conditions, val_preds, val_target = aligned_dataset(
+                                            ^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/experiments/tribe_late_fusion_ablation.py", line 141, in aligned_dataset
+    indices = common_time_indices(runs, tolerance_seconds=tolerance_seconds)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/experiments/tribe_late_fusion_ablation.py", line 117, in common_time_indices
+    raise ValueError("No approximately common sample times across condition runs")
+ValueError: No approximately common sample times across condition runs

@@ -1,0 +1,277 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-14 06:16:37 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+cache/ablation_results/tribe_hrf_offset_train_e01ab_val_e02a_v1.json
+{
+  "created_at": "2026-05-14T10:16:37.398049+00:00",
+  "experiment_name": "tribe_hrf_offset_ablation",
+  "checkpoint": "facebook/tribev2",
+  "features": [
+    "text",
+    "audio",
+    "video"
+  ],
+  "metric_space": "approx_parcel",
+  "offsets_seconds": [
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0
+  ],
+  "baseline_offset_seconds": 5.0,
+  "selection_policy": "select highest train mean Pearson; report selected offset on held-out validation chunks",
+  "train_results": [
+    "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01a_parcel_approx_v2.json",
+    "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01b_parcel_approx_v1.json"
+  ],
+  "val_results": [
+    "cache/ablation_results/pretrained_tribe_text_audio_video_s01e02a_parcel_approx_v1.json"
+  ],
+  "train_scores": [
+    {
+      "offset_seconds": 3.0,
+      "mean": 0.1575987532301117,
+      "median": 0.13525802743679916,
+      "n_vertices_finite": 983,
+      "n_finite_rows": 1756,
+      "per_run": [
+        {
+          "result_path": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01a_parcel_approx_v2.json",
+          "chunks": [
+            "e01a"
+          ],
+          "mean": 0.1404217231301781,
+          "median": 0.11935616240154535,
+          "n_vertices_finite": 983,
+          "n_finite_rows": 878
+        },
+        {
+          "result_path": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01b_parcel_approx_v1.json",
+          "chunks": [
+            "e01b"
+          ],
+          "mean": 0.1761620351178904,
+          "median": 0.16222722799088263,
+          "n_vertices_finite": 983,
+          "n_finite_rows": 878
+        }
+      ]
+    },
+    {
+      "offset_seconds": 4.0,
+      "mean": 0.17620055999762663,
+      "median": 0.14281778484499766,
+      "n_vertices_finite": 983,
+      "n_finite_rows": 1754,
+      "per_run": [
+        {
+          "result_path": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01a_parcel_approx_v2.json",
+          "chunks": [
+            "e01a"
+          ],
+          "mean": 0.160012026301225,
+          "median": 0.1344444202559969,
+          "n_vertices_finite": 983,
+          "n_finite_rows": 877
+        },
+        {
+          "result_path": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01b_parcel_approx_v1.json",
+          "chunks": [
+            "e01b"
+          ],
+          "mean": 0.19387664344650465,
+          "median": 0.17195994194556014,
+          "n_vertices_finite": 983,
+          "n_finite_rows": 877
+        }
+      ]
+    },
+    {
+      "offset_seconds": 5.0,
+      "mean": 0.18169077107309664,
+      "median": 0.1453235223421756,
+      "n_vertices_finite": 983,
+      "n_finite_rows": 1752,
+      "per_run": [
+        {
+          "result_path": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01a_parcel_approx_v2.json",
+          "chunks": [
+            "e01a"
+          ],
+          "mean": 0.16671964655556035,
+          "median": 0.13795575391610598,
+          "n_vertices_finite": 983,
+          "n_finite_rows": 876
+        },
+        {
+          "result_path": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01b_parcel_approx_v1.json",
+          "chunks": [
+            "e01b"
+          ],
+          "mean": 0.19799788771639731,
+          "median": 0.17790429113417067,
+          "n_vertices_finite": 983,
+          "n_finite_rows": 876
+        }
+      ]
+    },
+    {
+      "offset_seconds": 6.0,
+      "mean": 0.17226354918117875,
+      "median": 0.1434738190706014,
+      "n_vertices_finite": 983,
+      "n_finite_rows": 1750,
+      "per_run": [
+        {
+          "result_path": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01a_parcel_approx_v2.json",
+          "chunks": [
+            "e01a"
+          ],
+          "mean": 0.15945518147047408,
+          "median": 0.13408431275013927,
+          "n_vertices_finite": 983,
+          "n_finite_rows": 875
+        },
+        {
+          "result_path": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01b_parcel_approx_v1.json",
+          "chunks": [
+            "e01b"
+          ],
+          "mean": 0.18600997479415604,
+          "median": 0.1700672462576194,
+          "n_vertices_finite": 983,
+          "n_finite_rows": 875
+        }
+      ]
+    },
+    {
+      "offset_seconds": 7.0,
+      "mean": 0.15098528048579704,
+      "median": 0.13251308582593882,
+      "n_vertices_finite": 983,
+      "n_finite_rows": 1748,
+      "per_run": [
+        {
+          "result_path": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01a_parcel_approx_v2.json",
+          "chunks": [
+            "e01a"
+          ],
+          "mean": 0.1409552600123498,
+          "median": 0.12200995357793275,
+          "n_vertices_finite": 983,
+          "n_finite_rows": 874
+        },
+        {
+          "result_path": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01b_parcel_approx_v1.json",
+          "chunks": [
+            "e01b"
+          ],
+          "mean": 0.16143789718570659,
+          "median": 0.15206906729543415,
+          "n_vertices_finite": 983,
+          "n_finite_rows": 874
+        }
+      ]
+    }
+  ],
+  "best_train": {
+    "offset_seconds": 5.0,
+    "mean": 0.18169077107309664,
+    "median": 0.1453235223421756,
+    "n_vertices_finite": 983,
+    "n_finite_rows": 1752,
+    "per_run": [
+      {
+        "result_path": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01a_parcel_approx_v2.json",
+        "chunks": [
+          "e01a"
+        ],
+        "mean": 0.16671964655556035,
+        "median": 0.13795575391610598,
+        "n_vertices_finite": 983,
+        "n_finite_rows": 876
+      },
+      {
+        "result_path": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01b_parcel_approx_v1.json",
+        "chunks": [
+          "e01b"
+        ],
+        "mean": 0.19799788771639731,
+        "median": 0.17790429113417067,
+        "n_vertices_finite": 983,
+        "n_finite_rows": 876
+      }
+    ]
+  },
+  "train_baseline": {
+    "offset_seconds": 5.0,
+    "mean": 0.18169077107309664,
+    "median": 0.1453235223421756,
+    "n_vertices_finite": 983,
+    "n_finite_rows": 1752,
+    "per_run": [
+      {
+        "result_path": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01a_parcel_approx_v2.json",
+        "chunks": [
+          "e01a"
+        ],
+        "mean": 0.16671964655556035,
+        "median": 0.13795575391610598,
+        "n_vertices_finite": 983,
+        "n_finite_rows": 876
+      },
+      {
+        "result_path": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01b_parcel_approx_v1.json",
+        "chunks": [
+          "e01b"
+        ],
+        "mean": 0.19799788771639731,
+        "median": 0.17790429113417067,
+        "n_vertices_finite": 983,
+        "n_finite_rows": 876
+      }
+    ]
+  },
+  "val_selected": {
+    "offset_seconds": 5.0,
+    "mean": 0.21328867027437104,
+    "median": 0.18906106848890875,
+    "n_vertices_finite": 983,
+    "n_finite_rows": 712,
+    "per_run": [
+      {
+        "result_path": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e02a_parcel_approx_v1.json",
+        "chunks": [
+          "e02a"
+        ],
+        "mean": 0.21328867027437104,
+        "median": 0.18906106848890875,
+        "n_vertices_finite": 983,
+        "n_finite_rows": 712
+      }
+    ]
+  },
+  "val_baseline": {
+    "offset_seconds": 5.0,
+    "mean": 0.21328867027437104,
+    "median": 0.18906106848890875,
+    "n_vertices_finite": 983,
+    "n_finite_rows": 712,
+    "per_run": [
+      {
+        "result_path": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e02a_parcel_approx_v1.json",
+        "chunks": [
+          "e02a"
+        ],
+        "mean": 0.21328867027437104,
+        "median": 0.18906106848890875,
+        "n_vertices_finite": 983,
+        "n_finite_rows": 712
+      }
+    ]
+  },
+  "delta_val_selected_vs_baseline": 0.0,
+  "runtime_seconds": 0.31598253804259,
+  "caveat": "Available-label local proxy only. Public TRIBE may have seen this train distribution, and Friends S7/OOD official comparison still requires Codabench."
+}

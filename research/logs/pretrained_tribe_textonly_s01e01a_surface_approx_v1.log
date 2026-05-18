@@ -1,0 +1,486 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-14 03:00:17 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+2026-05-14 03:00:17 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+INFO - Loading model from /home/ripper/.cache/huggingface/hub/models--facebook--tribev2/snapshots/f894e783020944dcd96e5568550afe2aa9743f9f/best.ckpt
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:439: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:461: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+Add context to words:   0%|          | 0/1697 [00:00<?, ?it/s]Add context to words: 100%|██████████| 1697/1697 [00:00<00:00, 91827.51it/s]
+[03:00:19 INFO] Preparing extractor: text
+  0%|          | 0/1697 [00:00<?, ?it/s]
+Computing word embeddings:   0%|          | 0/425 [00:00<?, ?it/s][AFailed to load /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_cutlass_90a.abi3.so: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_cutlass_90a.abi3.so
+Failed to load /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_mxfp8.cpython-310-x86_64-linux-gnu.so: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_mxfp8.cpython-310-x86_64-linux-gnu.so
+W0514 03:00:32.821000 1091809 torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+W0514 03:00:32.832000 1091809 torch/utils/_pytree.py:630] <enum 'ScaleCalculationMode'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A[A
+
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.86it/s][A[ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  6.18it/s]
+  0%|          | 1/1697 [00:03<1:33:16,  3.30s/it]
+Computing word embeddings:   0%|          | 1/425 [00:03<23:57,  3.39s/it][A  0%|          | 5/1697 [00:04<19:12,  1.47it/s]  
+Computing word embeddings:   0%|          | 2/425 [00:04<13:26,  1.91s/it][A  1%|          | 9/1697 [00:05<14:20,  1.96it/s]
+Computing word embeddings:   1%|          | 3/425 [00:05<12:05,  1.72s/it][A  1%|          | 13/1697 [00:06<11:05,  2.53it/s]
+Computing word embeddings:   1%|          | 4/425 [00:06<10:01,  1.43s/it][A  1%|          | 17/1697 [00:08<10:43,  2.61it/s]
+Computing word embeddings:   1%|          | 5/425 [00:08<10:05,  1.44s/it][A  1%|          | 21/1697 [00:09<10:33,  2.65it/s]
+Computing word embeddings:   1%|▏         | 6/425 [00:09<10:08,  1.45s/it][A  1%|▏         | 25/1697 [00:11<10:29,  2.66it/s]
+Computing word embeddings:   2%|▏         | 7/425 [00:11<10:13,  1.47s/it][A  2%|▏         | 29/1697 [00:12<10:26,  2.66it/s]
+Computing word embeddings:   2%|▏         | 8/425 [00:12<10:17,  1.48s/it][A  2%|▏         | 33/1697 [00:14<10:23,  2.67it/s]
+Computing word embeddings:   2%|▏         | 9/425 [00:14<10:16,  1.48s/it][A  2%|▏         | 37/1697 [00:15<10:23,  2.66it/s]
+Computing word embeddings:   2%|▏         | 10/425 [00:15<10:19,  1.49s/it][A  2%|▏         | 41/1697 [00:17<10:25,  2.65it/s]
+Computing word embeddings:   3%|▎         | 11/425 [00:17<10:22,  1.50s/it][A  3%|▎         | 45/1697 [00:18<10:22,  2.66it/s]
+Computing word embeddings:   3%|▎         | 12/425 [00:18<10:20,  1.50s/it][A  3%|▎         | 49/1697 [00:20<10:19,  2.66it/s]
+Computing word embeddings:   3%|▎         | 13/425 [00:20<10:17,  1.50s/it][A  3%|▎         | 53/1697 [00:21<10:20,  2.65it/s]
+Computing word embeddings:   3%|▎         | 14/425 [00:21<10:19,  1.51s/it][A  3%|▎         | 57/1697 [00:23<10:20,  2.64it/s]
+Computing word embeddings:   4%|▎         | 15/425 [00:23<10:19,  1.51s/it][A  4%|▎         | 61/1697 [00:24<10:17,  2.65it/s]
+Computing word embeddings:   4%|▍         | 16/425 [00:24<10:17,  1.51s/it][A  4%|▍         | 65/1697 [00:25<09:35,  2.84it/s]
+Computing word embeddings:   4%|▍         | 17/425 [00:25<09:33,  1.41s/it][A  4%|▍         | 69/1697 [00:26<07:44,  3.50it/s]
+Computing word embeddings:   4%|▍         | 18/425 [00:26<07:38,  1.13s/it][A  4%|▍         | 73/1697 [00:27<08:21,  3.24it/s]
+Computing word embeddings:   4%|▍         | 19/425 [00:27<08:23,  1.24s/it][A  5%|▍         | 77/1697 [00:29<08:53,  3.04it/s]
+Computing word embeddings:   5%|▍         | 20/425 [00:29<08:54,  1.32s/it][A  5%|▍         | 81/1697 [00:30<09:17,  2.90it/s]
+Computing word embeddings:   5%|▍         | 21/425 [00:30<09:18,  1.38s/it][A  5%|▌         | 85/1697 [00:32<09:29,  2.83it/s]
+Computing word embeddings:   5%|▌         | 22/425 [00:32<09:29,  1.41s/it][A  5%|▌         | 89/1697 [00:33<09:21,  2.86it/s]
+Computing word embeddings:   5%|▌         | 23/425 [00:33<09:21,  1.40s/it][A  5%|▌         | 93/1697 [00:34<08:18,  3.22it/s]
+Computing word embeddings:   6%|▌         | 24/425 [00:34<08:16,  1.24s/it][A  6%|▌         | 97/1697 [00:36<08:44,  3.05it/s]
+Computing word embeddings:   6%|▌         | 25/425 [00:36<08:45,  1.31s/it][A  6%|▌         | 101/1697 [00:37<09:02,  2.94it/s]
+Computing word embeddings:   6%|▌         | 26/425 [00:37<09:03,  1.36s/it][A  6%|▌         | 105/1697 [00:38<09:13,  2.88it/s]
+Computing word embeddings:   6%|▋         | 27/425 [00:39<09:12,  1.39s/it][A  6%|▋         | 109/1697 [00:40<09:23,  2.82it/s]
+Computing word embeddings:   7%|▋         | 28/425 [00:40<09:23,  1.42s/it][A  7%|▋         | 113/1697 [00:41<09:28,  2.79it/s]
+Computing word embeddings:   7%|▋         | 29/425 [00:42<09:28,  1.44s/it][A  7%|▋         | 117/1697 [00:43<09:36,  2.74it/s]
+Computing word embeddings:   7%|▋         | 30/425 [00:43<09:37,  1.46s/it][A  7%|▋         | 121/1697 [00:44<09:42,  2.71it/s]
+Computing word embeddings:   7%|▋         | 31/425 [00:45<09:42,  1.48s/it][A  7%|▋         | 125/1697 [00:46<09:30,  2.76it/s]
+Computing word embeddings:   8%|▊         | 32/425 [00:46<09:31,  1.45s/it][A  8%|▊         | 129/1697 [00:47<09:36,  2.72it/s]
+Computing word embeddings:   8%|▊         | 33/425 [00:47<09:37,  1.47s/it][A  8%|▊         | 133/1697 [00:49<09:43,  2.68it/s]
+Computing word embeddings:   8%|▊         | 34/425 [00:49<09:43,  1.49s/it][A  8%|▊         | 137/1697 [00:50<09:46,  2.66it/s]
+Computing word embeddings:   8%|▊         | 35/425 [00:51<09:46,  1.50s/it][A  8%|▊         | 141/1697 [00:52<09:46,  2.65it/s]
+Computing word embeddings:   8%|▊         | 36/425 [00:52<09:47,  1.51s/it][A  9%|▊         | 145/1697 [00:54<09:48,  2.64it/s]
+Computing word embeddings:   9%|▊         | 37/425 [00:54<09:48,  1.52s/it][A  9%|▉         | 149/1697 [00:55<09:46,  2.64it/s]
+Computing word embeddings:   9%|▉         | 38/425 [00:55<09:45,  1.51s/it][A  9%|▉         | 153/1697 [00:57<09:48,  2.62it/s]
+Computing word embeddings:   9%|▉         | 39/425 [00:57<09:48,  1.52s/it][A  9%|▉         | 157/1697 [00:58<09:45,  2.63it/s]
+Computing word embeddings:   9%|▉         | 40/425 [00:58<09:44,  1.52s/it][A  9%|▉         | 161/1697 [01:00<09:41,  2.64it/s]
+Computing word embeddings:  10%|▉         | 41/425 [01:00<09:41,  1.51s/it][A 10%|▉         | 165/1697 [01:01<09:24,  2.71it/s]
+Computing word embeddings:  10%|▉         | 42/425 [01:01<09:24,  1.47s/it][A 10%|▉         | 169/1697 [01:02<09:25,  2.70it/s]
+Computing word embeddings:  10%|█         | 43/425 [01:03<09:25,  1.48s/it][A 10%|█         | 173/1697 [01:04<09:26,  2.69it/s]
+Computing word embeddings:  10%|█         | 44/425 [01:04<09:26,  1.49s/it][A 10%|█         | 177/1697 [01:05<09:25,  2.69it/s]
+Computing word embeddings:  11%|█         | 45/425 [01:06<09:25,  1.49s/it][A 11%|█         | 181/1697 [01:07<09:25,  2.68it/s]
+Computing word embeddings:  11%|█         | 46/425 [01:07<09:26,  1.49s/it][A 11%|█         | 185/1697 [01:08<09:26,  2.67it/s]
+Computing word embeddings:  11%|█         | 47/425 [01:09<09:26,  1.50s/it][A 11%|█         | 189/1697 [01:10<09:25,  2.66it/s]
+Computing word embeddings:  11%|█▏        | 48/425 [01:10<09:26,  1.50s/it][A 11%|█▏        | 193/1697 [01:11<08:03,  3.11it/s]
+Computing word embeddings:  12%|█▏        | 49/425 [01:11<07:59,  1.27s/it][A 12%|█▏        | 197/1697 [01:12<08:23,  2.98it/s]
+Computing word embeddings:  12%|█▏        | 50/425 [01:12<08:23,  1.34s/it][A 12%|█▏        | 201/1697 [01:14<08:45,  2.85it/s]
+Computing word embeddings:  12%|█▏        | 51/425 [01:14<08:45,  1.41s/it][A 12%|█▏        | 205/1697 [01:15<08:56,  2.78it/s]
+Computing word embeddings:  12%|█▏        | 52/425 [01:15<08:57,  1.44s/it][A 12%|█▏        | 209/1697 [01:17<09:05,  2.73it/s]
+Computing word embeddings:  12%|█▏        | 53/425 [01:17<09:06,  1.47s/it][A 13%|█▎        | 213/1697 [01:18<09:08,  2.70it/s]
+Computing word embeddings:  13%|█▎        | 54/425 [01:18<09:09,  1.48s/it][A 13%|█▎        | 217/1697 [01:20<09:13,  2.67it/s]
+Computing word embeddings:  13%|█▎        | 55/425 [01:20<09:13,  1.50s/it][A 13%|█▎        | 221/1697 [01:21<09:15,  2.66it/s]
+Computing word embeddings:  13%|█▎        | 56/425 [01:21<09:15,  1.51s/it][A 13%|█▎        | 225/1697 [01:23<09:16,  2.65it/s]
+Computing word embeddings:  13%|█▎        | 57/425 [01:23<09:15,  1.51s/it][A 13%|█▎        | 229/1697 [01:24<09:15,  2.64it/s]
+Computing word embeddings:  14%|█▎        | 58/425 [01:25<09:14,  1.51s/it][A 14%|█▎        | 233/1697 [01:26<09:14,  2.64it/s]
+Computing word embeddings:  14%|█▍        | 59/425 [01:26<09:13,  1.51s/it][A 14%|█▍        | 237/1697 [01:27<09:12,  2.64it/s]
+Computing word embeddings:  14%|█▍        | 60/425 [01:28<09:12,  1.51s/it][A 14%|█▍        | 241/1697 [01:29<09:12,  2.64it/s]
+Computing word embeddings:  14%|█▍        | 61/425 [01:29<09:12,  1.52s/it][A 14%|█▍        | 245/1697 [01:31<09:10,  2.64it/s]
+Computing word embeddings:  15%|█▍        | 62/425 [01:31<09:10,  1.52s/it][A 15%|█▍        | 249/1697 [01:32<09:09,  2.63it/s]
+Computing word embeddings:  15%|█▍        | 63/425 [01:32<09:10,  1.52s/it][A 15%|█▍        | 253/1697 [01:34<09:11,  2.62it/s]
+Computing word embeddings:  15%|█▌        | 64/425 [01:34<09:12,  1.53s/it][A 15%|█▌        | 257/1697 [01:35<09:13,  2.60it/s]
+Computing word embeddings:  15%|█▌        | 65/425 [01:35<09:13,  1.54s/it][A 15%|█▌        | 261/1697 [01:37<09:11,  2.60it/s]
+Computing word embeddings:  16%|█▌        | 66/425 [01:37<09:11,  1.54s/it][A 16%|█▌        | 265/1697 [01:38<09:10,  2.60it/s]
+Computing word embeddings:  16%|█▌        | 67/425 [01:38<09:10,  1.54s/it][A 16%|█▌        | 269/1697 [01:39<08:31,  2.79it/s]
+Computing word embeddings:  16%|█▌        | 68/425 [01:39<08:29,  1.43s/it][A 16%|█▌        | 273/1697 [01:41<08:08,  2.92it/s]
+Computing word embeddings:  16%|█▌        | 69/425 [01:41<08:07,  1.37s/it][A 16%|█▋        | 277/1697 [01:42<08:22,  2.83it/s]
+Computing word embeddings:  16%|█▋        | 70/425 [01:42<08:23,  1.42s/it][A 17%|█▋        | 281/1697 [01:44<08:33,  2.76it/s]
+Computing word embeddings:  17%|█▋        | 71/425 [01:44<08:34,  1.45s/it][A 17%|█▋        | 285/1697 [01:45<08:43,  2.70it/s]
+Computing word embeddings:  17%|█▋        | 72/425 [01:45<08:44,  1.49s/it][A 17%|█▋        | 289/1697 [01:47<08:53,  2.64it/s]
+Computing word embeddings:  17%|█▋        | 73/425 [01:47<08:51,  1.51s/it][A 17%|█▋        | 293/1697 [01:48<08:52,  2.64it/s]
+Computing word embeddings:  17%|█▋        | 74/425 [01:48<08:52,  1.52s/it][A 18%|█▊        | 297/1697 [01:50<08:48,  2.65it/s]
+Computing word embeddings:  18%|█▊        | 75/425 [01:50<08:47,  1.51s/it][A 18%|█▊        | 301/1697 [01:51<08:31,  2.73it/s]
+Computing word embeddings:  18%|█▊        | 76/425 [01:51<08:30,  1.46s/it][A 18%|█▊        | 305/1697 [01:53<08:33,  2.71it/s]
+Computing word embeddings:  18%|█▊        | 77/425 [01:53<08:33,  1.47s/it][A 18%|█▊        | 309/1697 [01:54<08:35,  2.69it/s]
+Computing word embeddings:  18%|█▊        | 78/425 [01:54<08:35,  1.49s/it][A 18%|█▊        | 313/1697 [01:56<08:39,  2.67it/s]
+Computing word embeddings:  19%|█▊        | 79/425 [01:56<08:39,  1.50s/it][A 19%|█▊        | 317/1697 [01:57<08:39,  2.65it/s]
+Computing word embeddings:  19%|█▉        | 80/425 [01:57<08:40,  1.51s/it][A 19%|█▉        | 321/1697 [01:59<08:39,  2.65it/s]
+Computing word embeddings:  19%|█▉        | 81/425 [01:59<08:40,  1.51s/it][A 19%|█▉        | 325/1697 [02:00<08:40,  2.63it/s]
+Computing word embeddings:  19%|█▉        | 82/425 [02:00<08:40,  1.52s/it][A 19%|█▉        | 329/1697 [02:02<08:42,  2.62it/s]
+Computing word embeddings:  20%|█▉        | 83/425 [02:02<08:43,  1.53s/it][A 20%|█▉        | 333/1697 [02:03<08:40,  2.62it/s]
+Computing word embeddings:  20%|█▉        | 84/425 [02:03<08:39,  1.52s/it][A 20%|█▉        | 337/1697 [02:05<08:35,  2.64it/s]
+Computing word embeddings:  20%|██        | 85/425 [02:05<08:35,  1.52s/it][A 20%|██        | 341/1697 [02:06<08:34,  2.64it/s]
+Computing word embeddings:  20%|██        | 86/425 [02:07<08:33,  1.52s/it][A 20%|██        | 345/1697 [02:08<08:32,  2.64it/s]
+Computing word embeddings:  20%|██        | 87/425 [02:08<08:32,  1.52s/it][A 21%|██        | 349/1697 [02:09<08:32,  2.63it/s]
+Computing word embeddings:  21%|██        | 88/425 [02:10<08:31,  1.52s/it][A 21%|██        | 353/1697 [02:11<08:29,  2.64it/s]
+Computing word embeddings:  21%|██        | 89/425 [02:11<08:29,  1.52s/it][A 21%|██        | 357/1697 [02:13<08:31,  2.62it/s]
+Computing word embeddings:  21%|██        | 90/425 [02:13<08:31,  1.53s/it][A 21%|██▏       | 361/1697 [02:14<07:52,  2.83it/s]
+Computing word embeddings:  21%|██▏       | 91/425 [02:14<07:52,  1.41s/it][A 22%|██▏       | 365/1697 [02:15<08:03,  2.76it/s]
+Computing word embeddings:  22%|██▏       | 92/425 [02:15<08:04,  1.45s/it][A 22%|██▏       | 369/1697 [02:17<08:10,  2.71it/s]
+Computing word embeddings:  22%|██▏       | 93/425 [02:17<08:11,  1.48s/it][A 22%|██▏       | 373/1697 [02:18<08:14,  2.68it/s]
+Computing word embeddings:  22%|██▏       | 94/425 [02:18<08:14,  1.49s/it][A 22%|██▏       | 377/1697 [02:20<08:16,  2.66it/s]
+Computing word embeddings:  22%|██▏       | 95/425 [02:20<08:16,  1.51s/it][A 22%|██▏       | 381/1697 [02:21<08:18,  2.64it/s]
+Computing word embeddings:  23%|██▎       | 96/425 [02:21<08:18,  1.52s/it][A 23%|██▎       | 385/1697 [02:23<08:21,  2.61it/s]
+Computing word embeddings:  23%|██▎       | 97/425 [02:23<08:21,  1.53s/it][A 23%|██▎       | 389/1697 [02:24<08:24,  2.59it/s]
+Computing word embeddings:  23%|██▎       | 98/425 [02:25<08:23,  1.54s/it][A 23%|██▎       | 393/1697 [02:26<07:51,  2.77it/s]
+Computing word embeddings:  23%|██▎       | 99/425 [02:26<07:50,  1.44s/it][A 23%|██▎       | 397/1697 [02:27<07:56,  2.73it/s]
+Computing word embeddings:  24%|██▎       | 100/425 [02:27<07:56,  1.47s/it][A 24%|██▎       | 401/1697 [02:29<08:01,  2.69it/s]
+Computing word embeddings:  24%|██▍       | 101/425 [02:29<08:02,  1.49s/it][A 24%|██▍       | 405/1697 [02:30<08:08,  2.65it/s]
+Computing word embeddings:  24%|██▍       | 102/425 [02:30<08:08,  1.51s/it][A 24%|██▍       | 409/1697 [02:32<08:09,  2.63it/s]
+Computing word embeddings:  24%|██▍       | 103/425 [02:32<08:10,  1.52s/it][A 24%|██▍       | 413/1697 [02:33<08:10,  2.62it/s]
+Computing word embeddings:  24%|██▍       | 104/425 [02:33<08:10,  1.53s/it][A 25%|██▍       | 417/1697 [02:35<08:10,  2.61it/s]
+Computing word embeddings:  25%|██▍       | 105/425 [02:35<08:09,  1.53s/it][A 25%|██▍       | 421/1697 [02:36<08:08,  2.61it/s]
+Computing word embeddings:  25%|██▍       | 106/425 [02:37<08:08,  1.53s/it][A 25%|██▌       | 425/1697 [02:38<08:08,  2.60it/s]
+Computing word embeddings:  25%|██▌       | 107/425 [02:38<08:07,  1.53s/it][A 25%|██▌       | 429/1697 [02:40<08:06,  2.61it/s]
+Computing word embeddings:  25%|██▌       | 108/425 [02:40<08:06,  1.54s/it][A 26%|██▌       | 433/1697 [02:41<08:05,  2.60it/s]
+Computing word embeddings:  26%|██▌       | 109/425 [02:41<08:05,  1.54s/it][A 26%|██▌       | 437/1697 [02:43<08:06,  2.59it/s]
+Computing word embeddings:  26%|██▌       | 110/425 [02:43<08:06,  1.54s/it][A 26%|██▌       | 441/1697 [02:44<08:07,  2.58it/s]
+Computing word embeddings:  26%|██▌       | 111/425 [02:44<08:07,  1.55s/it][A 26%|██▌       | 445/1697 [02:46<08:04,  2.59it/s]
+Computing word embeddings:  26%|██▋       | 112/425 [02:46<08:04,  1.55s/it][A 26%|██▋       | 449/1697 [02:47<08:03,  2.58it/s]
+Computing word embeddings:  27%|██▋       | 113/425 [02:47<08:02,  1.55s/it][A 27%|██▋       | 453/1697 [02:49<07:59,  2.59it/s]
+Computing word embeddings:  27%|██▋       | 114/425 [02:49<07:59,  1.54s/it][A 27%|██▋       | 457/1697 [02:50<07:58,  2.59it/s]
+Computing word embeddings:  27%|██▋       | 115/425 [02:50<07:58,  1.54s/it][A 27%|██▋       | 461/1697 [02:52<07:59,  2.58it/s]
+Computing word embeddings:  27%|██▋       | 116/425 [02:52<07:59,  1.55s/it][A 27%|██▋       | 465/1697 [02:53<07:54,  2.60it/s]
+Computing word embeddings:  28%|██▊       | 117/425 [02:54<07:54,  1.54s/it][A 28%|██▊       | 469/1697 [02:55<07:55,  2.58it/s]
+Computing word embeddings:  28%|██▊       | 118/425 [02:55<07:56,  1.55s/it][A 28%|██▊       | 473/1697 [02:57<07:52,  2.59it/s]
+Computing word embeddings:  28%|██▊       | 119/425 [02:57<07:52,  1.54s/it][A 28%|██▊       | 477/1697 [02:58<07:49,  2.60it/s]
+Computing word embeddings:  28%|██▊       | 120/425 [02:58<07:49,  1.54s/it][A 28%|██▊       | 481/1697 [03:00<07:40,  2.64it/s]
+Computing word embeddings:  28%|██▊       | 121/425 [03:00<07:40,  1.51s/it][A 29%|██▊       | 485/1697 [03:01<07:39,  2.64it/s]
+Computing word embeddings:  29%|██▊       | 122/425 [03:01<07:40,  1.52s/it][A 29%|██▉       | 489/1697 [03:02<06:59,  2.88it/s]
+Computing word embeddings:  29%|██▉       | 123/425 [03:02<06:58,  1.39s/it][A 29%|██▉       | 493/1697 [03:04<07:09,  2.81it/s]
+Computing word embeddings:  29%|██▉       | 124/425 [03:04<07:09,  1.43s/it][A 29%|██▉       | 497/1697 [03:05<07:17,  2.74it/s]
+Computing word embeddings:  29%|██▉       | 125/425 [03:05<07:18,  1.46s/it][A 30%|██▉       | 501/1697 [03:07<07:24,  2.69it/s]
+Computing word embeddings:  30%|██▉       | 126/425 [03:07<07:25,  1.49s/it][A 30%|██▉       | 505/1697 [03:08<07:28,  2.66it/s]
+Computing word embeddings:  30%|██▉       | 127/425 [03:08<07:28,  1.51s/it][A 30%|██▉       | 509/1697 [03:10<07:18,  2.71it/s]
+Computing word embeddings:  30%|███       | 128/425 [03:10<07:17,  1.47s/it][A 30%|███       | 513/1697 [03:11<07:22,  2.67it/s]
+Computing word embeddings:  30%|███       | 129/425 [03:11<07:22,  1.50s/it][A 30%|███       | 517/1697 [03:13<07:29,  2.63it/s]
+Computing word embeddings:  31%|███       | 130/425 [03:13<07:28,  1.52s/it][A 31%|███       | 521/1697 [03:14<07:27,  2.63it/s]
+Computing word embeddings:  31%|███       | 131/425 [03:14<07:28,  1.52s/it][A 31%|███       | 525/1697 [03:16<07:28,  2.61it/s]
+Computing word embeddings:  31%|███       | 132/425 [03:16<07:28,  1.53s/it][A 31%|███       | 529/1697 [03:17<07:28,  2.61it/s]
+Computing word embeddings:  31%|███▏      | 133/425 [03:18<07:28,  1.54s/it][A 31%|███▏      | 533/1697 [03:19<07:25,  2.61it/s]
+Computing word embeddings:  32%|███▏      | 134/425 [03:19<07:23,  1.53s/it][A 32%|███▏      | 537/1697 [03:21<07:22,  2.62it/s]
+Computing word embeddings:  32%|███▏      | 135/425 [03:21<07:22,  1.53s/it][A 32%|███▏      | 541/1697 [03:22<06:44,  2.86it/s]
+Computing word embeddings:  32%|███▏      | 136/425 [03:22<06:42,  1.39s/it][A 32%|███▏      | 545/1697 [03:23<06:51,  2.80it/s]
+Computing word embeddings:  32%|███▏      | 137/425 [03:23<06:51,  1.43s/it][A 32%|███▏      | 549/1697 [03:25<06:56,  2.76it/s]
+Computing word embeddings:  32%|███▏      | 138/425 [03:25<06:57,  1.45s/it][A 33%|███▎      | 553/1697 [03:26<07:02,  2.71it/s]
+Computing word embeddings:  33%|███▎      | 139/425 [03:26<07:02,  1.48s/it][A 33%|███▎      | 557/1697 [03:28<07:06,  2.67it/s]
+Computing word embeddings:  33%|███▎      | 140/425 [03:28<07:06,  1.50s/it][A 33%|███▎      | 561/1697 [03:29<07:09,  2.64it/s]
+Computing word embeddings:  33%|███▎      | 141/425 [03:29<07:09,  1.51s/it][A 33%|███▎      | 565/1697 [03:31<07:10,  2.63it/s]
+Computing word embeddings:  33%|███▎      | 142/425 [03:31<07:10,  1.52s/it][A 34%|███▎      | 569/1697 [03:32<07:09,  2.63it/s]
+Computing word embeddings:  34%|███▎      | 143/425 [03:32<07:10,  1.53s/it][A 34%|███▍      | 573/1697 [03:34<07:08,  2.62it/s]
+Computing word embeddings:  34%|███▍      | 144/425 [03:34<07:09,  1.53s/it][A 34%|███▍      | 577/1697 [03:35<07:08,  2.61it/s]
+Computing word embeddings:  34%|███▍      | 145/425 [03:35<07:09,  1.53s/it][A 34%|███▍      | 581/1697 [03:37<07:06,  2.62it/s]
+Computing word embeddings:  34%|███▍      | 146/425 [03:37<07:06,  1.53s/it][A 34%|███▍      | 585/1697 [03:38<06:35,  2.81it/s]
+Computing word embeddings:  35%|███▍      | 147/425 [03:38<06:33,  1.41s/it][A 35%|███▍      | 589/1697 [03:40<06:43,  2.74it/s]
+Computing word embeddings:  35%|███▍      | 148/425 [03:40<06:43,  1.46s/it][A 35%|███▍      | 593/1697 [03:41<06:46,  2.71it/s]
+Computing word embeddings:  35%|███▌      | 149/425 [03:41<06:46,  1.47s/it][A 35%|███▌      | 597/1697 [03:43<06:49,  2.69it/s]
+Computing word embeddings:  35%|███▌      | 150/425 [03:43<06:49,  1.49s/it][A 35%|███▌      | 601/1697 [03:44<06:52,  2.65it/s]
+Computing word embeddings:  36%|███▌      | 151/425 [03:44<06:53,  1.51s/it][A 36%|███▌      | 605/1697 [03:46<06:53,  2.64it/s]
+Computing word embeddings:  36%|███▌      | 152/425 [03:46<06:53,  1.51s/it][A 36%|███▌      | 609/1697 [03:47<06:55,  2.62it/s]
+Computing word embeddings:  36%|███▌      | 153/425 [03:47<06:55,  1.53s/it][A 36%|███▌      | 613/1697 [03:49<06:54,  2.61it/s]
+Computing word embeddings:  36%|███▌      | 154/425 [03:49<06:55,  1.53s/it][A 36%|███▋      | 617/1697 [03:50<06:54,  2.61it/s]
+Computing word embeddings:  36%|███▋      | 155/425 [03:50<06:55,  1.54s/it][A 37%|███▋      | 621/1697 [03:52<06:56,  2.58it/s]
+Computing word embeddings:  37%|███▋      | 156/425 [03:52<06:56,  1.55s/it][A 37%|███▋      | 625/1697 [03:54<06:55,  2.58it/s]
+Computing word embeddings:  37%|███▋      | 157/425 [03:54<06:55,  1.55s/it][A 37%|███▋      | 629/1697 [03:55<06:54,  2.58it/s]
+Computing word embeddings:  37%|███▋      | 158/425 [03:55<06:54,  1.55s/it][A 37%|███▋      | 633/1697 [03:57<06:52,  2.58it/s]
+Computing word embeddings:  37%|███▋      | 159/425 [03:57<06:52,  1.55s/it][A 38%|███▊      | 637/1697 [03:58<06:49,  2.59it/s]
+Computing word embeddings:  38%|███▊      | 160/425 [03:58<06:49,  1.55s/it][A 38%|███▊      | 641/1697 [04:00<06:47,  2.59it/s]
+Computing word embeddings:  38%|███▊      | 161/425 [04:00<06:47,  1.54s/it][A 38%|███▊      | 645/1697 [04:01<06:00,  2.92it/s]
+Computing word embeddings:  38%|███▊      | 162/425 [04:01<05:57,  1.36s/it][A 38%|███▊      | 649/1697 [04:02<06:09,  2.84it/s]
+Computing word embeddings:  38%|███▊      | 163/425 [04:02<06:09,  1.41s/it][A 38%|███▊      | 653/1697 [04:04<06:16,  2.77it/s]
+Computing word embeddings:  39%|███▊      | 164/425 [04:04<06:16,  1.44s/it][A 39%|███▊      | 657/1697 [04:05<06:22,  2.72it/s]
+Computing word embeddings:  39%|███▉      | 165/425 [04:05<06:22,  1.47s/it][A 39%|███▉      | 661/1697 [04:07<06:26,  2.68it/s]
+Computing word embeddings:  39%|███▉      | 166/425 [04:07<06:26,  1.49s/it][A 39%|███▉      | 665/1697 [04:08<05:56,  2.90it/s]
+Computing word embeddings:  39%|███▉      | 167/425 [04:08<05:55,  1.38s/it][A 39%|███▉      | 669/1697 [04:09<06:08,  2.79it/s]
+Computing word embeddings:  40%|███▉      | 168/425 [04:10<06:08,  1.43s/it][A 40%|███▉      | 673/1697 [04:11<06:14,  2.73it/s]
+Computing word embeddings:  40%|███▉      | 169/425 [04:11<06:14,  1.46s/it][A 40%|███▉      | 677/1697 [04:13<06:19,  2.69it/s]
+Computing word embeddings:  40%|████      | 170/425 [04:13<06:19,  1.49s/it][A 40%|████      | 681/1697 [04:14<06:24,  2.64it/s]
+Computing word embeddings:  40%|████      | 171/425 [04:14<06:24,  1.51s/it][A 40%|████      | 685/1697 [04:16<06:28,  2.61it/s]
+Computing word embeddings:  40%|████      | 172/425 [04:16<06:28,  1.54s/it][A 41%|████      | 689/1697 [04:17<06:29,  2.59it/s]
+Computing word embeddings:  41%|████      | 173/425 [04:17<06:30,  1.55s/it][A 41%|████      | 693/1697 [04:19<06:28,  2.58it/s]
+Computing word embeddings:  41%|████      | 174/425 [04:19<06:28,  1.55s/it][A 41%|████      | 697/1697 [04:20<06:27,  2.58it/s]
+Computing word embeddings:  41%|████      | 175/425 [04:20<06:27,  1.55s/it][A 41%|████▏     | 701/1697 [04:22<06:25,  2.58it/s]
+Computing word embeddings:  41%|████▏     | 176/425 [04:22<06:26,  1.55s/it][A 42%|████▏     | 705/1697 [04:23<06:24,  2.58it/s]
+Computing word embeddings:  42%|████▏     | 177/425 [04:24<06:25,  1.55s/it][A 42%|████▏     | 709/1697 [04:25<06:22,  2.58it/s]
+Computing word embeddings:  42%|████▏     | 178/425 [04:25<06:22,  1.55s/it][A 42%|████▏     | 713/1697 [04:27<06:20,  2.59it/s]
+Computing word embeddings:  42%|████▏     | 179/425 [04:27<06:19,  1.54s/it][A 42%|████▏     | 717/1697 [04:28<06:19,  2.58it/s]
+Computing word embeddings:  42%|████▏     | 180/425 [04:28<06:18,  1.55s/it][A 42%|████▏     | 721/1697 [04:30<06:17,  2.59it/s]
+Computing word embeddings:  43%|████▎     | 181/425 [04:30<06:17,  1.55s/it][A 43%|████▎     | 725/1697 [04:31<06:14,  2.60it/s]
+Computing word embeddings:  43%|████▎     | 182/425 [04:31<06:14,  1.54s/it][A 43%|████▎     | 729/1697 [04:33<06:12,  2.60it/s]
+Computing word embeddings:  43%|████▎     | 183/425 [04:33<06:12,  1.54s/it][A 43%|████▎     | 733/1697 [04:34<06:10,  2.60it/s]
+Computing word embeddings:  43%|████▎     | 184/425 [04:34<06:10,  1.54s/it][A 43%|████▎     | 737/1697 [04:36<06:12,  2.57it/s]
+Computing word embeddings:  44%|████▎     | 185/425 [04:36<06:12,  1.55s/it][A 44%|████▎     | 741/1697 [04:37<06:11,  2.57it/s]
+Computing word embeddings:  44%|████▍     | 186/425 [04:37<06:12,  1.56s/it][A 44%|████▍     | 745/1697 [04:39<06:09,  2.58it/s]
+Computing word embeddings:  44%|████▍     | 187/425 [04:39<06:10,  1.55s/it][A 44%|████▍     | 749/1697 [04:40<06:02,  2.62it/s]
+Computing word embeddings:  44%|████▍     | 188/425 [04:41<06:02,  1.53s/it][A 44%|████▍     | 753/1697 [04:42<06:02,  2.61it/s]
+Computing word embeddings:  44%|████▍     | 189/425 [04:42<06:02,  1.54s/it][A 45%|████▍     | 757/1697 [04:42<04:40,  3.35it/s]
+Computing word embeddings:  45%|████▍     | 190/425 [04:42<04:36,  1.17s/it][A 45%|████▍     | 761/1697 [04:44<05:00,  3.12it/s]
+Computing word embeddings:  45%|████▍     | 191/425 [04:44<05:01,  1.29s/it][A 45%|████▌     | 765/1697 [04:45<05:17,  2.94it/s]
+Computing word embeddings:  45%|████▌     | 192/425 [04:45<05:18,  1.37s/it][A 45%|████▌     | 769/1697 [04:47<05:31,  2.80it/s]
+Computing word embeddings:  45%|████▌     | 193/425 [04:47<05:32,  1.43s/it][A 46%|████▌     | 773/1697 [04:48<05:36,  2.75it/s]
+Computing word embeddings:  46%|████▌     | 194/425 [04:49<05:35,  1.45s/it][A 46%|████▌     | 777/1697 [04:50<05:42,  2.69it/s]
+Computing word embeddings:  46%|████▌     | 195/425 [04:50<05:42,  1.49s/it][A 46%|████▌     | 781/1697 [04:52<05:45,  2.65it/s]
+Computing word embeddings:  46%|████▌     | 196/425 [04:52<05:45,  1.51s/it][A 46%|████▋     | 785/1697 [04:53<05:48,  2.61it/s]
+Computing word embeddings:  46%|████▋     | 197/425 [04:53<05:49,  1.53s/it][A 46%|████▋     | 789/1697 [04:55<05:48,  2.60it/s]
+Computing word embeddings:  47%|████▋     | 198/425 [04:55<05:49,  1.54s/it][A 47%|████▋     | 793/1697 [04:56<05:48,  2.60it/s]
+Computing word embeddings:  47%|████▋     | 199/425 [04:56<05:48,  1.54s/it][A 47%|████▋     | 797/1697 [04:58<05:47,  2.59it/s]
+Computing word embeddings:  47%|████▋     | 200/425 [04:58<05:47,  1.54s/it][A 47%|████▋     | 801/1697 [04:59<05:48,  2.57it/s]
+Computing word embeddings:  47%|████▋     | 201/425 [05:00<05:48,  1.56s/it][A 47%|████▋     | 805/1697 [05:01<05:47,  2.57it/s]
+Computing word embeddings:  48%|████▊     | 202/425 [05:01<05:47,  1.56s/it][A 48%|████▊     | 809/1697 [05:03<05:45,  2.57it/s]
+Computing word embeddings:  48%|████▊     | 203/425 [05:03<05:45,  1.56s/it][A 48%|████▊     | 813/1697 [05:04<05:43,  2.57it/s]
+Computing word embeddings:  48%|████▊     | 204/425 [05:04<05:43,  1.56s/it][A 48%|████▊     | 817/1697 [05:06<05:44,  2.55it/s]
+Computing word embeddings:  48%|████▊     | 205/425 [05:06<05:44,  1.57s/it][A 48%|████▊     | 821/1697 [05:07<05:42,  2.56it/s]
+Computing word embeddings:  48%|████▊     | 206/425 [05:07<05:42,  1.56s/it][A 49%|████▊     | 825/1697 [05:09<05:40,  2.56it/s]
+Computing word embeddings:  49%|████▊     | 207/425 [05:09<05:40,  1.56s/it][A 49%|████▉     | 829/1697 [05:10<05:37,  2.57it/s]
+Computing word embeddings:  49%|████▉     | 208/425 [05:10<05:38,  1.56s/it][A 49%|████▉     | 833/1697 [05:12<05:36,  2.57it/s]
+Computing word embeddings:  49%|████▉     | 209/425 [05:12<05:36,  1.56s/it][A 49%|████▉     | 837/1697 [05:13<05:09,  2.78it/s]
+Computing word embeddings:  49%|████▉     | 210/425 [05:13<05:08,  1.43s/it][A 50%|████▉     | 841/1697 [05:15<05:14,  2.73it/s]
+Computing word embeddings:  50%|████▉     | 211/425 [05:15<05:14,  1.47s/it][A 50%|████▉     | 845/1697 [05:16<05:20,  2.66it/s]
+Computing word embeddings:  50%|████▉     | 212/425 [05:16<05:20,  1.51s/it][A 50%|█████     | 849/1697 [05:18<05:22,  2.63it/s]
+Computing word embeddings:  50%|█████     | 213/425 [05:18<05:22,  1.52s/it][A 50%|█████     | 853/1697 [05:19<05:22,  2.62it/s]
+Computing word embeddings:  50%|█████     | 214/425 [05:19<05:21,  1.52s/it][A 51%|█████     | 857/1697 [05:21<05:21,  2.61it/s]
+Computing word embeddings:  51%|█████     | 215/425 [05:21<05:22,  1.53s/it][A 51%|█████     | 861/1697 [05:22<05:22,  2.59it/s]
+Computing word embeddings:  51%|█████     | 216/425 [05:23<05:22,  1.54s/it][A 51%|█████     | 865/1697 [05:23<04:40,  2.97it/s]
+Computing word embeddings:  51%|█████     | 217/425 [05:23<04:38,  1.34s/it][A 51%|█████     | 869/1697 [05:25<04:49,  2.86it/s]
+Computing word embeddings:  51%|█████▏    | 218/425 [05:25<04:49,  1.40s/it][A 51%|█████▏    | 873/1697 [05:26<04:57,  2.77it/s]
+Computing word embeddings:  52%|█████▏    | 219/425 [05:26<04:58,  1.45s/it][A 52%|█████▏    | 877/1697 [05:28<05:03,  2.70it/s]
+Computing word embeddings:  52%|█████▏    | 220/425 [05:28<05:03,  1.48s/it][A 52%|█████▏    | 881/1697 [05:29<05:07,  2.66it/s]
+Computing word embeddings:  52%|█████▏    | 221/425 [05:30<05:07,  1.51s/it][A 52%|█████▏    | 885/1697 [05:31<05:08,  2.63it/s]
+Computing word embeddings:  52%|█████▏    | 222/425 [05:31<05:08,  1.52s/it][A 52%|█████▏    | 889/1697 [05:33<05:08,  2.62it/s]
+Computing word embeddings:  52%|█████▏    | 223/425 [05:33<05:08,  1.53s/it][A 53%|█████▎    | 893/1697 [05:34<05:07,  2.61it/s]
+Computing word embeddings:  53%|█████▎    | 224/425 [05:34<05:08,  1.54s/it][A 53%|█████▎    | 897/1697 [05:36<05:08,  2.60it/s]
+Computing word embeddings:  53%|█████▎    | 225/425 [05:36<05:07,  1.54s/it][A 53%|█████▎    | 901/1697 [05:37<05:09,  2.57it/s]
+Computing word embeddings:  53%|█████▎    | 226/425 [05:37<05:08,  1.55s/it][A 53%|█████▎    | 905/1697 [05:39<05:07,  2.58it/s]
+Computing word embeddings:  53%|█████▎    | 227/425 [05:39<05:07,  1.55s/it][A 54%|█████▎    | 909/1697 [05:40<04:56,  2.66it/s]
+Computing word embeddings:  54%|█████▎    | 228/425 [05:40<04:56,  1.51s/it][A 54%|█████▍    | 913/1697 [05:42<04:59,  2.62it/s]
+Computing word embeddings:  54%|█████▍    | 229/425 [05:42<04:59,  1.53s/it][A 54%|█████▍    | 917/1697 [05:43<04:59,  2.61it/s]
+Computing word embeddings:  54%|█████▍    | 230/425 [05:43<04:59,  1.53s/it][A 54%|█████▍    | 921/1697 [05:45<04:58,  2.60it/s]
+Computing word embeddings:  54%|█████▍    | 231/425 [05:45<04:58,  1.54s/it][A 55%|█████▍    | 925/1697 [05:46<04:57,  2.59it/s]
+Computing word embeddings:  55%|█████▍    | 232/425 [05:47<04:58,  1.54s/it][A 55%|█████▍    | 929/1697 [05:48<04:56,  2.59it/s]
+Computing word embeddings:  55%|█████▍    | 233/425 [05:48<04:57,  1.55s/it][A 55%|█████▍    | 933/1697 [05:50<04:56,  2.58it/s]
+Computing word embeddings:  55%|█████▌    | 234/425 [05:50<04:55,  1.55s/it][A 55%|█████▌    | 937/1697 [05:51<04:27,  2.84it/s]
+Computing word embeddings:  55%|█████▌    | 235/425 [05:51<04:26,  1.40s/it][A 55%|█████▌    | 941/1697 [05:52<04:34,  2.76it/s]
+Computing word embeddings:  56%|█████▌    | 236/425 [05:52<04:34,  1.45s/it][A 56%|█████▌    | 945/1697 [05:54<04:37,  2.71it/s]
+Computing word embeddings:  56%|█████▌    | 237/425 [05:54<04:38,  1.48s/it][A 56%|█████▌    | 949/1697 [05:55<04:42,  2.64it/s]
+Computing word embeddings:  56%|█████▌    | 238/425 [05:55<04:43,  1.51s/it][A 56%|█████▌    | 953/1697 [05:57<04:43,  2.63it/s]
+Computing word embeddings:  56%|█████▌    | 239/425 [05:57<04:43,  1.52s/it][A 56%|█████▋    | 957/1697 [05:58<04:44,  2.60it/s]
+Computing word embeddings:  56%|█████▋    | 240/425 [05:59<04:45,  1.54s/it][A 57%|█████▋    | 961/1697 [06:00<04:44,  2.59it/s]
+Computing word embeddings:  57%|█████▋    | 241/425 [06:00<04:44,  1.55s/it][A 57%|█████▋    | 965/1697 [06:02<04:44,  2.57it/s]
+Computing word embeddings:  57%|█████▋    | 242/425 [06:02<04:44,  1.56s/it][A 57%|█████▋    | 969/1697 [06:03<04:44,  2.56it/s]
+Computing word embeddings:  57%|█████▋    | 243/425 [06:03<04:44,  1.56s/it][A 57%|█████▋    | 973/1697 [06:04<04:20,  2.78it/s]
+Computing word embeddings:  57%|█████▋    | 244/425 [06:04<04:19,  1.43s/it][A 58%|█████▊    | 977/1697 [06:06<04:25,  2.71it/s]
+Computing word embeddings:  58%|█████▊    | 245/425 [06:06<04:26,  1.48s/it][A 58%|█████▊    | 981/1697 [06:07<04:30,  2.65it/s]
+Computing word embeddings:  58%|█████▊    | 246/425 [06:08<04:30,  1.51s/it][A 58%|█████▊    | 985/1697 [06:09<04:30,  2.63it/s]
+Computing word embeddings:  58%|█████▊    | 247/425 [06:09<04:30,  1.52s/it][A 58%|█████▊    | 989/1697 [06:11<04:32,  2.60it/s]
+Computing word embeddings:  58%|█████▊    | 248/425 [06:11<04:32,  1.54s/it][A 59%|█████▊    | 993/1697 [06:12<04:30,  2.60it/s]
+Computing word embeddings:  59%|█████▊    | 249/425 [06:12<04:31,  1.54s/it][A 59%|█████▉    | 997/1697 [06:14<04:29,  2.59it/s]
+Computing word embeddings:  59%|█████▉    | 250/425 [06:14<04:30,  1.54s/it][A 59%|█████▉    | 1001/1697 [06:15<04:28,  2.59it/s]
+Computing word embeddings:  59%|█████▉    | 251/425 [06:15<04:28,  1.55s/it][A 59%|█████▉    | 1005/1697 [06:17<04:27,  2.59it/s]
+Computing word embeddings:  59%|█████▉    | 252/425 [06:17<04:27,  1.54s/it][A 59%|█████▉    | 1009/1697 [06:18<04:26,  2.58it/s]
+Computing word embeddings:  60%|█████▉    | 253/425 [06:18<04:26,  1.55s/it][A 60%|█████▉    | 1013/1697 [06:19<04:02,  2.82it/s]
+Computing word embeddings:  60%|█████▉    | 254/425 [06:20<04:01,  1.41s/it][A 60%|█████▉    | 1017/1697 [06:21<04:07,  2.75it/s]
+Computing word embeddings:  60%|██████    | 255/425 [06:21<04:07,  1.46s/it][A 60%|██████    | 1021/1697 [06:23<04:09,  2.71it/s]
+Computing word embeddings:  60%|██████    | 256/425 [06:23<04:09,  1.48s/it][A 60%|██████    | 1025/1697 [06:24<04:11,  2.68it/s]
+Computing word embeddings:  60%|██████    | 257/425 [06:24<04:11,  1.49s/it][A 61%|██████    | 1029/1697 [06:26<04:11,  2.65it/s]
+Computing word embeddings:  61%|██████    | 258/425 [06:26<04:12,  1.51s/it][A 61%|██████    | 1033/1697 [06:27<04:12,  2.63it/s]
+Computing word embeddings:  61%|██████    | 259/425 [06:27<04:12,  1.52s/it][A 61%|██████    | 1037/1697 [06:28<03:36,  3.05it/s]
+Computing word embeddings:  61%|██████    | 260/425 [06:28<03:34,  1.30s/it][A 61%|██████▏   | 1041/1697 [06:30<03:44,  2.92it/s]
+Computing word embeddings:  61%|██████▏   | 261/425 [06:30<03:45,  1.37s/it][A 62%|██████▏   | 1045/1697 [06:31<03:53,  2.79it/s]
+Computing word embeddings:  62%|██████▏   | 262/425 [06:31<03:54,  1.44s/it][A 62%|██████▏   | 1049/1697 [06:33<03:58,  2.72it/s]
+Computing word embeddings:  62%|██████▏   | 263/425 [06:33<03:58,  1.47s/it][A 62%|██████▏   | 1053/1697 [06:34<04:01,  2.66it/s]
+Computing word embeddings:  62%|██████▏   | 264/425 [06:34<04:02,  1.50s/it][A 62%|██████▏   | 1057/1697 [06:36<04:02,  2.63it/s]
+Computing word embeddings:  62%|██████▏   | 265/425 [06:36<04:03,  1.52s/it][A 63%|██████▎   | 1061/1697 [06:37<04:03,  2.61it/s]
+Computing word embeddings:  63%|██████▎   | 266/425 [06:37<04:03,  1.53s/it][A 63%|██████▎   | 1065/1697 [06:39<04:03,  2.60it/s]
+Computing word embeddings:  63%|██████▎   | 267/425 [06:39<04:03,  1.54s/it][A 63%|██████▎   | 1069/1697 [06:40<04:02,  2.59it/s]
+Computing word embeddings:  63%|██████▎   | 268/425 [06:41<04:02,  1.55s/it][A 63%|██████▎   | 1073/1697 [06:41<03:31,  2.95it/s]
+Computing word embeddings:  63%|██████▎   | 269/425 [06:41<03:29,  1.34s/it][A 63%|██████▎   | 1077/1697 [06:43<03:38,  2.84it/s]
+Computing word embeddings:  64%|██████▎   | 270/425 [06:43<03:38,  1.41s/it][A 64%|██████▎   | 1081/1697 [06:44<03:44,  2.74it/s]
+Computing word embeddings:  64%|██████▍   | 271/425 [06:45<03:44,  1.46s/it][A 64%|██████▍   | 1085/1697 [06:46<03:48,  2.68it/s]
+Computing word embeddings:  64%|██████▍   | 272/425 [06:46<03:48,  1.49s/it][A 64%|██████▍   | 1089/1697 [06:48<03:51,  2.63it/s]
+Computing word embeddings:  64%|██████▍   | 273/425 [06:48<03:51,  1.53s/it][A 64%|██████▍   | 1093/1697 [06:49<03:50,  2.62it/s]
+Computing word embeddings:  64%|██████▍   | 274/425 [06:49<03:50,  1.53s/it][A 65%|██████▍   | 1097/1697 [06:51<03:50,  2.60it/s]
+Computing word embeddings:  65%|██████▍   | 275/425 [06:51<03:51,  1.54s/it][A 65%|██████▍   | 1101/1697 [06:52<03:49,  2.60it/s]
+Computing word embeddings:  65%|██████▍   | 276/425 [06:52<03:49,  1.54s/it][A 65%|██████▌   | 1105/1697 [06:54<03:48,  2.59it/s]
+Computing word embeddings:  65%|██████▌   | 277/425 [06:54<03:48,  1.54s/it][A 65%|██████▌   | 1109/1697 [06:55<03:46,  2.59it/s]
+Computing word embeddings:  65%|██████▌   | 278/425 [06:55<03:46,  1.54s/it][A 66%|██████▌   | 1113/1697 [06:57<03:45,  2.59it/s]
+Computing word embeddings:  66%|██████▌   | 279/425 [06:57<03:45,  1.54s/it][A 66%|██████▌   | 1117/1697 [06:58<03:43,  2.59it/s]
+Computing word embeddings:  66%|██████▌   | 280/425 [06:59<03:43,  1.54s/it][A 66%|██████▌   | 1121/1697 [07:00<03:41,  2.60it/s]
+Computing word embeddings:  66%|██████▌   | 281/425 [07:00<03:41,  1.54s/it][A 66%|██████▋   | 1125/1697 [07:02<03:39,  2.61it/s]
+Computing word embeddings:  66%|██████▋   | 282/425 [07:02<03:39,  1.53s/it][A 67%|██████▋   | 1129/1697 [07:03<03:38,  2.60it/s]
+Computing word embeddings:  67%|██████▋   | 283/425 [07:03<03:38,  1.54s/it][A 67%|██████▋   | 1133/1697 [07:05<03:36,  2.60it/s]
+Computing word embeddings:  67%|██████▋   | 284/425 [07:05<03:36,  1.54s/it][A 67%|██████▋   | 1137/1697 [07:06<03:34,  2.61it/s]
+Computing word embeddings:  67%|██████▋   | 285/425 [07:06<03:34,  1.53s/it][A 67%|██████▋   | 1141/1697 [07:08<03:33,  2.60it/s]
+Computing word embeddings:  67%|██████▋   | 286/425 [07:08<03:33,  1.54s/it][A 67%|██████▋   | 1145/1697 [07:09<03:32,  2.60it/s]
+Computing word embeddings:  68%|██████▊   | 287/425 [07:09<03:32,  1.54s/it][A 68%|██████▊   | 1149/1697 [07:11<03:31,  2.59it/s]
+Computing word embeddings:  68%|██████▊   | 288/425 [07:11<03:31,  1.55s/it][A 68%|██████▊   | 1153/1697 [07:12<03:31,  2.57it/s]
+Computing word embeddings:  68%|██████▊   | 289/425 [07:12<03:31,  1.55s/it][A 68%|██████▊   | 1157/1697 [07:13<03:09,  2.84it/s]
+Computing word embeddings:  68%|██████▊   | 290/425 [07:13<03:09,  1.40s/it][A 68%|██████▊   | 1161/1697 [07:15<03:10,  2.81it/s]
+Computing word embeddings:  68%|██████▊   | 291/425 [07:15<03:11,  1.43s/it][A 69%|██████▊   | 1165/1697 [07:16<03:13,  2.75it/s]
+Computing word embeddings:  69%|██████▊   | 292/425 [07:16<03:13,  1.46s/it][A 69%|██████▉   | 1169/1697 [07:18<03:15,  2.70it/s]
+Computing word embeddings:  69%|██████▉   | 293/425 [07:18<03:15,  1.48s/it][A 69%|██████▉   | 1173/1697 [07:19<03:16,  2.67it/s]
+Computing word embeddings:  69%|██████▉   | 294/425 [07:20<03:16,  1.50s/it][A 69%|██████▉   | 1177/1697 [07:21<03:17,  2.64it/s]
+Computing word embeddings:  69%|██████▉   | 295/425 [07:21<03:17,  1.52s/it][A 70%|██████▉   | 1181/1697 [07:22<03:00,  2.86it/s]
+Computing word embeddings:  70%|██████▉   | 296/425 [07:22<02:59,  1.39s/it][A 70%|██████▉   | 1185/1697 [07:24<03:04,  2.77it/s]
+Computing word embeddings:  70%|██████▉   | 297/425 [07:24<03:04,  1.44s/it][A 70%|███████   | 1189/1697 [07:25<03:06,  2.72it/s]
+Computing word embeddings:  70%|███████   | 298/425 [07:25<03:07,  1.47s/it][A 70%|███████   | 1193/1697 [07:27<03:08,  2.68it/s]
+Computing word embeddings:  70%|███████   | 299/425 [07:27<03:08,  1.50s/it][A 71%|███████   | 1197/1697 [07:28<02:59,  2.78it/s]
+Computing word embeddings:  71%|███████   | 300/425 [07:28<02:59,  1.44s/it][A 71%|███████   | 1201/1697 [07:30<03:02,  2.72it/s]
+Computing word embeddings:  71%|███████   | 301/425 [07:30<03:02,  1.47s/it][A 71%|███████   | 1205/1697 [07:31<03:04,  2.67it/s]
+Computing word embeddings:  71%|███████   | 302/425 [07:31<03:04,  1.50s/it][A 71%|███████   | 1209/1697 [07:33<03:05,  2.63it/s]
+Computing word embeddings:  71%|███████▏  | 303/425 [07:33<03:05,  1.52s/it][A 71%|███████▏  | 1213/1697 [07:34<03:05,  2.61it/s]
+Computing word embeddings:  72%|███████▏  | 304/425 [07:34<03:05,  1.53s/it][A 72%|███████▏  | 1217/1697 [07:36<03:04,  2.60it/s]
+Computing word embeddings:  72%|███████▏  | 305/425 [07:36<03:04,  1.54s/it][A 72%|███████▏  | 1221/1697 [07:37<03:04,  2.57it/s]
+Computing word embeddings:  72%|███████▏  | 306/425 [07:38<03:04,  1.55s/it][A 72%|███████▏  | 1225/1697 [07:39<03:03,  2.57it/s]
+Computing word embeddings:  72%|███████▏  | 307/425 [07:39<03:03,  1.55s/it][A 72%|███████▏  | 1229/1697 [07:41<03:01,  2.57it/s]
+Computing word embeddings:  72%|███████▏  | 308/425 [07:41<03:01,  1.55s/it][A 73%|███████▎  | 1233/1697 [07:42<02:57,  2.61it/s]
+Computing word embeddings:  73%|███████▎  | 309/425 [07:42<02:57,  1.53s/it][A 73%|███████▎  | 1237/1697 [07:44<02:56,  2.61it/s]
+Computing word embeddings:  73%|███████▎  | 310/425 [07:44<02:56,  1.54s/it][A 73%|███████▎  | 1241/1697 [07:45<02:56,  2.59it/s]
+Computing word embeddings:  73%|███████▎  | 311/425 [07:45<02:56,  1.55s/it][A 73%|███████▎  | 1245/1697 [07:47<02:55,  2.57it/s]
+Computing word embeddings:  73%|███████▎  | 312/425 [07:47<02:55,  1.56s/it][A 74%|███████▎  | 1249/1697 [07:48<02:55,  2.56it/s]
+Computing word embeddings:  74%|███████▎  | 313/425 [07:48<02:55,  1.56s/it][A 74%|███████▍  | 1253/1697 [07:50<02:53,  2.56it/s]
+Computing word embeddings:  74%|███████▍  | 314/425 [07:50<02:53,  1.56s/it][A 74%|███████▍  | 1257/1697 [07:51<02:52,  2.56it/s]
+Computing word embeddings:  74%|███████▍  | 315/425 [07:52<02:51,  1.56s/it][A 74%|███████▍  | 1261/1697 [07:53<02:38,  2.75it/s]
+Computing word embeddings:  74%|███████▍  | 316/425 [07:53<02:37,  1.45s/it][A 75%|███████▍  | 1265/1697 [07:54<02:39,  2.71it/s]
+Computing word embeddings:  75%|███████▍  | 317/425 [07:54<02:39,  1.48s/it][A 75%|███████▍  | 1269/1697 [07:56<02:39,  2.68it/s]
+Computing word embeddings:  75%|███████▍  | 318/425 [07:56<02:40,  1.50s/it][A 75%|███████▌  | 1273/1697 [07:57<02:39,  2.66it/s]
+Computing word embeddings:  75%|███████▌  | 319/425 [07:57<02:39,  1.51s/it][A 75%|███████▌  | 1277/1697 [07:59<02:39,  2.64it/s]
+Computing word embeddings:  75%|███████▌  | 320/425 [07:59<02:39,  1.52s/it][A 75%|███████▌  | 1281/1697 [08:00<02:37,  2.63it/s]
+Computing word embeddings:  76%|███████▌  | 321/425 [08:00<02:38,  1.52s/it][A 76%|███████▌  | 1285/1697 [08:02<02:37,  2.61it/s]
+Computing word embeddings:  76%|███████▌  | 322/425 [08:02<02:37,  1.53s/it][A 76%|███████▌  | 1289/1697 [08:03<02:36,  2.61it/s]
+Computing word embeddings:  76%|███████▌  | 323/425 [08:04<02:36,  1.53s/it][A 76%|███████▌  | 1293/1697 [08:05<02:35,  2.60it/s]
+Computing word embeddings:  76%|███████▌  | 324/425 [08:05<02:35,  1.54s/it][A 76%|███████▋  | 1297/1697 [08:07<02:33,  2.60it/s]
+Computing word embeddings:  76%|███████▋  | 325/425 [08:07<02:33,  1.54s/it][A 77%|███████▋  | 1301/1697 [08:08<02:32,  2.60it/s]
+Computing word embeddings:  77%|███████▋  | 326/425 [08:08<02:32,  1.54s/it][A 77%|███████▋  | 1305/1697 [08:10<02:30,  2.60it/s]
+Computing word embeddings:  77%|███████▋  | 327/425 [08:10<02:30,  1.54s/it][A 77%|███████▋  | 1309/1697 [08:11<02:29,  2.60it/s]
+Computing word embeddings:  77%|███████▋  | 328/425 [08:11<02:29,  1.54s/it][A 77%|███████▋  | 1313/1697 [08:13<02:28,  2.59it/s]
+Computing word embeddings:  77%|███████▋  | 329/425 [08:13<02:28,  1.54s/it][A 78%|███████▊  | 1317/1697 [08:14<02:26,  2.59it/s]
+Computing word embeddings:  78%|███████▊  | 330/425 [08:14<02:26,  1.55s/it][A 78%|███████▊  | 1321/1697 [08:16<02:25,  2.59it/s]
+Computing word embeddings:  78%|███████▊  | 331/425 [08:16<02:25,  1.55s/it][A 78%|███████▊  | 1325/1697 [08:17<02:24,  2.57it/s]
+Computing word embeddings:  78%|███████▊  | 332/425 [08:17<02:24,  1.56s/it][A 78%|███████▊  | 1329/1697 [08:19<02:22,  2.57it/s]
+Computing word embeddings:  78%|███████▊  | 333/425 [08:19<02:22,  1.55s/it][A 79%|███████▊  | 1333/1697 [08:20<02:21,  2.58it/s]
+Computing word embeddings:  79%|███████▊  | 334/425 [08:21<02:20,  1.55s/it][A 79%|███████▉  | 1337/1697 [08:22<02:18,  2.60it/s]
+Computing word embeddings:  79%|███████▉  | 335/425 [08:22<02:18,  1.54s/it][A 79%|███████▉  | 1341/1697 [08:24<02:17,  2.59it/s]
+Computing word embeddings:  79%|███████▉  | 336/425 [08:24<02:17,  1.54s/it][A 79%|███████▉  | 1345/1697 [08:25<02:16,  2.59it/s]
+Computing word embeddings:  79%|███████▉  | 337/425 [08:25<02:16,  1.55s/it][A 79%|███████▉  | 1349/1697 [08:27<02:14,  2.58it/s]
+Computing word embeddings:  80%|███████▉  | 338/425 [08:27<02:14,  1.55s/it][A 80%|███████▉  | 1353/1697 [08:28<01:57,  2.94it/s]
+Computing word embeddings:  80%|███████▉  | 339/425 [08:28<01:56,  1.35s/it][A 80%|███████▉  | 1357/1697 [08:29<01:45,  3.22it/s]
+Computing word embeddings:  80%|████████  | 340/425 [08:29<01:45,  1.24s/it][A 80%|████████  | 1361/1697 [08:30<01:51,  3.01it/s]
+Computing word embeddings:  80%|████████  | 341/425 [08:30<01:51,  1.33s/it][A 80%|████████  | 1365/1697 [08:32<01:56,  2.86it/s]
+Computing word embeddings:  80%|████████  | 342/425 [08:32<01:56,  1.40s/it][A 81%|████████  | 1369/1697 [08:33<01:59,  2.75it/s]
+Computing word embeddings:  81%|████████  | 343/425 [08:33<01:59,  1.46s/it][A 81%|████████  | 1373/1697 [08:35<02:00,  2.69it/s]
+Computing word embeddings:  81%|████████  | 344/425 [08:35<02:00,  1.49s/it][A 81%|████████  | 1377/1697 [08:36<02:00,  2.65it/s]
+Computing word embeddings:  81%|████████  | 345/425 [08:36<02:00,  1.51s/it][A 81%|████████▏ | 1381/1697 [08:38<02:00,  2.63it/s]
+Computing word embeddings:  81%|████████▏ | 346/425 [08:38<02:00,  1.52s/it][A 82%|████████▏ | 1385/1697 [08:39<01:59,  2.60it/s]
+Computing word embeddings:  82%|████████▏ | 347/425 [08:40<01:59,  1.54s/it][A 82%|████████▏ | 1389/1697 [08:41<01:57,  2.62it/s]
+Computing word embeddings:  82%|████████▏ | 348/425 [08:41<01:57,  1.52s/it][A 82%|████████▏ | 1393/1697 [08:42<01:55,  2.64it/s]
+Computing word embeddings:  82%|████████▏ | 349/425 [08:43<01:54,  1.51s/it][A 82%|████████▏ | 1397/1697 [08:44<01:53,  2.63it/s]
+Computing word embeddings:  82%|████████▏ | 350/425 [08:44<01:53,  1.52s/it][A 83%|████████▎ | 1401/1697 [08:45<01:52,  2.64it/s]
+Computing word embeddings:  83%|████████▎ | 351/425 [08:46<01:52,  1.52s/it][A 83%|████████▎ | 1405/1697 [08:47<01:51,  2.63it/s]
+Computing word embeddings:  83%|████████▎ | 352/425 [08:47<01:51,  1.52s/it][A 83%|████████▎ | 1409/1697 [08:49<01:49,  2.62it/s]
+Computing word embeddings:  83%|████████▎ | 353/425 [08:49<01:49,  1.53s/it][A 83%|████████▎ | 1413/1697 [08:50<01:48,  2.62it/s]
+Computing word embeddings:  83%|████████▎ | 354/425 [08:50<01:48,  1.53s/it][A 84%|████████▎ | 1417/1697 [08:52<01:47,  2.61it/s]
+Computing word embeddings:  84%|████████▎ | 355/425 [08:52<01:47,  1.53s/it][A 84%|████████▎ | 1421/1697 [08:53<01:46,  2.59it/s]
+Computing word embeddings:  84%|████████▍ | 356/425 [08:53<01:46,  1.54s/it][A 84%|████████▍ | 1425/1697 [08:55<01:41,  2.67it/s]
+Computing word embeddings:  84%|████████▍ | 357/425 [08:55<01:41,  1.49s/it][A 84%|████████▍ | 1429/1697 [08:56<01:41,  2.65it/s]
+Computing word embeddings:  84%|████████▍ | 358/425 [08:56<01:41,  1.51s/it][A 84%|████████▍ | 1433/1697 [08:58<01:40,  2.63it/s]
+Computing word embeddings:  84%|████████▍ | 359/425 [08:58<01:40,  1.52s/it][A 85%|████████▍ | 1437/1697 [08:59<01:39,  2.62it/s]
+Computing word embeddings:  85%|████████▍ | 360/425 [08:59<01:39,  1.53s/it][A 85%|████████▍ | 1441/1697 [09:01<01:38,  2.59it/s]
+Computing word embeddings:  85%|████████▍ | 361/425 [09:01<01:38,  1.54s/it][A 85%|████████▌ | 1445/1697 [09:02<01:37,  2.59it/s]
+Computing word embeddings:  85%|████████▌ | 362/425 [09:02<01:37,  1.55s/it][A 85%|████████▌ | 1449/1697 [09:04<01:35,  2.59it/s]
+Computing word embeddings:  85%|████████▌ | 363/425 [09:04<01:35,  1.54s/it][A 86%|████████▌ | 1453/1697 [09:05<01:25,  2.86it/s]
+Computing word embeddings:  86%|████████▌ | 364/425 [09:05<01:24,  1.39s/it][A 86%|████████▌ | 1457/1697 [09:06<01:26,  2.79it/s]
+Computing word embeddings:  86%|████████▌ | 365/425 [09:07<01:25,  1.43s/it][A 86%|████████▌ | 1461/1697 [09:08<01:26,  2.74it/s]
+Computing word embeddings:  86%|████████▌ | 366/425 [09:08<01:26,  1.46s/it][A 86%|████████▋ | 1465/1697 [09:09<01:25,  2.71it/s]
+Computing word embeddings:  86%|████████▋ | 367/425 [09:10<01:25,  1.48s/it][A 87%|████████▋ | 1469/1697 [09:11<01:24,  2.69it/s]
+Computing word embeddings:  87%|████████▋ | 368/425 [09:11<01:24,  1.49s/it][A 87%|████████▋ | 1473/1697 [09:13<01:24,  2.65it/s]
+Computing word embeddings:  87%|████████▋ | 369/425 [09:13<01:24,  1.51s/it][A 87%|████████▋ | 1477/1697 [09:14<01:23,  2.62it/s]
+Computing word embeddings:  87%|████████▋ | 370/425 [09:14<01:23,  1.52s/it][A 87%|████████▋ | 1481/1697 [09:16<01:22,  2.62it/s]
+Computing word embeddings:  87%|████████▋ | 371/425 [09:16<01:22,  1.53s/it][A 88%|████████▊ | 1485/1697 [09:17<01:21,  2.61it/s]
+Computing word embeddings:  88%|████████▊ | 372/425 [09:17<01:21,  1.54s/it][A 88%|████████▊ | 1489/1697 [09:19<01:19,  2.60it/s]
+Computing word embeddings:  88%|████████▊ | 373/425 [09:19<01:20,  1.54s/it][A 88%|████████▊ | 1493/1697 [09:20<01:18,  2.58it/s]
+Computing word embeddings:  88%|████████▊ | 374/425 [09:20<01:18,  1.55s/it][A 88%|████████▊ | 1497/1697 [09:22<01:17,  2.58it/s]
+Computing word embeddings:  88%|████████▊ | 375/425 [09:22<01:17,  1.55s/it][A 88%|████████▊ | 1501/1697 [09:23<01:04,  3.02it/s]
+Computing word embeddings:  88%|████████▊ | 376/425 [09:23<01:04,  1.31s/it][A 89%|████████▊ | 1505/1697 [09:24<01:06,  2.89it/s]
+Computing word embeddings:  89%|████████▊ | 377/425 [09:24<01:06,  1.39s/it][A 89%|████████▉ | 1509/1697 [09:26<01:07,  2.79it/s]
+Computing word embeddings:  89%|████████▉ | 378/425 [09:26<01:07,  1.44s/it][A 89%|████████▉ | 1513/1697 [09:27<01:07,  2.72it/s]
+Computing word embeddings:  89%|████████▉ | 379/425 [09:27<01:07,  1.47s/it][A 89%|████████▉ | 1517/1697 [09:29<01:07,  2.68it/s]
+Computing word embeddings:  89%|████████▉ | 380/425 [09:29<01:07,  1.49s/it][A 90%|████████▉ | 1521/1697 [09:30<01:06,  2.65it/s]
+Computing word embeddings:  90%|████████▉ | 381/425 [09:30<01:06,  1.51s/it][A 90%|████████▉ | 1525/1697 [09:32<01:05,  2.61it/s]
+Computing word embeddings:  90%|████████▉ | 382/425 [09:32<01:05,  1.53s/it][A 90%|█████████ | 1529/1697 [09:34<01:05,  2.58it/s]
+Computing word embeddings:  90%|█████████ | 383/425 [09:34<01:04,  1.55s/it][A 90%|█████████ | 1533/1697 [09:35<01:03,  2.56it/s]
+Computing word embeddings:  90%|█████████ | 384/425 [09:35<01:03,  1.56s/it][A 91%|█████████ | 1537/1697 [09:37<01:02,  2.56it/s]
+Computing word embeddings:  91%|█████████ | 385/425 [09:37<01:02,  1.56s/it][A 91%|█████████ | 1541/1697 [09:38<01:00,  2.57it/s]
+Computing word embeddings:  91%|█████████ | 386/425 [09:38<01:00,  1.56s/it][A 91%|█████████ | 1545/1697 [09:40<00:59,  2.57it/s]
+Computing word embeddings:  91%|█████████ | 387/425 [09:40<00:59,  1.56s/it][A 91%|█████████▏| 1549/1697 [09:40<00:46,  3.22it/s]
+Computing word embeddings:  91%|█████████▏| 388/425 [09:40<00:45,  1.23s/it][A 92%|█████████▏| 1553/1697 [09:42<00:47,  3.01it/s]
+Computing word embeddings:  92%|█████████▏| 389/425 [09:42<00:47,  1.33s/it][A 92%|█████████▏| 1557/1697 [09:43<00:48,  2.87it/s]
+Computing word embeddings:  92%|█████████▏| 390/425 [09:44<00:48,  1.40s/it][A 92%|█████████▏| 1561/1697 [09:45<00:49,  2.77it/s]
+Computing word embeddings:  92%|█████████▏| 391/425 [09:45<00:49,  1.44s/it][A 92%|█████████▏| 1565/1697 [09:46<00:47,  2.78it/s]
+Computing word embeddings:  92%|█████████▏| 392/425 [09:46<00:47,  1.44s/it][A 92%|█████████▏| 1569/1697 [09:48<00:47,  2.72it/s]
+Computing word embeddings:  92%|█████████▏| 393/425 [09:48<00:47,  1.47s/it][A 93%|█████████▎| 1573/1697 [09:49<00:46,  2.69it/s]
+Computing word embeddings:  93%|█████████▎| 394/425 [09:50<00:46,  1.49s/it][A 93%|█████████▎| 1577/1697 [09:51<00:44,  2.68it/s]
+Computing word embeddings:  93%|█████████▎| 395/425 [09:51<00:44,  1.49s/it][A 93%|█████████▎| 1581/1697 [09:52<00:41,  2.77it/s]
+Computing word embeddings:  93%|█████████▎| 396/425 [09:52<00:41,  1.44s/it][A 93%|█████████▎| 1585/1697 [09:54<00:41,  2.72it/s]
+Computing word embeddings:  93%|█████████▎| 397/425 [09:54<00:41,  1.47s/it][A 94%|█████████▎| 1589/1697 [09:55<00:39,  2.70it/s]
+Computing word embeddings:  94%|█████████▎| 398/425 [09:55<00:39,  1.48s/it][A 94%|█████████▍| 1593/1697 [09:57<00:39,  2.66it/s]
+Computing word embeddings:  94%|█████████▍| 399/425 [09:57<00:39,  1.50s/it][A 94%|█████████▍| 1597/1697 [09:58<00:37,  2.63it/s]
+Computing word embeddings:  94%|█████████▍| 400/425 [09:59<00:38,  1.52s/it][A 94%|█████████▍| 1601/1697 [10:00<00:36,  2.64it/s]
+Computing word embeddings:  94%|█████████▍| 401/425 [10:00<00:36,  1.52s/it][A 95%|█████████▍| 1605/1697 [10:02<00:35,  2.62it/s]
+Computing word embeddings:  95%|█████████▍| 402/425 [10:02<00:35,  1.53s/it][A 95%|█████████▍| 1609/1697 [10:02<00:28,  3.07it/s]
+Computing word embeddings:  95%|█████████▍| 403/425 [10:02<00:28,  1.29s/it][A 95%|█████████▌| 1613/1697 [10:04<00:28,  2.91it/s]
+Computing word embeddings:  95%|█████████▌| 404/425 [10:04<00:28,  1.38s/it][A 95%|█████████▌| 1617/1697 [10:05<00:28,  2.80it/s]
+Computing word embeddings:  95%|█████████▌| 405/425 [10:05<00:28,  1.43s/it][A 96%|█████████▌| 1621/1697 [10:07<00:27,  2.72it/s]
+Computing word embeddings:  96%|█████████▌| 406/425 [10:07<00:28,  1.47s/it][A 96%|█████████▌| 1625/1697 [10:09<00:26,  2.67it/s]
+Computing word embeddings:  96%|█████████▌| 407/425 [10:09<00:27,  1.50s/it][A 96%|█████████▌| 1629/1697 [10:09<00:21,  3.11it/s]
+Computing word embeddings:  96%|█████████▌| 408/425 [10:09<00:21,  1.27s/it][A 96%|█████████▌| 1633/1697 [10:11<00:21,  2.95it/s]
+Computing word embeddings:  96%|█████████▌| 409/425 [10:11<00:21,  1.36s/it][A 96%|█████████▋| 1637/1697 [10:12<00:21,  2.83it/s]
+Computing word embeddings:  96%|█████████▋| 410/425 [10:12<00:21,  1.42s/it][A 97%|█████████▋| 1641/1697 [10:14<00:20,  2.75it/s]
+Computing word embeddings:  97%|█████████▋| 411/425 [10:14<00:20,  1.46s/it][A 97%|█████████▋| 1645/1697 [10:15<00:17,  2.93it/s]
+Computing word embeddings:  97%|█████████▋| 412/425 [10:15<00:17,  1.36s/it][A 97%|█████████▋| 1649/1697 [10:17<00:16,  2.83it/s]
+Computing word embeddings:  97%|█████████▋| 413/425 [10:17<00:16,  1.41s/it][A 97%|█████████▋| 1653/1697 [10:18<00:15,  2.76it/s]
+Computing word embeddings:  97%|█████████▋| 414/425 [10:18<00:15,  1.45s/it][A 98%|█████████▊| 1657/1697 [10:19<00:14,  2.82it/s]
+Computing word embeddings:  98%|█████████▊| 415/425 [10:20<00:14,  1.42s/it][A 98%|█████████▊| 1661/1697 [10:21<00:12,  2.87it/s]
+Computing word embeddings:  98%|█████████▊| 416/425 [10:21<00:12,  1.39s/it][A 98%|█████████▊| 1665/1697 [10:22<00:11,  2.81it/s]
+Computing word embeddings:  98%|█████████▊| 417/425 [10:22<00:11,  1.42s/it][A 98%|█████████▊| 1669/1697 [10:24<00:10,  2.76it/s]
+Computing word embeddings:  98%|█████████▊| 418/425 [10:24<00:10,  1.45s/it][A 99%|█████████▊| 1673/1697 [10:25<00:08,  2.73it/s]
+Computing word embeddings:  99%|█████████▊| 419/425 [10:25<00:08,  1.47s/it][A 99%|█████████▉| 1677/1697 [10:27<00:07,  2.70it/s]
+Computing word embeddings:  99%|█████████▉| 420/425 [10:27<00:07,  1.48s/it][A 99%|█████████▉| 1681/1697 [10:28<00:06,  2.66it/s]
+Computing word embeddings:  99%|█████████▉| 421/425 [10:28<00:06,  1.50s/it][A 99%|█████████▉| 1685/1697 [10:30<00:04,  2.64it/s]
+Computing word embeddings:  99%|█████████▉| 422/425 [10:30<00:04,  1.52s/it][A100%|█████████▉| 1689/1697 [10:31<00:03,  2.62it/s]
+Computing word embeddings: 100%|█████████▉| 423/425 [10:32<00:03,  1.53s/it][A100%|█████████▉| 1693/1697 [10:33<00:01,  2.60it/s]
+Computing word embeddings: 100%|█████████▉| 424/425 [10:33<00:01,  1.54s/it][A100%|██████████| 1697/1697 [10:33<00:00,  3.54it/s]100%|██████████| 1697/1697 [10:33<00:00,  2.68it/s]
+Computing word embeddings: 100%|██████████| 425/425 [10:33<00:00,  1.49s/it]
+[03:11:06 INFO] Preparing extractor: subject_id
+2026-05-14 03:11:06 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'Algonauts2025/sub-01'}. This was probably not intended.
+[03:11:06 INFO] Building dataloader for split all
+INFO - Predicted 856 / 900 segments (95.1% kept)
+cache/ablation_results/pretrained_tribe_textonly_s01e01a_surface_approx_v1.json
+{
+  "created_at": "2026-05-14T07:11:25.779546+00:00",
+  "checkpoint": "facebook/tribev2",
+  "features": [
+    "text"
+  ],
+  "subject": "sub-01",
+  "movie": "s01",
+  "chunks": [
+    "e01a"
+  ],
+  "target_projection": "Schaefer1000 parcels -> MNI label volume -> standard fsaverage5 vol_to_surf",
+  "target_projection_caveat": "Approximate local evaluation; not the official Algonauts surface preprocessing and not directly comparable to the public leaderboard.",
+  "target_offset_seconds": 5.0,
+  "n_prediction_samples": 856,
+  "prediction_shape": [
+    856,
+    20484
+  ],
+  "target_shape": [
+    856,
+    20484
+  ],
+  "n_finite_target_rows": 856,
+  "metrics": {
+    "mean": 0.11062859988732332,
+    "median": 0.09403733154156656,
+    "n_vertices_total": 20484,
+    "n_vertices_finite": 19315
+  },
+  "load_seconds": 0.7337465060409158,
+  "predict_seconds": 647.5848534010584,
+  "target_projection_seconds": 18.707975640892982
+}

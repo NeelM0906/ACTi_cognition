@@ -31,7 +31,7 @@ print(preds.shape)  # (n_timesteps, n_vertices)
 Predictions are for the "average" subject (see paper for details) and live on the **fsaverage5** cortical mesh (~20k vertices).
 They are offset by 5 seconds in the past, in order to compensate for the hemodynamic lag.
 
-You can also pass `text_path` or `audio_path` to `model.get_events_dataframe` — text is automatically converted to speech and transcribed to obtain word-level timings.
+You can also pass `text_path` or `audio_path` to `model.get_events_dataframe` — text is converted directly into approximate word-level timing events for low-latency inference.
 
 For a full walkthrough with brain visualizations, see the [Colab demo notebook](https://colab.research.google.com/github/facebookresearch/tribev2/blob/main/tribe_demo.ipynb).
 

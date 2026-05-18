@@ -1,0 +1,60 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-14 06:30:08 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+cache/ablation_results/tribe_regionwise_fusion_integer_timed_train_e01ab_val_e02a_v1.json
+{
+  "created_at": "2026-05-14T10:30:11.779998+00:00",
+  "experiment_name": "tribe_regionwise_fusion_ablation",
+  "conditions": [
+    "text_video",
+    "audio_video",
+    "full"
+  ],
+  "grids": [
+    "full,text_video,audio_video:0.05"
+  ],
+  "time_tolerance_seconds": 0.06,
+  "n_candidates": 231,
+  "train_shape": [
+    1752,
+    3,
+    1000
+  ],
+  "val_shape": [
+    712,
+    3,
+    1000
+  ],
+  "train_selected_mean_unit_corr": 0.19609493600579386,
+  "train_selected_median_unit_corr": 0.16216618215890208,
+  "weight_summary": {
+    "nonzero_counts": {
+      "text_video": 603,
+      "audio_video": 590,
+      "full": 429
+    },
+    "mean_weights": {
+      "text_video": 0.34769999980926514,
+      "audio_video": 0.36774998903274536,
+      "full": 0.267549991607666
+    }
+  },
+  "val_regionwise": {
+    "mean": 0.2179257670601445,
+    "median": 0.19303556482585835,
+    "n_vertices_finite": 983
+  },
+  "val_full": {
+    "weights": {
+      "text_video": 0.0,
+      "audio_video": 0.0,
+      "full": 1.0
+    },
+    "mean": 0.21328867027437104,
+    "median": 0.18906106848890875,
+    "n_vertices_finite": 983
+  },
+  "delta_val_regionwise_vs_full": 0.0046370967857734535,
+  "runtime_seconds": 3.2765488389413804,
+  "caveat": "Available-label local proxy only. Parcel-wise fusion weights were selected on train chunks and evaluated on held-out available labels; no hidden Friends S7/OOD labels were used."
+}

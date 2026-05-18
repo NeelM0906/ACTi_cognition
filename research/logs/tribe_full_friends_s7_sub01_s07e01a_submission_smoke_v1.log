@@ -1,0 +1,1519 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-14 05:22:52 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+2026-05-14 05:22:52 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+INFO - Loading model from /home/ripper/.cache/huggingface/hub/models--facebook--tribev2/snapshots/f894e783020944dcd96e5568550afe2aa9743f9f/best.ckpt
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:439: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:461: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+Extract audio from video events:   0%|          | 0/1 [00:00<?, ?it/s]                                                                      Extract audio from video events:   0%|          | 0/1 [00:00<?, ?it/s]MoviePy - Writing audio in /home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s7/friends_s07e01a.wav
+
+chunk:   0%|          | 0/15103 [00:00<?, ?it/s, now=None][A
+chunk:   7%|▋         | 1071/15103 [00:00<00:01, 10607.48it/s, now=None][A
+chunk:  15%|█▌        | 2333/15103 [00:00<00:01, 11786.20it/s, now=None][A
+chunk:  24%|██▍       | 3592/15103 [00:00<00:00, 12152.23it/s, now=None][A
+chunk:  32%|███▏      | 4828/15103 [00:00<00:00, 12233.44it/s, now=None][A
+chunk:  40%|████      | 6071/15103 [00:00<00:00, 12302.10it/s, now=None][A
+chunk:  49%|████▊     | 7358/15103 [00:00<00:00, 12494.34it/s, now=None][A
+chunk:  57%|█████▋    | 8619/15103 [00:00<00:00, 12493.02it/s, now=None][A
+chunk:  66%|██████▌   | 9903/15103 [00:00<00:00, 12603.11it/s, now=None][A
+chunk:  74%|███████▍  | 11176/15103 [00:00<00:00, 12640.37it/s, now=None][A
+chunk:  82%|████████▏ | 12444/15103 [00:01<00:00, 12616.85it/s, now=None][A
+chunk:  91%|█████████ | 13706/15103 [00:01<00:00, 12606.92it/s, now=None][A
+chunk:  99%|█████████▉| 14967/15103 [00:01<00:00, 12603.05it/s, now=None][A
+                                                                         [A                                                                      Extract audio from video events:   0%|          | 0/1 [00:01<?, ?it/s]Extract audio from video events: 100%|██████████| 1/1 [00:01<00:00,  1.24s/it]Extract audio from video events: 100%|██████████| 1/1 [00:01<00:00,  1.24s/it]
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/utils.py:134: UserWarning: The events dataframe contains an `Index` column. This is dangerous, please add drop=True in calls to df.reset_index(). Dropping it automatically.
+  warnings.warn(msg)
+MoviePy - Done.
+Add context to words:   0%|          | 0/1202 [00:00<?, ?it/s]Add context to words: 100%|██████████| 1202/1202 [00:00<00:00, 108785.46it/s]
+[05:22:56 INFO] Preparing extractor: text
+[05:22:56 INFO] Preparing extractor: audio
+  0%|          | 0/11 [00:00<?, ?it/s]
+Computing audio embeddings:   0%|          | 0/11 [00:00<?, ?it/s][AFailed to load /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_cutlass_90a.abi3.so: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_cutlass_90a.abi3.so
+Failed to load /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_mxfp8.cpython-310-x86_64-linux-gnu.so: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_mxfp8.cpython-310-x86_64-linux-gnu.so
+W0514 05:22:57.203000 1686671 venv/lib/python3.12/site-packages/torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+W0514 05:22:57.213000 1686671 venv/lib/python3.12/site-packages/torch/utils/_pytree.py:630] <enum 'ScaleCalculationMode'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+  9%|▉         | 1/11 [00:01<00:14,  1.40s/it]
+Computing audio embeddings:   9%|▉         | 1/11 [00:01<00:14,  1.40s/it][A 18%|█▊        | 2/11 [00:02<00:08,  1.05it/s]
+Computing audio embeddings:  18%|█▊        | 2/11 [00:02<00:08,  1.05it/s][A 27%|██▋       | 3/11 [00:02<00:06,  1.23it/s]
+Computing audio embeddings:  27%|██▋       | 3/11 [00:02<00:06,  1.23it/s][A 36%|███▋      | 4/11 [00:03<00:05,  1.32it/s]
+Computing audio embeddings:  36%|███▋      | 4/11 [00:03<00:05,  1.32it/s][A 45%|████▌     | 5/11 [00:04<00:04,  1.37it/s]
+Computing audio embeddings:  45%|████▌     | 5/11 [00:04<00:04,  1.37it/s][A 55%|█████▍    | 6/11 [00:04<00:03,  1.42it/s]
+Computing audio embeddings:  55%|█████▍    | 6/11 [00:04<00:03,  1.42it/s][A 64%|██████▎   | 7/11 [00:05<00:02,  1.45it/s]
+Computing audio embeddings:  64%|██████▎   | 7/11 [00:05<00:02,  1.45it/s][A 73%|███████▎  | 8/11 [00:06<00:02,  1.20it/s]
+Computing audio embeddings:  73%|███████▎  | 8/11 [00:06<00:02,  1.20it/s][A 82%|████████▏ | 9/11 [00:07<00:01,  1.28it/s]
+Computing audio embeddings:  82%|████████▏ | 9/11 [00:07<00:01,  1.28it/s][A 91%|█████████ | 10/11 [00:07<00:00,  1.35it/s]
+Computing audio embeddings:  91%|█████████ | 10/11 [00:07<00:00,  1.35it/s][A100%|██████████| 11/11 [00:08<00:00,  1.40it/s]100%|██████████| 11/11 [00:08<00:00,  1.30it/s]
+
+Computing audio embeddings: 100%|██████████| 11/11 [00:08<00:00,  1.40it/s][AComputing audio embeddings: 100%|██████████| 11/11 [00:08<00:00,  1.30it/s]
+[05:23:05 INFO] Preparing extractor: video
+  0%|          | 0/11 [00:00<?, ?it/s]2026-05-14 05:23:06 - DEBUG - neuralset.extractors.video:277 - Loaded Video (duration 60.0s at 29.97002997002997fps, shape (720, 480)):
+/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s7/friends_s07e01a.mkv
+
+Encoding video:   0%|          | 0/120 [00:00<?, ?it/s][A2026-05-14 05:23:07 - DEBUG - neuralset.extractors.video:311 - Created Tensor with size (120, 20, 1408)
+
+Encoding video:   1%|          | 1/120 [00:01<02:29,  1.25s/it][A
+Encoding video:   2%|▏         | 2/120 [00:02<02:27,  1.25s/it][A
+Encoding video:   2%|▎         | 3/120 [00:03<02:26,  1.25s/it][A
+Encoding video:   3%|▎         | 4/120 [00:05<02:25,  1.25s/it][A
+Encoding video:   4%|▍         | 5/120 [00:06<02:24,  1.25s/it][A
+Encoding video:   5%|▌         | 6/120 [00:07<02:23,  1.26s/it][A
+Encoding video:   6%|▌         | 7/120 [00:08<02:22,  1.26s/it][A
+Encoding video:   7%|▋         | 8/120 [00:10<02:21,  1.26s/it][A
+Encoding video:   8%|▊         | 9/120 [00:11<02:20,  1.26s/it][A
+Encoding video:   8%|▊         | 10/120 [00:12<02:18,  1.26s/it][A
+Encoding video:   9%|▉         | 11/120 [00:13<02:18,  1.27s/it][A
+Encoding video:  10%|█         | 12/120 [00:15<02:16,  1.27s/it][A
+Encoding video:  11%|█         | 13/120 [00:16<02:16,  1.27s/it][A
+Encoding video:  12%|█▏        | 14/120 [00:17<02:15,  1.27s/it][A
+Encoding video:  12%|█▎        | 15/120 [00:19<02:14,  1.28s/it][A
+Encoding video:  13%|█▎        | 16/120 [00:20<02:13,  1.28s/it][A
+Encoding video:  14%|█▍        | 17/120 [00:21<02:13,  1.29s/it][A
+Encoding video:  15%|█▌        | 18/120 [00:22<02:11,  1.29s/it][A
+Encoding video:  16%|█▌        | 19/120 [00:24<02:11,  1.30s/it][A
+Encoding video:  17%|█▋        | 20/120 [00:25<02:08,  1.29s/it][A
+Encoding video:  18%|█▊        | 21/120 [00:26<02:07,  1.29s/it][A
+Encoding video:  18%|█▊        | 22/120 [00:28<02:05,  1.28s/it][A
+Encoding video:  19%|█▉        | 23/120 [00:29<02:04,  1.29s/it][A
+Encoding video:  20%|██        | 24/120 [00:30<02:03,  1.28s/it][A
+Encoding video:  21%|██        | 25/120 [00:31<02:02,  1.29s/it][A
+Encoding video:  22%|██▏       | 26/120 [00:33<02:00,  1.28s/it][A
+Encoding video:  22%|██▎       | 27/120 [00:34<01:59,  1.29s/it][A
+Encoding video:  23%|██▎       | 28/120 [00:35<01:58,  1.28s/it][A
+Encoding video:  24%|██▍       | 29/120 [00:37<01:57,  1.29s/it][A
+Encoding video:  25%|██▌       | 30/120 [00:38<01:56,  1.29s/it][A
+Encoding video:  26%|██▌       | 31/120 [00:39<01:55,  1.30s/it][A
+Encoding video:  27%|██▋       | 32/120 [00:40<01:54,  1.30s/it][A
+Encoding video:  28%|██▊       | 33/120 [00:42<01:53,  1.30s/it][A
+Encoding video:  28%|██▊       | 34/120 [00:43<01:52,  1.30s/it][A
+Encoding video:  29%|██▉       | 35/120 [00:44<01:51,  1.31s/it][A
+Encoding video:  30%|███       | 36/120 [00:46<01:49,  1.31s/it][A
+Encoding video:  31%|███       | 37/120 [00:47<01:49,  1.32s/it][A
+Encoding video:  32%|███▏      | 38/120 [00:48<01:47,  1.32s/it][A
+Encoding video:  32%|███▎      | 39/120 [00:50<01:47,  1.32s/it][A
+Encoding video:  33%|███▎      | 40/120 [00:51<01:45,  1.32s/it][A
+Encoding video:  34%|███▍      | 41/120 [00:52<01:44,  1.33s/it][A
+Encoding video:  35%|███▌      | 42/120 [00:54<01:42,  1.32s/it][A
+Encoding video:  36%|███▌      | 43/120 [00:55<01:41,  1.32s/it][A
+Encoding video:  37%|███▋      | 44/120 [00:56<01:39,  1.32s/it][A
+Encoding video:  38%|███▊      | 45/120 [00:58<01:38,  1.32s/it][A
+Encoding video:  38%|███▊      | 46/120 [00:59<01:37,  1.31s/it][A
+Encoding video:  39%|███▉      | 47/120 [01:00<01:36,  1.32s/it][A
+Encoding video:  40%|████      | 48/120 [01:02<01:34,  1.31s/it][A
+Encoding video:  41%|████      | 49/120 [01:03<01:33,  1.32s/it][A
+Encoding video:  42%|████▏     | 50/120 [01:04<01:31,  1.31s/it][A
+Encoding video:  42%|████▎     | 51/120 [01:06<01:31,  1.32s/it][A
+Encoding video:  43%|████▎     | 52/120 [01:07<01:29,  1.31s/it][A
+Encoding video:  44%|████▍     | 53/120 [01:08<01:28,  1.32s/it][A
+Encoding video:  45%|████▌     | 54/120 [01:09<01:27,  1.32s/it][A
+Encoding video:  46%|████▌     | 55/120 [01:11<01:26,  1.33s/it][A
+Encoding video:  47%|████▋     | 56/120 [01:12<01:24,  1.32s/it][A
+Encoding video:  48%|████▊     | 57/120 [01:13<01:23,  1.33s/it][A
+Encoding video:  48%|████▊     | 58/120 [01:15<01:22,  1.33s/it][A
+Encoding video:  49%|████▉     | 59/120 [01:16<01:21,  1.34s/it][A
+Encoding video:  50%|█████     | 60/120 [01:17<01:20,  1.34s/it][A
+Encoding video:  51%|█████     | 61/120 [01:19<01:19,  1.34s/it][A
+Encoding video:  52%|█████▏    | 62/120 [01:20<01:17,  1.33s/it][A
+Encoding video:  52%|█████▎    | 63/120 [01:21<01:15,  1.33s/it][A
+Encoding video:  53%|█████▎    | 64/120 [01:23<01:14,  1.32s/it][A
+Encoding video:  54%|█████▍    | 65/120 [01:24<01:13,  1.33s/it][A
+Encoding video:  55%|█████▌    | 66/120 [01:25<01:11,  1.32s/it][A
+Encoding video:  56%|█████▌    | 67/120 [01:27<01:10,  1.33s/it][A
+Encoding video:  57%|█████▋    | 68/120 [01:28<01:08,  1.33s/it][A
+Encoding video:  57%|█████▊    | 69/120 [01:29<01:07,  1.33s/it][A
+Encoding video:  58%|█████▊    | 70/120 [01:31<01:06,  1.33s/it][A
+Encoding video:  59%|█████▉    | 71/120 [01:32<01:05,  1.33s/it][A
+Encoding video:  60%|██████    | 72/120 [01:33<01:03,  1.33s/it][A
+Encoding video:  61%|██████    | 73/120 [01:35<01:02,  1.34s/it][A
+Encoding video:  62%|██████▏   | 74/120 [01:36<01:01,  1.33s/it][A
+Encoding video:  62%|██████▎   | 75/120 [01:37<01:00,  1.34s/it][A
+Encoding video:  63%|██████▎   | 76/120 [01:39<00:58,  1.34s/it][A
+Encoding video:  64%|██████▍   | 77/120 [01:40<00:57,  1.35s/it][A
+Encoding video:  65%|██████▌   | 78/120 [01:42<00:56,  1.35s/it][A
+Encoding video:  66%|██████▌   | 79/120 [01:43<00:55,  1.35s/it][A
+Encoding video:  67%|██████▋   | 80/120 [01:44<00:53,  1.34s/it][A
+Encoding video:  68%|██████▊   | 81/120 [01:46<00:52,  1.34s/it][A
+Encoding video:  68%|██████▊   | 82/120 [01:47<00:50,  1.34s/it][A
+Encoding video:  69%|██████▉   | 83/120 [01:48<00:49,  1.34s/it][A
+Encoding video:  70%|███████   | 84/120 [01:50<00:48,  1.34s/it][A
+Encoding video:  71%|███████   | 85/120 [01:51<00:46,  1.34s/it][A
+Encoding video:  72%|███████▏  | 86/120 [01:52<00:45,  1.33s/it][A
+Encoding video:  72%|███████▎  | 87/120 [01:54<00:44,  1.34s/it][A
+Encoding video:  73%|███████▎  | 88/120 [01:55<00:42,  1.33s/it][A
+Encoding video:  74%|███████▍  | 89/120 [01:56<00:41,  1.34s/it][A
+Encoding video:  75%|███████▌  | 90/120 [01:58<00:39,  1.33s/it][A
+Encoding video:  76%|███████▌  | 91/120 [01:59<00:38,  1.34s/it][A
+Encoding video:  77%|███████▋  | 92/120 [02:00<00:37,  1.34s/it][A
+Encoding video:  78%|███████▊  | 93/120 [02:02<00:36,  1.34s/it][A
+Encoding video:  78%|███████▊  | 94/120 [02:03<00:34,  1.33s/it][A
+Encoding video:  79%|███████▉  | 95/120 [02:04<00:33,  1.33s/it][A
+Encoding video:  80%|████████  | 96/120 [02:06<00:31,  1.33s/it][A
+Encoding video:  81%|████████  | 97/120 [02:07<00:30,  1.34s/it][A
+Encoding video:  82%|████████▏ | 98/120 [02:08<00:29,  1.33s/it][A
+Encoding video:  82%|████████▎ | 99/120 [02:10<00:28,  1.34s/it][A
+Encoding video:  83%|████████▎ | 100/120 [02:11<00:26,  1.33s/it][A
+Encoding video:  84%|████████▍ | 101/120 [02:12<00:25,  1.33s/it][A
+Encoding video:  85%|████████▌ | 102/120 [02:14<00:23,  1.33s/it][A
+Encoding video:  86%|████████▌ | 103/120 [02:15<00:22,  1.33s/it][A
+Encoding video:  87%|████████▋ | 104/120 [02:16<00:21,  1.33s/it][A
+Encoding video:  88%|████████▊ | 105/120 [02:18<00:20,  1.33s/it][A
+Encoding video:  88%|████████▊ | 106/120 [02:19<00:18,  1.33s/it][A
+Encoding video:  89%|████████▉ | 107/120 [02:20<00:17,  1.34s/it][A
+Encoding video:  90%|█████████ | 108/120 [02:22<00:15,  1.33s/it][A
+Encoding video:  91%|█████████ | 109/120 [02:23<00:14,  1.34s/it][A
+Encoding video:  92%|█████████▏| 110/120 [02:24<00:13,  1.34s/it][A
+Encoding video:  92%|█████████▎| 111/120 [02:26<00:12,  1.34s/it][A
+Encoding video:  93%|█████████▎| 112/120 [02:27<00:10,  1.34s/it][A
+Encoding video:  94%|█████████▍| 113/120 [02:28<00:09,  1.35s/it][A
+Encoding video:  95%|█████████▌| 114/120 [02:30<00:08,  1.34s/it][A
+Encoding video:  96%|█████████▌| 115/120 [02:31<00:06,  1.34s/it][A
+Encoding video:  97%|█████████▋| 116/120 [02:32<00:05,  1.33s/it][A
+Encoding video:  98%|█████████▊| 117/120 [02:34<00:04,  1.34s/it][A
+Encoding video:  98%|█████████▊| 118/120 [02:35<00:02,  1.33s/it][A
+Encoding video:  99%|█████████▉| 119/120 [02:36<00:01,  1.34s/it][A
+Encoding video: 100%|██████████| 120/120 [02:38<00:00,  1.33s/it][AEncoding video: 100%|██████████| 120/120 [02:38<00:00,  1.32s/it]
+  9%|▉         | 1/11 [02:38<26:27, 158.74s/it]2026-05-14 05:25:44 - DEBUG - neuralset.extractors.video:277 - Loaded Video (duration 60.0s at 29.97002997002997fps, shape (720, 480)):
+/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s7/friends_s07e01a.mkv
+
+Encoding video:   0%|          | 0/120 [00:00<?, ?it/s][A2026-05-14 05:25:45 - DEBUG - neuralset.extractors.video:311 - Created Tensor with size (120, 20, 1408)
+
+Encoding video:   1%|          | 1/120 [00:01<02:30,  1.27s/it][A
+Encoding video:   2%|▏         | 2/120 [00:02<02:34,  1.31s/it][A
+Encoding video:   2%|▎         | 3/120 [00:03<02:34,  1.32s/it][A
+Encoding video:   3%|▎         | 4/120 [00:05<02:33,  1.33s/it][A
+Encoding video:   4%|▍         | 5/120 [00:06<02:33,  1.33s/it][A
+Encoding video:   5%|▌         | 6/120 [00:07<02:32,  1.34s/it][A
+Encoding video:   6%|▌         | 7/120 [00:09<02:31,  1.34s/it][A
+Encoding video:   7%|▋         | 8/120 [00:10<02:30,  1.34s/it][A
+Encoding video:   8%|▊         | 9/120 [00:12<02:29,  1.35s/it][A
+Encoding video:   8%|▊         | 10/120 [00:13<02:28,  1.35s/it][A
+Encoding video:   9%|▉         | 11/120 [00:14<02:26,  1.34s/it][A
+Encoding video:  10%|█         | 12/120 [00:16<02:24,  1.34s/it][A
+Encoding video:  11%|█         | 13/120 [00:17<02:22,  1.33s/it][A
+Encoding video:  12%|█▏        | 14/120 [00:18<02:21,  1.33s/it][A
+Encoding video:  12%|█▎        | 15/120 [00:20<02:19,  1.33s/it][A
+Encoding video:  13%|█▎        | 16/120 [00:21<02:17,  1.33s/it][A
+Encoding video:  14%|█▍        | 17/120 [00:22<02:16,  1.33s/it][A
+Encoding video:  15%|█▌        | 18/120 [00:23<02:15,  1.33s/it][A
+Encoding video:  16%|█▌        | 19/120 [00:25<02:14,  1.33s/it][A
+Encoding video:  17%|█▋        | 20/120 [00:26<02:12,  1.33s/it][A
+Encoding video:  18%|█▊        | 21/120 [00:27<02:11,  1.33s/it][A
+Encoding video:  18%|█▊        | 22/120 [00:29<02:09,  1.32s/it][A
+Encoding video:  19%|█▉        | 23/120 [00:30<02:08,  1.32s/it][A
+Encoding video:  20%|██        | 24/120 [00:31<02:06,  1.32s/it][A
+Encoding video:  21%|██        | 25/120 [00:33<02:05,  1.33s/it][A
+Encoding video:  22%|██▏       | 26/120 [00:34<02:04,  1.32s/it][A
+Encoding video:  22%|██▎       | 27/120 [00:35<02:03,  1.33s/it][A
+Encoding video:  23%|██▎       | 28/120 [00:37<02:02,  1.33s/it][A
+Encoding video:  24%|██▍       | 29/120 [00:38<02:01,  1.33s/it][A
+Encoding video:  25%|██▌       | 30/120 [00:39<01:59,  1.33s/it][A
+Encoding video:  26%|██▌       | 31/120 [00:41<01:58,  1.33s/it][A
+Encoding video:  27%|██▋       | 32/120 [00:42<01:56,  1.33s/it][A
+Encoding video:  28%|██▊       | 33/120 [00:43<01:55,  1.33s/it][A
+Encoding video:  28%|██▊       | 34/120 [00:45<01:53,  1.33s/it][A
+Encoding video:  29%|██▉       | 35/120 [00:46<01:52,  1.32s/it][A
+Encoding video:  30%|███       | 36/120 [00:47<01:51,  1.32s/it][A
+Encoding video:  31%|███       | 37/120 [00:49<01:49,  1.32s/it][A
+Encoding video:  32%|███▏      | 38/120 [00:50<01:48,  1.32s/it][A
+Encoding video:  32%|███▎      | 39/120 [00:51<01:47,  1.32s/it][A
+Encoding video:  33%|███▎      | 40/120 [00:53<01:45,  1.32s/it][A
+Encoding video:  34%|███▍      | 41/120 [00:54<01:44,  1.32s/it][A
+Encoding video:  35%|███▌      | 42/120 [00:55<01:43,  1.32s/it][A
+Encoding video:  36%|███▌      | 43/120 [00:57<01:41,  1.32s/it][A
+Encoding video:  37%|███▋      | 44/120 [00:58<01:40,  1.32s/it][A
+Encoding video:  38%|███▊      | 45/120 [00:59<01:39,  1.32s/it][A
+Encoding video:  38%|███▊      | 46/120 [01:01<01:37,  1.32s/it][A
+Encoding video:  39%|███▉      | 47/120 [01:02<01:36,  1.32s/it][A
+Encoding video:  40%|████      | 48/120 [01:03<01:34,  1.32s/it][A
+Encoding video:  41%|████      | 49/120 [01:05<01:33,  1.32s/it][A
+Encoding video:  42%|████▏     | 50/120 [01:06<01:32,  1.32s/it][A
+Encoding video:  42%|████▎     | 51/120 [01:07<01:31,  1.32s/it][A
+Encoding video:  43%|████▎     | 52/120 [01:08<01:29,  1.32s/it][A
+Encoding video:  44%|████▍     | 53/120 [01:10<01:28,  1.32s/it][A
+Encoding video:  45%|████▌     | 54/120 [01:11<01:27,  1.32s/it][A
+Encoding video:  46%|████▌     | 55/120 [01:12<01:26,  1.33s/it][A
+Encoding video:  47%|████▋     | 56/120 [01:14<01:25,  1.33s/it][A
+Encoding video:  48%|████▊     | 57/120 [01:15<01:23,  1.33s/it][A
+Encoding video:  48%|████▊     | 58/120 [01:16<01:22,  1.32s/it][A
+Encoding video:  49%|████▉     | 59/120 [01:18<01:20,  1.33s/it][A
+Encoding video:  50%|█████     | 60/120 [01:19<01:19,  1.32s/it][A
+Encoding video:  51%|█████     | 61/120 [01:20<01:18,  1.32s/it][A
+Encoding video:  52%|█████▏    | 62/120 [01:22<01:16,  1.32s/it][A
+Encoding video:  52%|█████▎    | 63/120 [01:23<01:15,  1.32s/it][A
+Encoding video:  53%|█████▎    | 64/120 [01:24<01:13,  1.32s/it][A
+Encoding video:  54%|█████▍    | 65/120 [01:26<01:12,  1.32s/it][A
+Encoding video:  55%|█████▌    | 66/120 [01:27<01:11,  1.32s/it][A
+Encoding video:  56%|█████▌    | 67/120 [01:28<01:09,  1.32s/it][A
+Encoding video:  57%|█████▋    | 68/120 [01:30<01:08,  1.32s/it][A
+Encoding video:  57%|█████▊    | 69/120 [01:31<01:07,  1.32s/it][A
+Encoding video:  58%|█████▊    | 70/120 [01:32<01:05,  1.32s/it][A
+Encoding video:  59%|█████▉    | 71/120 [01:34<01:04,  1.32s/it][A
+Encoding video:  60%|██████    | 72/120 [01:35<01:03,  1.32s/it][A
+Encoding video:  61%|██████    | 73/120 [01:36<01:01,  1.32s/it][A
+Encoding video:  62%|██████▏   | 74/120 [01:38<01:00,  1.32s/it][A
+Encoding video:  62%|██████▎   | 75/120 [01:39<00:59,  1.32s/it][A
+Encoding video:  63%|██████▎   | 76/120 [01:40<00:58,  1.32s/it][A
+Encoding video:  64%|██████▍   | 77/120 [01:42<00:56,  1.32s/it][A
+Encoding video:  65%|██████▌   | 78/120 [01:43<00:55,  1.32s/it][A
+Encoding video:  66%|██████▌   | 79/120 [01:44<00:54,  1.32s/it][A
+Encoding video:  67%|██████▋   | 80/120 [01:45<00:52,  1.32s/it][A
+Encoding video:  68%|██████▊   | 81/120 [01:47<00:51,  1.32s/it][A
+Encoding video:  68%|██████▊   | 82/120 [01:48<00:50,  1.32s/it][A
+Encoding video:  69%|██████▉   | 83/120 [01:49<00:48,  1.32s/it][A
+Encoding video:  70%|███████   | 84/120 [01:51<00:47,  1.32s/it][A
+Encoding video:  71%|███████   | 85/120 [01:52<00:46,  1.32s/it][A
+Encoding video:  72%|███████▏  | 86/120 [01:53<00:44,  1.32s/it][A
+Encoding video:  72%|███████▎  | 87/120 [01:55<00:43,  1.32s/it][A
+Encoding video:  73%|███████▎  | 88/120 [01:56<00:42,  1.32s/it][A
+Encoding video:  74%|███████▍  | 89/120 [01:57<00:40,  1.32s/it][A
+Encoding video:  75%|███████▌  | 90/120 [01:59<00:39,  1.32s/it][A
+Encoding video:  76%|███████▌  | 91/120 [02:00<00:38,  1.32s/it][A
+Encoding video:  77%|███████▋  | 92/120 [02:01<00:36,  1.32s/it][A
+Encoding video:  78%|███████▊  | 93/120 [02:03<00:35,  1.32s/it][A
+Encoding video:  78%|███████▊  | 94/120 [02:04<00:34,  1.32s/it][A
+Encoding video:  79%|███████▉  | 95/120 [02:05<00:32,  1.32s/it][A
+Encoding video:  80%|████████  | 96/120 [02:07<00:31,  1.32s/it][A
+Encoding video:  81%|████████  | 97/120 [02:08<00:30,  1.32s/it][A
+Encoding video:  82%|████████▏ | 98/120 [02:09<00:29,  1.32s/it][A
+Encoding video:  82%|████████▎ | 99/120 [02:11<00:27,  1.32s/it][A
+Encoding video:  83%|████████▎ | 100/120 [02:12<00:26,  1.32s/it][A
+Encoding video:  84%|████████▍ | 101/120 [02:13<00:25,  1.32s/it][A
+Encoding video:  85%|████████▌ | 102/120 [02:14<00:23,  1.32s/it][A
+Encoding video:  86%|████████▌ | 103/120 [02:16<00:22,  1.32s/it][A
+Encoding video:  87%|████████▋ | 104/120 [02:17<00:21,  1.32s/it][A
+Encoding video:  88%|████████▊ | 105/120 [02:18<00:19,  1.32s/it][A
+Encoding video:  88%|████████▊ | 106/120 [02:20<00:18,  1.32s/it][A
+Encoding video:  89%|████████▉ | 107/120 [02:21<00:17,  1.33s/it][A
+Encoding video:  90%|█████████ | 108/120 [02:22<00:15,  1.33s/it][A
+Encoding video:  91%|█████████ | 109/120 [02:24<00:14,  1.33s/it][A
+Encoding video:  92%|█████████▏| 110/120 [02:25<00:13,  1.33s/it][A
+Encoding video:  92%|█████████▎| 111/120 [02:26<00:12,  1.33s/it][A
+Encoding video:  93%|█████████▎| 112/120 [02:28<00:10,  1.34s/it][A
+Encoding video:  94%|█████████▍| 113/120 [02:29<00:09,  1.34s/it][A
+Encoding video:  95%|█████████▌| 114/120 [02:31<00:08,  1.34s/it][A
+Encoding video:  96%|█████████▌| 115/120 [02:32<00:06,  1.34s/it][A
+Encoding video:  97%|█████████▋| 116/120 [02:33<00:05,  1.33s/it][A
+Encoding video:  98%|█████████▊| 117/120 [02:34<00:03,  1.33s/it][A
+Encoding video:  98%|█████████▊| 118/120 [02:36<00:02,  1.33s/it][A
+Encoding video:  99%|█████████▉| 119/120 [02:37<00:01,  1.33s/it][A
+Encoding video: 100%|██████████| 120/120 [02:38<00:00,  1.33s/it][AEncoding video: 100%|██████████| 120/120 [02:38<00:00,  1.32s/it]
+ 18%|█▊        | 2/11 [05:17<23:50, 158.93s/it]2026-05-14 05:28:23 - DEBUG - neuralset.extractors.video:277 - Loaded Video (duration 60.0s at 29.97002997002997fps, shape (720, 480)):
+/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s7/friends_s07e01a.mkv
+
+Encoding video:   0%|          | 0/120 [00:00<?, ?it/s][A2026-05-14 05:28:24 - DEBUG - neuralset.extractors.video:311 - Created Tensor with size (120, 20, 1408)
+
+Encoding video:   1%|          | 1/120 [00:01<02:29,  1.26s/it][A
+Encoding video:   2%|▏         | 2/120 [00:02<02:31,  1.29s/it][A
+Encoding video:   2%|▎         | 3/120 [00:03<02:32,  1.30s/it][A
+Encoding video:   3%|▎         | 4/120 [00:05<02:31,  1.30s/it][A
+Encoding video:   4%|▍         | 5/120 [00:06<02:30,  1.31s/it][A
+Encoding video:   5%|▌         | 6/120 [00:07<02:29,  1.31s/it][A
+Encoding video:   6%|▌         | 7/120 [00:09<02:28,  1.32s/it][A
+Encoding video:   7%|▋         | 8/120 [00:10<02:27,  1.32s/it][A
+Encoding video:   8%|▊         | 9/120 [00:11<02:26,  1.32s/it][A
+Encoding video:   8%|▊         | 10/120 [00:13<02:25,  1.32s/it][A
+Encoding video:   9%|▉         | 11/120 [00:14<02:24,  1.33s/it][A
+Encoding video:  10%|█         | 12/120 [00:15<02:23,  1.32s/it][A
+Encoding video:  11%|█         | 13/120 [00:17<02:22,  1.33s/it][A
+Encoding video:  12%|█▏        | 14/120 [00:18<02:20,  1.33s/it][A
+Encoding video:  12%|█▎        | 15/120 [00:19<02:19,  1.33s/it][A
+Encoding video:  13%|█▎        | 16/120 [00:21<02:17,  1.33s/it][A
+Encoding video:  14%|█▍        | 17/120 [00:22<02:16,  1.33s/it][A
+Encoding video:  15%|█▌        | 18/120 [00:23<02:15,  1.33s/it][A
+Encoding video:  16%|█▌        | 19/120 [00:25<02:14,  1.33s/it][A
+Encoding video:  17%|█▋        | 20/120 [00:26<02:13,  1.33s/it][A
+Encoding video:  18%|█▊        | 21/120 [00:27<02:12,  1.34s/it][A
+Encoding video:  18%|█▊        | 22/120 [00:29<02:10,  1.34s/it][A
+Encoding video:  19%|█▉        | 23/120 [00:30<02:09,  1.34s/it][A
+Encoding video:  20%|██        | 24/120 [00:31<02:08,  1.34s/it][A
+Encoding video:  21%|██        | 25/120 [00:33<02:07,  1.34s/it][A
+Encoding video:  22%|██▏       | 26/120 [00:34<02:06,  1.34s/it][A
+Encoding video:  22%|██▎       | 27/120 [00:35<02:04,  1.34s/it][A
+Encoding video:  23%|██▎       | 28/120 [00:37<02:02,  1.33s/it][A
+Encoding video:  24%|██▍       | 29/120 [00:38<02:01,  1.33s/it][A
+Encoding video:  25%|██▌       | 30/120 [00:39<01:59,  1.33s/it][A
+Encoding video:  26%|██▌       | 31/120 [00:41<01:58,  1.33s/it][A
+Encoding video:  27%|██▋       | 32/120 [00:42<01:56,  1.33s/it][A
+Encoding video:  28%|██▊       | 33/120 [00:43<01:55,  1.33s/it][A
+Encoding video:  28%|██▊       | 34/120 [00:45<01:54,  1.33s/it][A
+Encoding video:  29%|██▉       | 35/120 [00:46<01:53,  1.33s/it][A
+Encoding video:  30%|███       | 36/120 [00:47<01:51,  1.32s/it][A
+Encoding video:  31%|███       | 37/120 [00:49<01:50,  1.33s/it][A
+Encoding video:  32%|███▏      | 38/120 [00:50<01:49,  1.33s/it][A
+Encoding video:  32%|███▎      | 39/120 [00:51<01:48,  1.33s/it][A
+Encoding video:  33%|███▎      | 40/120 [00:53<01:46,  1.33s/it][A
+Encoding video:  34%|███▍      | 41/120 [00:54<01:45,  1.33s/it][A
+Encoding video:  35%|███▌      | 42/120 [00:55<01:43,  1.33s/it][A
+Encoding video:  36%|███▌      | 43/120 [00:57<01:42,  1.33s/it][A
+Encoding video:  37%|███▋      | 44/120 [00:58<01:40,  1.33s/it][A
+Encoding video:  38%|███▊      | 45/120 [00:59<01:39,  1.33s/it][A
+Encoding video:  38%|███▊      | 46/120 [01:01<01:37,  1.32s/it][A
+Encoding video:  39%|███▉      | 47/120 [01:02<01:36,  1.33s/it][A
+Encoding video:  40%|████      | 48/120 [01:03<01:35,  1.32s/it][A
+Encoding video:  41%|████      | 49/120 [01:05<01:34,  1.33s/it][A
+Encoding video:  42%|████▏     | 50/120 [01:06<01:32,  1.33s/it][A
+Encoding video:  42%|████▎     | 51/120 [01:07<01:31,  1.33s/it][A
+Encoding video:  43%|████▎     | 52/120 [01:09<01:30,  1.32s/it][A
+Encoding video:  44%|████▍     | 53/120 [01:10<01:28,  1.33s/it][A
+Encoding video:  45%|████▌     | 54/120 [01:11<01:27,  1.32s/it][A
+Encoding video:  46%|████▌     | 55/120 [01:12<01:26,  1.32s/it][A
+Encoding video:  47%|████▋     | 56/120 [01:14<01:24,  1.32s/it][A
+Encoding video:  48%|████▊     | 57/120 [01:15<01:23,  1.33s/it][A
+Encoding video:  48%|████▊     | 58/120 [01:16<01:22,  1.32s/it][A
+Encoding video:  49%|████▉     | 59/120 [01:18<01:21,  1.33s/it][A
+Encoding video:  50%|█████     | 60/120 [01:19<01:19,  1.33s/it][A
+Encoding video:  51%|█████     | 61/120 [01:20<01:18,  1.33s/it][A
+Encoding video:  52%|█████▏    | 62/120 [01:22<01:17,  1.33s/it][A
+Encoding video:  52%|█████▎    | 63/120 [01:23<01:15,  1.33s/it][A
+Encoding video:  53%|█████▎    | 64/120 [01:24<01:14,  1.33s/it][A
+Encoding video:  54%|█████▍    | 65/120 [01:26<01:12,  1.33s/it][A
+Encoding video:  55%|█████▌    | 66/120 [01:27<01:11,  1.32s/it][A
+Encoding video:  56%|█████▌    | 67/120 [01:28<01:10,  1.33s/it][A
+Encoding video:  57%|█████▋    | 68/120 [01:30<01:09,  1.33s/it][A
+Encoding video:  57%|█████▊    | 69/120 [01:31<01:08,  1.33s/it][A
+Encoding video:  58%|█████▊    | 70/120 [01:32<01:06,  1.33s/it][A
+Encoding video:  59%|█████▉    | 71/120 [01:34<01:05,  1.34s/it][A
+Encoding video:  60%|██████    | 72/120 [01:35<01:04,  1.33s/it][A
+Encoding video:  61%|██████    | 73/120 [01:36<01:02,  1.33s/it][A
+Encoding video:  62%|██████▏   | 74/120 [01:38<01:01,  1.33s/it][A
+Encoding video:  62%|██████▎   | 75/120 [01:39<00:59,  1.33s/it][A
+Encoding video:  63%|██████▎   | 76/120 [01:40<00:58,  1.32s/it][A
+Encoding video:  64%|██████▍   | 77/120 [01:42<00:57,  1.33s/it][A
+Encoding video:  65%|██████▌   | 78/120 [01:43<00:55,  1.32s/it][A
+Encoding video:  66%|██████▌   | 79/120 [01:44<00:54,  1.32s/it][A
+Encoding video:  67%|██████▋   | 80/120 [01:46<00:52,  1.32s/it][A
+Encoding video:  68%|██████▊   | 81/120 [01:47<00:51,  1.32s/it][A
+Encoding video:  68%|██████▊   | 82/120 [01:48<00:50,  1.32s/it][A
+Encoding video:  69%|██████▉   | 83/120 [01:50<00:48,  1.32s/it][A
+Encoding video:  70%|███████   | 84/120 [01:51<00:47,  1.32s/it][A
+Encoding video:  71%|███████   | 85/120 [01:52<00:46,  1.32s/it][A
+Encoding video:  72%|███████▏  | 86/120 [01:54<00:44,  1.32s/it][A
+Encoding video:  72%|███████▎  | 87/120 [01:55<00:43,  1.33s/it][A
+Encoding video:  73%|███████▎  | 88/120 [01:56<00:42,  1.32s/it][A
+Encoding video:  74%|███████▍  | 89/120 [01:58<00:41,  1.33s/it][A
+Encoding video:  75%|███████▌  | 90/120 [01:59<00:39,  1.33s/it][A
+Encoding video:  76%|███████▌  | 91/120 [02:00<00:38,  1.33s/it][A
+Encoding video:  77%|███████▋  | 92/120 [02:02<00:37,  1.32s/it][A
+Encoding video:  78%|███████▊  | 93/120 [02:03<00:35,  1.33s/it][A
+Encoding video:  78%|███████▊  | 94/120 [02:04<00:34,  1.33s/it][A
+Encoding video:  79%|███████▉  | 95/120 [02:06<00:33,  1.33s/it][A
+Encoding video:  80%|████████  | 96/120 [02:07<00:31,  1.33s/it][A
+Encoding video:  81%|████████  | 97/120 [02:08<00:30,  1.34s/it][A
+Encoding video:  82%|████████▏ | 98/120 [02:10<00:29,  1.33s/it][A
+Encoding video:  82%|████████▎ | 99/120 [02:11<00:27,  1.33s/it][A
+Encoding video:  83%|████████▎ | 100/120 [02:12<00:26,  1.33s/it][A
+Encoding video:  84%|████████▍ | 101/120 [02:14<00:25,  1.33s/it][A
+Encoding video:  85%|████████▌ | 102/120 [02:15<00:23,  1.33s/it][A
+Encoding video:  86%|████████▌ | 103/120 [02:16<00:22,  1.33s/it][A
+Encoding video:  87%|████████▋ | 104/120 [02:18<00:21,  1.33s/it][A
+Encoding video:  88%|████████▊ | 105/120 [02:19<00:19,  1.33s/it][A
+Encoding video:  88%|████████▊ | 106/120 [02:20<00:18,  1.33s/it][A
+Encoding video:  89%|████████▉ | 107/120 [02:22<00:17,  1.33s/it][A
+Encoding video:  90%|█████████ | 108/120 [02:23<00:15,  1.32s/it][A
+Encoding video:  91%|█████████ | 109/120 [02:24<00:14,  1.33s/it][A
+Encoding video:  92%|█████████▏| 110/120 [02:25<00:13,  1.33s/it][A
+Encoding video:  92%|█████████▎| 111/120 [02:27<00:11,  1.33s/it][A
+Encoding video:  93%|█████████▎| 112/120 [02:28<00:10,  1.33s/it][A
+Encoding video:  94%|█████████▍| 113/120 [02:30<00:09,  1.34s/it][A
+Encoding video:  95%|█████████▌| 114/120 [02:31<00:08,  1.33s/it][A
+Encoding video:  96%|█████████▌| 115/120 [02:32<00:06,  1.34s/it][A
+Encoding video:  97%|█████████▋| 116/120 [02:34<00:05,  1.34s/it][A
+Encoding video:  98%|█████████▊| 117/120 [02:35<00:04,  1.34s/it][A
+Encoding video:  98%|█████████▊| 118/120 [02:36<00:02,  1.34s/it][A
+Encoding video:  99%|█████████▉| 119/120 [02:38<00:01,  1.35s/it][A
+Encoding video: 100%|██████████| 120/120 [02:39<00:00,  1.35s/it][AEncoding video: 100%|██████████| 120/120 [02:39<00:00,  1.33s/it]
+ 27%|██▋       | 3/11 [07:57<21:13, 159.20s/it]2026-05-14 05:31:03 - DEBUG - neuralset.extractors.video:277 - Loaded Video (duration 60.0s at 29.97002997002997fps, shape (720, 480)):
+/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s7/friends_s07e01a.mkv
+
+Encoding video:   0%|          | 0/120 [00:00<?, ?it/s][A2026-05-14 05:31:04 - DEBUG - neuralset.extractors.video:311 - Created Tensor with size (120, 20, 1408)
+
+Encoding video:   1%|          | 1/120 [00:01<02:29,  1.26s/it][A
+Encoding video:   2%|▏         | 2/120 [00:02<02:32,  1.29s/it][A
+Encoding video:   2%|▎         | 3/120 [00:03<02:33,  1.31s/it][A
+Encoding video:   3%|▎         | 4/120 [00:05<02:33,  1.32s/it][A
+Encoding video:   4%|▍         | 5/120 [00:06<02:32,  1.33s/it][A
+Encoding video:   5%|▌         | 6/120 [00:07<02:31,  1.33s/it][A
+Encoding video:   6%|▌         | 7/120 [00:09<02:30,  1.34s/it][A
+Encoding video:   7%|▋         | 8/120 [00:10<02:29,  1.34s/it][A
+Encoding video:   8%|▊         | 9/120 [00:11<02:28,  1.34s/it][A
+Encoding video:   8%|▊         | 10/120 [00:13<02:26,  1.34s/it][A
+Encoding video:   9%|▉         | 11/120 [00:14<02:25,  1.33s/it][A
+Encoding video:  10%|█         | 12/120 [00:15<02:23,  1.33s/it][A
+Encoding video:  11%|█         | 13/120 [00:17<02:21,  1.32s/it][A
+Encoding video:  12%|█▏        | 14/120 [00:18<02:19,  1.32s/it][A
+Encoding video:  12%|█▎        | 15/120 [00:19<02:18,  1.32s/it][A
+Encoding video:  13%|█▎        | 16/120 [00:21<02:16,  1.31s/it][A
+Encoding video:  14%|█▍        | 17/120 [00:22<02:15,  1.31s/it][A
+Encoding video:  15%|█▌        | 18/120 [00:23<02:13,  1.31s/it][A
+Encoding video:  16%|█▌        | 19/120 [00:25<02:12,  1.31s/it][A
+Encoding video:  17%|█▋        | 20/120 [00:26<02:10,  1.31s/it][A
+Encoding video:  18%|█▊        | 21/120 [00:27<02:09,  1.31s/it][A
+Encoding video:  18%|█▊        | 22/120 [00:29<02:08,  1.31s/it][A
+Encoding video:  19%|█▉        | 23/120 [00:30<02:07,  1.31s/it][A
+Encoding video:  20%|██        | 24/120 [00:31<02:05,  1.31s/it][A
+Encoding video:  21%|██        | 25/120 [00:32<02:04,  1.31s/it][A
+Encoding video:  22%|██▏       | 26/120 [00:34<02:03,  1.31s/it][A
+Encoding video:  22%|██▎       | 27/120 [00:35<02:02,  1.32s/it][A
+Encoding video:  23%|██▎       | 28/120 [00:36<02:01,  1.32s/it][A
+Encoding video:  24%|██▍       | 29/120 [00:38<01:59,  1.31s/it][A
+Encoding video:  25%|██▌       | 30/120 [00:39<01:57,  1.31s/it][A
+Encoding video:  26%|██▌       | 31/120 [00:40<01:56,  1.31s/it][A
+Encoding video:  27%|██▋       | 32/120 [00:42<01:55,  1.31s/it][A
+Encoding video:  28%|██▊       | 33/120 [00:43<01:53,  1.31s/it][A
+Encoding video:  28%|██▊       | 34/120 [00:44<01:52,  1.31s/it][A
+Encoding video:  29%|██▉       | 35/120 [00:46<01:51,  1.31s/it][A
+Encoding video:  30%|███       | 36/120 [00:47<01:49,  1.31s/it][A
+Encoding video:  31%|███       | 37/120 [00:48<01:48,  1.31s/it][A
+Encoding video:  32%|███▏      | 38/120 [00:49<01:47,  1.31s/it][A
+Encoding video:  32%|███▎      | 39/120 [00:51<01:46,  1.31s/it][A
+Encoding video:  33%|███▎      | 40/120 [00:52<01:44,  1.31s/it][A
+Encoding video:  34%|███▍      | 41/120 [00:53<01:43,  1.31s/it][A
+Encoding video:  35%|███▌      | 42/120 [00:55<01:42,  1.31s/it][A
+Encoding video:  36%|███▌      | 43/120 [00:56<01:41,  1.32s/it][A
+Encoding video:  37%|███▋      | 44/120 [00:57<01:39,  1.31s/it][A
+Encoding video:  38%|███▊      | 45/120 [00:59<01:38,  1.31s/it][A
+Encoding video:  38%|███▊      | 46/120 [01:00<01:36,  1.31s/it][A
+Encoding video:  39%|███▉      | 47/120 [01:01<01:35,  1.31s/it][A
+Encoding video:  40%|████      | 48/120 [01:03<01:34,  1.31s/it][A
+Encoding video:  41%|████      | 49/120 [01:04<01:32,  1.31s/it][A
+Encoding video:  42%|████▏     | 50/120 [01:05<01:31,  1.31s/it][A
+Encoding video:  42%|████▎     | 51/120 [01:07<01:30,  1.31s/it][A
+Encoding video:  43%|████▎     | 52/120 [01:08<01:28,  1.31s/it][A
+Encoding video:  44%|████▍     | 53/120 [01:09<01:27,  1.31s/it][A
+Encoding video:  45%|████▌     | 54/120 [01:10<01:26,  1.31s/it][A
+Encoding video:  46%|████▌     | 55/120 [01:12<01:25,  1.31s/it][A
+Encoding video:  47%|████▋     | 56/120 [01:13<01:24,  1.32s/it][A
+Encoding video:  48%|████▊     | 57/120 [01:14<01:22,  1.32s/it][A
+Encoding video:  48%|████▊     | 58/120 [01:16<01:21,  1.32s/it][A
+Encoding video:  49%|████▉     | 59/120 [01:17<01:20,  1.32s/it][A
+Encoding video:  50%|█████     | 60/120 [01:18<01:19,  1.32s/it][A
+Encoding video:  51%|█████     | 61/120 [01:20<01:17,  1.32s/it][A
+Encoding video:  52%|█████▏    | 62/120 [01:21<01:16,  1.31s/it][A
+Encoding video:  52%|█████▎    | 63/120 [01:22<01:14,  1.31s/it][A
+Encoding video:  53%|█████▎    | 64/120 [01:24<01:13,  1.31s/it][A
+Encoding video:  54%|█████▍    | 65/120 [01:25<01:12,  1.31s/it][A
+Encoding video:  55%|█████▌    | 66/120 [01:26<01:11,  1.32s/it][A
+Encoding video:  56%|█████▌    | 67/120 [01:28<01:09,  1.32s/it][A
+Encoding video:  57%|█████▋    | 68/120 [01:29<01:08,  1.32s/it][A
+Encoding video:  57%|█████▊    | 69/120 [01:30<01:07,  1.32s/it][A
+Encoding video:  58%|█████▊    | 70/120 [01:32<01:05,  1.32s/it][A
+Encoding video:  59%|█████▉    | 71/120 [01:33<01:04,  1.31s/it][A
+Encoding video:  60%|██████    | 72/120 [01:34<01:02,  1.31s/it][A
+Encoding video:  61%|██████    | 73/120 [01:35<01:01,  1.31s/it][A
+Encoding video:  62%|██████▏   | 74/120 [01:37<01:00,  1.31s/it][A
+Encoding video:  62%|██████▎   | 75/120 [01:38<00:59,  1.31s/it][A
+Encoding video:  63%|██████▎   | 76/120 [01:39<00:57,  1.31s/it][A
+Encoding video:  64%|██████▍   | 77/120 [01:41<00:56,  1.32s/it][A
+Encoding video:  65%|██████▌   | 78/120 [01:42<00:55,  1.32s/it][A
+Encoding video:  66%|██████▌   | 79/120 [01:43<00:54,  1.32s/it][A
+Encoding video:  67%|██████▋   | 80/120 [01:45<00:52,  1.32s/it][A
+Encoding video:  68%|██████▊   | 81/120 [01:46<00:51,  1.32s/it][A
+Encoding video:  68%|██████▊   | 82/120 [01:47<00:50,  1.33s/it][A
+Encoding video:  69%|██████▉   | 83/120 [01:49<00:49,  1.33s/it][A
+Encoding video:  70%|███████   | 84/120 [01:50<00:47,  1.33s/it][A
+Encoding video:  71%|███████   | 85/120 [01:51<00:46,  1.33s/it][A
+Encoding video:  72%|███████▏  | 86/120 [01:53<00:45,  1.33s/it][A
+Encoding video:  72%|███████▎  | 87/120 [01:54<00:44,  1.34s/it][A
+Encoding video:  73%|███████▎  | 88/120 [01:55<00:42,  1.33s/it][A
+Encoding video:  74%|███████▍  | 89/120 [01:57<00:40,  1.32s/it][A
+Encoding video:  75%|███████▌  | 90/120 [01:58<00:39,  1.32s/it][A
+Encoding video:  76%|███████▌  | 91/120 [01:59<00:38,  1.32s/it][A
+Encoding video:  77%|███████▋  | 92/120 [02:01<00:36,  1.31s/it][A
+Encoding video:  78%|███████▊  | 93/120 [02:02<00:35,  1.32s/it][A
+Encoding video:  78%|███████▊  | 94/120 [02:03<00:34,  1.31s/it][A
+Encoding video:  79%|███████▉  | 95/120 [02:05<00:32,  1.32s/it][A
+Encoding video:  80%|████████  | 96/120 [02:06<00:31,  1.31s/it][A
+Encoding video:  81%|████████  | 97/120 [02:07<00:30,  1.32s/it][A
+Encoding video:  82%|████████▏ | 98/120 [02:08<00:29,  1.32s/it][A
+Encoding video:  82%|████████▎ | 99/120 [02:10<00:27,  1.32s/it][A
+Encoding video:  83%|████████▎ | 100/120 [02:11<00:26,  1.32s/it][A
+Encoding video:  84%|████████▍ | 101/120 [02:12<00:25,  1.32s/it][A
+Encoding video:  85%|████████▌ | 102/120 [02:14<00:23,  1.32s/it][A
+Encoding video:  86%|████████▌ | 103/120 [02:15<00:22,  1.33s/it][A
+Encoding video:  87%|████████▋ | 104/120 [02:16<00:21,  1.32s/it][A
+Encoding video:  88%|████████▊ | 105/120 [02:18<00:19,  1.32s/it][A
+Encoding video:  88%|████████▊ | 106/120 [02:19<00:18,  1.31s/it][A
+Encoding video:  89%|████████▉ | 107/120 [02:20<00:17,  1.31s/it][A
+Encoding video:  90%|█████████ | 108/120 [02:22<00:15,  1.32s/it][A
+Encoding video:  91%|█████████ | 109/120 [02:23<00:14,  1.32s/it][A
+Encoding video:  92%|█████████▏| 110/120 [02:24<00:13,  1.32s/it][A
+Encoding video:  92%|█████████▎| 111/120 [02:26<00:11,  1.32s/it][A
+Encoding video:  93%|█████████▎| 112/120 [02:27<00:10,  1.31s/it][A
+Encoding video:  94%|█████████▍| 113/120 [02:28<00:09,  1.31s/it][A
+Encoding video:  95%|█████████▌| 114/120 [02:30<00:07,  1.31s/it][A
+Encoding video:  96%|█████████▌| 115/120 [02:31<00:06,  1.31s/it][A
+Encoding video:  97%|█████████▋| 116/120 [02:32<00:05,  1.31s/it][A
+Encoding video:  98%|█████████▊| 117/120 [02:33<00:03,  1.31s/it][A
+Encoding video:  98%|█████████▊| 118/120 [02:35<00:02,  1.32s/it][A
+Encoding video:  99%|█████████▉| 119/120 [02:36<00:01,  1.32s/it][A
+Encoding video: 100%|██████████| 120/120 [02:37<00:00,  1.32s/it][AEncoding video: 100%|██████████| 120/120 [02:37<00:00,  1.32s/it]
+ 36%|███▋      | 4/11 [10:35<18:31, 158.75s/it]2026-05-14 05:33:41 - DEBUG - neuralset.extractors.video:277 - Loaded Video (duration 60.0s at 29.97002997002997fps, shape (720, 480)):
+/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s7/friends_s07e01a.mkv
+
+Encoding video:   0%|          | 0/120 [00:00<?, ?it/s][A2026-05-14 05:33:42 - DEBUG - neuralset.extractors.video:311 - Created Tensor with size (120, 20, 1408)
+
+Encoding video:   1%|          | 1/120 [00:01<02:30,  1.27s/it][A
+Encoding video:   2%|▏         | 2/120 [00:02<02:32,  1.30s/it][A
+Encoding video:   2%|▎         | 3/120 [00:03<02:32,  1.30s/it][A
+Encoding video:   3%|▎         | 4/120 [00:05<02:31,  1.31s/it][A
+Encoding video:   4%|▍         | 5/120 [00:06<02:30,  1.31s/it][A
+Encoding video:   5%|▌         | 6/120 [00:07<02:29,  1.31s/it][A
+Encoding video:   6%|▌         | 7/120 [00:09<02:28,  1.31s/it][A
+Encoding video:   7%|▋         | 8/120 [00:10<02:27,  1.32s/it][A
+Encoding video:   8%|▊         | 9/120 [00:11<02:26,  1.32s/it][A
+Encoding video:   8%|▊         | 10/120 [00:13<02:25,  1.33s/it][A
+Encoding video:   9%|▉         | 11/120 [00:14<02:25,  1.33s/it][A
+Encoding video:  10%|█         | 12/120 [00:15<02:23,  1.33s/it][A
+Encoding video:  11%|█         | 13/120 [00:17<02:22,  1.33s/it][A
+Encoding video:  12%|█▏        | 14/120 [00:18<02:20,  1.32s/it][A
+Encoding video:  12%|█▎        | 15/120 [00:19<02:18,  1.32s/it][A
+Encoding video:  13%|█▎        | 16/120 [00:21<02:17,  1.32s/it][A
+Encoding video:  14%|█▍        | 17/120 [00:22<02:15,  1.32s/it][A
+Encoding video:  15%|█▌        | 18/120 [00:23<02:14,  1.32s/it][A
+Encoding video:  16%|█▌        | 19/120 [00:25<02:13,  1.33s/it][A
+Encoding video:  17%|█▋        | 20/120 [00:26<02:12,  1.33s/it][A
+Encoding video:  18%|█▊        | 21/120 [00:27<02:11,  1.33s/it][A
+Encoding video:  18%|█▊        | 22/120 [00:29<02:10,  1.33s/it][A
+Encoding video:  19%|█▉        | 23/120 [00:30<02:09,  1.34s/it][A
+Encoding video:  20%|██        | 24/120 [00:31<02:07,  1.33s/it][A
+Encoding video:  21%|██        | 25/120 [00:33<02:05,  1.32s/it][A
+Encoding video:  22%|██▏       | 26/120 [00:34<02:04,  1.32s/it][A
+Encoding video:  22%|██▎       | 27/120 [00:35<02:02,  1.32s/it][A
+Encoding video:  23%|██▎       | 28/120 [00:36<02:01,  1.32s/it][A
+Encoding video:  24%|██▍       | 29/120 [00:38<02:00,  1.32s/it][A
+Encoding video:  25%|██▌       | 30/120 [00:39<01:58,  1.32s/it][A
+Encoding video:  26%|██▌       | 31/120 [00:40<01:57,  1.32s/it][A
+Encoding video:  27%|██▋       | 32/120 [00:42<01:56,  1.32s/it][A
+Encoding video:  28%|██▊       | 33/120 [00:43<01:55,  1.33s/it][A
+Encoding video:  28%|██▊       | 34/120 [00:44<01:54,  1.33s/it][A
+Encoding video:  29%|██▉       | 35/120 [00:46<01:53,  1.33s/it][A
+Encoding video:  30%|███       | 36/120 [00:47<01:51,  1.33s/it][A
+Encoding video:  31%|███       | 37/120 [00:48<01:50,  1.33s/it][A
+Encoding video:  32%|███▏      | 38/120 [00:50<01:49,  1.34s/it][A
+Encoding video:  32%|███▎      | 39/120 [00:51<01:47,  1.33s/it][A
+Encoding video:  33%|███▎      | 40/120 [00:52<01:45,  1.32s/it][A
+Encoding video:  34%|███▍      | 41/120 [00:54<01:44,  1.32s/it][A
+Encoding video:  35%|███▌      | 42/120 [00:55<01:43,  1.32s/it][A
+Encoding video:  36%|███▌      | 43/120 [00:56<01:41,  1.32s/it][A
+Encoding video:  37%|███▋      | 44/120 [00:58<01:40,  1.32s/it][A
+Encoding video:  38%|███▊      | 45/120 [00:59<01:39,  1.32s/it][A
+Encoding video:  38%|███▊      | 46/120 [01:00<01:37,  1.32s/it][A
+Encoding video:  39%|███▉      | 47/120 [01:02<01:36,  1.32s/it][A
+Encoding video:  40%|████      | 48/120 [01:03<01:35,  1.32s/it][A
+Encoding video:  41%|████      | 49/120 [01:04<01:33,  1.32s/it][A
+Encoding video:  42%|████▏     | 50/120 [01:06<01:32,  1.32s/it][A
+Encoding video:  42%|████▎     | 51/120 [01:07<01:30,  1.32s/it][A
+Encoding video:  43%|████▎     | 52/120 [01:08<01:29,  1.32s/it][A
+Encoding video:  44%|████▍     | 53/120 [01:10<01:28,  1.32s/it][A
+Encoding video:  45%|████▌     | 54/120 [01:11<01:27,  1.32s/it][A
+Encoding video:  46%|████▌     | 55/120 [01:12<01:26,  1.32s/it][A
+Encoding video:  47%|████▋     | 56/120 [01:14<01:24,  1.33s/it][A
+Encoding video:  48%|████▊     | 57/120 [01:15<01:23,  1.32s/it][A
+Encoding video:  48%|████▊     | 58/120 [01:16<01:22,  1.32s/it][A
+Encoding video:  49%|████▉     | 59/120 [01:18<01:20,  1.32s/it][A
+Encoding video:  50%|█████     | 60/120 [01:19<01:19,  1.32s/it][A
+Encoding video:  51%|█████     | 61/120 [01:20<01:17,  1.32s/it][A
+Encoding video:  52%|█████▏    | 62/120 [01:21<01:16,  1.32s/it][A
+Encoding video:  52%|█████▎    | 63/120 [01:23<01:15,  1.32s/it][A
+Encoding video:  53%|█████▎    | 64/120 [01:24<01:14,  1.33s/it][A
+Encoding video:  54%|█████▍    | 65/120 [01:25<01:12,  1.33s/it][A
+Encoding video:  55%|█████▌    | 66/120 [01:27<01:11,  1.33s/it][A
+Encoding video:  56%|█████▌    | 67/120 [01:28<01:10,  1.33s/it][A
+Encoding video:  57%|█████▋    | 68/120 [01:29<01:09,  1.33s/it][A
+Encoding video:  57%|█████▊    | 69/120 [01:31<01:08,  1.33s/it][A
+Encoding video:  58%|█████▊    | 70/120 [01:32<01:06,  1.34s/it][A
+Encoding video:  59%|█████▉    | 71/120 [01:34<01:05,  1.34s/it][A
+Encoding video:  60%|██████    | 72/120 [01:35<01:04,  1.34s/it][A
+Encoding video:  61%|██████    | 73/120 [01:36<01:02,  1.33s/it][A
+Encoding video:  62%|██████▏   | 74/120 [01:37<01:01,  1.33s/it][A
+Encoding video:  62%|██████▎   | 75/120 [01:39<00:59,  1.33s/it][A
+Encoding video:  63%|██████▎   | 76/120 [01:40<00:58,  1.32s/it][A
+Encoding video:  64%|██████▍   | 77/120 [01:41<00:56,  1.32s/it][A
+Encoding video:  65%|██████▌   | 78/120 [01:43<00:55,  1.32s/it][A
+Encoding video:  66%|██████▌   | 79/120 [01:44<00:54,  1.32s/it][A
+Encoding video:  67%|██████▋   | 80/120 [01:45<00:52,  1.32s/it][A
+Encoding video:  68%|██████▊   | 81/120 [01:47<00:51,  1.32s/it][A
+Encoding video:  68%|██████▊   | 82/120 [01:48<00:50,  1.32s/it][A
+Encoding video:  69%|██████▉   | 83/120 [01:49<00:48,  1.32s/it][A
+Encoding video:  70%|███████   | 84/120 [01:51<00:47,  1.32s/it][A
+Encoding video:  71%|███████   | 85/120 [01:52<00:46,  1.32s/it][A
+Encoding video:  72%|███████▏  | 86/120 [01:53<00:45,  1.32s/it][A
+Encoding video:  72%|███████▎  | 87/120 [01:55<00:43,  1.33s/it][A
+Encoding video:  73%|███████▎  | 88/120 [01:56<00:42,  1.33s/it][A
+Encoding video:  74%|███████▍  | 89/120 [01:57<00:41,  1.33s/it][A
+Encoding video:  75%|███████▌  | 90/120 [01:59<00:39,  1.33s/it][A
+Encoding video:  76%|███████▌  | 91/120 [02:00<00:38,  1.32s/it][A
+Encoding video:  77%|███████▋  | 92/120 [02:01<00:37,  1.32s/it][A
+Encoding video:  78%|███████▊  | 93/120 [02:03<00:35,  1.32s/it][A
+Encoding video:  78%|███████▊  | 94/120 [02:04<00:34,  1.32s/it][A
+Encoding video:  79%|███████▉  | 95/120 [02:05<00:33,  1.32s/it][A
+Encoding video:  80%|████████  | 96/120 [02:07<00:31,  1.33s/it][A
+Encoding video:  81%|████████  | 97/120 [02:08<00:30,  1.33s/it][A
+Encoding video:  82%|████████▏ | 98/120 [02:09<00:29,  1.33s/it][A
+Encoding video:  82%|████████▎ | 99/120 [02:11<00:28,  1.33s/it][A
+Encoding video:  83%|████████▎ | 100/120 [02:12<00:26,  1.33s/it][A
+Encoding video:  84%|████████▍ | 101/120 [02:13<00:25,  1.34s/it][A
+Encoding video:  85%|████████▌ | 102/120 [02:15<00:24,  1.34s/it][A
+Encoding video:  86%|████████▌ | 103/120 [02:16<00:22,  1.34s/it][A
+Encoding video:  87%|████████▋ | 104/120 [02:17<00:21,  1.35s/it][A
+Encoding video:  88%|████████▊ | 105/120 [02:19<00:20,  1.35s/it][A
+Encoding video:  88%|████████▊ | 106/120 [02:20<00:18,  1.35s/it][A
+Encoding video:  89%|████████▉ | 107/120 [02:21<00:17,  1.34s/it][A
+Encoding video:  90%|█████████ | 108/120 [02:23<00:15,  1.33s/it][A
+Encoding video:  91%|█████████ | 109/120 [02:24<00:14,  1.32s/it][A
+Encoding video:  92%|█████████▏| 110/120 [02:25<00:13,  1.32s/it][A
+Encoding video:  92%|█████████▎| 111/120 [02:27<00:11,  1.32s/it][A
+Encoding video:  93%|█████████▎| 112/120 [02:28<00:10,  1.32s/it][A
+Encoding video:  94%|█████████▍| 113/120 [02:29<00:09,  1.32s/it][A
+Encoding video:  95%|█████████▌| 114/120 [02:31<00:07,  1.31s/it][A
+Encoding video:  96%|█████████▌| 115/120 [02:32<00:06,  1.32s/it][A
+Encoding video:  97%|█████████▋| 116/120 [02:33<00:05,  1.32s/it][A
+Encoding video:  98%|█████████▊| 117/120 [02:34<00:03,  1.32s/it][A
+Encoding video:  98%|█████████▊| 118/120 [02:36<00:02,  1.31s/it][A
+Encoding video:  99%|█████████▉| 119/120 [02:37<00:01,  1.31s/it][A
+Encoding video: 100%|██████████| 120/120 [02:38<00:00,  1.32s/it][AEncoding video: 100%|██████████| 120/120 [02:38<00:00,  1.32s/it]
+ 45%|████▌     | 5/11 [13:14<15:53, 158.85s/it]2026-05-14 05:36:20 - DEBUG - neuralset.extractors.video:277 - Loaded Video (duration 60.0s at 29.97002997002997fps, shape (720, 480)):
+/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s7/friends_s07e01a.mkv
+
+Encoding video:   0%|          | 0/120 [00:00<?, ?it/s][A2026-05-14 05:36:21 - DEBUG - neuralset.extractors.video:311 - Created Tensor with size (120, 20, 1408)
+
+Encoding video:   1%|          | 1/120 [00:01<02:29,  1.26s/it][A
+Encoding video:   2%|▏         | 2/120 [00:02<02:31,  1.28s/it][A
+Encoding video:   2%|▎         | 3/120 [00:03<02:30,  1.29s/it][A
+Encoding video:   3%|▎         | 4/120 [00:05<02:30,  1.30s/it][A
+Encoding video:   4%|▍         | 5/120 [00:06<02:29,  1.30s/it][A
+Encoding video:   5%|▌         | 6/120 [00:07<02:28,  1.30s/it][A
+Encoding video:   6%|▌         | 7/120 [00:09<02:27,  1.31s/it][A
+Encoding video:   7%|▋         | 8/120 [00:10<02:26,  1.31s/it][A
+Encoding video:   8%|▊         | 9/120 [00:11<02:26,  1.32s/it][A
+Encoding video:   8%|▊         | 10/120 [00:13<02:25,  1.32s/it][A
+Encoding video:   9%|▉         | 11/120 [00:14<02:23,  1.32s/it][A
+Encoding video:  10%|█         | 12/120 [00:15<02:22,  1.32s/it][A
+Encoding video:  11%|█         | 13/120 [00:17<02:21,  1.32s/it][A
+Encoding video:  12%|█▏        | 14/120 [00:18<02:20,  1.32s/it][A
+Encoding video:  12%|█▎        | 15/120 [00:19<02:18,  1.32s/it][A
+Encoding video:  13%|█▎        | 16/120 [00:20<02:17,  1.32s/it][A
+Encoding video:  14%|█▍        | 17/120 [00:22<02:15,  1.31s/it][A
+Encoding video:  15%|█▌        | 18/120 [00:23<02:14,  1.31s/it][A
+Encoding video:  16%|█▌        | 19/120 [00:24<02:12,  1.31s/it][A
+Encoding video:  17%|█▋        | 20/120 [00:26<02:11,  1.31s/it][A
+Encoding video:  18%|█▊        | 21/120 [00:27<02:10,  1.31s/it][A
+Encoding video:  18%|█▊        | 22/120 [00:28<02:08,  1.31s/it][A
+Encoding video:  19%|█▉        | 23/120 [00:30<02:07,  1.31s/it][A
+Encoding video:  20%|██        | 24/120 [00:31<02:06,  1.31s/it][A
+Encoding video:  21%|██        | 25/120 [00:32<02:04,  1.31s/it][A
+Encoding video:  22%|██▏       | 26/120 [00:34<02:03,  1.32s/it][A
+Encoding video:  22%|██▎       | 27/120 [00:35<02:02,  1.32s/it][A
+Encoding video:  23%|██▎       | 28/120 [00:36<02:01,  1.32s/it][A
+Encoding video:  24%|██▍       | 29/120 [00:38<01:59,  1.32s/it][A
+Encoding video:  25%|██▌       | 30/120 [00:39<01:58,  1.32s/it][A
+Encoding video:  26%|██▌       | 31/120 [00:40<01:57,  1.32s/it][A
+Encoding video:  27%|██▋       | 32/120 [00:42<01:56,  1.32s/it][A
+Encoding video:  28%|██▊       | 33/120 [00:43<01:54,  1.32s/it][A
+Encoding video:  28%|██▊       | 34/120 [00:44<01:53,  1.32s/it][A
+Encoding video:  29%|██▉       | 35/120 [00:45<01:51,  1.32s/it][A
+Encoding video:  30%|███       | 36/120 [00:47<01:50,  1.32s/it][A
+Encoding video:  31%|███       | 37/120 [00:48<01:49,  1.32s/it][A
+Encoding video:  32%|███▏      | 38/120 [00:49<01:48,  1.32s/it][A
+Encoding video:  32%|███▎      | 39/120 [00:51<01:46,  1.31s/it][A
+Encoding video:  33%|███▎      | 40/120 [00:52<01:45,  1.31s/it][A
+Encoding video:  34%|███▍      | 41/120 [00:53<01:43,  1.31s/it][A
+Encoding video:  35%|███▌      | 42/120 [00:55<01:42,  1.31s/it][A
+Encoding video:  36%|███▌      | 43/120 [00:56<01:41,  1.31s/it][A
+Encoding video:  37%|███▋      | 44/120 [00:57<01:39,  1.31s/it][A
+Encoding video:  38%|███▊      | 45/120 [00:59<01:38,  1.31s/it][A
+Encoding video:  38%|███▊      | 46/120 [01:00<01:37,  1.31s/it][A
+Encoding video:  39%|███▉      | 47/120 [01:01<01:35,  1.31s/it][A
+Encoding video:  40%|████      | 48/120 [01:03<01:34,  1.31s/it][A
+Encoding video:  41%|████      | 49/120 [01:04<01:33,  1.31s/it][A
+Encoding video:  42%|████▏     | 50/120 [01:05<01:32,  1.32s/it][A
+Encoding video:  42%|████▎     | 51/120 [01:07<01:30,  1.32s/it][A
+Encoding video:  43%|████▎     | 52/120 [01:08<01:29,  1.32s/it][A
+Encoding video:  44%|████▍     | 53/120 [01:09<01:28,  1.31s/it][A
+Encoding video:  45%|████▌     | 54/120 [01:10<01:26,  1.31s/it][A
+Encoding video:  46%|████▌     | 55/120 [01:12<01:25,  1.31s/it][A
+Encoding video:  47%|████▋     | 56/120 [01:13<01:23,  1.31s/it][A
+Encoding video:  48%|████▊     | 57/120 [01:14<01:22,  1.31s/it][A
+Encoding video:  48%|████▊     | 58/120 [01:16<01:21,  1.31s/it][A
+Encoding video:  49%|████▉     | 59/120 [01:17<01:19,  1.31s/it][A
+Encoding video:  50%|█████     | 60/120 [01:18<01:18,  1.31s/it][A
+Encoding video:  51%|█████     | 61/120 [01:20<01:17,  1.31s/it][A
+Encoding video:  52%|█████▏    | 62/120 [01:21<01:16,  1.31s/it][A
+Encoding video:  52%|█████▎    | 63/120 [01:22<01:14,  1.31s/it][A
+Encoding video:  53%|█████▎    | 64/120 [01:24<01:13,  1.31s/it][A
+Encoding video:  54%|█████▍    | 65/120 [01:25<01:12,  1.31s/it][A
+Encoding video:  55%|█████▌    | 66/120 [01:26<01:10,  1.31s/it][A
+Encoding video:  56%|█████▌    | 67/120 [01:27<01:09,  1.31s/it][A
+Encoding video:  57%|█████▋    | 68/120 [01:29<01:08,  1.31s/it][A
+Encoding video:  57%|█████▊    | 69/120 [01:30<01:06,  1.31s/it][A
+Encoding video:  58%|█████▊    | 70/120 [01:31<01:05,  1.31s/it][A
+Encoding video:  59%|█████▉    | 71/120 [01:33<01:04,  1.31s/it][A
+Encoding video:  60%|██████    | 72/120 [01:34<01:02,  1.31s/it][A
+Encoding video:  61%|██████    | 73/120 [01:35<01:01,  1.31s/it][A
+Encoding video:  62%|██████▏   | 74/120 [01:37<01:00,  1.31s/it][A
+Encoding video:  62%|██████▎   | 75/120 [01:38<00:58,  1.31s/it][A
+Encoding video:  63%|██████▎   | 76/120 [01:39<00:57,  1.32s/it][A
+Encoding video:  64%|██████▍   | 77/120 [01:41<00:56,  1.32s/it][A
+Encoding video:  65%|██████▌   | 78/120 [01:42<00:55,  1.32s/it][A
+Encoding video:  66%|██████▌   | 79/120 [01:43<00:53,  1.32s/it][A
+Encoding video:  67%|██████▋   | 80/120 [01:45<00:52,  1.32s/it][A
+Encoding video:  68%|██████▊   | 81/120 [01:46<00:51,  1.32s/it][A
+Encoding video:  68%|██████▊   | 82/120 [01:47<00:50,  1.32s/it][A
+Encoding video:  69%|██████▉   | 83/120 [01:49<00:48,  1.32s/it][A
+Encoding video:  70%|███████   | 84/120 [01:50<00:47,  1.32s/it][A
+Encoding video:  71%|███████   | 85/120 [01:51<00:45,  1.31s/it][A
+Encoding video:  72%|███████▏  | 86/120 [01:52<00:44,  1.31s/it][A
+Encoding video:  72%|███████▎  | 87/120 [01:54<00:43,  1.31s/it][A
+Encoding video:  73%|███████▎  | 88/120 [01:55<00:41,  1.31s/it][A
+Encoding video:  74%|███████▍  | 89/120 [01:56<00:40,  1.31s/it][A
+Encoding video:  75%|███████▌  | 90/120 [01:58<00:39,  1.31s/it][A
+Encoding video:  76%|███████▌  | 91/120 [01:59<00:37,  1.31s/it][A
+Encoding video:  77%|███████▋  | 92/120 [02:00<00:36,  1.31s/it][A
+Encoding video:  78%|███████▊  | 93/120 [02:02<00:35,  1.31s/it][A
+Encoding video:  78%|███████▊  | 94/120 [02:03<00:34,  1.31s/it][A
+Encoding video:  79%|███████▉  | 95/120 [02:04<00:32,  1.31s/it][A
+Encoding video:  80%|████████  | 96/120 [02:06<00:31,  1.31s/it][A
+Encoding video:  81%|████████  | 97/120 [02:07<00:30,  1.31s/it][A
+Encoding video:  82%|████████▏ | 98/120 [02:08<00:28,  1.31s/it][A
+Encoding video:  82%|████████▎ | 99/120 [02:09<00:27,  1.31s/it][A
+Encoding video:  83%|████████▎ | 100/120 [02:11<00:26,  1.31s/it][A
+Encoding video:  84%|████████▍ | 101/120 [02:12<00:24,  1.31s/it][A
+Encoding video:  85%|████████▌ | 102/120 [02:13<00:23,  1.32s/it][A
+Encoding video:  86%|████████▌ | 103/120 [02:15<00:22,  1.32s/it][A
+Encoding video:  87%|████████▋ | 104/120 [02:16<00:21,  1.32s/it][A
+Encoding video:  88%|████████▊ | 105/120 [02:17<00:19,  1.32s/it][A
+Encoding video:  88%|████████▊ | 106/120 [02:19<00:18,  1.32s/it][A
+Encoding video:  89%|████████▉ | 107/120 [02:20<00:17,  1.32s/it][A
+Encoding video:  90%|█████████ | 108/120 [02:21<00:15,  1.33s/it][A
+Encoding video:  91%|█████████ | 109/120 [02:23<00:14,  1.33s/it][A
+Encoding video:  92%|█████████▏| 110/120 [02:24<00:13,  1.33s/it][A
+Encoding video:  92%|█████████▎| 111/120 [02:25<00:11,  1.33s/it][A
+Encoding video:  93%|█████████▎| 112/120 [02:27<00:10,  1.33s/it][A
+Encoding video:  94%|█████████▍| 113/120 [02:28<00:09,  1.32s/it][A
+Encoding video:  95%|█████████▌| 114/120 [02:29<00:07,  1.32s/it][A
+Encoding video:  96%|█████████▌| 115/120 [02:31<00:06,  1.31s/it][A
+Encoding video:  97%|█████████▋| 116/120 [02:32<00:05,  1.32s/it][A
+Encoding video:  98%|█████████▊| 117/120 [02:33<00:03,  1.31s/it][A
+Encoding video:  98%|█████████▊| 118/120 [02:35<00:02,  1.32s/it][A
+Encoding video:  99%|█████████▉| 119/120 [02:36<00:01,  1.31s/it][A
+Encoding video: 100%|██████████| 120/120 [02:37<00:00,  1.32s/it][AEncoding video: 100%|██████████| 120/120 [02:37<00:00,  1.31s/it]
+ 55%|█████▍    | 6/11 [15:52<13:12, 158.50s/it]2026-05-14 05:38:58 - DEBUG - neuralset.extractors.video:277 - Loaded Video (duration 60.0s at 29.97002997002997fps, shape (720, 480)):
+/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s7/friends_s07e01a.mkv
+
+Encoding video:   0%|          | 0/120 [00:00<?, ?it/s][A2026-05-14 05:38:59 - DEBUG - neuralset.extractors.video:311 - Created Tensor with size (120, 20, 1408)
+
+Encoding video:   1%|          | 1/120 [00:01<02:27,  1.24s/it][A
+Encoding video:   2%|▏         | 2/120 [00:02<02:32,  1.29s/it][A
+Encoding video:   2%|▎         | 3/120 [00:03<02:32,  1.30s/it][A
+Encoding video:   3%|▎         | 4/120 [00:05<02:32,  1.31s/it][A
+Encoding video:   4%|▍         | 5/120 [00:06<02:31,  1.32s/it][A
+Encoding video:   5%|▌         | 6/120 [00:07<02:30,  1.32s/it][A
+Encoding video:   6%|▌         | 7/120 [00:09<02:30,  1.33s/it][A
+Encoding video:   7%|▋         | 8/120 [00:10<02:29,  1.33s/it][A
+Encoding video:   8%|▊         | 9/120 [00:11<02:28,  1.34s/it][A
+Encoding video:   8%|▊         | 10/120 [00:13<02:27,  1.34s/it][A
+Encoding video:   9%|▉         | 11/120 [00:14<02:26,  1.34s/it][A
+Encoding video:  10%|█         | 12/120 [00:15<02:24,  1.34s/it][A
+Encoding video:  11%|█         | 13/120 [00:17<02:22,  1.33s/it][A
+Encoding video:  12%|█▏        | 14/120 [00:18<02:20,  1.32s/it][A
+Encoding video:  12%|█▎        | 15/120 [00:19<02:18,  1.32s/it][A
+Encoding video:  13%|█▎        | 16/120 [00:21<02:17,  1.32s/it][A
+Encoding video:  14%|█▍        | 17/120 [00:22<02:15,  1.32s/it][A
+Encoding video:  15%|█▌        | 18/120 [00:23<02:14,  1.32s/it][A
+Encoding video:  16%|█▌        | 19/120 [00:25<02:12,  1.32s/it][A
+Encoding video:  17%|█▋        | 20/120 [00:26<02:11,  1.31s/it][A
+Encoding video:  18%|█▊        | 21/120 [00:27<02:09,  1.31s/it][A
+Encoding video:  18%|█▊        | 22/120 [00:29<02:08,  1.31s/it][A
+Encoding video:  19%|█▉        | 23/120 [00:30<02:06,  1.31s/it][A
+Encoding video:  20%|██        | 24/120 [00:31<02:05,  1.31s/it][A
+Encoding video:  21%|██        | 25/120 [00:32<02:04,  1.31s/it][A
+Encoding video:  22%|██▏       | 26/120 [00:34<02:03,  1.31s/it][A
+Encoding video:  22%|██▎       | 27/120 [00:35<02:02,  1.31s/it][A
+Encoding video:  23%|██▎       | 28/120 [00:36<02:01,  1.32s/it][A
+Encoding video:  24%|██▍       | 29/120 [00:38<01:59,  1.32s/it][A
+Encoding video:  25%|██▌       | 30/120 [00:39<01:58,  1.32s/it][A
+Encoding video:  26%|██▌       | 31/120 [00:40<01:57,  1.32s/it][A
+Encoding video:  27%|██▋       | 32/120 [00:42<01:56,  1.33s/it][A
+Encoding video:  28%|██▊       | 33/120 [00:43<01:55,  1.33s/it][A
+Encoding video:  28%|██▊       | 34/120 [00:44<01:54,  1.33s/it][A
+Encoding video:  29%|██▉       | 35/120 [00:46<01:53,  1.33s/it][A
+Encoding video:  30%|███       | 36/120 [00:47<01:52,  1.34s/it][A
+Encoding video:  31%|███       | 37/120 [00:48<01:51,  1.34s/it][A
+Encoding video:  32%|███▏      | 38/120 [00:50<01:49,  1.33s/it][A
+Encoding video:  32%|███▎      | 39/120 [00:51<01:47,  1.32s/it][A
+Encoding video:  33%|███▎      | 40/120 [00:52<01:45,  1.32s/it][A
+Encoding video:  34%|███▍      | 41/120 [00:54<01:44,  1.32s/it][A
+Encoding video:  35%|███▌      | 42/120 [00:55<01:42,  1.32s/it][A
+Encoding video:  36%|███▌      | 43/120 [00:56<01:41,  1.32s/it][A
+Encoding video:  37%|███▋      | 44/120 [00:58<01:40,  1.32s/it][A
+Encoding video:  38%|███▊      | 45/120 [00:59<01:39,  1.32s/it][A
+Encoding video:  38%|███▊      | 46/120 [01:00<01:38,  1.32s/it][A
+Encoding video:  39%|███▉      | 47/120 [01:02<01:36,  1.32s/it][A
+Encoding video:  40%|████      | 48/120 [01:03<01:35,  1.33s/it][A
+Encoding video:  41%|████      | 49/120 [01:04<01:34,  1.33s/it][A
+Encoding video:  42%|████▏     | 50/120 [01:06<01:33,  1.33s/it][A
+Encoding video:  42%|████▎     | 51/120 [01:07<01:32,  1.34s/it][A
+Encoding video:  43%|████▎     | 52/120 [01:08<01:31,  1.34s/it][A
+Encoding video:  44%|████▍     | 53/120 [01:10<01:28,  1.33s/it][A
+Encoding video:  45%|████▌     | 54/120 [01:11<01:27,  1.32s/it][A
+Encoding video:  46%|████▌     | 55/120 [01:12<01:25,  1.31s/it][A
+Encoding video:  47%|████▋     | 56/120 [01:14<01:24,  1.32s/it][A
+Encoding video:  48%|████▊     | 57/120 [01:15<01:22,  1.31s/it][A
+Encoding video:  48%|████▊     | 58/120 [01:16<01:21,  1.31s/it][A
+Encoding video:  49%|████▉     | 59/120 [01:17<01:19,  1.31s/it][A
+Encoding video:  50%|█████     | 60/120 [01:19<01:18,  1.31s/it][A
+Encoding video:  51%|█████     | 61/120 [01:20<01:17,  1.31s/it][A
+Encoding video:  52%|█████▏    | 62/120 [01:21<01:16,  1.31s/it][A
+Encoding video:  52%|█████▎    | 63/120 [01:23<01:15,  1.32s/it][A
+Encoding video:  53%|█████▎    | 64/120 [01:24<01:13,  1.32s/it][A
+Encoding video:  54%|█████▍    | 65/120 [01:25<01:12,  1.32s/it][A
+Encoding video:  55%|█████▌    | 66/120 [01:27<01:11,  1.32s/it][A
+Encoding video:  56%|█████▌    | 67/120 [01:28<01:10,  1.32s/it][A
+Encoding video:  57%|█████▋    | 68/120 [01:29<01:08,  1.32s/it][A
+Encoding video:  57%|█████▊    | 69/120 [01:31<01:07,  1.32s/it][A
+Encoding video:  58%|█████▊    | 70/120 [01:32<01:05,  1.31s/it][A
+Encoding video:  59%|█████▉    | 71/120 [01:33<01:04,  1.31s/it][A
+Encoding video:  60%|██████    | 72/120 [01:35<01:02,  1.31s/it][A
+Encoding video:  61%|██████    | 73/120 [01:36<01:01,  1.31s/it][A
+Encoding video:  62%|██████▏   | 74/120 [01:37<01:00,  1.31s/it][A
+Encoding video:  62%|██████▎   | 75/120 [01:39<00:59,  1.31s/it][A
+Encoding video:  63%|██████▎   | 76/120 [01:40<00:57,  1.31s/it][A
+Encoding video:  64%|██████▍   | 77/120 [01:41<00:56,  1.31s/it][A
+Encoding video:  65%|██████▌   | 78/120 [01:42<00:55,  1.31s/it][A
+Encoding video:  66%|██████▌   | 79/120 [01:44<00:53,  1.31s/it][A
+Encoding video:  67%|██████▋   | 80/120 [01:45<00:52,  1.31s/it][A
+Encoding video:  68%|██████▊   | 81/120 [01:46<00:51,  1.31s/it][A
+Encoding video:  68%|██████▊   | 82/120 [01:48<00:49,  1.31s/it][A
+Encoding video:  69%|██████▉   | 83/120 [01:49<00:48,  1.31s/it][A
+Encoding video:  70%|███████   | 84/120 [01:50<00:47,  1.31s/it][A
+Encoding video:  71%|███████   | 85/120 [01:52<00:45,  1.31s/it][A
+Encoding video:  72%|███████▏  | 86/120 [01:53<00:44,  1.31s/it][A
+Encoding video:  72%|███████▎  | 87/120 [01:54<00:43,  1.31s/it][A
+Encoding video:  73%|███████▎  | 88/120 [01:56<00:41,  1.31s/it][A
+Encoding video:  74%|███████▍  | 89/120 [01:57<00:40,  1.31s/it][A
+Encoding video:  75%|███████▌  | 90/120 [01:58<00:39,  1.32s/it][A
+Encoding video:  76%|███████▌  | 91/120 [02:00<00:38,  1.31s/it][A
+Encoding video:  77%|███████▋  | 92/120 [02:01<00:36,  1.31s/it][A
+Encoding video:  78%|███████▊  | 93/120 [02:02<00:35,  1.32s/it][A
+Encoding video:  78%|███████▊  | 94/120 [02:03<00:34,  1.32s/it][A
+Encoding video:  79%|███████▉  | 95/120 [02:05<00:32,  1.32s/it][A
+Encoding video:  80%|████████  | 96/120 [02:06<00:31,  1.32s/it][A
+Encoding video:  81%|████████  | 97/120 [02:07<00:30,  1.32s/it][A
+Encoding video:  82%|████████▏ | 98/120 [02:09<00:29,  1.33s/it][A
+Encoding video:  82%|████████▎ | 99/120 [02:10<00:27,  1.32s/it][A
+Encoding video:  83%|████████▎ | 100/120 [02:11<00:26,  1.32s/it][A
+Encoding video:  84%|████████▍ | 101/120 [02:13<00:25,  1.32s/it][A
+Encoding video:  85%|████████▌ | 102/120 [02:14<00:23,  1.32s/it][A
+Encoding video:  86%|████████▌ | 103/120 [02:15<00:22,  1.32s/it][A
+Encoding video:  87%|████████▋ | 104/120 [02:17<00:21,  1.32s/it][A
+Encoding video:  88%|████████▊ | 105/120 [02:18<00:19,  1.32s/it][A
+Encoding video:  88%|████████▊ | 106/120 [02:19<00:18,  1.32s/it][A
+Encoding video:  89%|████████▉ | 107/120 [02:21<00:17,  1.32s/it][A
+Encoding video:  90%|█████████ | 108/120 [02:22<00:15,  1.33s/it][A
+Encoding video:  91%|█████████ | 109/120 [02:23<00:14,  1.33s/it][A
+Encoding video:  92%|█████████▏| 110/120 [02:25<00:13,  1.33s/it][A
+Encoding video:  92%|█████████▎| 111/120 [02:26<00:11,  1.33s/it][A
+Encoding video:  93%|█████████▎| 112/120 [02:27<00:10,  1.33s/it][A
+Encoding video:  94%|█████████▍| 113/120 [02:29<00:09,  1.33s/it][A
+Encoding video:  95%|█████████▌| 114/120 [02:30<00:07,  1.33s/it][A
+Encoding video:  96%|█████████▌| 115/120 [02:31<00:06,  1.32s/it][A
+Encoding video:  97%|█████████▋| 116/120 [02:33<00:05,  1.32s/it][A
+Encoding video:  98%|█████████▊| 117/120 [02:34<00:03,  1.32s/it][A
+Encoding video:  98%|█████████▊| 118/120 [02:35<00:02,  1.31s/it][A
+Encoding video:  99%|█████████▉| 119/120 [02:37<00:01,  1.31s/it][A
+Encoding video: 100%|██████████| 120/120 [02:38<00:00,  1.32s/it][AEncoding video: 100%|██████████| 120/120 [02:38<00:00,  1.32s/it]
+ 64%|██████▎   | 7/11 [18:30<10:33, 158.48s/it]2026-05-14 05:41:36 - DEBUG - neuralset.extractors.video:277 - Loaded Video (duration 60.0s at 29.97002997002997fps, shape (720, 480)):
+/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s7/friends_s07e01a.mkv
+
+Encoding video:   0%|          | 0/120 [00:00<?, ?it/s][A2026-05-14 05:41:37 - DEBUG - neuralset.extractors.video:311 - Created Tensor with size (120, 20, 1408)
+
+Encoding video:   1%|          | 1/120 [00:01<02:28,  1.25s/it][A
+Encoding video:   2%|▏         | 2/120 [00:02<02:30,  1.27s/it][A
+Encoding video:   2%|▎         | 3/120 [00:03<02:29,  1.28s/it][A
+Encoding video:   3%|▎         | 4/120 [00:05<02:29,  1.29s/it][A
+Encoding video:   4%|▍         | 5/120 [00:06<02:28,  1.29s/it][A
+Encoding video:   5%|▌         | 6/120 [00:07<02:28,  1.30s/it][A
+Encoding video:   6%|▌         | 7/120 [00:09<02:26,  1.30s/it][A
+Encoding video:   7%|▋         | 8/120 [00:10<02:26,  1.30s/it][A
+Encoding video:   8%|▊         | 9/120 [00:11<02:24,  1.31s/it][A
+Encoding video:   8%|▊         | 10/120 [00:12<02:23,  1.31s/it][A
+Encoding video:   9%|▉         | 11/120 [00:14<02:22,  1.31s/it][A
+Encoding video:  10%|█         | 12/120 [00:15<02:21,  1.31s/it][A
+Encoding video:  11%|█         | 13/120 [00:16<02:20,  1.31s/it][A
+Encoding video:  12%|█▏        | 14/120 [00:18<02:19,  1.32s/it][A
+Encoding video:  12%|█▎        | 15/120 [00:19<02:18,  1.32s/it][A
+Encoding video:  13%|█▎        | 16/120 [00:20<02:17,  1.32s/it][A
+Encoding video:  14%|█▍        | 17/120 [00:22<02:16,  1.32s/it][A
+Encoding video:  15%|█▌        | 18/120 [00:23<02:15,  1.32s/it][A
+Encoding video:  16%|█▌        | 19/120 [00:24<02:13,  1.33s/it][A
+Encoding video:  17%|█▋        | 20/120 [00:26<02:12,  1.32s/it][A
+Encoding video:  18%|█▊        | 21/120 [00:27<02:10,  1.32s/it][A
+Encoding video:  18%|█▊        | 22/120 [00:28<02:09,  1.32s/it][A
+Encoding video:  19%|█▉        | 23/120 [00:30<02:07,  1.32s/it][A
+Encoding video:  20%|██        | 24/120 [00:31<02:06,  1.31s/it][A
+Encoding video:  21%|██        | 25/120 [00:32<02:04,  1.32s/it][A
+Encoding video:  22%|██▏       | 26/120 [00:34<02:03,  1.31s/it][A
+Encoding video:  22%|██▎       | 27/120 [00:35<02:01,  1.31s/it][A
+Encoding video:  23%|██▎       | 28/120 [00:36<02:00,  1.31s/it][A
+Encoding video:  24%|██▍       | 29/120 [00:37<01:59,  1.31s/it][A
+Encoding video:  25%|██▌       | 30/120 [00:39<01:58,  1.32s/it][A
+Encoding video:  26%|██▌       | 31/120 [00:40<01:57,  1.32s/it][A
+Encoding video:  27%|██▋       | 32/120 [00:41<01:56,  1.32s/it][A
+Encoding video:  28%|██▊       | 33/120 [00:43<01:55,  1.33s/it][A
+Encoding video:  28%|██▊       | 34/120 [00:44<01:53,  1.32s/it][A
+Encoding video:  29%|██▉       | 35/120 [00:45<01:52,  1.32s/it][A
+Encoding video:  30%|███       | 36/120 [00:47<01:50,  1.32s/it][A
+Encoding video:  31%|███       | 37/120 [00:48<01:49,  1.32s/it][A
+Encoding video:  32%|███▏      | 38/120 [00:49<01:48,  1.32s/it][A
+Encoding video:  32%|███▎      | 39/120 [00:51<01:46,  1.32s/it][A
+Encoding video:  33%|███▎      | 40/120 [00:52<01:45,  1.32s/it][A
+Encoding video:  34%|███▍      | 41/120 [00:53<01:44,  1.33s/it][A
+Encoding video:  35%|███▌      | 42/120 [00:55<01:43,  1.33s/it][A
+Encoding video:  36%|███▌      | 43/120 [00:56<01:42,  1.33s/it][A
+Encoding video:  37%|███▋      | 44/120 [00:57<01:40,  1.33s/it][A
+Encoding video:  38%|███▊      | 45/120 [00:59<01:39,  1.33s/it][A
+Encoding video:  38%|███▊      | 46/120 [01:00<01:38,  1.33s/it][A
+Encoding video:  39%|███▉      | 47/120 [01:01<01:37,  1.34s/it][A
+Encoding video:  40%|████      | 48/120 [01:03<01:36,  1.34s/it][A
+Encoding video:  41%|████      | 49/120 [01:04<01:35,  1.34s/it][A
+Encoding video:  42%|████▏     | 50/120 [01:05<01:33,  1.34s/it][A
+Encoding video:  42%|████▎     | 51/120 [01:07<01:31,  1.33s/it][A
+Encoding video:  43%|████▎     | 52/120 [01:08<01:30,  1.33s/it][A
+Encoding video:  44%|████▍     | 53/120 [01:09<01:28,  1.32s/it][A
+Encoding video:  45%|████▌     | 54/120 [01:11<01:26,  1.32s/it][A
+Encoding video:  46%|████▌     | 55/120 [01:12<01:25,  1.31s/it][A
+Encoding video:  47%|████▋     | 56/120 [01:13<01:24,  1.32s/it][A
+Encoding video:  48%|████▊     | 57/120 [01:15<01:22,  1.32s/it][A
+Encoding video:  48%|████▊     | 58/120 [01:16<01:21,  1.32s/it][A
+Encoding video:  49%|████▉     | 59/120 [01:17<01:20,  1.32s/it][A
+Encoding video:  50%|█████     | 60/120 [01:19<01:19,  1.32s/it][A
+Encoding video:  51%|█████     | 61/120 [01:20<01:17,  1.32s/it][A
+Encoding video:  52%|█████▏    | 62/120 [01:21<01:16,  1.32s/it][A
+Encoding video:  52%|█████▎    | 63/120 [01:23<01:14,  1.32s/it][A
+Encoding video:  53%|█████▎    | 64/120 [01:24<01:13,  1.32s/it][A
+Encoding video:  54%|█████▍    | 65/120 [01:25<01:12,  1.32s/it][A
+Encoding video:  55%|█████▌    | 66/120 [01:26<01:11,  1.32s/it][A
+Encoding video:  56%|█████▌    | 67/120 [01:28<01:09,  1.32s/it][A
+Encoding video:  57%|█████▋    | 68/120 [01:29<01:08,  1.32s/it][A
+Encoding video:  57%|█████▊    | 69/120 [01:30<01:07,  1.32s/it][A
+Encoding video:  58%|█████▊    | 70/120 [01:32<01:05,  1.32s/it][A
+Encoding video:  59%|█████▉    | 71/120 [01:33<01:04,  1.32s/it][A
+Encoding video:  60%|██████    | 72/120 [01:34<01:03,  1.32s/it][A
+Encoding video:  61%|██████    | 73/120 [01:36<01:02,  1.32s/it][A
+Encoding video:  62%|██████▏   | 74/120 [01:37<01:00,  1.32s/it][A
+Encoding video:  62%|██████▎   | 75/120 [01:38<00:59,  1.33s/it][A
+Encoding video:  63%|██████▎   | 76/120 [01:40<00:58,  1.33s/it][A
+Encoding video:  64%|██████▍   | 77/120 [01:41<00:57,  1.33s/it][A
+Encoding video:  65%|██████▌   | 78/120 [01:42<00:55,  1.33s/it][A
+Encoding video:  66%|██████▌   | 79/120 [01:44<00:54,  1.33s/it][A
+Encoding video:  67%|██████▋   | 80/120 [01:45<00:53,  1.34s/it][A
+Encoding video:  68%|██████▊   | 81/120 [01:46<00:52,  1.34s/it][A
+Encoding video:  68%|██████▊   | 82/120 [01:48<00:50,  1.34s/it][A
+Encoding video:  69%|██████▉   | 83/120 [01:49<00:49,  1.34s/it][A
+Encoding video:  70%|███████   | 84/120 [01:50<00:48,  1.33s/it][A
+Encoding video:  71%|███████   | 85/120 [01:52<00:46,  1.33s/it][A
+Encoding video:  72%|███████▏  | 86/120 [01:53<00:45,  1.33s/it][A
+Encoding video:  72%|███████▎  | 87/120 [01:54<00:43,  1.32s/it][A
+Encoding video:  73%|███████▎  | 88/120 [01:56<00:42,  1.32s/it][A
+Encoding video:  74%|███████▍  | 89/120 [01:57<00:40,  1.32s/it][A
+Encoding video:  75%|███████▌  | 90/120 [01:58<00:39,  1.33s/it][A
+Encoding video:  76%|███████▌  | 91/120 [02:00<00:38,  1.33s/it][A
+Encoding video:  77%|███████▋  | 92/120 [02:01<00:37,  1.33s/it][A
+Encoding video:  78%|███████▊  | 93/120 [02:02<00:35,  1.33s/it][A
+Encoding video:  78%|███████▊  | 94/120 [02:04<00:34,  1.33s/it][A
+Encoding video:  79%|███████▉  | 95/120 [02:05<00:33,  1.34s/it][A
+Encoding video:  80%|████████  | 96/120 [02:06<00:32,  1.34s/it][A
+Encoding video:  81%|████████  | 97/120 [02:08<00:30,  1.34s/it][A
+Encoding video:  82%|████████▏ | 98/120 [02:09<00:29,  1.34s/it][A
+Encoding video:  82%|████████▎ | 99/120 [02:10<00:28,  1.35s/it][A
+Encoding video:  83%|████████▎ | 100/120 [02:12<00:26,  1.35s/it][A
+Encoding video:  84%|████████▍ | 101/120 [02:13<00:25,  1.34s/it][A
+Encoding video:  85%|████████▌ | 102/120 [02:14<00:23,  1.33s/it][A
+Encoding video:  86%|████████▌ | 103/120 [02:16<00:22,  1.33s/it][A
+Encoding video:  87%|████████▋ | 104/120 [02:17<00:21,  1.33s/it][A
+Encoding video:  88%|████████▊ | 105/120 [02:18<00:19,  1.33s/it][A
+Encoding video:  88%|████████▊ | 106/120 [02:20<00:18,  1.32s/it][A
+Encoding video:  89%|████████▉ | 107/120 [02:21<00:17,  1.32s/it][A
+Encoding video:  90%|█████████ | 108/120 [02:22<00:15,  1.32s/it][A
+Encoding video:  91%|█████████ | 109/120 [02:24<00:14,  1.32s/it][A
+Encoding video:  92%|█████████▏| 110/120 [02:25<00:13,  1.32s/it][A
+Encoding video:  92%|█████████▎| 111/120 [02:26<00:11,  1.32s/it][A
+Encoding video:  93%|█████████▎| 112/120 [02:28<00:10,  1.32s/it][A
+Encoding video:  94%|█████████▍| 113/120 [02:29<00:09,  1.32s/it][A
+Encoding video:  95%|█████████▌| 114/120 [02:30<00:07,  1.32s/it][A
+Encoding video:  96%|█████████▌| 115/120 [02:32<00:06,  1.33s/it][A
+Encoding video:  97%|█████████▋| 116/120 [02:33<00:05,  1.33s/it][A
+Encoding video:  98%|█████████▊| 117/120 [02:34<00:03,  1.32s/it][A
+Encoding video:  98%|█████████▊| 118/120 [02:36<00:02,  1.32s/it][A
+Encoding video:  99%|█████████▉| 119/120 [02:37<00:01,  1.32s/it][A
+Encoding video: 100%|██████████| 120/120 [02:38<00:00,  1.32s/it][AEncoding video: 100%|██████████| 120/120 [02:38<00:00,  1.32s/it]
+ 73%|███████▎  | 8/11 [21:09<07:55, 158.56s/it]2026-05-14 05:44:15 - DEBUG - neuralset.extractors.video:277 - Loaded Video (duration 60.0s at 29.97002997002997fps, shape (720, 480)):
+/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s7/friends_s07e01a.mkv
+
+Encoding video:   0%|          | 0/120 [00:00<?, ?it/s][A2026-05-14 05:44:16 - DEBUG - neuralset.extractors.video:311 - Created Tensor with size (120, 20, 1408)
+
+Encoding video:   1%|          | 1/120 [00:01<02:28,  1.25s/it][A
+Encoding video:   2%|▏         | 2/120 [00:02<02:30,  1.28s/it][A
+Encoding video:   2%|▎         | 3/120 [00:03<02:29,  1.28s/it][A
+Encoding video:   3%|▎         | 4/120 [00:05<02:29,  1.29s/it][A
+Encoding video:   4%|▍         | 5/120 [00:06<02:28,  1.29s/it][A
+Encoding video:   5%|▌         | 6/120 [00:07<02:27,  1.29s/it][A
+Encoding video:   6%|▌         | 7/120 [00:09<02:26,  1.30s/it][A
+Encoding video:   7%|▋         | 8/120 [00:10<02:25,  1.30s/it][A
+Encoding video:   8%|▊         | 9/120 [00:11<02:24,  1.30s/it][A
+Encoding video:   8%|▊         | 10/120 [00:12<02:24,  1.31s/it][A
+Encoding video:   9%|▉         | 11/120 [00:14<02:23,  1.31s/it][A
+Encoding video:  10%|█         | 12/120 [00:15<02:22,  1.32s/it][A
+Encoding video:  11%|█         | 13/120 [00:16<02:20,  1.31s/it][A
+Encoding video:  12%|█▏        | 14/120 [00:18<02:19,  1.31s/it][A
+Encoding video:  12%|█▎        | 15/120 [00:19<02:17,  1.31s/it][A
+Encoding video:  13%|█▎        | 16/120 [00:20<02:16,  1.31s/it][A
+Encoding video:  14%|█▍        | 17/120 [00:22<02:15,  1.31s/it][A
+Encoding video:  15%|█▌        | 18/120 [00:23<02:14,  1.31s/it][A
+Encoding video:  16%|█▌        | 19/120 [00:24<02:12,  1.32s/it][A
+Encoding video:  17%|█▋        | 20/120 [00:26<02:11,  1.32s/it][A
+Encoding video:  18%|█▊        | 21/120 [00:27<02:10,  1.31s/it][A
+Encoding video:  18%|█▊        | 22/120 [00:28<02:08,  1.31s/it][A
+Encoding video:  19%|█▉        | 23/120 [00:30<02:07,  1.31s/it][A
+Encoding video:  20%|██        | 24/120 [00:31<02:05,  1.31s/it][A
+Encoding video:  21%|██        | 25/120 [00:32<02:04,  1.31s/it][A
+Encoding video:  22%|██▏       | 26/120 [00:33<02:02,  1.31s/it][A
+Encoding video:  22%|██▎       | 27/120 [00:35<02:01,  1.31s/it][A
+Encoding video:  23%|██▎       | 28/120 [00:36<02:00,  1.31s/it][A
+Encoding video:  24%|██▍       | 29/120 [00:37<01:59,  1.31s/it][A
+Encoding video:  25%|██▌       | 30/120 [00:39<01:58,  1.32s/it][A
+Encoding video:  26%|██▌       | 31/120 [00:40<01:57,  1.32s/it][A
+Encoding video:  27%|██▋       | 32/120 [00:41<01:55,  1.32s/it][A
+Encoding video:  28%|██▊       | 33/120 [00:43<01:54,  1.31s/it][A
+Encoding video:  28%|██▊       | 34/120 [00:44<01:52,  1.31s/it][A
+Encoding video:  29%|██▉       | 35/120 [00:45<01:51,  1.31s/it][A
+Encoding video:  30%|███       | 36/120 [00:47<01:50,  1.31s/it][A
+Encoding video:  31%|███       | 37/120 [00:48<01:48,  1.31s/it][A
+Encoding video:  32%|███▏      | 38/120 [00:49<01:47,  1.31s/it][A
+Encoding video:  32%|███▎      | 39/120 [00:51<01:46,  1.31s/it][A
+Encoding video:  33%|███▎      | 40/120 [00:52<01:44,  1.31s/it][A
+Encoding video:  34%|███▍      | 41/120 [00:53<01:43,  1.31s/it][A
+Encoding video:  35%|███▌      | 42/120 [00:54<01:42,  1.32s/it][A
+Encoding video:  36%|███▌      | 43/120 [00:56<01:41,  1.32s/it][A
+Encoding video:  37%|███▋      | 44/120 [00:57<01:40,  1.32s/it][A
+Encoding video:  38%|███▊      | 45/120 [00:58<01:39,  1.32s/it][A
+Encoding video:  38%|███▊      | 46/120 [01:00<01:38,  1.33s/it][A
+Encoding video:  39%|███▉      | 47/120 [01:01<01:36,  1.33s/it][A
+Encoding video:  40%|████      | 48/120 [01:02<01:35,  1.33s/it][A
+Encoding video:  41%|████      | 49/120 [01:04<01:33,  1.32s/it][A
+Encoding video:  42%|████▏     | 50/120 [01:05<01:32,  1.32s/it][A
+Encoding video:  42%|████▎     | 51/120 [01:06<01:30,  1.32s/it][A
+Encoding video:  43%|████▎     | 52/120 [01:08<01:29,  1.32s/it][A
+Encoding video:  44%|████▍     | 53/120 [01:09<01:27,  1.31s/it][A
+Encoding video:  45%|████▌     | 54/120 [01:10<01:26,  1.31s/it][A
+Encoding video:  46%|████▌     | 55/120 [01:12<01:25,  1.31s/it][A
+Encoding video:  47%|████▋     | 56/120 [01:13<01:23,  1.31s/it][A
+Encoding video:  48%|████▊     | 57/120 [01:14<01:22,  1.31s/it][A
+Encoding video:  48%|████▊     | 58/120 [01:16<01:21,  1.31s/it][A
+Encoding video:  49%|████▉     | 59/120 [01:17<01:19,  1.31s/it][A
+Encoding video:  50%|█████     | 60/120 [01:18<01:18,  1.31s/it][A
+Encoding video:  51%|█████     | 61/120 [01:19<01:17,  1.31s/it][A
+Encoding video:  52%|█████▏    | 62/120 [01:21<01:16,  1.31s/it][A
+Encoding video:  52%|█████▎    | 63/120 [01:22<01:14,  1.31s/it][A
+Encoding video:  53%|█████▎    | 64/120 [01:23<01:13,  1.32s/it][A
+Encoding video:  54%|█████▍    | 65/120 [01:25<01:12,  1.32s/it][A
+Encoding video:  55%|█████▌    | 66/120 [01:26<01:11,  1.32s/it][A
+Encoding video:  56%|█████▌    | 67/120 [01:27<01:10,  1.32s/it][A
+Encoding video:  57%|█████▋    | 68/120 [01:29<01:08,  1.32s/it][A
+Encoding video:  57%|█████▊    | 69/120 [01:30<01:07,  1.33s/it][A
+Encoding video:  58%|█████▊    | 70/120 [01:31<01:06,  1.32s/it][A
+Encoding video:  59%|█████▉    | 71/120 [01:33<01:04,  1.32s/it][A
+Encoding video:  60%|██████    | 72/120 [01:34<01:03,  1.32s/it][A
+Encoding video:  61%|██████    | 73/120 [01:35<01:01,  1.31s/it][A
+Encoding video:  62%|██████▏   | 74/120 [01:37<01:00,  1.31s/it][A
+Encoding video:  62%|██████▎   | 75/120 [01:38<00:59,  1.31s/it][A
+Encoding video:  63%|██████▎   | 76/120 [01:39<00:57,  1.32s/it][A
+Encoding video:  64%|██████▍   | 77/120 [01:41<00:56,  1.31s/it][A
+Encoding video:  65%|██████▌   | 78/120 [01:42<00:55,  1.32s/it][A
+Encoding video:  66%|██████▌   | 79/120 [01:43<00:53,  1.32s/it][A
+Encoding video:  67%|██████▋   | 80/120 [01:45<00:52,  1.32s/it][A
+Encoding video:  68%|██████▊   | 81/120 [01:46<00:51,  1.32s/it][A
+Encoding video:  68%|██████▊   | 82/120 [01:47<00:50,  1.32s/it][A
+Encoding video:  69%|██████▉   | 83/120 [01:49<00:49,  1.33s/it][A
+Encoding video:  70%|███████   | 84/120 [01:50<00:47,  1.33s/it][A
+Encoding video:  71%|███████   | 85/120 [01:51<00:46,  1.33s/it][A
+Encoding video:  72%|███████▏  | 86/120 [01:53<00:45,  1.33s/it][A
+Encoding video:  72%|███████▎  | 87/120 [01:54<00:43,  1.33s/it][A
+Encoding video:  73%|███████▎  | 88/120 [01:55<00:42,  1.32s/it][A
+Encoding video:  74%|███████▍  | 89/120 [01:56<00:40,  1.32s/it][A
+Encoding video:  75%|███████▌  | 90/120 [01:58<00:39,  1.32s/it][A
+Encoding video:  76%|███████▌  | 91/120 [01:59<00:38,  1.32s/it][A
+Encoding video:  77%|███████▋  | 92/120 [02:00<00:36,  1.32s/it][A
+Encoding video:  78%|███████▊  | 93/120 [02:02<00:35,  1.31s/it][A
+Encoding video:  78%|███████▊  | 94/120 [02:03<00:34,  1.31s/it][A
+Encoding video:  79%|███████▉  | 95/120 [02:04<00:32,  1.31s/it][A
+Encoding video:  80%|████████  | 96/120 [02:06<00:31,  1.31s/it][A
+Encoding video:  81%|████████  | 97/120 [02:07<00:30,  1.31s/it][A
+Encoding video:  82%|████████▏ | 98/120 [02:08<00:28,  1.31s/it][A
+Encoding video:  82%|████████▎ | 99/120 [02:10<00:27,  1.31s/it][A
+Encoding video:  83%|████████▎ | 100/120 [02:11<00:26,  1.32s/it][A
+Encoding video:  84%|████████▍ | 101/120 [02:12<00:25,  1.32s/it][A
+Encoding video:  85%|████████▌ | 102/120 [02:14<00:23,  1.32s/it][A
+Encoding video:  86%|████████▌ | 103/120 [02:15<00:22,  1.32s/it][A
+Encoding video:  87%|████████▋ | 104/120 [02:16<00:21,  1.32s/it][A
+Encoding video:  88%|████████▊ | 105/120 [02:18<00:19,  1.33s/it][A
+Encoding video:  88%|████████▊ | 106/120 [02:19<00:18,  1.33s/it][A
+Encoding video:  89%|████████▉ | 107/120 [02:20<00:17,  1.33s/it][A
+Encoding video:  90%|█████████ | 108/120 [02:22<00:16,  1.34s/it][A
+Encoding video:  91%|█████████ | 109/120 [02:23<00:14,  1.34s/it][A
+Encoding video:  92%|█████████▏| 110/120 [02:24<00:13,  1.34s/it][A
+Encoding video:  92%|█████████▎| 111/120 [02:26<00:12,  1.34s/it][A
+Encoding video:  93%|█████████▎| 112/120 [02:27<00:10,  1.33s/it][A
+Encoding video:  94%|█████████▍| 113/120 [02:28<00:09,  1.32s/it][A
+Encoding video:  95%|█████████▌| 114/120 [02:30<00:07,  1.32s/it][A
+Encoding video:  96%|█████████▌| 115/120 [02:31<00:06,  1.32s/it][A
+Encoding video:  97%|█████████▋| 116/120 [02:32<00:05,  1.31s/it][A
+Encoding video:  98%|█████████▊| 117/120 [02:33<00:03,  1.31s/it][A
+Encoding video:  98%|█████████▊| 118/120 [02:35<00:02,  1.31s/it][A
+Encoding video:  99%|█████████▉| 119/120 [02:36<00:01,  1.31s/it][A
+Encoding video: 100%|██████████| 120/120 [02:37<00:00,  1.31s/it][AEncoding video: 100%|██████████| 120/120 [02:37<00:00,  1.32s/it]
+ 82%|████████▏ | 9/11 [23:47<05:16, 158.37s/it]2026-05-14 05:46:53 - DEBUG - neuralset.extractors.video:277 - Loaded Video (duration 84.90999999999997s at 29.97002997002997fps, shape (720, 480)):
+/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s7/friends_s07e01a.mkv
+
+Encoding video:   0%|          | 0/170 [00:00<?, ?it/s][A2026-05-14 05:46:54 - DEBUG - neuralset.extractors.video:311 - Created Tensor with size (170, 20, 1408)
+
+Encoding video:   1%|          | 1/170 [00:01<03:30,  1.25s/it][A
+Encoding video:   1%|          | 2/170 [00:02<03:34,  1.27s/it][A
+Encoding video:   2%|▏         | 3/170 [00:03<03:35,  1.29s/it][A
+Encoding video:   2%|▏         | 4/170 [00:05<03:34,  1.29s/it][A
+Encoding video:   3%|▎         | 5/170 [00:06<03:34,  1.30s/it][A
+Encoding video:   4%|▎         | 6/170 [00:07<03:33,  1.30s/it][A
+Encoding video:   4%|▍         | 7/170 [00:09<03:32,  1.30s/it][A
+Encoding video:   5%|▍         | 8/170 [00:10<03:31,  1.31s/it][A
+Encoding video:   5%|▌         | 9/170 [00:11<03:30,  1.31s/it][A
+Encoding video:   6%|▌         | 10/170 [00:13<03:29,  1.31s/it][A
+Encoding video:   6%|▋         | 11/170 [00:14<03:28,  1.31s/it][A
+Encoding video:   7%|▋         | 12/170 [00:15<03:27,  1.32s/it][A
+Encoding video:   8%|▊         | 13/170 [00:16<03:27,  1.32s/it][A
+Encoding video:   8%|▊         | 14/170 [00:18<03:26,  1.32s/it][A
+Encoding video:   9%|▉         | 15/170 [00:19<03:25,  1.32s/it][A
+Encoding video:   9%|▉         | 16/170 [00:20<03:24,  1.33s/it][A
+Encoding video:  10%|█         | 17/170 [00:22<03:23,  1.33s/it][A
+Encoding video:  11%|█         | 18/170 [00:23<03:21,  1.32s/it][A
+Encoding video:  11%|█         | 19/170 [00:24<03:19,  1.32s/it][A
+Encoding video:  12%|█▏        | 20/170 [00:26<03:18,  1.32s/it][A
+Encoding video:  12%|█▏        | 21/170 [00:27<03:17,  1.32s/it][A
+Encoding video:  13%|█▎        | 22/170 [00:28<03:15,  1.32s/it][A
+Encoding video:  14%|█▎        | 23/170 [00:30<03:14,  1.32s/it][A
+Encoding video:  14%|█▍        | 24/170 [00:31<03:12,  1.32s/it][A
+Encoding video:  15%|█▍        | 25/170 [00:32<03:11,  1.32s/it][A
+Encoding video:  15%|█▌        | 26/170 [00:34<03:09,  1.32s/it][A
+Encoding video:  16%|█▌        | 27/170 [00:35<03:09,  1.32s/it][A
+Encoding video:  16%|█▋        | 28/170 [00:36<03:07,  1.32s/it][A
+Encoding video:  17%|█▋        | 29/170 [00:38<03:06,  1.32s/it][A
+Encoding video:  18%|█▊        | 30/170 [00:39<03:04,  1.32s/it][A
+Encoding video:  18%|█▊        | 31/170 [00:40<03:03,  1.32s/it][A
+Encoding video:  19%|█▉        | 32/170 [00:42<03:01,  1.32s/it][A
+Encoding video:  19%|█▉        | 33/170 [00:43<03:00,  1.32s/it][A
+Encoding video:  20%|██        | 34/170 [00:44<02:58,  1.31s/it][A
+Encoding video:  21%|██        | 35/170 [00:46<02:57,  1.31s/it][A
+Encoding video:  21%|██        | 36/170 [00:47<02:56,  1.31s/it][A
+Encoding video:  22%|██▏       | 37/170 [00:48<02:54,  1.32s/it][A
+Encoding video:  22%|██▏       | 38/170 [00:49<02:53,  1.31s/it][A
+Encoding video:  23%|██▎       | 39/170 [00:51<02:52,  1.32s/it][A
+Encoding video:  24%|██▎       | 40/170 [00:52<02:50,  1.31s/it][A
+Encoding video:  24%|██▍       | 41/170 [00:53<02:49,  1.31s/it][A
+Encoding video:  25%|██▍       | 42/170 [00:55<02:48,  1.31s/it][A
+Encoding video:  25%|██▌       | 43/170 [00:56<02:47,  1.32s/it][A
+Encoding video:  26%|██▌       | 44/170 [00:57<02:45,  1.32s/it][A
+Encoding video:  26%|██▋       | 45/170 [00:59<02:44,  1.32s/it][A
+Encoding video:  27%|██▋       | 46/170 [01:00<02:43,  1.32s/it][A
+Encoding video:  28%|██▊       | 47/170 [01:01<02:41,  1.32s/it][A
+Encoding video:  28%|██▊       | 48/170 [01:03<02:40,  1.31s/it][A
+Encoding video:  29%|██▉       | 49/170 [01:04<02:39,  1.32s/it][A
+Encoding video:  29%|██▉       | 50/170 [01:05<02:37,  1.32s/it][A
+Encoding video:  30%|███       | 51/170 [01:07<02:36,  1.32s/it][A
+Encoding video:  31%|███       | 52/170 [01:08<02:35,  1.32s/it][A
+Encoding video:  31%|███       | 53/170 [01:09<02:34,  1.32s/it][A
+Encoding video:  32%|███▏      | 54/170 [01:11<02:32,  1.32s/it][A
+Encoding video:  32%|███▏      | 55/170 [01:12<02:31,  1.31s/it][A
+Encoding video:  33%|███▎      | 56/170 [01:13<02:29,  1.31s/it][A
+Encoding video:  34%|███▎      | 57/170 [01:14<02:28,  1.32s/it][A
+Encoding video:  34%|███▍      | 58/170 [01:16<02:27,  1.32s/it][A
+Encoding video:  35%|███▍      | 59/170 [01:17<02:26,  1.32s/it][A
+Encoding video:  35%|███▌      | 60/170 [01:18<02:25,  1.32s/it][A
+Encoding video:  36%|███▌      | 61/170 [01:20<02:23,  1.32s/it][A
+Encoding video:  36%|███▋      | 62/170 [01:21<02:22,  1.32s/it][A
+Encoding video:  37%|███▋      | 63/170 [01:22<02:20,  1.32s/it][A
+Encoding video:  38%|███▊      | 64/170 [01:24<02:19,  1.32s/it][A
+Encoding video:  38%|███▊      | 65/170 [01:25<02:18,  1.32s/it][A
+Encoding video:  39%|███▉      | 66/170 [01:26<02:16,  1.32s/it][A
+Encoding video:  39%|███▉      | 67/170 [01:28<02:15,  1.32s/it][A
+Encoding video:  40%|████      | 68/170 [01:29<02:14,  1.32s/it][A
+Encoding video:  41%|████      | 69/170 [01:30<02:13,  1.32s/it][A
+Encoding video:  41%|████      | 70/170 [01:32<02:12,  1.32s/it][A
+Encoding video:  42%|████▏     | 71/170 [01:33<02:10,  1.32s/it][A
+Encoding video:  42%|████▏     | 72/170 [01:34<02:08,  1.32s/it][A
+Encoding video:  43%|████▎     | 73/170 [01:36<02:07,  1.32s/it][A
+Encoding video:  44%|████▎     | 74/170 [01:37<02:06,  1.31s/it][A
+Encoding video:  44%|████▍     | 75/170 [01:38<02:04,  1.31s/it][A
+Encoding video:  45%|████▍     | 76/170 [01:40<02:03,  1.32s/it][A
+Encoding video:  45%|████▌     | 77/170 [01:41<02:02,  1.32s/it][A
+Encoding video:  46%|████▌     | 78/170 [01:42<02:01,  1.32s/it][A
+Encoding video:  46%|████▋     | 79/170 [01:43<02:00,  1.32s/it][A
+Encoding video:  47%|████▋     | 80/170 [01:45<01:59,  1.32s/it][A
+Encoding video:  48%|████▊     | 81/170 [01:46<01:58,  1.33s/it][A
+Encoding video:  48%|████▊     | 82/170 [01:47<01:57,  1.33s/it][A
+Encoding video:  49%|████▉     | 83/170 [01:49<01:55,  1.33s/it][A
+Encoding video:  49%|████▉     | 84/170 [01:50<01:54,  1.33s/it][A
+Encoding video:  50%|█████     | 85/170 [01:51<01:53,  1.33s/it][A
+Encoding video:  51%|█████     | 86/170 [01:53<01:52,  1.34s/it][A
+Encoding video:  51%|█████     | 87/170 [01:54<01:51,  1.34s/it][A
+Encoding video:  52%|█████▏    | 88/170 [01:55<01:49,  1.33s/it][A
+Encoding video:  52%|█████▏    | 89/170 [01:57<01:47,  1.33s/it][A
+Encoding video:  53%|█████▎    | 90/170 [01:58<01:45,  1.32s/it][A
+Encoding video:  54%|█████▎    | 91/170 [01:59<01:43,  1.32s/it][A
+Encoding video:  54%|█████▍    | 92/170 [02:01<01:42,  1.31s/it][A
+Encoding video:  55%|█████▍    | 93/170 [02:02<01:41,  1.31s/it][A
+Encoding video:  55%|█████▌    | 94/170 [02:03<01:40,  1.32s/it][A
+Encoding video:  56%|█████▌    | 95/170 [02:05<01:38,  1.32s/it][A
+Encoding video:  56%|█████▋    | 96/170 [02:06<01:37,  1.32s/it][A
+Encoding video:  57%|█████▋    | 97/170 [02:07<01:36,  1.32s/it][A
+Encoding video:  58%|█████▊    | 98/170 [02:09<01:35,  1.32s/it][A
+Encoding video:  58%|█████▊    | 99/170 [02:10<01:34,  1.33s/it][A
+Encoding video:  59%|█████▉    | 100/170 [02:11<01:33,  1.33s/it][A
+Encoding video:  59%|█████▉    | 101/170 [02:13<01:31,  1.33s/it][A
+Encoding video:  60%|██████    | 102/170 [02:14<01:30,  1.33s/it][A
+Encoding video:  61%|██████    | 103/170 [02:15<01:29,  1.34s/it][A
+Encoding video:  61%|██████    | 104/170 [02:17<01:28,  1.34s/it][A
+Encoding video:  62%|██████▏   | 105/170 [02:18<01:27,  1.34s/it][A
+Encoding video:  62%|██████▏   | 106/170 [02:19<01:25,  1.34s/it][A
+Encoding video:  63%|██████▎   | 107/170 [02:21<01:24,  1.33s/it][A
+Encoding video:  64%|██████▎   | 108/170 [02:22<01:22,  1.33s/it][A
+Encoding video:  64%|██████▍   | 109/170 [02:23<01:20,  1.32s/it][A
+Encoding video:  65%|██████▍   | 110/170 [02:25<01:19,  1.32s/it][A
+Encoding video:  65%|██████▌   | 111/170 [02:26<01:17,  1.32s/it][A
+Encoding video:  66%|██████▌   | 112/170 [02:27<01:16,  1.32s/it][A
+Encoding video:  66%|██████▋   | 113/170 [02:29<01:15,  1.32s/it][A
+Encoding video:  67%|██████▋   | 114/170 [02:30<01:13,  1.32s/it][A
+Encoding video:  68%|██████▊   | 115/170 [02:31<01:12,  1.32s/it][A
+Encoding video:  68%|██████▊   | 116/170 [02:33<01:11,  1.32s/it][A
+Encoding video:  69%|██████▉   | 117/170 [02:34<01:10,  1.32s/it][A
+Encoding video:  69%|██████▉   | 118/170 [02:35<01:08,  1.33s/it][A
+Encoding video:  70%|███████   | 119/170 [02:37<01:07,  1.33s/it][A
+Encoding video:  71%|███████   | 120/170 [02:38<01:06,  1.33s/it][A
+Encoding video:  71%|███████   | 121/170 [02:39<01:05,  1.34s/it][A
+Encoding video:  72%|███████▏  | 122/170 [02:41<01:03,  1.33s/it][A
+Encoding video:  72%|███████▏  | 123/170 [02:42<01:02,  1.32s/it][A
+Encoding video:  73%|███████▎  | 124/170 [02:43<01:00,  1.32s/it][A
+Encoding video:  74%|███████▎  | 125/170 [02:45<00:59,  1.32s/it][A
+Encoding video:  74%|███████▍  | 126/170 [02:46<00:58,  1.32s/it][A
+Encoding video:  75%|███████▍  | 127/170 [02:47<00:56,  1.32s/it][A
+Encoding video:  75%|███████▌  | 128/170 [02:48<00:55,  1.31s/it][A
+Encoding video:  76%|███████▌  | 129/170 [02:50<00:53,  1.31s/it][A
+Encoding video:  76%|███████▋  | 130/170 [02:51<00:52,  1.31s/it][A
+Encoding video:  77%|███████▋  | 131/170 [02:52<00:51,  1.32s/it][A
+Encoding video:  78%|███████▊  | 132/170 [02:54<00:50,  1.32s/it][A
+Encoding video:  78%|███████▊  | 133/170 [02:55<00:48,  1.32s/it][A
+Encoding video:  79%|███████▉  | 134/170 [02:56<00:47,  1.32s/it][A
+Encoding video:  79%|███████▉  | 135/170 [02:58<00:46,  1.32s/it][A
+Encoding video:  80%|████████  | 136/170 [02:59<00:44,  1.32s/it][A
+Encoding video:  81%|████████  | 137/170 [03:00<00:43,  1.32s/it][A
+Encoding video:  81%|████████  | 138/170 [03:02<00:42,  1.32s/it][A
+Encoding video:  82%|████████▏ | 139/170 [03:03<00:40,  1.32s/it][A
+Encoding video:  82%|████████▏ | 140/170 [03:04<00:39,  1.32s/it][A
+Encoding video:  83%|████████▎ | 141/170 [03:06<00:38,  1.32s/it][A
+Encoding video:  84%|████████▎ | 142/170 [03:07<00:37,  1.32s/it][A
+Encoding video:  84%|████████▍ | 143/170 [03:08<00:35,  1.32s/it][A
+Encoding video:  85%|████████▍ | 144/170 [03:10<00:34,  1.32s/it][A
+Encoding video:  85%|████████▌ | 145/170 [03:11<00:32,  1.32s/it][A
+Encoding video:  86%|████████▌ | 146/170 [03:12<00:31,  1.31s/it][A
+Encoding video:  86%|████████▋ | 147/170 [03:13<00:30,  1.31s/it][A
+Encoding video:  87%|████████▋ | 148/170 [03:15<00:28,  1.31s/it][A
+Encoding video:  88%|████████▊ | 149/170 [03:16<00:27,  1.31s/it][A
+Encoding video:  88%|████████▊ | 150/170 [03:17<00:26,  1.31s/it][A
+Encoding video:  89%|████████▉ | 151/170 [03:19<00:24,  1.31s/it][A
+Encoding video:  89%|████████▉ | 152/170 [03:20<00:23,  1.31s/it][A
+Encoding video:  90%|█████████ | 153/170 [03:21<00:22,  1.31s/it][A
+Encoding video:  91%|█████████ | 154/170 [03:23<00:20,  1.31s/it][A
+Encoding video:  91%|█████████ | 155/170 [03:24<00:19,  1.31s/it][A
+Encoding video:  92%|█████████▏| 156/170 [03:25<00:18,  1.31s/it][A
+Encoding video:  92%|█████████▏| 157/170 [03:27<00:17,  1.31s/it][A
+Encoding video:  93%|█████████▎| 158/170 [03:28<00:15,  1.31s/it][A
+Encoding video:  94%|█████████▎| 159/170 [03:29<00:14,  1.31s/it][A
+Encoding video:  94%|█████████▍| 160/170 [03:31<00:13,  1.31s/it][A
+Encoding video:  95%|█████████▍| 161/170 [03:32<00:11,  1.32s/it][A
+Encoding video:  95%|█████████▌| 162/170 [03:33<00:10,  1.32s/it][A
+Encoding video:  96%|█████████▌| 163/170 [03:34<00:09,  1.32s/it][A
+Encoding video:  96%|█████████▋| 164/170 [03:36<00:07,  1.32s/it][A
+Encoding video:  97%|█████████▋| 165/170 [03:37<00:06,  1.32s/it][A
+Encoding video:  98%|█████████▊| 166/170 [03:38<00:05,  1.31s/it][A
+Encoding video:  98%|█████████▊| 167/170 [03:40<00:03,  1.30s/it][A
+Encoding video:  99%|█████████▉| 168/170 [03:41<00:02,  1.30s/it][A
+Encoding video:  99%|█████████▉| 169/170 [03:42<00:01,  1.29s/it][A
+Encoding video: 100%|██████████| 170/170 [03:44<00:00,  1.29s/it][AEncoding video: 100%|██████████| 170/170 [03:44<00:00,  1.32s/it]
+ 91%|█████████ | 10/11 [27:31<02:58, 178.67s/it]2026-05-14 05:50:37 - DEBUG - neuralset.extractors.video:277 - Loaded Video (duration 60.0s at 29.97002997002997fps, shape (720, 480)):
+/home/ripper/data/tribe_benchmarks/download/algonauts_2025.competitors/stimuli/movies/friends/s7/friends_s07e01a.mkv
+
+Encoding video:   0%|          | 0/120 [00:00<?, ?it/s][A2026-05-14 05:50:38 - DEBUG - neuralset.extractors.video:311 - Created Tensor with size (120, 20, 1408)
+
+Encoding video:   1%|          | 1/120 [00:01<02:26,  1.23s/it][A
+Encoding video:   2%|▏         | 2/120 [00:02<02:28,  1.26s/it][A
+Encoding video:   2%|▎         | 3/120 [00:03<02:28,  1.27s/it][A
+Encoding video:   3%|▎         | 4/120 [00:05<02:28,  1.28s/it][A
+Encoding video:   4%|▍         | 5/120 [00:06<02:27,  1.28s/it][A
+Encoding video:   5%|▌         | 6/120 [00:07<02:26,  1.29s/it][A
+Encoding video:   6%|▌         | 7/120 [00:08<02:26,  1.29s/it][A
+Encoding video:   7%|▋         | 8/120 [00:10<02:25,  1.30s/it][A
+Encoding video:   8%|▊         | 9/120 [00:11<02:24,  1.30s/it][A
+Encoding video:   8%|▊         | 10/120 [00:12<02:24,  1.31s/it][A
+Encoding video:   9%|▉         | 11/120 [00:14<02:23,  1.32s/it][A
+Encoding video:  10%|█         | 12/120 [00:15<02:22,  1.32s/it][A
+Encoding video:  11%|█         | 13/120 [00:16<02:21,  1.32s/it][A
+Encoding video:  12%|█▏        | 14/120 [00:18<02:20,  1.32s/it][A
+Encoding video:  12%|█▎        | 15/120 [00:19<02:18,  1.32s/it][A
+Encoding video:  13%|█▎        | 16/120 [00:20<02:18,  1.33s/it][A
+Encoding video:  14%|█▍        | 17/120 [00:22<02:16,  1.32s/it][A
+Encoding video:  15%|█▌        | 18/120 [00:23<02:14,  1.32s/it][A
+Encoding video:  16%|█▌        | 19/120 [00:24<02:12,  1.32s/it][A
+Encoding video:  17%|█▋        | 20/120 [00:26<02:11,  1.32s/it][A
+Encoding video:  18%|█▊        | 21/120 [00:27<02:10,  1.31s/it][A
+Encoding video:  18%|█▊        | 22/120 [00:28<02:08,  1.31s/it][A
+Encoding video:  19%|█▉        | 23/120 [00:30<02:07,  1.31s/it][A
+Encoding video:  20%|██        | 24/120 [00:31<02:06,  1.31s/it][A
+Encoding video:  21%|██        | 25/120 [00:32<02:04,  1.31s/it][A
+Encoding video:  22%|██▏       | 26/120 [00:34<02:03,  1.32s/it][A
+Encoding video:  22%|██▎       | 27/120 [00:35<02:02,  1.31s/it][A
+Encoding video:  23%|██▎       | 28/120 [00:36<02:00,  1.31s/it][A
+Encoding video:  24%|██▍       | 29/120 [00:37<01:59,  1.32s/it][A
+Encoding video:  25%|██▌       | 30/120 [00:39<01:58,  1.32s/it][A
+Encoding video:  26%|██▌       | 31/120 [00:40<01:57,  1.32s/it][A
+Encoding video:  27%|██▋       | 32/120 [00:41<01:55,  1.32s/it][A
+Encoding video:  28%|██▊       | 33/120 [00:43<01:54,  1.31s/it][A
+Encoding video:  28%|██▊       | 34/120 [00:44<01:52,  1.31s/it][A
+Encoding video:  29%|██▉       | 35/120 [00:45<01:51,  1.31s/it][A
+Encoding video:  30%|███       | 36/120 [00:47<01:49,  1.31s/it][A
+Encoding video:  31%|███       | 37/120 [00:48<01:48,  1.31s/it][A
+Encoding video:  32%|███▏      | 38/120 [00:49<01:47,  1.31s/it][A
+Encoding video:  32%|███▎      | 39/120 [00:51<01:45,  1.31s/it][A
+Encoding video:  33%|███▎      | 40/120 [00:52<01:44,  1.31s/it][A
+Encoding video:  34%|███▍      | 41/120 [00:53<01:43,  1.31s/it][A
+Encoding video:  35%|███▌      | 42/120 [00:55<01:42,  1.31s/it][A
+Encoding video:  36%|███▌      | 43/120 [00:56<01:40,  1.31s/it][A
+Encoding video:  37%|███▋      | 44/120 [00:57<01:39,  1.31s/it][A
+Encoding video:  38%|███▊      | 45/120 [00:58<01:38,  1.31s/it][A
+Encoding video:  38%|███▊      | 46/120 [01:00<01:37,  1.31s/it][A
+Encoding video:  39%|███▉      | 47/120 [01:01<01:35,  1.31s/it][A
+Encoding video:  40%|████      | 48/120 [01:02<01:34,  1.31s/it][A
+Encoding video:  41%|████      | 49/120 [01:04<01:32,  1.31s/it][A
+Encoding video:  42%|████▏     | 50/120 [01:05<01:31,  1.31s/it][A
+Encoding video:  42%|████▎     | 51/120 [01:06<01:30,  1.31s/it][A
+Encoding video:  43%|████▎     | 52/120 [01:08<01:29,  1.31s/it][A
+Encoding video:  44%|████▍     | 53/120 [01:09<01:27,  1.31s/it][A
+Encoding video:  45%|████▌     | 54/120 [01:10<01:26,  1.31s/it][A
+Encoding video:  46%|████▌     | 55/120 [01:12<01:24,  1.31s/it][A
+Encoding video:  47%|████▋     | 56/120 [01:13<01:23,  1.31s/it][A
+Encoding video:  48%|████▊     | 57/120 [01:14<01:22,  1.31s/it][A
+Encoding video:  48%|████▊     | 58/120 [01:15<01:21,  1.31s/it][A
+Encoding video:  49%|████▉     | 59/120 [01:17<01:20,  1.31s/it][A
+Encoding video:  50%|█████     | 60/120 [01:18<01:18,  1.31s/it][A
+Encoding video:  51%|█████     | 61/120 [01:19<01:17,  1.31s/it][A
+Encoding video:  52%|█████▏    | 62/120 [01:21<01:16,  1.31s/it][A
+Encoding video:  52%|█████▎    | 63/120 [01:22<01:14,  1.31s/it][A
+Encoding video:  53%|█████▎    | 64/120 [01:23<01:13,  1.31s/it][A
+Encoding video:  54%|█████▍    | 65/120 [01:25<01:12,  1.31s/it][A
+Encoding video:  55%|█████▌    | 66/120 [01:26<01:10,  1.31s/it][A
+Encoding video:  56%|█████▌    | 67/120 [01:27<01:09,  1.31s/it][A
+Encoding video:  57%|█████▋    | 68/120 [01:29<01:08,  1.31s/it][A
+Encoding video:  57%|█████▊    | 69/120 [01:30<01:06,  1.31s/it][A
+Encoding video:  58%|█████▊    | 70/120 [01:31<01:05,  1.31s/it][A
+Encoding video:  59%|█████▉    | 71/120 [01:33<01:04,  1.31s/it][A
+Encoding video:  60%|██████    | 72/120 [01:34<01:03,  1.31s/it][A
+Encoding video:  61%|██████    | 73/120 [01:35<01:01,  1.31s/it][A
+Encoding video:  62%|██████▏   | 74/120 [01:36<01:00,  1.32s/it][A
+Encoding video:  62%|██████▎   | 75/120 [01:38<00:59,  1.31s/it][A
+Encoding video:  63%|██████▎   | 76/120 [01:39<00:57,  1.31s/it][A
+Encoding video:  64%|██████▍   | 77/120 [01:40<00:56,  1.31s/it][A
+Encoding video:  65%|██████▌   | 78/120 [01:42<00:55,  1.32s/it][A
+Encoding video:  66%|██████▌   | 79/120 [01:43<00:53,  1.31s/it][A
+Encoding video:  67%|██████▋   | 80/120 [01:44<00:52,  1.32s/it][A
+Encoding video:  68%|██████▊   | 81/120 [01:46<00:51,  1.31s/it][A
+Encoding video:  68%|██████▊   | 82/120 [01:47<00:49,  1.32s/it][A
+Encoding video:  69%|██████▉   | 83/120 [01:48<00:48,  1.31s/it][A
+Encoding video:  70%|███████   | 84/120 [01:50<00:47,  1.31s/it][A
+Encoding video:  71%|███████   | 85/120 [01:51<00:45,  1.31s/it][A
+Encoding video:  72%|███████▏  | 86/120 [01:52<00:44,  1.31s/it][A
+Encoding video:  72%|███████▎  | 87/120 [01:54<00:43,  1.31s/it][A
+Encoding video:  73%|███████▎  | 88/120 [01:55<00:41,  1.31s/it][A
+Encoding video:  74%|███████▍  | 89/120 [01:56<00:40,  1.31s/it][A
+Encoding video:  75%|███████▌  | 90/120 [01:57<00:39,  1.31s/it][A
+Encoding video:  76%|███████▌  | 91/120 [01:59<00:37,  1.31s/it][A
+Encoding video:  77%|███████▋  | 92/120 [02:00<00:36,  1.31s/it][A
+Encoding video:  78%|███████▊  | 93/120 [02:01<00:35,  1.31s/it][A
+Encoding video:  78%|███████▊  | 94/120 [02:03<00:34,  1.31s/it][A
+Encoding video:  79%|███████▉  | 95/120 [02:04<00:32,  1.31s/it][A
+Encoding video:  80%|████████  | 96/120 [02:05<00:31,  1.31s/it][A
+Encoding video:  81%|████████  | 97/120 [02:07<00:30,  1.31s/it][A
+Encoding video:  82%|████████▏ | 98/120 [02:08<00:28,  1.31s/it][A
+Encoding video:  82%|████████▎ | 99/120 [02:09<00:27,  1.31s/it][A
+Encoding video:  83%|████████▎ | 100/120 [02:11<00:26,  1.31s/it][A
+Encoding video:  84%|████████▍ | 101/120 [02:12<00:24,  1.31s/it][A
+Encoding video:  85%|████████▌ | 102/120 [02:13<00:23,  1.31s/it][A
+Encoding video:  86%|████████▌ | 103/120 [02:15<00:22,  1.31s/it][A
+Encoding video:  87%|████████▋ | 104/120 [02:16<00:21,  1.32s/it][A
+Encoding video:  88%|████████▊ | 105/120 [02:17<00:19,  1.32s/it][A
+Encoding video:  88%|████████▊ | 106/120 [02:18<00:18,  1.32s/it][A
+Encoding video:  89%|████████▉ | 107/120 [02:20<00:17,  1.32s/it][A
+Encoding video:  90%|█████████ | 108/120 [02:21<00:15,  1.33s/it][A
+Encoding video:  91%|█████████ | 109/120 [02:22<00:14,  1.33s/it][A
+Encoding video:  92%|█████████▏| 110/120 [02:24<00:13,  1.33s/it][A
+Encoding video:  92%|█████████▎| 111/120 [02:25<00:11,  1.33s/it][A
+Encoding video:  93%|█████████▎| 112/120 [02:26<00:10,  1.33s/it][A
+Encoding video:  94%|█████████▍| 113/120 [02:28<00:09,  1.34s/it][A
+Encoding video:  95%|█████████▌| 114/120 [02:29<00:07,  1.33s/it][A
+Encoding video:  96%|█████████▌| 115/120 [02:30<00:06,  1.32s/it][A
+Encoding video:  97%|█████████▋| 116/120 [02:32<00:05,  1.32s/it][A
+Encoding video:  98%|█████████▊| 117/120 [02:33<00:03,  1.32s/it][A
+Encoding video:  98%|█████████▊| 118/120 [02:34<00:02,  1.32s/it][A
+Encoding video:  99%|█████████▉| 119/120 [02:36<00:01,  1.32s/it][A
+Encoding video: 100%|██████████| 120/120 [02:37<00:00,  1.32s/it][AEncoding video: 100%|██████████| 120/120 [02:37<00:00,  1.31s/it]
+100%|██████████| 11/11 [30:09<00:00, 172.22s/it]100%|██████████| 11/11 [30:09<00:00, 164.46s/it]
+[05:53:15 INFO] Preparing extractor: subject_id
+2026-05-14 05:53:15 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'Algonauts2025/sub-01'}. This was probably not intended.
+[05:53:15 INFO] Building dataloader for split all
+INFO - Predicted 685 / 700 segments (97.9% kept)
+cache/submissions/tribe_full_friends_s7_sub01_s07e01a_v1.npy
+cache/submissions/tribe_full_friends_s7_sub01_s07e01a_manifest_v1.json
+{
+  "created_at": "2026-05-14T09:22:52.673148+00:00",
+  "checkpoint": "facebook/tribev2",
+  "phase": "friends-s7",
+  "features": [
+    "text",
+    "audio",
+    "video"
+  ],
+  "subjects": [
+    "sub-01"
+  ],
+  "target_offset_seconds": 5.0,
+  "nonfinite_fill": "row-mean",
+  "dry_run": false,
+  "items": {
+    "sub-01": {
+      "s07e01a": {
+        "shape": [
+          460,
+          1000
+        ],
+        "n_target_samples": 460,
+        "n_prediction_segments": 685,
+        "n_nonfinite_values_filled": 7820,
+        "used_prediction_cache": false,
+        "predict_seconds": 1819.2654705470195,
+        "total_item_seconds": 1821.957157868077
+      }
+    }
+  },
+  "caveat": "Submission-shaped predictions only; Friends S7/OOD labels are withheld and official scoring requires Codabench.",
+  "model_load_seconds": 0.726234363974072,
+  "runtime_seconds": 1822.996708709048,
+  "out": "cache/submissions/tribe_full_friends_s7_sub01_s07e01a_v1.npy",
+  "zip_out": "cache/submissions/tribe_full_friends_s7_sub01_s07e01a_v1.zip"
+}

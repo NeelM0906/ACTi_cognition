@@ -37,6 +37,7 @@ from torch import nn
 from torch.utils.data import DataLoader
 
 from .eventstransforms import *  # register custom events transforms in neuralset
+from .losses import *  # register custom losses in neuraltrain
 from .model import *  # register custom models in neuraltrain
 from .studies import *  # register studies
 from .utils import (

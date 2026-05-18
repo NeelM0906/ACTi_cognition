@@ -1,0 +1,192 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-14 07:50:13 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+2026-05-14 07:50:14 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+INFO - Loading model from /home/ripper/.cache/huggingface/hub/models--facebook--tribev2/snapshots/f894e783020944dcd96e5568550afe2aa9743f9f/best.ckpt
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:439: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:461: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+Extract audio from video events:   0%|          | 0/1 [00:00<?, ?it/s]Extract audio from video events: 100%|██████████| 1/1 [00:00<00:00, 5084.00it/s]
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/utils.py:134: UserWarning: The events dataframe contains an `Index` column. This is dangerous, please add drop=True in calls to df.reset_index(). Dropping it automatically.
+  warnings.warn(msg)
+Add context to words:   0%|          | 0/1073 [00:00<?, ?it/s]Add context to words: 100%|██████████| 1073/1073 [00:00<00:00, 33987.24it/s]
+[07:50:20 INFO] Preparing extractor: text
+[07:50:20 INFO] Preparing extractor: audio
+[07:50:21 INFO] Preparing extractor: video
+[07:50:21 INFO] Preparing extractor: subject_id
+2026-05-14 07:50:21 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'Algonauts2025/sub-01'}. This was probably not intended.
+[07:50:22 INFO] Building dataloader for split all
+cache/ablation_results/tribe_frozen_readout_train_e01_val_e02_v1.json
+{
+  "created_at": "2026-05-14T11:52:11.974569+00:00",
+  "experiment_name": "tribe_frozen_readout_ablation",
+  "checkpoint": "facebook/tribev2",
+  "features": [
+    "text",
+    "audio",
+    "video"
+  ],
+  "train_runs": [
+    {
+      "label": "e01a",
+      "subject": "sub-01",
+      "movie": "s01",
+      "chunk": "e01a",
+      "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01a_parcel_approx_v2.npz"
+    },
+    {
+      "label": "e01b",
+      "subject": "sub-01",
+      "movie": "s01",
+      "chunk": "e01b",
+      "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01b_parcel_approx_v1.npz"
+    }
+  ],
+  "val_runs": [
+    {
+      "label": "e02a",
+      "subject": "sub-01",
+      "movie": "s01",
+      "chunk": "e02a",
+      "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e02a_parcel_approx_v1.npz"
+    },
+    {
+      "label": "e02b",
+      "subject": "sub-01",
+      "movie": "s01",
+      "chunk": "e02b",
+      "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e02b_parcel_approx_v1.npz"
+    }
+  ],
+  "n_train_rows": 1752,
+  "n_val_rows": 1424,
+  "latent_dim": 2048,
+  "n_scored_units_common_with_baseline": 983,
+  "alpha_grid": [
+    1.0,
+    10.0,
+    100.0,
+    1000.0,
+    10000.0,
+    100000.0
+  ],
+  "target_offset_seconds": 5.0,
+  "split_policy": "episode-disjoint available-label local proxy",
+  "metric_space": "approx_projected_schaefer1000_parcel_1hz_interpolated_targets",
+  "selected_alpha": 1000.0,
+  "inner_alpha_selection": {
+    "selected_alpha": 1000.0,
+    "inner_scores": [
+      {
+        "alpha": 1.0,
+        "mean_score": 0.13258564420185442,
+        "fold_scores": [
+          0.13016520871741644,
+          0.1350060796862924
+        ]
+      },
+      {
+        "alpha": 10.0,
+        "mean_score": 0.1592517456774304,
+        "fold_scores": [
+          0.15386476266364102,
+          0.16463872869121976
+        ]
+      },
+      {
+        "alpha": 100.0,
+        "mean_score": 0.18426405459061043,
+        "fold_scores": [
+          0.17753107368540438,
+          0.19099703549581648
+        ]
+      },
+      {
+        "alpha": 1000.0,
+        "mean_score": 0.19341047600860004,
+        "fold_scores": [
+          0.18464775702775008,
+          0.20217319498945
+        ]
+      },
+      {
+        "alpha": 10000.0,
+        "mean_score": 0.18629766385195262,
+        "fold_scores": [
+          0.1794839986337528,
+          0.19311132907015244
+        ]
+      },
+      {
+        "alpha": 100000.0,
+        "mean_score": 0.1837587841298234,
+        "fold_scores": [
+          0.17777414584891915,
+          0.18974342241072767
+        ]
+      }
+    ]
+  },
+  "train_readout": {
+    "mean": 0.3476372374904101,
+    "median": 0.3308273328011266,
+    "n_vertices_total": 983,
+    "n_vertices_finite": 983
+  },
+  "train_baseline": {
+    "mean": 0.18169077107309664,
+    "median": 0.1453235223421756,
+    "n_vertices_total": 983,
+    "n_vertices_finite": 983
+  },
+  "val_readout": {
+    "mean": 0.2590147469574354,
+    "median": 0.24129264684417032,
+    "n_vertices_total": 983,
+    "n_vertices_finite": 983
+  },
+  "val_baseline": {
+    "mean": 0.21853686886280632,
+    "median": 0.19477452607710447,
+    "n_vertices_total": 983,
+    "n_vertices_finite": 983
+  },
+  "delta_val_readout_vs_baseline": 0.040477878094629105,
+  "feature_artifacts": {
+    "e01a": {
+      "path": "cache/ablation_results/readout_features/tribe_lowrank_sub-01_s01e01a_text_audio_video.npz",
+      "shape": [
+        882,
+        2048
+      ],
+      "used_cache": true
+    },
+    "e01b": {
+      "path": "cache/ablation_results/readout_features/tribe_lowrank_sub-01_s01e01b_text_audio_video.npz",
+      "shape": [
+        880,
+        2048
+      ],
+      "used_cache": true
+    },
+    "e02a": {
+      "path": "cache/ablation_results/readout_features/tribe_lowrank_sub-01_s01e02a_text_audio_video.npz",
+      "shape": [
+        719,
+        2048
+      ],
+      "used_cache": true
+    },
+    "e02b": {
+      "path": "cache/ablation_results/readout_features/tribe_lowrank_sub-01_s01e02b_text_audio_video.npz",
+      "shape": [
+        719,
+        2048
+      ],
+      "used_cache": false
+    }
+  },
+  "runtime_seconds": 118.0170997469686,
+  "caveat": "Available-label local proxy only. The readout is trained on local Algonauts labels and scored on held-out available chunks. Hidden Friends S7/OOD labels were not used."
+}

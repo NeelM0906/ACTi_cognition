@@ -1,0 +1,143 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-14 07:50:14 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+cache/ablation_results/tribe_prediction_ridge_train_e02_val_e01_v1.json
+{
+  "created_at": "2026-05-14T11:52:09.618332+00:00",
+  "experiment_name": "tribe_prediction_ridge_baseline",
+  "baseline": "public facebook/tribev2 full average-head parcel predictions",
+  "candidate": "supervised ridge calibration over public average-head parcel predictions",
+  "checkpoint": "facebook/tribev2",
+  "features": [
+    "text",
+    "audio",
+    "video"
+  ],
+  "metric_space": "approx_projected_schaefer1000_parcel_1hz_interpolated_targets",
+  "split_policy": "episode-disjoint available-label local proxy",
+  "target_offset_seconds": 5.0,
+  "train_runs": [
+    {
+      "label": "e02a",
+      "subject": "sub-01",
+      "movie": "s01",
+      "chunk": "e02a",
+      "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e02a_parcel_approx_v1.npz"
+    },
+    {
+      "label": "e02b",
+      "subject": "sub-01",
+      "movie": "s01",
+      "chunk": "e02b",
+      "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e02b_parcel_approx_v1.npz"
+    }
+  ],
+  "val_runs": [
+    {
+      "label": "e01a",
+      "subject": "sub-01",
+      "movie": "s01",
+      "chunk": "e01a",
+      "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01a_parcel_approx_v2.npz"
+    },
+    {
+      "label": "e01b",
+      "subject": "sub-01",
+      "movie": "s01",
+      "chunk": "e01b",
+      "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_s01e01b_parcel_approx_v1.npz"
+    }
+  ],
+  "n_train_rows": 1424,
+  "n_val_rows": 1752,
+  "n_scored_units_common_with_baseline": 983,
+  "alpha_grid": [
+    1.0,
+    10.0,
+    100.0,
+    1000.0,
+    10000.0,
+    100000.0
+  ],
+  "selected_alpha": 100.0,
+  "inner_alpha_selection": {
+    "selected_alpha": 100.0,
+    "inner_scores": [
+      {
+        "alpha": 1.0,
+        "mean_score": 0.21996412522725267,
+        "fold_scores": [
+          0.2253538687465131,
+          0.21457438170799223
+        ]
+      },
+      {
+        "alpha": 10.0,
+        "mean_score": 0.24272736390868616,
+        "fold_scores": [
+          0.24683285621957185,
+          0.2386218715978005
+        ]
+      },
+      {
+        "alpha": 100.0,
+        "mean_score": 0.2529336050655099,
+        "fold_scores": [
+          0.2539329202773746,
+          0.25193428985364524
+        ]
+      },
+      {
+        "alpha": 1000.0,
+        "mean_score": 0.2505409343259677,
+        "fold_scores": [
+          0.25048024311210215,
+          0.2506016255398333
+        ]
+      },
+      {
+        "alpha": 10000.0,
+        "mean_score": 0.2302373147014644,
+        "fold_scores": [
+          0.22717090730458342,
+          0.23330372209834543
+        ]
+      },
+      {
+        "alpha": 100000.0,
+        "mean_score": 0.21959901610674393,
+        "fold_scores": [
+          0.2152624887880655,
+          0.22393554342542235
+        ]
+      }
+    ]
+  },
+  "train_calibrated": {
+    "mean": 0.40292514833682774,
+    "median": 0.39099708098167896,
+    "n_vertices_total": 983,
+    "n_vertices_finite": 983
+  },
+  "train_baseline": {
+    "mean": 0.21853686886280632,
+    "median": 0.19477452607710447,
+    "n_vertices_total": 983,
+    "n_vertices_finite": 983
+  },
+  "val_calibrated": {
+    "mean": 0.22387160751887158,
+    "median": 0.18870930083765206,
+    "n_vertices_total": 983,
+    "n_vertices_finite": 983
+  },
+  "val_baseline": {
+    "mean": 0.18169077107309664,
+    "median": 0.1453235223421756,
+    "n_vertices_total": 983,
+    "n_vertices_finite": 983
+  },
+  "delta_val_calibrated_vs_baseline": 0.042180836445774944,
+  "runtime_seconds": 115.55284844804555,
+  "caveat": "Available-label local proxy only. This is a supervised calibration control for the frozen low-rank readout, not a hidden leaderboard score."
+}

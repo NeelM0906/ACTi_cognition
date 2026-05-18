@@ -7,6 +7,7 @@
 """TribeModel for inference and utilities for building event DataFrames."""
 
 import logging
+import re
 import typing as tp
 from pathlib import Path
 
@@ -93,6 +94,120 @@ def get_audio_and_text_events(
     for transform in transforms:
         events = transform(events)
     return standardize_events(events)
+
+
+_WORD_RE = re.compile(r"[^\W_]+(?:['-][^\W_]+)*", re.UNICODE)
+
+
+def _pause_after(separator: str) -> float:
+    """Approximate speech pauses from punctuation between two word tokens."""
+    pause = 0.0
+    if any(ch in separator for ch in ".!?"):
+        pause = max(pause, 0.35)
+    elif any(ch in separator for ch in ";:"):
+        pause = max(pause, 0.22)
+    elif "," in separator:
+        pause = max(pause, 0.12)
+    if "\n\n" in separator:
+        pause = max(pause, 0.30)
+    elif "\n" in separator:
+        pause = max(pause, 0.15)
+    return pause
+
+
+class DirectTextToEvents(pydantic.BaseModel):
+    """Convert raw text directly to timed Word events.
+
+    This is the low-latency text inference path. It approximates word timings
+    deterministically instead of synthesizing speech and running ASR. The model
+    only needs timestamped Word events with non-empty contextual fields for text
+    feature extraction; missing audio/video modalities are handled downstream.
+    """
+
+    text: str
+    words_per_minute: float = 165.0
+    max_context_words: int = 1024
+    timeline: str = "default"
+    subject: str = "default"
+    language: str = "english"
+
+    def get_events(self) -> pd.DataFrame:
+        matches = list(_WORD_RE.finditer(self.text))
+        if not matches:
+            raise ValueError("Text does not contain any word-like tokens.")
+
+        tokens = [m.group(0) for m in matches]
+        sentence_ids: list[int] = []
+        sentence_id = 0
+        for idx, match in enumerate(matches):
+            sentence_ids.append(sentence_id)
+            next_start = (
+                matches[idx + 1].start()
+                if idx + 1 < len(matches)
+                else len(self.text)
+            )
+            if any(ch in self.text[match.end() : next_start] for ch in ".!?"):
+                sentence_id += 1
+
+        sentence_texts: dict[int, str] = {}
+        for sid in sorted(set(sentence_ids)):
+            sentence_tokens = [
+                token
+                for token, token_sid in zip(tokens, sentence_ids)
+                if token_sid == sid
+            ]
+            sentence_texts[sid] = " ".join(sentence_tokens)
+
+        positions_in_sentence: dict[int, list[int]] = {}
+        for sid in sorted(sentence_texts):
+            cursor = 0
+            positions = []
+            for token, token_sid in zip(tokens, sentence_ids):
+                if token_sid != sid:
+                    continue
+                positions.append(cursor)
+                cursor += len(token) + 1
+            positions_in_sentence[sid] = positions
+
+        seen_in_sentence = {sid: 0 for sid in sentence_texts}
+        rows = []
+        current_time = 0.0
+        base_word_seconds = 60.0 / self.words_per_minute
+        for idx, (token, match, sid) in enumerate(
+            zip(tokens, matches, sentence_ids)
+        ):
+            length_factor = 0.70 + 0.60 * min(len(token), 14) / 14
+            duration = max(0.18, min(0.65, base_word_seconds * length_factor))
+            context_start = max(0, idx + 1 - self.max_context_words)
+            context = " ".join(tokens[context_start : idx + 1])
+            sent_pos_idx = seen_in_sentence[sid]
+            seen_in_sentence[sid] += 1
+            rows.append(
+                {
+                    "type": "Word",
+                    "text": token,
+                    "start": current_time,
+                    "duration": duration,
+                    "timeline": self.timeline,
+                    "subject": self.subject,
+                    "language": self.language,
+                    "sequence_id": sid,
+                    "sentence": sentence_texts[sid],
+                    "sentence_char": positions_in_sentence[sid][sent_pos_idx],
+                    "context": context,
+                    "modality": "read",
+                }
+            )
+            next_start = (
+                matches[idx + 1].start()
+                if idx + 1 < len(matches)
+                else len(self.text)
+            )
+            current_time += duration + _pause_after(
+                self.text[match.end() : next_start]
+            )
+
+        return standardize_events(pd.DataFrame(rows))
 
 
 class TextToEvents(pydantic.BaseModel):
@@ -259,8 +374,8 @@ class TribeModel(TribeExperiment):
         Parameters
         ----------
         text_path:
-            Path to a ``.txt`` file. The text is converted to speech, then
-            transcribed back to produce word-level events.
+            Path to a ``.txt`` file. The text is converted directly to
+            approximate word-level timing events.
         audio_path:
             Path to an audio file (``.wav``, ``.mp3``, ``.flac``, ``.ogg``).
         video_path:
@@ -312,10 +427,7 @@ class TribeModel(TribeExperiment):
             text = path.read_text(encoding="utf-8")
             if not text.strip():
                 raise ValueError(f"Text file is empty: {path}")
-            return TextToEvents(
-                text=text,
-                infra={"folder": self.cache_folder, "mode": "retry"},
-            ).get_events()
+            return DirectTextToEvents(text=text).get_events()
 
         event_type = "Audio" if audio_path is not None else "Video"
         event = {

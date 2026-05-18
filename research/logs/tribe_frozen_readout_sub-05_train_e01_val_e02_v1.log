@@ -1,0 +1,213 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-14 09:28:53 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+2026-05-14 09:28:53 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+INFO - Loading model from /home/ripper/.cache/huggingface/hub/models--facebook--tribev2/snapshots/f894e783020944dcd96e5568550afe2aa9743f9f/best.ckpt
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:439: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:461: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+Extract audio from video events:   0%|          | 0/1 [00:00<?, ?it/s]Extract audio from video events: 100%|██████████| 1/1 [00:00<00:00, 6096.37it/s]
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/utils.py:134: UserWarning: The events dataframe contains an `Index` column. This is dangerous, please add drop=True in calls to df.reset_index(). Dropping it automatically.
+  warnings.warn(msg)
+Add context to words:   0%|          | 0/1697 [00:00<?, ?it/s]Add context to words: 100%|██████████| 1697/1697 [00:00<00:00, 96714.91it/s]
+[09:28:56 INFO] Preparing extractor: text
+[09:28:56 INFO] Preparing extractor: audio
+[09:28:56 INFO] Preparing extractor: video
+[09:28:57 INFO] Preparing extractor: subject_id
+2026-05-14 09:28:57 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'Algonauts2025/sub-05'}. This was probably not intended.
+[09:28:57 INFO] Building dataloader for split all
+Extract audio from video events:   0%|          | 0/1 [00:00<?, ?it/s]Extract audio from video events: 100%|██████████| 1/1 [00:00<00:00, 5949.37it/s]
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/utils.py:134: UserWarning: The events dataframe contains an `Index` column. This is dangerous, please add drop=True in calls to df.reset_index(). Dropping it automatically.
+  warnings.warn(msg)
+Add context to words:   0%|          | 0/1533 [00:00<?, ?it/s]Add context to words: 100%|██████████| 1533/1533 [00:00<00:00, 99834.92it/s]
+[09:28:58 INFO] Preparing extractor: text
+[09:28:58 INFO] Preparing extractor: audio
+[09:28:59 INFO] Preparing extractor: video
+[09:28:59 INFO] Preparing extractor: subject_id
+2026-05-14 09:28:59 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'Algonauts2025/sub-05'}. This was probably not intended.
+[09:28:59 INFO] Building dataloader for split all
+Extract audio from video events:   0%|          | 0/1 [00:00<?, ?it/s]Extract audio from video events: 100%|██████████| 1/1 [00:00<00:00, 6307.22it/s]
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/utils.py:134: UserWarning: The events dataframe contains an `Index` column. This is dangerous, please add drop=True in calls to df.reset_index(). Dropping it automatically.
+  warnings.warn(msg)
+Add context to words:   0%|          | 0/1382 [00:00<?, ?it/s]Add context to words: 100%|██████████| 1382/1382 [00:00<00:00, 102001.27it/s]
+[09:29:00 INFO] Preparing extractor: text
+[09:29:01 INFO] Preparing extractor: audio
+[09:29:01 INFO] Preparing extractor: video
+[09:29:01 INFO] Preparing extractor: subject_id
+2026-05-14 09:29:01 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'Algonauts2025/sub-05'}. This was probably not intended.
+[09:29:01 INFO] Building dataloader for split all
+Extract audio from video events:   0%|          | 0/1 [00:00<?, ?it/s]Extract audio from video events: 100%|██████████| 1/1 [00:00<00:00, 6335.81it/s]
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/utils.py:134: UserWarning: The events dataframe contains an `Index` column. This is dangerous, please add drop=True in calls to df.reset_index(). Dropping it automatically.
+  warnings.warn(msg)
+Add context to words:   0%|          | 0/1073 [00:00<?, ?it/s]Add context to words: 100%|██████████| 1073/1073 [00:00<00:00, 109639.65it/s]
+[09:29:02 INFO] Preparing extractor: text
+[09:29:02 INFO] Preparing extractor: audio
+[09:29:03 INFO] Preparing extractor: video
+[09:29:03 INFO] Preparing extractor: subject_id
+2026-05-14 09:29:03 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'Algonauts2025/sub-05'}. This was probably not intended.
+[09:29:03 INFO] Building dataloader for split all
+cache/ablation_results/tribe_frozen_readout_sub-05_train_e01_val_e02_v1.json
+{
+  "created_at": "2026-05-14T13:29:05.820651+00:00",
+  "experiment_name": "tribe_frozen_readout_ablation",
+  "checkpoint": "facebook/tribev2",
+  "features": [
+    "text",
+    "audio",
+    "video"
+  ],
+  "train_runs": [
+    {
+      "label": "e01a",
+      "subject": "sub-05",
+      "movie": "s01",
+      "chunk": "e01a",
+      "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_sub-05_s01e01a_parcel_approx_v1.npz"
+    },
+    {
+      "label": "e01b",
+      "subject": "sub-05",
+      "movie": "s01",
+      "chunk": "e01b",
+      "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_sub-05_s01e01b_parcel_approx_v1.npz"
+    }
+  ],
+  "val_runs": [
+    {
+      "label": "e02a",
+      "subject": "sub-05",
+      "movie": "s01",
+      "chunk": "e02a",
+      "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_sub-05_s01e02a_parcel_approx_v1.npz"
+    },
+    {
+      "label": "e02b",
+      "subject": "sub-05",
+      "movie": "s01",
+      "chunk": "e02b",
+      "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_sub-05_s01e02b_parcel_approx_v1.npz"
+    }
+  ],
+  "n_train_rows": 1752,
+  "n_val_rows": 1424,
+  "latent_dim": 2048,
+  "n_scored_units_common_with_baseline": 983,
+  "alpha_grid": [
+    1.0,
+    10.0,
+    100.0,
+    1000.0,
+    10000.0
+  ],
+  "target_offset_seconds": 5.0,
+  "split_policy": "episode-disjoint available-label local proxy",
+  "metric_space": "approx_projected_schaefer1000_parcel_1hz_interpolated_targets",
+  "selected_alpha": 10000.0,
+  "inner_alpha_selection": {
+    "selected_alpha": 10000.0,
+    "inner_scores": [
+      {
+        "alpha": 1.0,
+        "mean_score": 0.09544599950375622,
+        "fold_scores": [
+          0.10171894853895005,
+          0.08917305046856239
+        ]
+      },
+      {
+        "alpha": 10.0,
+        "mean_score": 0.11191547795184581,
+        "fold_scores": [
+          0.11645047387716169,
+          0.10738048202652994
+        ]
+      },
+      {
+        "alpha": 100.0,
+        "mean_score": 0.1323203167082495,
+        "fold_scores": [
+          0.13486265970292832,
+          0.1297779737135707
+        ]
+      },
+      {
+        "alpha": 1000.0,
+        "mean_score": 0.14909916766371384,
+        "fold_scores": [
+          0.14677065093686667,
+          0.15142768439056098
+        ]
+      },
+      {
+        "alpha": 10000.0,
+        "mean_score": 0.15001713766784486,
+        "fold_scores": [
+          0.14400169871284227,
+          0.15603257662284747
+        ]
+      }
+    ]
+  },
+  "train_readout": {
+    "mean": 0.28597393417264205,
+    "median": 0.2621673493251296,
+    "n_vertices_total": 983,
+    "n_vertices_finite": 983
+  },
+  "train_baseline": {
+    "mean": 0.16616272675844773,
+    "median": 0.129102572256171,
+    "n_vertices_total": 983,
+    "n_vertices_finite": 983
+  },
+  "val_readout": {
+    "mean": 0.22605809700295987,
+    "median": 0.19914564185782416,
+    "n_vertices_total": 983,
+    "n_vertices_finite": 983
+  },
+  "val_baseline": {
+    "mean": 0.19635025972000528,
+    "median": 0.17879470883119097,
+    "n_vertices_total": 983,
+    "n_vertices_finite": 983
+  },
+  "delta_val_readout_vs_baseline": 0.02970783728295459,
+  "feature_artifacts": {
+    "e01a": {
+      "path": "cache/ablation_results/readout_features/tribe_lowrank_sub-05_s01e01a_text_audio_video.npz",
+      "shape": [
+        882,
+        2048
+      ],
+      "used_cache": false
+    },
+    "e01b": {
+      "path": "cache/ablation_results/readout_features/tribe_lowrank_sub-05_s01e01b_text_audio_video.npz",
+      "shape": [
+        880,
+        2048
+      ],
+      "used_cache": false
+    },
+    "e02a": {
+      "path": "cache/ablation_results/readout_features/tribe_lowrank_sub-05_s01e02a_text_audio_video.npz",
+      "shape": [
+        719,
+        2048
+      ],
+      "used_cache": false
+    },
+    "e02b": {
+      "path": "cache/ablation_results/readout_features/tribe_lowrank_sub-05_s01e02b_text_audio_video.npz",
+      "shape": [
+        719,
+        2048
+      ],
+      "used_cache": false
+    }
+  },
+  "runtime_seconds": 11.939758720924146,
+  "caveat": "Available-label local proxy only. The readout is trained on local Algonauts labels and scored on held-out available chunks. Hidden Friends S7/OOD labels were not used."
+}

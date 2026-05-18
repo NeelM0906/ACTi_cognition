@@ -1,0 +1,266 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-14 08:11:37 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+cache/ablation_results/tribe_native_tr_subject_adaptation_sub-02_train_e02_val_e01_v1.json
+{
+  "created_at": "2026-05-14T12:14:32.774067+00:00",
+  "experiment_name": "tribe_native_tr_subject_adaptation",
+  "checkpoint": "facebook/tribev2",
+  "features": [
+    "text",
+    "audio",
+    "video"
+  ],
+  "subject": [
+    "sub-02"
+  ],
+  "movie": [
+    "s01"
+  ],
+  "metric_space": "native_fmri_tr_projected_schaefer1000_parcel",
+  "native_frequency_hz": 0.6711409395973155,
+  "target_offset_seconds": 5.0,
+  "split_policy": "episode-disjoint available-label local proxy",
+  "train_runs": [
+    {
+      "label": "e02a",
+      "subject": "sub-02",
+      "movie": "s01",
+      "chunk": "e02a",
+      "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_sub-02_s01e02a_parcel_approx_v1.npz"
+    },
+    {
+      "label": "e02b",
+      "subject": "sub-02",
+      "movie": "s01",
+      "chunk": "e02b",
+      "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_sub-02_s01e02b_parcel_approx_v1.npz"
+    }
+  ],
+  "val_runs": [
+    {
+      "label": "e01a",
+      "subject": "sub-02",
+      "movie": "s01",
+      "chunk": "e01a",
+      "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_sub-02_s01e01a_parcel_approx_v1.npz"
+    },
+    {
+      "label": "e01b",
+      "subject": "sub-02",
+      "movie": "s01",
+      "chunk": "e01b",
+      "baseline_npz": "cache/ablation_results/pretrained_tribe_text_audio_video_sub-02_s01e01b_parcel_approx_v1.npz"
+    }
+  ],
+  "n_train_rows": 964,
+  "n_val_rows": 1184,
+  "n_scored_units_common_with_baseline": 983,
+  "alpha_grid": [
+    1.0,
+    10.0,
+    100.0,
+    1000.0,
+    10000.0,
+    100000.0
+  ],
+  "train_baseline": {
+    "mean": 0.19602427882128423,
+    "median": 0.16987113726463984,
+    "n_vertices_total": 983,
+    "n_vertices_finite": 983
+  },
+  "val_baseline": {
+    "mean": 0.1756344580441331,
+    "median": 0.1457685464668705,
+    "n_vertices_total": 983,
+    "n_vertices_finite": 983
+  },
+  "prediction_ridge": {
+    "selected_alpha": 100.0,
+    "inner_alpha_selection": {
+      "selected_alpha": 100.0,
+      "inner_scores": [
+        {
+          "alpha": 1.0,
+          "mean_score": 0.1906235144259353,
+          "fold_scores": [
+            0.19085664120214887,
+            0.19039038764972174
+          ]
+        },
+        {
+          "alpha": 10.0,
+          "mean_score": 0.21908598327742174,
+          "fold_scores": [
+            0.21987847750798603,
+            0.21829348904685744
+          ]
+        },
+        {
+          "alpha": 100.0,
+          "mean_score": 0.23213175590141058,
+          "fold_scores": [
+            0.23486418160968908,
+            0.22939933019313208
+          ]
+        },
+        {
+          "alpha": 1000.0,
+          "mean_score": 0.22600564813981516,
+          "fold_scores": [
+            0.23155840989257653,
+            0.22045288638705376
+          ]
+        },
+        {
+          "alpha": 10000.0,
+          "mean_score": 0.20948459324893098,
+          "fold_scores": [
+            0.2138737195885777,
+            0.2050954669092843
+          ]
+        },
+        {
+          "alpha": 100000.0,
+          "mean_score": 0.20289552357956872,
+          "fold_scores": [
+            0.20582604729723142,
+            0.19996499986190602
+          ]
+        }
+      ]
+    },
+    "train_score": {
+      "mean": 0.35609322636676377,
+      "median": 0.3428681915438372,
+      "n_vertices_total": 983,
+      "n_vertices_finite": 983
+    },
+    "val_score": {
+      "mean": 0.21654913076982302,
+      "median": 0.19508228711891343,
+      "n_vertices_total": 983,
+      "n_vertices_finite": 983
+    },
+    "delta_val_vs_baseline": 0.04091467272568991
+  },
+  "lowrank_readout": {
+    "selected_alpha": 1000.0,
+    "inner_alpha_selection": {
+      "selected_alpha": 1000.0,
+      "inner_scores": [
+        {
+          "alpha": 1.0,
+          "mean_score": 0.16117702355120309,
+          "fold_scores": [
+            0.15955121698576682,
+            0.16280283011663935
+          ]
+        },
+        {
+          "alpha": 10.0,
+          "mean_score": 0.1956431737352844,
+          "fold_scores": [
+            0.19734805525403987,
+            0.19393829221652892
+          ]
+        },
+        {
+          "alpha": 100.0,
+          "mean_score": 0.22323303501556985,
+          "fold_scores": [
+            0.2275450207036415,
+            0.21892104932749817
+          ]
+        },
+        {
+          "alpha": 1000.0,
+          "mean_score": 0.22461604960055204,
+          "fold_scores": [
+            0.23067409249234752,
+            0.21855800670875655
+          ]
+        },
+        {
+          "alpha": 10000.0,
+          "mean_score": 0.21449567000893618,
+          "fold_scores": [
+            0.21944395616784804,
+            0.20954738385002433
+          ]
+        },
+        {
+          "alpha": 100000.0,
+          "mean_score": 0.2122315357031637,
+          "fold_scores": [
+            0.21689801858171873,
+            0.20756505282460866
+          ]
+        }
+      ]
+    },
+    "train_score": {
+      "mean": 0.34224496918402897,
+      "median": 0.33077548911911325,
+      "n_vertices_total": 983,
+      "n_vertices_finite": 983
+    },
+    "val_score": {
+      "mean": 0.21272338541353034,
+      "median": 0.19182621404593214,
+      "n_vertices_total": 983,
+      "n_vertices_finite": 983
+    },
+    "delta_val_vs_baseline": 0.03708892736939723,
+    "delta_val_vs_prediction_ridge": -0.0038257453562926813
+  },
+  "feature_artifacts": {
+    "e02a": {
+      "path": "cache/ablation_results/readout_features/tribe_lowrank_sub-02_s01e02a_text_audio_video.npz",
+      "segment_shape": [
+        719,
+        2048
+      ],
+      "native_shape": [
+        482,
+        2048
+      ]
+    },
+    "e02b": {
+      "path": "cache/ablation_results/readout_features/tribe_lowrank_sub-02_s01e02b_text_audio_video.npz",
+      "segment_shape": [
+        719,
+        2048
+      ],
+      "native_shape": [
+        482,
+        2048
+      ]
+    },
+    "e01a": {
+      "path": "cache/ablation_results/readout_features/tribe_lowrank_sub-02_s01e01a_text_audio_video.npz",
+      "segment_shape": [
+        882,
+        2048
+      ],
+      "native_shape": [
+        592,
+        2048
+      ]
+    },
+    "e01b": {
+      "path": "cache/ablation_results/readout_features/tribe_lowrank_sub-02_s01e01b_text_audio_video.npz",
+      "segment_shape": [
+        880,
+        2048
+      ],
+      "native_shape": [
+        592,
+        2048
+      ]
+    }
+  },
+  "runtime_seconds": 175.41579649504274,
+  "caveat": "Available-label local proxy on native fMRI rows. This does not use Friends S7/OOD hidden labels and is not an official leaderboard score."
+}

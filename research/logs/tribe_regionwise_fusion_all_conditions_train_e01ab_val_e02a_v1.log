@@ -1,0 +1,76 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-14 06:30:44 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+cache/ablation_results/tribe_regionwise_fusion_all_conditions_train_e01ab_val_e02a_v1.json
+{
+  "created_at": "2026-05-14T10:32:17.923572+00:00",
+  "experiment_name": "tribe_regionwise_fusion_ablation",
+  "conditions": [
+    "text",
+    "audio",
+    "video",
+    "text_audio",
+    "text_video",
+    "audio_video",
+    "full"
+  ],
+  "grids": [
+    "text,audio,video,text_audio,text_video,audio_video,full:0.1"
+  ],
+  "time_tolerance_seconds": 0.5,
+  "n_candidates": 8008,
+  "train_shape": [
+    1719,
+    7,
+    1000
+  ],
+  "val_shape": [
+    712,
+    7,
+    1000
+  ],
+  "train_selected_mean_unit_corr": 0.20437577528336945,
+  "train_selected_median_unit_corr": 0.17561466290072267,
+  "weight_summary": {
+    "nonzero_counts": {
+      "text": 364,
+      "audio": 333,
+      "video": 441,
+      "text_audio": 335,
+      "text_video": 371,
+      "audio_video": 352,
+      "full": 207
+    },
+    "mean_weights": {
+      "text": 0.1348000019788742,
+      "audio": 0.10440000146627426,
+      "video": 0.1899999976158142,
+      "text_audio": 0.13820001482963562,
+      "text_video": 0.1657000035047531,
+      "audio_video": 0.15770000219345093,
+      "full": 0.09220000356435776
+    }
+  },
+  "val_regionwise": {
+    "mean": 0.20790160797386212,
+    "median": 0.1761704682564649,
+    "n_vertices_finite": 983
+  },
+  "val_full": {
+    "weights": {
+      "text": 0.0,
+      "audio": 0.0,
+      "video": 0.0,
+      "text_audio": 0.0,
+      "text_video": 0.0,
+      "audio_video": 0.0,
+      "full": 1.0
+    },
+    "mean": 0.20898625131202,
+    "median": 0.18515749811143856,
+    "n_vertices_finite": 983
+  },
+  "delta_val_regionwise_vs_full": -0.0010846433381578868,
+  "runtime_seconds": 93.86448111804202,
+  "caveat": "Available-label local proxy only. Parcel-wise fusion weights were selected on train chunks and evaluated on held-out available labels; no hidden Friends S7/OOD labels were used."
+}

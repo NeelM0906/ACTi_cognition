@@ -1,0 +1,261 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-13 20:51:51 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+Seed set to 33
+2026-05-13 20:51:52 - INFO - exca.map:500 - Sent 8 items for tribev2.studies.algonauts2025.Algonauts2025._load_timelines,text_loss_episode_s01_e01_e08_val_e07_e08_v1/name=Algonauts2025,infra_timelines.version=text_loss_episode_s01_e01_e08_val_e07_e08_v1-6d9f20f8 into a processpool
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  4.39it/s]100%|██████████| 8/8 [00:00<00:00, 30.55it/s]
+2026-05-13 20:51:52 - INFO - exca.map:504 - Finished processing 8 items for tribev2.studies.algonauts2025.Algonauts2025._load_timelines,text_loss_episode_s01_e01_e08_val_e07_e08_v1/name=Algonauts2025,infra_timelines.version=text_loss_episode_s01_e01_e08_val_e07_e08_v1-6d9f20f8
+Add sentence to Word based on Text:   0%|          | 0/16 [00:00<?, ?it/s]Add sentence to Word based on Text: 100%|██████████| 16/16 [00:03<00:00,  4.39it/s]
+Add context to words:   0%|          | 0/20324 [00:00<?, ?it/s]Add context to words: 100%|██████████| 20324/20324 [00:00<00:00, 97158.96it/s]
+2026-05-13 20:51:56 - WARNING - exca.task:79 - Computation failed for tribev2.main.TribeExperiment.run with traceback:
+Traceback (most recent call last):
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/task.py", line 49, in __init__
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/slurm.py", line 245, in _run_method
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/main.py", line 644, in run
+    loaders = self.data.get_loaders(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/main.py", line 168, in get_loaders
+    events = self.get_events()
+             ^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/main.py", line 151, in get_events
+    events = self.study.run()
+             ^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/steps/base.py", line 250, in run
+    result = step._run(*args)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/utils.py", line 128, in _run
+    df = chain.run()
+         ^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/steps/base.py", line 487, in run
+    result = chain._run()
+             ^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/steps/base.py", line 464, in _run
+    args = (step._run(*args),)
+            ^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/transforms/base.py", line 151, in _validated_run
+    result = original(self, *args, **kw)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/eventstransforms.py", line 140, in _run
+    episode = chunk.apply(self._episode_from_chunk)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/series.py", line 5084, in apply
+    ).apply()
+      ^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1520, in apply
+    return self.apply_standard()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1578, in apply_standard
+    mapped = obj._map_values(mapper=curried)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/base.py", line 1020, in _map_values
+    return arr.map(mapper, na_action=na_action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/arrays/arrow/array.py", line 1741, in map
+    return super().map(mapper, na_action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/arrays/base.py", line 2744, in map
+    return map_array(self, mapper, na_action=na_action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/algorithms.py", line 1710, in map_array
+    return lib.map_infer(values, mapper)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/lib.pyx", line 3071, in pandas._libs.lib.map_infer
+  File "/home/ripper/ACTi_cognition/tribev2/eventstransforms.py", line 120, in _episode_from_chunk
+    if chunk.startswith("e") and len(chunk) >= 3:
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'startswith'
+  -> while running step 5/5: AssignSplitByEpisode
+  -> in MultiStudyLoader(**
+{ 'infra': None,
+  'infra_timelines': { 'cluster': 'processpool',
+                       'conda_env': None,
+                       'cpus_per_task': None,
+                       'folder': '/home/ripper/data/tribe_runs/cache/tribe_release',
+                       'forbid_single_item_computation': False,
+                       'gpus_per_node': None,
+                       'job_name': None,
+                       'keep_in_ram': True,
+                       'logs': '{folder}/logs/{user}/%j',
+                       'max_jobs': 1024,
+                       'max_pickle_size_gb': None,
+                       'mem_gb': None,
+                       'min_samples_per_job': 4,
+                       'mode': 'cached',
+                       'nodes': 1,
+                       'permissions': 511,
+                       'slurm_account': None,
+                       'slurm_additional_parameters': None,
+                       'slurm_constraint': None,
+                       'slurm_partition': None,
+                       'slurm_qos': None,
+                       'slurm_use_srun': False,
+                       'tasks_per_node': 1,
+                       'timeout_min': 720,
+                       'version': 'text_loss_episode_s01_e01_e08_val_e07_e08_v1',
+                       'workdir': None},
+  'name': 'MultiStudyLoader',
+  'names': 'Algonauts2025',
+  'path': '/home/ripper/data/tribe_benchmarks',
+  'query': "subject == 'Algonauts2025/sub-01' and task == 'friends' and movie "
+           "== 's01' and chunk in ['e01a', 'e01b', 'e02a', 'e02b', 'e03a', "
+           "'e03b', 'e04a', 'e04b', 'e05a', 'e05b', 'e06a', 'e06b', 'e07a', "
+           "'e07b', 'e08a', 'e08b']",
+  'studies_to_include': None,
+  'transforms': { 'addcontext': { 'infra': None,
+                                  'max_context_len': 1024,
+                                  'name': 'AddContextToWords',
+                                  'sentence_only': False,
+                                  'split_field': ''},
+                  'addsentence': { 'infra': None,
+                                   'max_unmatched_ratio': 0.05,
+                                   'name': 'AddSentenceToWords',
+                                   'override_sentences': False},
+                  'removemissing': { 'event_types': 'Word',
+                                     'field': 'context',
+                                     'infra': None,
+                                     'name': 'RemoveMissing'},
+                  'split': { 'chunk_field': 'chunk',
+                             'infra': None,
+                             'movie_field': 'movie',
+                             'name': 'AssignSplitByEpisode',
+                             'train_label': 'train',
+                             'val_episodes': ['s01e07', 's01e08'],
+                             'val_label': 'val'}}}
+)
+
+Traceback (most recent call last):
+  File "/home/ripper/ACTi_cognition/experiments/algonauts_text_loss_ablation.py", line 272, in <module>
+    main()
+  File "/home/ripper/ACTi_cognition/experiments/algonauts_text_loss_ablation.py", line 260, in main
+    run_one(args, loss_name, seed)
+  File "/home/ripper/ACTi_cognition/experiments/algonauts_text_loss_ablation.py", line 174, in run_one
+    task.run()
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/task.py", line 422, in _method_override
+    out = job.results()[0]  # only first for multi-tasks
+          ^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/task.py", line 68, in results
+    return (self.result(),)
+            ^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/task.py", line 64, in result
+    raise e
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/task.py", line 49, in __init__
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/slurm.py", line 245, in _run_method
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/main.py", line 644, in run
+    loaders = self.data.get_loaders(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/main.py", line 168, in get_loaders
+    events = self.get_events()
+             ^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/main.py", line 151, in get_events
+    events = self.study.run()
+             ^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/steps/base.py", line 250, in run
+    result = step._run(*args)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/utils.py", line 128, in _run
+    df = chain.run()
+         ^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/steps/base.py", line 487, in run
+    result = chain._run()
+             ^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/steps/base.py", line 464, in _run
+    args = (step._run(*args),)
+            ^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/transforms/base.py", line 151, in _validated_run
+    result = original(self, *args, **kw)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/eventstransforms.py", line 140, in _run
+    episode = chunk.apply(self._episode_from_chunk)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/series.py", line 5084, in apply
+    ).apply()
+      ^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1520, in apply
+    return self.apply_standard()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1578, in apply_standard
+    mapped = obj._map_values(mapper=curried)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/base.py", line 1020, in _map_values
+    return arr.map(mapper, na_action=na_action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/arrays/arrow/array.py", line 1741, in map
+    return super().map(mapper, na_action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/arrays/base.py", line 2744, in map
+    return map_array(self, mapper, na_action=na_action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pandas/core/algorithms.py", line 1710, in map_array
+    return lib.map_infer(values, mapper)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/lib.pyx", line 3071, in pandas._libs.lib.map_infer
+  File "/home/ripper/ACTi_cognition/tribev2/eventstransforms.py", line 120, in _episode_from_chunk
+    if chunk.startswith("e") and len(chunk) >= 3:
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'startswith'
+  -> while running step 5/5: AssignSplitByEpisode
+  -> in MultiStudyLoader(**
+{ 'infra': None,
+  'infra_timelines': { 'cluster': 'processpool',
+                       'conda_env': None,
+                       'cpus_per_task': None,
+                       'folder': '/home/ripper/data/tribe_runs/cache/tribe_release',
+                       'forbid_single_item_computation': False,
+                       'gpus_per_node': None,
+                       'job_name': None,
+                       'keep_in_ram': True,
+                       'logs': '{folder}/logs/{user}/%j',
+                       'max_jobs': 1024,
+                       'max_pickle_size_gb': None,
+                       'mem_gb': None,
+                       'min_samples_per_job': 4,
+                       'mode': 'cached',
+                       'nodes': 1,
+                       'permissions': 511,
+                       'slurm_account': None,
+                       'slurm_additional_parameters': None,
+                       'slurm_constraint': None,
+                       'slurm_partition': None,
+                       'slurm_qos': None,
+                       'slurm_use_srun': False,
+                       'tasks_per_node': 1,
+                       'timeout_min': 720,
+                       'version': 'text_loss_episode_s01_e01_e08_val_e07_e08_v1',
+                       'workdir': None},
+  'name': 'MultiStudyLoader',
+  'names': 'Algonauts2025',
+  'path': '/home/ripper/data/tribe_benchmarks',
+  'query': "subject == 'Algonauts2025/sub-01' and task == 'friends' and movie "
+           "== 's01' and chunk in ['e01a', 'e01b', 'e02a', 'e02b', 'e03a', "
+           "'e03b', 'e04a', 'e04b', 'e05a', 'e05b', 'e06a', 'e06b', 'e07a', "
+           "'e07b', 'e08a', 'e08b']",
+  'studies_to_include': None,
+  'transforms': { 'addcontext': { 'infra': None,
+                                  'max_context_len': 1024,
+                                  'name': 'AddContextToWords',
+                                  'sentence_only': False,
+                                  'split_field': ''},
+                  'addsentence': { 'infra': None,
+                                   'max_unmatched_ratio': 0.05,
+                                   'name': 'AddSentenceToWords',
+                                   'override_sentences': False},
+                  'removemissing': { 'event_types': 'Word',
+                                     'field': 'context',
+                                     'infra': None,
+                                     'name': 'RemoveMissing'},
+                  'split': { 'chunk_field': 'chunk',
+                             'infra': None,
+                             'movie_field': 'movie',
+                             'name': 'AssignSplitByEpisode',
+                             'train_label': 'train',
+                             'val_episodes': ['s01e07', 's01e08'],
+                             'val_label': 'val'}}}
+)

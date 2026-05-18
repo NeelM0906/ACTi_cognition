@@ -1,0 +1,18 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-13 23:11:17 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+Traceback (most recent call last):
+  File "/home/ripper/ACTi_cognition/experiments/algonauts_text_loss_ablation.py", line 324, in <module>
+    main()
+  File "/home/ripper/ACTi_cognition/experiments/algonauts_text_loss_ablation.py", line 312, in main
+    run_one(args, loss_name, seed)
+  File "/home/ripper/ACTi_cognition/experiments/algonauts_text_loss_ablation.py", line 190, in run_one
+    task = TribeExperiment(**config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for TribeExperiment
+data.layer_aggregation
+  Input should be 'group_mean' or 'mean' [type=literal_error, input_value='cat', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/literal_error

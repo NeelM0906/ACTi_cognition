@@ -1,0 +1,36 @@
+/home/ripper/ACTi_cognition/app.py:335: UserWarning: The parameters have been moved from the Blocks constructor to the launch() method in Gradio 6.0: theme. Please pass these parameters to launch() instead.
+  with gr.Blocks(title="TRIBE v2", theme=gr.themes.Soft()) as demo:
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-13 11:04:02 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-13 11:04:02 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+INFO - Loading model from /home/ripper/.cache/huggingface/hub/models--facebook--tribev2/snapshots/f894e783020944dcd96e5568550afe2aa9743f9f/best.ckpt
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:439: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:461: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+Loading TRIBE v2 model...
+Loading brain plotter...
+Ready!
+ngrok tunnel: https://acti.cognition.ngrok.pro
+REST API:    https://acti.cognition.ngrok.pro/analysis
+OpenAPI:     https://acti.cognition.ngrok.pro/docs
+INFO:     Started server process [439094]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:7860 (Press CTRL+C to quit)
+INFO:     127.0.0.1:59486 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59490 - "POST /analysis HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:59506 - "POST /analysis HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:59520 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     136.113.249.109:0 - "GET / HTTP/1.1" 200 OK
+INFO:     216.73.217.44:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.217.44:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     66.132.172.191:0 - "GET / HTTP/1.1" 200 OK
+INFO:     66.132.172.191:0 - "GET /favicon.ico HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [439094]

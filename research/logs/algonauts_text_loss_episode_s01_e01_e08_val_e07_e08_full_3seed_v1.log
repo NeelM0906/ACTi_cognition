@@ -1,0 +1,670 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-13 21:17:31 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+Seed set to 33
+Add sentence to Word based on Text:   0%|          | 0/16 [00:00<?, ?it/s]Add sentence to Word based on Text: 100%|██████████| 16/16 [00:03<00:00,  4.34it/s]
+Add context to words:   0%|          | 0/20324 [00:00<?, ?it/s]Add context to words: 100%|██████████| 20324/20324 [00:00<00:00, 95989.96it/s]
+[21:17:35 INFO] Event summary: 
+                           index  subject  timeline
+study         split type                           
+Algonauts2025 train Fmri      12        1        12
+                    Text      12        1        12
+                    Video     12        1        12
+                    Word   16069        1        12
+              val   Fmri       4        1         4
+                    Text       4        1         4
+                    Video      4        1         4
+                    Word    4253        1         4
+[21:17:36 INFO] Preparing extractor: text
+[21:17:37 INFO] Preparing extractor: fmri
+  0%|          | 0/16 [00:00<?, ?it/s]
+Computing fmri data:   0%|          | 0/16 [00:00<?, ?it/s][A2026-05-13 21:17:37 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:17:37 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:17:37 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:17:37 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:17:37 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:17:37 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:17:37 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+ 50%|█████     | 8/16 [00:00<00:00, 74.00it/s]
+Computing fmri data:  50%|█████     | 8/16 [00:00<00:00, 73.98it/s][A2026-05-13 21:17:37 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:17:37 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:17:37 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:17:37 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:17:37 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:17:37 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:17:37 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+100%|██████████| 16/16 [00:00<00:00, 76.94it/s]
+Computing fmri data: 100%|██████████| 16/16 [00:00<00:00, 76.93it/s]
+[21:17:38 INFO] Preparing extractor: subject_id
+2026-05-13 21:17:38 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'Algonauts2025/sub-01'}. This was probably not intended.
+[21:17:39 INFO] Building dataloader for split train
+2026-05-13 21:17:39 - WARNING - neuralset.segments:759 - 2 segments out of 96 did not contain valid events for event type <class 'neuralset.events.etypes.Word'>
+[21:17:39 INFO] Building dataloader for split val
+2026-05-13 21:17:39 - WARNING - neuralset.segments:759 - 1 segments out of 32 did not contain valid events for event type <class 'neuralset.events.etypes.Word'>
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:439: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:461: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+[21:17:39 INFO] Extractor dims: {'text': (1, 1024)}
+[21:17:39 INFO] Input shapes: torch.Size([1, 200, 1152])
+[21:17:39 INFO] Target shapes: 1000
+[21:17:39 INFO] Total parameters: 136284257
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/logger_connector/logger_connector.py:76: Starting from v1.9.0, `tensorboardX` has been removed as a dependency of the `lightning.pytorch` package, due to potential conflicts with other packages in the ML ecosystem. For this reason, `logger=True` will use `CSVLogger` as the default logger, unless the `tensorboard` or `tensorboardX` packages are found. Please `pip install lightning[extra]` or one of them to enable TensorBoard support by default
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+Loading `train_dataloader` to estimate number of stepping batches.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+┏━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name    ┃ Type             ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ model   │ FmriEncoderModel │  136 M │ train │     0 │
+│ 1 │ loss    │ MSELoss          │      0 │ train │     0 │
+│ 2 │ metrics │ ModuleDict       │      0 │ train │     0 │
+└───┴─────────┴──────────────────┴────────┴───────┴───────┘
+Trainable params: 136 M                                                         
+Non-trainable params: 0                                                         
+Total params: 136 M                                                             
+Total estimated model params size (MB): 545                                     
+Modules in train mode: 197                                                      
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:485: Your `val_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test dataloaders.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuraltrain/metrics/metrics.py:596: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
+  group_preds = preds[mask]
+`Trainer.fit` stopped: `max_epochs=10` reached.
+Epoch 9/9  ━━━━━━━━━━━━━━━━━ 96/96 0:00:01 • 0:00:00 52.58it/s v_num: 19.000    
+                                                               train/loss_step: 
+                                                               0.792 val/loss:  
+                                                               0.816            
+                                                               val/pearson:     
+                                                               0.077            
+                                                               val/retrieval_to…
+                                                               1.000            
+                                                               train/loss_epoch:
+                                                               0.767            
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:485: Your `test_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test dataloaders.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃             Test metric              ┃             DataLoader 0              ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│              test/loss               │          0.8160163164138794           │
+│             test/pearson             │          0.07725212723016739          │
+│         test/retrieval_top1          │                  1.0                  │
+│ test/subj_pearson/Algonauts2025/sub… │          0.07725212723016739          │
+└──────────────────────────────────────┴───────────────────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 32/32 0:00:00 • 0:00:00 152.43it/s 
+Seed set to 33
+Add sentence to Word based on Text:   0%|          | 0/16 [00:00<?, ?it/s]Add sentence to Word based on Text: 100%|██████████| 16/16 [00:00<00:00, 20.33it/s]
+Add context to words:   0%|          | 0/20324 [00:00<?, ?it/s]Add context to words: 100%|██████████| 20324/20324 [00:00<00:00, 97299.69it/s]
+[21:18:02 INFO] Event summary: 
+                           index  subject  timeline
+study         split type                           
+Algonauts2025 train Fmri      12        1        12
+                    Text      12        1        12
+                    Video     12        1        12
+                    Word   16069        1        12
+              val   Fmri       4        1         4
+                    Text       4        1         4
+                    Video      4        1         4
+                    Word    4253        1         4
+[21:18:04 INFO] Preparing extractor: text
+[21:18:04 INFO] Preparing extractor: fmri
+  0%|          | 0/16 [00:00<?, ?it/s]
+Computing fmri data:   0%|          | 0/16 [00:00<?, ?it/s][A2026-05-13 21:18:04 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:04 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:04 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:04 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:04 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:04 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:04 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+ 50%|█████     | 8/16 [00:00<00:00, 73.82it/s]
+Computing fmri data:  50%|█████     | 8/16 [00:00<00:00, 73.79it/s][A2026-05-13 21:18:04 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:04 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:04 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:05 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:05 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:05 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:05 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+100%|██████████| 16/16 [00:00<00:00, 76.69it/s]100%|██████████| 16/16 [00:00<00:00, 76.21it/s]
+
+Computing fmri data: 100%|██████████| 16/16 [00:00<00:00, 76.66it/s][AComputing fmri data: 100%|██████████| 16/16 [00:00<00:00, 76.21it/s]
+[21:18:05 INFO] Preparing extractor: subject_id
+2026-05-13 21:18:05 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'Algonauts2025/sub-01'}. This was probably not intended.
+[21:18:06 INFO] Building dataloader for split train
+2026-05-13 21:18:06 - WARNING - neuralset.segments:759 - 2 segments out of 96 did not contain valid events for event type <class 'neuralset.events.etypes.Word'>
+[21:18:06 INFO] Building dataloader for split val
+2026-05-13 21:18:06 - WARNING - neuralset.segments:759 - 1 segments out of 32 did not contain valid events for event type <class 'neuralset.events.etypes.Word'>
+[21:18:06 INFO] Extractor dims: {'text': (1, 1024)}
+[21:18:06 INFO] Input shapes: torch.Size([1, 200, 1152])
+[21:18:06 INFO] Target shapes: 1000
+[21:18:06 INFO] Total parameters: 136284257
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+Loading `train_dataloader` to estimate number of stepping batches.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+┏━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name    ┃ Type               ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ model   │ FmriEncoderModel   │  136 M │ train │     0 │
+│ 1 │ loss    │ PearsonMSELossImpl │      0 │ train │     0 │
+│ 2 │ metrics │ ModuleDict         │      0 │ train │     0 │
+└───┴─────────┴────────────────────┴────────┴───────┴───────┘
+Trainable params: 136 M                                                         
+Non-trainable params: 0                                                         
+Total params: 136 M                                                             
+Total estimated model params size (MB): 545                                     
+Modules in train mode: 198                                                      
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:485: Your `val_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test dataloaders.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+`Trainer.fit` stopped: `max_epochs=10` reached.
+Epoch 9/9  ━━━━━━━━━━━━━━━━━ 96/96 0:00:01 • 0:00:00 51.85it/s v_num: 20.000    
+                                                               train/loss_step: 
+                                                               0.761 val/loss:  
+                                                               0.969            
+                                                               val/pearson:     
+                                                               0.079            
+                                                               val/retrieval_to…
+                                                               1.000            
+                                                               train/loss_epoch:
+                                                               0.712            
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:485: Your `test_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test dataloaders.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃             Test metric              ┃             DataLoader 0              ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│              test/loss               │          0.9693924784660339           │
+│             test/pearson             │          0.0790412575006485           │
+│         test/retrieval_top1          │                  1.0                  │
+│ test/subj_pearson/Algonauts2025/sub… │          0.0790412575006485           │
+└──────────────────────────────────────┴───────────────────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 32/32 0:00:00 • 0:00:00 152.44it/s 
+Seed set to 34
+Add sentence to Word based on Text:   0%|          | 0/16 [00:00<?, ?it/s]Add sentence to Word based on Text: 100%|██████████| 16/16 [00:00<00:00, 31.63it/s]
+Add context to words:   0%|          | 0/20324 [00:00<?, ?it/s]Add context to words: 100%|██████████| 20324/20324 [00:00<00:00, 96885.43it/s]
+[21:18:29 INFO] Event summary: 
+                           index  subject  timeline
+study         split type                           
+Algonauts2025 train Fmri      12        1        12
+                    Text      12        1        12
+                    Video     12        1        12
+                    Word   16069        1        12
+              val   Fmri       4        1         4
+                    Text       4        1         4
+                    Video      4        1         4
+                    Word    4253        1         4
+[21:18:30 INFO] Preparing extractor: text
+[21:18:31 INFO] Preparing extractor: fmri
+  0%|          | 0/16 [00:00<?, ?it/s]
+Computing fmri data:   0%|          | 0/16 [00:00<?, ?it/s][A2026-05-13 21:18:31 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:31 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:31 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:31 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:31 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:31 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+ 50%|█████     | 8/16 [00:00<00:00, 75.20it/s]
+Computing fmri data:  50%|█████     | 8/16 [00:00<00:00, 75.16it/s][A2026-05-13 21:18:31 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:31 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:31 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:31 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:31 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:31 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:31 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:31 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+100%|██████████| 16/16 [00:00<00:00, 76.38it/s]100%|██████████| 16/16 [00:00<00:00, 76.16it/s]
+
+Computing fmri data: 100%|██████████| 16/16 [00:00<00:00, 76.35it/s][AComputing fmri data: 100%|██████████| 16/16 [00:00<00:00, 76.16it/s]
+[21:18:32 INFO] Preparing extractor: subject_id
+2026-05-13 21:18:32 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'Algonauts2025/sub-01'}. This was probably not intended.
+[21:18:33 INFO] Building dataloader for split train
+2026-05-13 21:18:33 - WARNING - neuralset.segments:759 - 2 segments out of 96 did not contain valid events for event type <class 'neuralset.events.etypes.Word'>
+[21:18:33 INFO] Building dataloader for split val
+2026-05-13 21:18:33 - WARNING - neuralset.segments:759 - 1 segments out of 32 did not contain valid events for event type <class 'neuralset.events.etypes.Word'>
+[21:18:33 INFO] Extractor dims: {'text': (1, 1024)}
+[21:18:33 INFO] Input shapes: torch.Size([1, 200, 1152])
+[21:18:33 INFO] Target shapes: 1000
+[21:18:33 INFO] Total parameters: 136284257
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+Loading `train_dataloader` to estimate number of stepping batches.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+┏━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name    ┃ Type             ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ model   │ FmriEncoderModel │  136 M │ train │     0 │
+│ 1 │ loss    │ MSELoss          │      0 │ train │     0 │
+│ 2 │ metrics │ ModuleDict       │      0 │ train │     0 │
+└───┴─────────┴──────────────────┴────────┴───────┴───────┘
+Trainable params: 136 M                                                         
+Non-trainable params: 0                                                         
+Total params: 136 M                                                             
+Total estimated model params size (MB): 545                                     
+Modules in train mode: 197                                                      
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:485: Your `val_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test dataloaders.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+`Trainer.fit` stopped: `max_epochs=10` reached.
+Epoch 9/9  ━━━━━━━━━━━━━━━━━ 96/96 0:00:01 • 0:00:00 52.72it/s v_num: 21.000    
+                                                               train/loss_step: 
+                                                               0.879 val/loss:  
+                                                               0.813            
+                                                               val/pearson:     
+                                                               0.095            
+                                                               val/retrieval_to…
+                                                               1.000            
+                                                               train/loss_epoch:
+                                                               0.765            
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:485: Your `test_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test dataloaders.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃             Test metric              ┃             DataLoader 0              ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│              test/loss               │          0.8127776384353638           │
+│             test/pearson             │          0.09503354877233505          │
+│         test/retrieval_top1          │                  1.0                  │
+│ test/subj_pearson/Algonauts2025/sub… │          0.09503354877233505          │
+└──────────────────────────────────────┴───────────────────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 32/32 0:00:00 • 0:00:00 153.33it/s 
+Seed set to 34
+Add sentence to Word based on Text:   0%|          | 0/16 [00:00<?, ?it/s]Add sentence to Word based on Text: 100%|██████████| 16/16 [00:00<00:00, 31.51it/s]
+Add context to words:   0%|          | 0/20324 [00:00<?, ?it/s]Add context to words: 100%|██████████| 20324/20324 [00:00<00:00, 95228.08it/s]
+[21:18:56 INFO] Event summary: 
+                           index  subject  timeline
+study         split type                           
+Algonauts2025 train Fmri      12        1        12
+                    Text      12        1        12
+                    Video     12        1        12
+                    Word   16069        1        12
+              val   Fmri       4        1         4
+                    Text       4        1         4
+                    Video      4        1         4
+                    Word    4253        1         4
+[21:18:57 INFO] Preparing extractor: text
+[21:18:58 INFO] Preparing extractor: fmri
+  0%|          | 0/16 [00:00<?, ?it/s]
+Computing fmri data:   0%|          | 0/16 [00:00<?, ?it/s][A2026-05-13 21:18:58 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:58 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:58 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:58 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:58 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:58 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+ 50%|█████     | 8/16 [00:00<00:00, 73.58it/s]
+Computing fmri data:  50%|█████     | 8/16 [00:00<00:00, 73.54it/s][A2026-05-13 21:18:58 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:58 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:58 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:58 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:58 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:58 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:58 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:18:58 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+100%|██████████| 16/16 [00:00<00:00, 74.55it/s]100%|██████████| 16/16 [00:00<00:00, 74.37it/s]
+
+Computing fmri data: 100%|██████████| 16/16 [00:00<00:00, 74.53it/s][AComputing fmri data: 100%|██████████| 16/16 [00:00<00:00, 74.37it/s]
+[21:18:58 INFO] Preparing extractor: subject_id
+2026-05-13 21:18:59 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'Algonauts2025/sub-01'}. This was probably not intended.
+[21:18:59 INFO] Building dataloader for split train
+2026-05-13 21:19:00 - WARNING - neuralset.segments:759 - 2 segments out of 96 did not contain valid events for event type <class 'neuralset.events.etypes.Word'>
+[21:19:00 INFO] Building dataloader for split val
+2026-05-13 21:19:00 - WARNING - neuralset.segments:759 - 1 segments out of 32 did not contain valid events for event type <class 'neuralset.events.etypes.Word'>
+[21:19:00 INFO] Extractor dims: {'text': (1, 1024)}
+[21:19:00 INFO] Input shapes: torch.Size([1, 200, 1152])
+[21:19:00 INFO] Target shapes: 1000
+[21:19:00 INFO] Total parameters: 136284257
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+Loading `train_dataloader` to estimate number of stepping batches.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+┏━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name    ┃ Type               ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ model   │ FmriEncoderModel   │  136 M │ train │     0 │
+│ 1 │ loss    │ PearsonMSELossImpl │      0 │ train │     0 │
+│ 2 │ metrics │ ModuleDict         │      0 │ train │     0 │
+└───┴─────────┴────────────────────┴────────┴───────┴───────┘
+Trainable params: 136 M                                                         
+Non-trainable params: 0                                                         
+Total params: 136 M                                                             
+Total estimated model params size (MB): 545                                     
+Modules in train mode: 198                                                      
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:485: Your `val_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test dataloaders.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+`Trainer.fit` stopped: `max_epochs=10` reached.
+Epoch 9/9  ━━━━━━━━━━━━━━━━━ 96/96 0:00:01 • 0:00:00 51.60it/s v_num: 22.000    
+                                                               train/loss_step: 
+                                                               1.004 val/loss:  
+                                                               0.970            
+                                                               val/pearson:     
+                                                               0.076            
+                                                               val/retrieval_to…
+                                                               1.000            
+                                                               train/loss_epoch:
+                                                               0.729            
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:485: Your `test_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test dataloaders.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃             Test metric              ┃             DataLoader 0              ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│              test/loss               │          0.9695766568183899           │
+│             test/pearson             │          0.07565850764513016          │
+│         test/retrieval_top1          │                  1.0                  │
+│ test/subj_pearson/Algonauts2025/sub… │          0.07565850764513016          │
+└──────────────────────────────────────┴───────────────────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 32/32 0:00:00 • 0:00:00 152.71it/s 
+Seed set to 35
+Add sentence to Word based on Text:   0%|          | 0/16 [00:00<?, ?it/s]Add sentence to Word based on Text: 100%|██████████| 16/16 [00:00<00:00, 31.61it/s]
+Add context to words:   0%|          | 0/20324 [00:00<?, ?it/s]Add context to words: 100%|██████████| 20324/20324 [00:00<00:00, 93935.99it/s]
+[21:19:23 INFO] Event summary: 
+                           index  subject  timeline
+study         split type                           
+Algonauts2025 train Fmri      12        1        12
+                    Text      12        1        12
+                    Video     12        1        12
+                    Word   16069        1        12
+              val   Fmri       4        1         4
+                    Text       4        1         4
+                    Video      4        1         4
+                    Word    4253        1         4
+[21:19:24 INFO] Preparing extractor: text
+[21:19:25 INFO] Preparing extractor: fmri
+  0%|          | 0/16 [00:00<?, ?it/s]
+Computing fmri data:   0%|          | 0/16 [00:00<?, ?it/s][A2026-05-13 21:19:25 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:25 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:25 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:25 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:25 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:25 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:25 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+ 50%|█████     | 8/16 [00:00<00:00, 77.67it/s]
+Computing fmri data:  50%|█████     | 8/16 [00:00<00:00, 77.64it/s][A2026-05-13 21:19:25 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:25 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:25 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:25 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:25 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:25 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:25 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+100%|██████████| 16/16 [00:00<00:00, 75.59it/s]100%|██████████| 16/16 [00:00<00:00, 75.85it/s]
+
+Computing fmri data: 100%|██████████| 16/16 [00:00<00:00, 75.56it/s][AComputing fmri data: 100%|██████████| 16/16 [00:00<00:00, 75.85it/s]
+[21:19:25 INFO] Preparing extractor: subject_id
+2026-05-13 21:19:26 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'Algonauts2025/sub-01'}. This was probably not intended.
+[21:19:26 INFO] Building dataloader for split train
+2026-05-13 21:19:27 - WARNING - neuralset.segments:759 - 2 segments out of 96 did not contain valid events for event type <class 'neuralset.events.etypes.Word'>
+[21:19:27 INFO] Building dataloader for split val
+2026-05-13 21:19:27 - WARNING - neuralset.segments:759 - 1 segments out of 32 did not contain valid events for event type <class 'neuralset.events.etypes.Word'>
+[21:19:27 INFO] Extractor dims: {'text': (1, 1024)}
+[21:19:27 INFO] Input shapes: torch.Size([1, 200, 1152])
+[21:19:27 INFO] Target shapes: 1000
+[21:19:27 INFO] Total parameters: 136284257
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+Loading `train_dataloader` to estimate number of stepping batches.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+┏━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name    ┃ Type             ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ model   │ FmriEncoderModel │  136 M │ train │     0 │
+│ 1 │ loss    │ MSELoss          │      0 │ train │     0 │
+│ 2 │ metrics │ ModuleDict       │      0 │ train │     0 │
+└───┴─────────┴──────────────────┴────────┴───────┴───────┘
+Trainable params: 136 M                                                         
+Non-trainable params: 0                                                         
+Total params: 136 M                                                             
+Total estimated model params size (MB): 545                                     
+Modules in train mode: 197                                                      
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:485: Your `val_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test dataloaders.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+`Trainer.fit` stopped: `max_epochs=10` reached.
+Epoch 9/9  ━━━━━━━━━━━━━━━━━ 96/96 0:00:01 • 0:00:00 52.01it/s v_num: 23.000    
+                                                               train/loss_step: 
+                                                               0.692 val/loss:  
+                                                               0.815            
+                                                               val/pearson:     
+                                                               0.081            
+                                                               val/retrieval_to…
+                                                               1.000            
+                                                               train/loss_epoch:
+                                                               0.763            
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:485: Your `test_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test dataloaders.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃             Test metric              ┃             DataLoader 0              ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│              test/loss               │          0.8148861527442932           │
+│             test/pearson             │          0.08144568651914597          │
+│         test/retrieval_top1          │                  1.0                  │
+│ test/subj_pearson/Algonauts2025/sub… │          0.08144568651914597          │
+└──────────────────────────────────────┴───────────────────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 32/32 0:00:00 • 0:00:00 148.98it/s 
+Seed set to 35
+Add sentence to Word based on Text:   0%|          | 0/16 [00:00<?, ?it/s]Add sentence to Word based on Text: 100%|██████████| 16/16 [00:00<00:00, 31.87it/s]
+Add context to words:   0%|          | 0/20324 [00:00<?, ?it/s]Add context to words: 100%|██████████| 20324/20324 [00:00<00:00, 96052.15it/s]
+[21:19:49 INFO] Event summary: 
+                           index  subject  timeline
+study         split type                           
+Algonauts2025 train Fmri      12        1        12
+                    Text      12        1        12
+                    Video     12        1        12
+                    Word   16069        1        12
+              val   Fmri       4        1         4
+                    Text       4        1         4
+                    Video      4        1         4
+                    Word    4253        1         4
+[21:19:50 INFO] Preparing extractor: text
+[21:19:51 INFO] Preparing extractor: fmri
+  0%|          | 0/16 [00:00<?, ?it/s]
+Computing fmri data:   0%|          | 0/16 [00:00<?, ?it/s][A2026-05-13 21:19:51 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:51 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:51 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:51 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:52 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:52 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:52 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+ 50%|█████     | 8/16 [00:00<00:00, 77.84it/s]
+Computing fmri data:  50%|█████     | 8/16 [00:00<00:00, 77.81it/s][A2026-05-13 21:19:52 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:52 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:52 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:52 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:52 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:52 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-13 21:19:52 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+100%|██████████| 16/16 [00:00<00:00, 75.73it/s]100%|██████████| 16/16 [00:00<00:00, 76.01it/s]
+
+Computing fmri data: 100%|██████████| 16/16 [00:00<00:00, 75.71it/s][AComputing fmri data: 100%|██████████| 16/16 [00:00<00:00, 76.00it/s]
+[21:19:52 INFO] Preparing extractor: subject_id
+2026-05-13 21:19:52 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'Algonauts2025/sub-01'}. This was probably not intended.
+[21:19:53 INFO] Building dataloader for split train
+2026-05-13 21:19:53 - WARNING - neuralset.segments:759 - 2 segments out of 96 did not contain valid events for event type <class 'neuralset.events.etypes.Word'>
+[21:19:53 INFO] Building dataloader for split val
+2026-05-13 21:19:53 - WARNING - neuralset.segments:759 - 1 segments out of 32 did not contain valid events for event type <class 'neuralset.events.etypes.Word'>
+[21:19:53 INFO] Extractor dims: {'text': (1, 1024)}
+[21:19:53 INFO] Input shapes: torch.Size([1, 200, 1152])
+[21:19:53 INFO] Target shapes: 1000
+[21:19:54 INFO] Total parameters: 136284257
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+Loading `train_dataloader` to estimate number of stepping batches.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+┏━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name    ┃ Type               ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ model   │ FmriEncoderModel   │  136 M │ train │     0 │
+│ 1 │ loss    │ PearsonMSELossImpl │      0 │ train │     0 │
+│ 2 │ metrics │ ModuleDict         │      0 │ train │     0 │
+└───┴─────────┴────────────────────┴────────┴───────┴───────┘
+Trainable params: 136 M                                                         
+Non-trainable params: 0                                                         
+Total params: 136 M                                                             
+Total estimated model params size (MB): 545                                     
+Modules in train mode: 198                                                      
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:485: Your `val_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test dataloaders.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+`Trainer.fit` stopped: `max_epochs=10` reached.
+Epoch 9/9  ━━━━━━━━━━━━━━━━━ 96/96 0:00:01 • 0:00:00 52.16it/s v_num: 24.000    
+                                                               train/loss_step: 
+                                                               0.710 val/loss:  
+                                                               0.987            
+                                                               val/pearson:     
+                                                               0.061            
+                                                               val/retrieval_to…
+                                                               1.000            
+                                                               train/loss_epoch:
+                                                               0.678            
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:485: Your `test_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test dataloaders.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃             Test metric              ┃             DataLoader 0              ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│              test/loss               │          0.9872305393218994           │
+│             test/pearson             │         0.060860201716423035          │
+│         test/retrieval_top1          │                  1.0                  │
+│ test/subj_pearson/Algonauts2025/sub… │         0.060860201716423035          │
+└──────────────────────────────────────┴───────────────────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 32/32 0:00:00 • 0:00:00 148.09it/s 
+cache/ablation_results/algonauts_text_loss_episode_s01_e01_e08_val_e07_e08_full_3seed_v1.json
+{
+  "created_at": "2026-05-14T01:17:28.968083+00:00",
+  "git_sha": "0151e9a",
+  "query": "subject == 'Algonauts2025/sub-01' and task == 'friends' and movie == 's01' and chunk in ['e01a', 'e01b', 'e02a', 'e02b', 'e03a', 'e03b', 'e04a', 'e04b', 'e05a', 'e05b', 'e06a', 'e06b', 'e07a', 'e07b', 'e08a', 'e08b']",
+  "split_mode": "episode",
+  "val_chunks": [
+    "e01b"
+  ],
+  "val_episodes": [
+    "s01e07",
+    "s01e08"
+  ],
+  "seeds": [
+    33,
+    34,
+    35
+  ],
+  "run_tag": "text_episode_s01_e01_e08_val_e07_e08_full_v1",
+  "timeline_cache_version": "text_loss_episode_s01_e01_e08_val_e07_e08_v1",
+  "text_cache_version": "text_loss_episode_s01_e01_e08_val_e07_e08_v1",
+  "matmul_precision": "high",
+  "temporal_delay_bank": false,
+  "delay_lags": 6,
+  "delay_stride": 2,
+  "epochs": 10,
+  "batch_size": 1,
+  "tiny_model": false,
+  "runs": [
+    {
+      "loss": "mse",
+      "seed": 33,
+      "seconds": 30.221264828927815,
+      "peak_vram_mb": 2673.36328125,
+      "folder": "/home/ripper/data/tribe_runs/text_episode_s01_e01_e08_val_e07_e08_full_v1/mse/seed_33",
+      "metrics": {
+        "test/loss": 0.8160163164138794,
+        "test/pearson": 0.07725212723016739,
+        "test/retrieval_top1": 1.0,
+        "test/subj_pearson/Algonauts2025/sub-01": 0.07725212723016739
+      }
+    },
+    {
+      "loss": "pearson_mse",
+      "seed": 33,
+      "seconds": 26.851467004977167,
+      "peak_vram_mb": 2673.36328125,
+      "folder": "/home/ripper/data/tribe_runs/text_episode_s01_e01_e08_val_e07_e08_full_v1/pearson_mse/seed_33",
+      "metrics": {
+        "test/loss": 0.9693924784660339,
+        "test/pearson": 0.0790412575006485,
+        "test/retrieval_top1": 1.0,
+        "test/subj_pearson/Algonauts2025/sub-01": 0.0790412575006485
+      }
+    },
+    {
+      "loss": "mse",
+      "seed": 34,
+      "seconds": 26.579602649086155,
+      "peak_vram_mb": 2673.36328125,
+      "folder": "/home/ripper/data/tribe_runs/text_episode_s01_e01_e08_val_e07_e08_full_v1/mse/seed_34",
+      "metrics": {
+        "test/loss": 0.8127776384353638,
+        "test/pearson": 0.09503354877233505,
+        "test/retrieval_top1": 1.0,
+        "test/subj_pearson/Algonauts2025/sub-01": 0.09503354877233505
+      }
+    },
+    {
+      "loss": "pearson_mse",
+      "seed": 34,
+      "seconds": 26.865606219973415,
+      "peak_vram_mb": 2673.36328125,
+      "folder": "/home/ripper/data/tribe_runs/text_episode_s01_e01_e08_val_e07_e08_full_v1/pearson_mse/seed_34",
+      "metrics": {
+        "test/loss": 0.9695766568183899,
+        "test/pearson": 0.07565850764513016,
+        "test/retrieval_top1": 1.0,
+        "test/subj_pearson/Algonauts2025/sub-01": 0.07565850764513016
+      }
+    },
+    {
+      "loss": "mse",
+      "seed": 35,
+      "seconds": 26.6291621979326,
+      "peak_vram_mb": 2673.36328125,
+      "folder": "/home/ripper/data/tribe_runs/text_episode_s01_e01_e08_val_e07_e08_full_v1/mse/seed_35",
+      "metrics": {
+        "test/loss": 0.8148861527442932,
+        "test/pearson": 0.08144568651914597,
+        "test/retrieval_top1": 1.0,
+        "test/subj_pearson/Algonauts2025/sub-01": 0.08144568651914597
+      }
+    },
+    {
+      "loss": "pearson_mse",
+      "seed": 35,
+      "seconds": 26.765835330006666,
+      "peak_vram_mb": 2673.36328125,
+      "folder": "/home/ripper/data/tribe_runs/text_episode_s01_e01_e08_val_e07_e08_full_v1/pearson_mse/seed_35",
+      "metrics": {
+        "test/loss": 0.9872305393218994,
+        "test/pearson": 0.060860201716423035,
+        "test/retrieval_top1": 1.0,
+        "test/subj_pearson/Algonauts2025/sub-01": 0.060860201716423035
+      }
+    }
+  ]
+}

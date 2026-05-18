@@ -11,6 +11,7 @@ import typing as tp
 from pathlib import Path
 
 import lightning.pytorch as pl
+import torch
 from einops import rearrange
 from neuralset.dataloader import SegmentData
 from neuraltrain.optimizers import BaseOptimizer
@@ -70,8 +71,13 @@ class BrainModule(pl.LightningModule):
             y_pred_flat = y_pred_flat[~bad_indices]
             y_true_flat = y_true_flat[~bad_indices]
             subject_ids_flat = subject_ids_flat[~bad_indices]
+        finite_indices = torch.isfinite(y_pred_flat).all(dim=1) & torch.isfinite(
+            y_true_flat
+        ).all(dim=1)
+        y_pred_flat = y_pred_flat[finite_indices]
+        y_true_flat = y_true_flat[finite_indices]
+        subject_ids_flat = subject_ids_flat[finite_indices]
 
-        loss = self.loss(y_pred_flat, y_true_flat).mean()
         log_kwargs = {
             "on_step": True if step_name == "train" else False,
             "on_epoch": True,
@@ -79,6 +85,18 @@ class BrainModule(pl.LightningModule):
             "prog_bar": True,
             "batch_size": y_pred.shape[0],
         }
+
+        if y_pred_flat.shape[0] == 0:
+            loss = y_pred.sum() * 0.0
+            if step_name == "train":
+                self.log(
+                    f"{step_name}/loss",
+                    loss,
+                    **log_kwargs,
+                )
+            return loss, y_pred.detach().cpu(), y_true.detach().cpu()
+
+        loss = self.loss(y_pred_flat, y_true_flat).mean()
 
         self.log(
             f"{step_name}/loss",

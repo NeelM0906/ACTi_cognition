@@ -46,6 +46,74 @@ class TemporalSmoothing(BaseModelConfig):
         return conv
 
 
+class TemporalDelayBank(BaseModelConfig):
+    n_lags: int = 6
+    lag_stride: int = 1
+    per_channel: bool = True
+    init_identity: bool = True
+
+    def build(self, dim: int) -> nn.Module:
+        return TemporalDelayBankModel(
+            dim=dim,
+            n_lags=self.n_lags,
+            lag_stride=self.lag_stride,
+            per_channel=self.per_channel,
+            init_identity=self.init_identity,
+        )
+
+
+class TemporalDelayBankModel(nn.Module):
+    def __init__(
+        self,
+        dim: int,
+        n_lags: int,
+        lag_stride: int,
+        per_channel: bool,
+        init_identity: bool,
+    ) -> None:
+        super().__init__()
+        if n_lags < 1:
+            raise ValueError("n_lags must be at least 1")
+        if lag_stride < 1:
+            raise ValueError("lag_stride must be at least 1")
+        self.dim = dim
+        self.n_lags = n_lags
+        self.lag_stride = lag_stride
+        self.per_channel = per_channel
+        weight_shape = (dim, n_lags) if per_channel else (n_lags,)
+        self.weights = nn.Parameter(torch.zeros(weight_shape))
+        if init_identity:
+            with torch.no_grad():
+                if per_channel:
+                    self.weights[:, 0] = 1.0
+                else:
+                    self.weights[0] = 1.0
+        else:
+            nn.init.normal_(self.weights, std=1.0 / n_lags)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        if x.ndim != 3:
+            raise ValueError(f"Expected input shape B,T,H, got {tuple(x.shape)}")
+        if x.shape[-1] != self.dim:
+            raise ValueError(f"Expected hidden dim {self.dim}, got {x.shape[-1]}")
+
+        shifted = []
+        B, T, H = x.shape
+        for lag_idx in range(self.n_lags):
+            shift = lag_idx * self.lag_stride
+            if shift == 0:
+                shifted.append(x)
+            elif shift < T:
+                pad = torch.zeros(B, shift, H, device=x.device, dtype=x.dtype)
+                shifted.append(torch.cat([pad, x[:, : T - shift]], dim=1))
+            else:
+                shifted.append(torch.zeros_like(x))
+        bank = torch.stack(shifted, dim=-1)  # B, T, H, L
+        if self.per_channel:
+            return (bank * self.weights.view(1, 1, H, self.n_lags)).sum(dim=-1)
+        return (bank * self.weights.view(1, 1, 1, self.n_lags)).sum(dim=-1)
+
+
 class FmriEncoder(BaseModelConfig):
 
     # architecture
@@ -66,6 +134,8 @@ class FmriEncoder(BaseModelConfig):
     temporal_dropout: float = 0.0
     low_rank_head: int | None = None
     temporal_smoothing: TemporalSmoothing | None = None
+    temporal_delay_bank: TemporalDelayBank | None = None
+    output_temporal_delay_bank: TemporalDelayBank | None = None
 
     def model_post_init(self, __context):
         if self.encoder is not None:
@@ -147,6 +217,12 @@ class FmriEncoderModel(nn.Module):
         )
         if config.temporal_smoothing is not None:
             self.temporal_smoothing = config.temporal_smoothing.build(dim=hidden)
+        if config.temporal_delay_bank is not None:
+            self.temporal_delay_bank = config.temporal_delay_bank.build(dim=hidden)
+        if config.output_temporal_delay_bank is not None:
+            self.output_temporal_delay_bank = config.output_temporal_delay_bank.build(
+                dim=n_outputs
+            )
         if not config.linear_baseline:
             if config.time_pos_embedding:
                 self.time_pos_embed = nn.Parameter(
@@ -167,10 +243,14 @@ class FmriEncoderModel(nn.Module):
             x = self.temporal_smoothing(x.transpose(1, 2)).transpose(1, 2)
         if not self.config.linear_baseline:
             x = self.transformer_forward(x, subject_id)
+        if hasattr(self, "temporal_delay_bank"):
+            x = self.temporal_delay_bank(x)
         x = x.transpose(1, 2)  # B, H, T
         if self.config.low_rank_head is not None:
             x = self.low_rank_head(x.transpose(1, 2)).transpose(1, 2)
         x = self.predictor(x, subject_id)  # B, O, T
+        if hasattr(self, "output_temporal_delay_bank"):
+            x = self.output_temporal_delay_bank(x.transpose(1, 2)).transpose(1, 2)
         if pool_outputs:
             out = self.pooler(x)  # B, O, T'
         else:

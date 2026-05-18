@@ -1,0 +1,120 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-14 06:43:04 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+cache/ablation_results/tribe_groupwise_fusion_heminet_train_e01ab_val_e02a_v1.json
+{
+  "created_at": "2026-05-14T10:43:10.392611+00:00",
+  "experiment_name": "tribe_groupwise_fusion_ablation",
+  "conditions": [
+    "text_video",
+    "audio_video",
+    "full"
+  ],
+  "group_mode": "hemi-network",
+  "n_groups": 14,
+  "grids": [
+    "full,text_video,audio_video:0.05"
+  ],
+  "time_tolerance_seconds": 0.06,
+  "n_candidates": 231,
+  "train_shape": [
+    1752,
+    3,
+    1000
+  ],
+  "val_shape": [
+    712,
+    3,
+    1000
+  ],
+  "group_weight_summary": {
+    "LH_Vis": {
+      "text_video": 0.45000001788139343,
+      "audio_video": 0.550000011920929,
+      "full": 0.0
+    },
+    "LH_SomMot": {
+      "text_video": 0.25,
+      "audio_video": 0.050000011920928955,
+      "full": 0.6999999284744263
+    },
+    "LH_DorsAttn": {
+      "text_video": 0.3499999940395355,
+      "audio_video": 0.6500001549720764,
+      "full": 0.0
+    },
+    "LH_SalVentAttn": {
+      "text_video": 0.19999998807907104,
+      "audio_video": 0.25,
+      "full": 0.5499998927116394
+    },
+    "LH_Limbic": {
+      "text_video": 0.0,
+      "audio_video": 0.09999998658895493,
+      "full": 0.8999998569488525
+    },
+    "LH_Cont": {
+      "text_video": 0.0,
+      "audio_video": 0.0,
+      "full": 1.0
+    },
+    "LH_Default": {
+      "text_video": 0.10000003129243851,
+      "audio_video": 0.050000015646219254,
+      "full": 0.8500000238418579
+    },
+    "RH_Vis": {
+      "text_video": 0.5,
+      "audio_video": 0.5,
+      "full": 0.0
+    },
+    "RH_SomMot": {
+      "text_video": 0.550000011920929,
+      "audio_video": 0.45000001788139343,
+      "full": 0.0
+    },
+    "RH_DorsAttn": {
+      "text_video": 0.10000000149011612,
+      "audio_video": 0.9000001549720764,
+      "full": 0.0
+    },
+    "RH_SalVentAttn": {
+      "text_video": 0.2999999523162842,
+      "audio_video": 0.6999999284744263,
+      "full": 0.0
+    },
+    "RH_Limbic": {
+      "text_video": 0.0,
+      "audio_video": 0.19999995827674866,
+      "full": 0.7999998331069946
+    },
+    "RH_Cont": {
+      "text_video": 0.0,
+      "audio_video": 0.0,
+      "full": 1.0
+    },
+    "RH_Default": {
+      "text_video": 0.0,
+      "audio_video": 0.1000000387430191,
+      "full": 0.9000000953674316
+    }
+  },
+  "val_groupwise": {
+    "mean": 0.21531955095467573,
+    "median": 0.1894338363865509,
+    "n_vertices_finite": 983
+  },
+  "val_full": {
+    "weights": {
+      "text_video": 0.0,
+      "audio_video": 0.0,
+      "full": 1.0
+    },
+    "mean": 0.21328867027437104,
+    "median": 0.18906106848890875,
+    "n_vertices_finite": 983
+  },
+  "delta_val_groupwise_vs_full": 0.0020308806803046864,
+  "runtime_seconds": 6.0922456389525905,
+  "caveat": "Available-label local proxy only. Group-wise fusion weights were selected on train chunks and evaluated on held-out available labels; no hidden Friends S7/OOD labels were used."
+}

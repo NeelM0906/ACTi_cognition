@@ -1,0 +1,64 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-14 08:10:29 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+2026-05-14 08:10:29 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+INFO - Loading model from /home/ripper/.cache/huggingface/hub/models--facebook--tribev2/snapshots/f894e783020944dcd96e5568550afe2aa9743f9f/best.ckpt
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:439: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:461: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+Extract audio from video events:   0%|          | 0/1 [00:00<?, ?it/s]Extract audio from video events: 100%|██████████| 1/1 [00:00<00:00, 6177.18it/s]
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/utils.py:134: UserWarning: The events dataframe contains an `Index` column. This is dangerous, please add drop=True in calls to df.reset_index(). Dropping it automatically.
+  warnings.warn(msg)
+Add context to words:   0%|          | 0/1382 [00:00<?, ?it/s]Add context to words: 100%|██████████| 1382/1382 [00:00<00:00, 98805.58it/s]
+[08:10:31 INFO] Preparing extractor: text
+[08:10:32 INFO] Preparing extractor: audio
+[08:10:32 INFO] Preparing extractor: video
+[08:10:32 INFO] Preparing extractor: subject_id
+2026-05-14 08:10:32 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'Algonauts2025/sub-02'}. This was probably not intended.
+[08:10:32 INFO] Building dataloader for split all
+INFO - Predicted 719 / 800 segments (89.9% kept)
+cache/ablation_results/pretrained_tribe_text_audio_video_sub-02_s01e02a_parcel_approx_v1.json
+{
+  "created_at": "2026-05-14T12:10:33.744894+00:00",
+  "checkpoint": "facebook/tribev2",
+  "features": [
+    "text",
+    "audio",
+    "video"
+  ],
+  "metric_space": "parcel",
+  "subject": "sub-02",
+  "movie": "s01",
+  "chunks": [
+    "e02a"
+  ],
+  "target_projection": "standard fsaverage5 prediction -> nearest projected Schaefer1000 parcel averages",
+  "target_projection_caveat": "Approximate local evaluation; not the official Algonauts surface preprocessing and not directly comparable to the public leaderboard.",
+  "target_offset_seconds": 5.0,
+  "n_prediction_samples": 719,
+  "prediction_shape": [
+    719,
+    20484
+  ],
+  "metric_prediction_shape": [
+    719,
+    1000
+  ],
+  "target_shape": [
+    719,
+    1000
+  ],
+  "n_finite_target_rows": 712,
+  "n_nonempty_projected_parcels": 983,
+  "metrics": {
+    "mean": 0.21499810882430767,
+    "median": 0.18980879989688487,
+    "n_vertices_total": 983,
+    "n_vertices_finite": 983
+  },
+  "load_seconds": 0.7652775449678302,
+  "predict_seconds": 1.675571328960359,
+  "target_projection_seconds": 0.35286247497424483,
+  "arrays_path": "cache/ablation_results/pretrained_tribe_text_audio_video_sub-02_s01e02a_parcel_approx_v1.npz"
+}

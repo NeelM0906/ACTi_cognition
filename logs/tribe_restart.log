@@ -1,0 +1,1548 @@
+/home/ripper/ACTi_cognition/app.py:335: UserWarning: The parameters have been moved from the Blocks constructor to the launch() method in Gradio 6.0: theme. Please pass these parameters to launch() instead.
+  with gr.Blocks(title="TRIBE v2", theme=gr.themes.Soft()) as demo:
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-13 11:39:38 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-13 11:39:38 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+INFO - Loading model from /home/ripper/.cache/huggingface/hub/models--facebook--tribev2/snapshots/f894e783020944dcd96e5568550afe2aa9743f9f/best.ckpt
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:439: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:461: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+Loading TRIBE v2 model...
+Loading brain plotter...
+Ready!
+ngrok tunnel: https://acti.cognition.ngrok.pro
+REST API:    https://acti.cognition.ngrok.pro/analysis
+OpenAPI:     https://acti.cognition.ngrok.pro/docs
+INFO:     Started server process [466413]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:7860 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51876 - "GET / HTTP/1.1" 200 OK
+INFO:     34.90.96.148:0 - "GET / HTTP/1.1" 200 OK
+INFO:     100.23.174.86:0 - "GET / HTTP/1.1" 200 OK
+INFO:     100.23.174.86:0 - "GET / HTTP/1.1" 200 OK
+INFO:     34.70.57.69:0 - "GET / HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET / HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/index-BvBk1Iap.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/index-CrbFh6qt.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /manifest.json HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/i18n-CGFL4PZH.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Index-BRJ0gETR.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Index-D1pHiZ3X.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/StreamingBar.svelte_svelte_type_style_lang-CdFIGsJa.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/i18n-CMo5lpzy.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/html-CdUEtR5E.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/StreamingBar-M0OJiclA.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/ScrollFade.svelte_svelte_type_style_lang-Xm-PLg9E.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/ScrollFade-BXTrLZiw.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/index-Lz7fsHFt.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/snippet-Bl5YVoCg.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/index-DnoGeqVF.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/index-C7e-J7CF.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/utils.svelte-CYLB_jIA.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/clone-DaB-S2nH.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Clear-Dgs5UhTO.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/index-BJk8VOjP.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /favicon.ico HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /static/img/logo_nosize.svg HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /theme.css?v=undefined HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Index-D0q0pAfU.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Login-DbEEw7Ia.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/BaseForm-B79fGGKa.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Image-DQfoGqtb.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/ImagePreview-CAbFrrhc.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/BaseForm-0cuxY3Cw.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Example-BlSzJhEn.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Textbox-DbZXQzbK.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Login-CJk1KhUZ.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Button-CoUFCYL9.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Copy-DFFray7x.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Index.svelte_svelte_type_style_lang-C97CbKPo.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/BlockTitle-7XQ-8ENg.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Button-CH2w4_A4.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Textbox-v-cNeNHQ.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Image-CDw5qb5O.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Info-BrkJhX6_.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Check-BlnBgjLT.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Square-B6INQV79.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/misc-ByVveAau.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/IconButtonWrapper-Ba0GidgU.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/actions-Cit_UA5S.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Send-Ee555fP_.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/input-C317uaXR.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Block-Bx3BikCN.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET / HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/index-CrbFh6qt.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/index-BvBk1Iap.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /manifest.json HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/StreamingBar-M0OJiclA.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/ScrollFade-BXTrLZiw.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Index-BRJ0gETR.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/i18n-CGFL4PZH.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/i18n-CMo5lpzy.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Index-D1pHiZ3X.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/html-CdUEtR5E.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/index-Lz7fsHFt.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/index-BJk8VOjP.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/StreamingBar.svelte_svelte_type_style_lang-CdFIGsJa.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/clone-DaB-S2nH.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/ScrollFade.svelte_svelte_type_style_lang-Xm-PLg9E.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Clear-Dgs5UhTO.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/index-DnoGeqVF.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/index-C7e-J7CF.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/snippet-Bl5YVoCg.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/utils.svelte-CYLB_jIA.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /favicon.ico HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /static/img/logo_nosize.svg HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /theme.css?v=undefined HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/BaseForm-B79fGGKa.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Image-DQfoGqtb.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Example-BlSzJhEn.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Index-D0q0pAfU.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/actions-Cit_UA5S.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/ImagePreview-CAbFrrhc.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Button-CoUFCYL9.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Login-CJk1KhUZ.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Textbox-DbZXQzbK.css HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/BaseForm-0cuxY3Cw.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/IconButtonWrapper-Ba0GidgU.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Check-BlnBgjLT.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Login-DbEEw7Ia.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Copy-DFFray7x.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Info-BrkJhX6_.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Square-B6INQV79.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/input-C317uaXR.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Block-Bx3BikCN.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Textbox-v-cNeNHQ.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/BlockTitle-7XQ-8ENg.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Send-Ee555fP_.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Image-CDw5qb5O.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Index.svelte_svelte_type_style_lang-C97CbKPo.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/Button-CH2w4_A4.js HTTP/1.1" 200 OK
+INFO:     35.87.151.207:0 - "GET /assets/misc-ByVveAau.js HTTP/1.1" 200 OK
+INFO:     62.84.181.197:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     62.84.181.197:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     216.73.217.44:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.217.44:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET / HTTP/1.1" 200 OK
+INFO:     157.143.84.87:0 - "GET /js/twint_ch.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /js/lkk_ch.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /assets/js/qr_modal.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /assets/js/auth.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /manifest.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40450 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     71.187.174.98:0 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     71.187.174.98:0 - "POST /analysis HTTP/1.1" 401 Unauthorized
+INFO - Wrote TTS audio to /home/ripper/ACTi_cognition/cache/tribev2.demo_utils.TextToEvents.get_events,0/text=INT.-ABANDONED-LIBRARY---NIGHT--The-heavy-oak-door-groaned-as-ELENA-pushed-it-open,-her-flashlight-beam-cutting-through-dec...12-a8f41911/audio.mp3
+Extracting words from audio:   0%|          | 0/1 [00:00<?, ?it/s]Extracting words from audio:   0%|          | 0/1 [00:07<?, ?it/s]
+2026-05-13 15:14:26 - WARNING - exca.task:79 - Computation failed for tribev2.demo_utils.TextToEvents.get_events with traceback:
+Traceback (most recent call last):
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/task.py", line 49, in __init__
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/slurm.py", line 245, in _run_method
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/demo_utils.py", line 130, in get_events
+    return get_audio_and_text_events(pd.DataFrame([audio_event]))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/demo_utils.py", line 94, in get_audio_and_text_events
+    events = transform(events)
+             ^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/transforms/base.py", line 158, in __call__
+    return self._run(events)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/transforms/base.py", line 151, in _validated_run
+    result = original(self, *args, **kw)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/eventstransforms.py", line 183, in _run
+    transcript = self._get_transcript_from_audio(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/eventstransforms.py", line 139, in _get_transcript_from_audio
+    raise RuntimeError(f"whisperx failed:\n{result.stderr}")
+RuntimeError: whisperx failed:
+Failed to load /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_cutlass_90a.abi3.so: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_cutlass_90a.abi3.so
+Failed to load /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_mxfp8.cpython-310-x86_64-linux-gnu.so: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_mxfp8.cpython-310-x86_64-linux-gnu.so
+W0513 15:14:21.699000 601440 venv/lib/python3.12/site-packages/torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+W0513 15:14:21.715000 601440 venv/lib/python3.12/site-packages/torch/utils/_pytree.py:630] <enum 'ScaleCalculationMode'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pyannote/audio/core/io.py:47: UserWarning: 
+torchcodec is not installed correctly so built-in audio decoding will fail. Solutions are:
+* use audio preloaded in-memory as a {'waveform': (channel, time) torch.Tensor, 'sample_rate': int} dictionary;
+* fix torchcodec installation. Error message was:
+
+Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6 and 7.
+          2. The PyTorch version (2.12.0.dev20260408+cu128) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 7: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchcodec/libtorchcodec_core7.so
+FFmpeg version 6: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchcodec/libtorchcodec_core6.so
+FFmpeg version 5: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchcodec/libtorchcodec_core5.so
+FFmpeg version 4: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchcodec/libtorchcodec_core4.so
+[end of libtorchcodec loading traceback].
+  warnings.warn(
+Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.6.1. To apply the upgrade to your files permanently, run `python -m lightning.pytorch.utilities.upgrade_checkpoint venv/lib/python3.12/site-packages/whisperx/assets/pytorch_model.bin`
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pyannote/audio/utils/reproducibility.py:74: ReproducibilityWarning: TensorFloat-32 (TF32) has been disabled as it might lead to reproducibility issues and lower accuracy.
+It can be re-enabled by calling
+   >>> import torch
+   >>> torch.backends.cuda.matmul.allow_tf32 = True
+   >>> torch.backends.cudnn.allow_tf32 = True
+See https://github.com/pyannote/pyannote-audio/issues/1370 for more details.
+
+  warnings.warn(
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/whisperx/__main__.py", line 102, in <module>
+    cli()
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/whisperx/__main__.py", line 98, in cli
+    transcribe_task(args, parser)
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/whisperx/transcribe.py", line 151, in transcribe_task
+    result: TranscriptionResult = model.transcribe(
+                                  ^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/whisperx/asr.py", line 267, in transcribe
+    for idx, out in enumerate(self.__call__(data(audio, vad_segments), batch_size=batch_size, num_workers=num_workers)):
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/transformers/pipelines/pt_utils.py", line 126, in __next__
+    item = next(self.iterator)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/transformers/pipelines/pt_utils.py", line 127, in __next__
+    processed = self.infer(item, **self.params)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/transformers/pipelines/base.py", line 1374, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/whisperx/asr.py", line 170, in _forward
+    outputs = self.model.generate_segment_batched(model_inputs['inputs'], self.tokenizer, self.options)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/whisperx/asr.py", line 60, in generate_segment_batched
+    encoder_output = self.encode(features)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/whisperx/asr.py", line 104, in encode
+    return self.model.encode(features, to_cpu=to_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA failed with error out of memory
+
+
+INFO:     71.187.174.98:0 - "POST /analysis HTTP/1.1" 502 Bad Gateway
+INFO:     127.0.0.1:50974 - "GET /healthz HTTP/1.1" 200 OK
+2026-05-13 15:18:38 - WARNING - exca.task:79 - Computation failed for tribev2.demo_utils.TextToEvents.get_events with traceback:
+Traceback (most recent call last):
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/task.py", line 49, in __init__
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/exca/slurm.py", line 245, in _run_method
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/demo_utils.py", line 130, in get_events
+    return get_audio_and_text_events(pd.DataFrame([audio_event]))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/demo_utils.py", line 94, in get_audio_and_text_events
+    events = transform(events)
+             ^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/transforms/base.py", line 158, in __call__
+    return self._run(events)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/transforms/base.py", line 151, in _validated_run
+    result = original(self, *args, **kw)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/eventstransforms.py", line 183, in _run
+    transcript = self._get_transcript_from_audio(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/tribev2/eventstransforms.py", line 139, in _get_transcript_from_audio
+    raise RuntimeError(f"whisperx failed:\n{result.stderr}")
+RuntimeError: whisperx failed:
+Failed to load /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_cutlass_90a.abi3.so: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_cutlass_90a.abi3.so
+Failed to load /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_mxfp8.cpython-310-x86_64-linux-gnu.so: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_mxfp8.cpython-310-x86_64-linux-gnu.so
+W0513 15:14:21.699000 601440 venv/lib/python3.12/site-packages/torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+W0513 15:14:21.715000 601440 venv/lib/python3.12/site-packages/torch/utils/_pytree.py:630] <enum 'ScaleCalculationMode'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pyannote/audio/core/io.py:47: UserWarning: 
+torchcodec is not installed correctly so built-in audio decoding will fail. Solutions are:
+* use audio preloaded in-memory as a {'waveform': (channel, time) torch.Tensor, 'sample_rate': int} dictionary;
+* fix torchcodec installation. Error message was:
+
+Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6 and 7.
+          2. The PyTorch version (2.12.0.dev20260408+cu128) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 7: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchcodec/libtorchcodec_core7.so
+FFmpeg version 6: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchcodec/libtorchcodec_core6.so
+FFmpeg version 5: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchcodec/libtorchcodec_core5.so
+FFmpeg version 4: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchcodec/libtorchcodec_core4.so
+[end of libtorchcodec loading traceback].
+  warnings.warn(
+Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.6.1. To apply the upgrade to your files permanently, run `python -m lightning.pytorch.utilities.upgrade_checkpoint venv/lib/python3.12/site-packages/whisperx/assets/pytorch_model.bin`
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pyannote/audio/utils/reproducibility.py:74: ReproducibilityWarning: TensorFloat-32 (TF32) has been disabled as it might lead to reproducibility issues and lower accuracy.
+It can be re-enabled by calling
+   >>> import torch
+   >>> torch.backends.cuda.matmul.allow_tf32 = True
+   >>> torch.backends.cudnn.allow_tf32 = True
+See https://github.com/pyannote/pyannote-audio/issues/1370 for more details.
+
+  warnings.warn(
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/whisperx/__main__.py", line 102, in <module>
+    cli()
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/whisperx/__main__.py", line 98, in cli
+    transcribe_task(args, parser)
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/whisperx/transcribe.py", line 151, in transcribe_task
+    result: TranscriptionResult = model.transcribe(
+                                  ^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/whisperx/asr.py", line 267, in transcribe
+    for idx, out in enumerate(self.__call__(data(audio, vad_segments), batch_size=batch_size, num_workers=num_workers)):
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/transformers/pipelines/pt_utils.py", line 126, in __next__
+    item = next(self.iterator)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/transformers/pipelines/pt_utils.py", line 127, in __next__
+    processed = self.infer(item, **self.params)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/transformers/pipelines/base.py", line 1374, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/whisperx/asr.py", line 170, in _forward
+    outputs = self.model.generate_segment_batched(model_inputs['inputs'], self.tokenizer, self.options)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/whisperx/asr.py", line 60, in generate_segment_batched
+    encoder_output = self.encode(features)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/whisperx/asr.py", line 104, in encode
+    return self.model.encode(features, to_cpu=to_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA failed with error out of memory
+
+
+2026-05-13 15:18:38 - WARNING - exca.task:351 - Retrying failed job "local" for tribev2.demo_utils.TextToEvents.get_events,0/text=INT.-ABANDONED-LIBRARY---NIGHT--The-heavy-oak-door-groaned-as-ELENA-pushed-it-open,-her-flashlight-beam-cutting-through-dec...12-a8f41911 (infra.retry=True)
+INFO - Wrote TTS audio to /home/ripper/ACTi_cognition/cache/tribev2.demo_utils.TextToEvents.get_events,0/text=INT.-ABANDONED-LIBRARY---NIGHT--The-heavy-oak-door-groaned-as-ELENA-pushed-it-open,-her-flashlight-beam-cutting-through-dec...12-a8f41911/audio.mp3
+Extracting words from audio:   0%|          | 0/1 [00:00<?, ?it/s]Extracting words from audio: 100%|██████████| 1/1 [00:09<00:00,  9.90s/it]Extracting words from audio: 100%|██████████| 1/1 [00:09<00:00,  9.90s/it]
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/utils.py:134: UserWarning: The events dataframe contains an `Index` column. This is dangerous, please add drop=True in calls to df.reset_index(). Dropping it automatically.
+  warnings.warn(msg)
+Add context to words:   0%|          | 0/462 [00:00<?, ?it/s]Add context to words: 100%|██████████| 462/462 [00:00<00:00, 157670.34it/s]
+[15:18:57 WARNING] Removing extractor video as there are no corresponding events
+[15:18:57 INFO] Preparing extractor: text
+  0%|          | 0/461 [00:00<?, ?it/s]
+Computing word embeddings:   0%|          | 0/116 [00:00<?, ?it/s][AFailed to load /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_cutlass_90a.abi3.so: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_cutlass_90a.abi3.so
+Failed to load /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_mxfp8.cpython-310-x86_64-linux-gnu.so: Could not load this library: /home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/torchao/_C_mxfp8.cpython-310-x86_64-linux-gnu.so
+W0513 15:19:01.998000 466413 venv/lib/python3.12/site-packages/torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+W0513 15:19:02.009000 466413 venv/lib/python3.12/site-packages/torch/utils/_pytree.py:630] <enum 'ScaleCalculationMode'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A[A
+
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.35it/s][A[A
+
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.44it/s][A[ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.21it/s]
+  0%|          | 1/461 [00:02<21:50,  2.85s/it]
+Computing word embeddings:   1%|          | 1/116 [00:02<05:34,  2.91s/it][A  1%|          | 5/461 [00:03<04:01,  1.89it/s]
+Computing word embeddings:   2%|▏         | 2/116 [00:03<02:49,  1.48s/it][A  2%|▏         | 9/461 [00:03<02:21,  3.20it/s]
+Computing word embeddings:   3%|▎         | 3/116 [00:03<01:59,  1.06s/it][A  3%|▎         | 13/461 [00:04<01:39,  4.52it/s]
+Computing word embeddings:   3%|▎         | 4/116 [00:04<01:29,  1.25it/s][A  4%|▎         | 17/461 [00:04<01:21,  5.44it/s]
+Computing word embeddings:   4%|▍         | 5/116 [00:04<01:16,  1.45it/s][A  5%|▍         | 21/461 [00:05<01:09,  6.29it/s]
+Computing word embeddings:   5%|▌         | 6/116 [00:05<01:06,  1.65it/s][A  5%|▌         | 25/461 [00:05<01:04,  6.72it/s]
+Computing word embeddings:   6%|▌         | 7/116 [00:05<01:03,  1.71it/s][A  6%|▋         | 29/461 [00:06<01:02,  6.97it/s]
+Computing word embeddings:   7%|▋         | 8/116 [00:06<01:01,  1.76it/s][A  7%|▋         | 33/461 [00:06<00:55,  7.72it/s]
+Computing word embeddings:   8%|▊         | 9/116 [00:06<00:54,  1.98it/s][A  8%|▊         | 37/461 [00:07<00:54,  7.82it/s]
+Computing word embeddings:   9%|▊         | 10/116 [00:07<00:53,  1.97it/s][A  9%|▉         | 41/461 [00:07<00:55,  7.57it/s]
+Computing word embeddings:   9%|▉         | 11/116 [00:07<00:55,  1.88it/s][A 10%|▉         | 45/461 [00:08<00:55,  7.47it/s]
+Computing word embeddings:  10%|█         | 12/116 [00:08<00:55,  1.88it/s][A 11%|█         | 49/461 [00:08<00:51,  8.01it/s]
+Computing word embeddings:  11%|█         | 13/116 [00:08<00:50,  2.03it/s][A 11%|█▏        | 53/461 [00:09<00:51,  7.92it/s]
+Computing word embeddings:  12%|█▏        | 14/116 [00:09<00:51,  1.98it/s][A 12%|█▏        | 57/461 [00:09<00:49,  8.23it/s]
+Computing word embeddings:  13%|█▎        | 15/116 [00:09<00:49,  2.06it/s][A 13%|█▎        | 61/461 [00:10<00:49,  8.02it/s]
+Computing word embeddings:  14%|█▍        | 16/116 [00:10<00:49,  2.00it/s][A 14%|█▍        | 65/461 [00:10<00:50,  7.91it/s]
+Computing word embeddings:  15%|█▍        | 17/116 [00:10<00:50,  1.97it/s][A 15%|█▍        | 69/461 [00:10<00:41,  9.46it/s]
+Computing word embeddings:  16%|█▌        | 18/116 [00:10<00:40,  2.42it/s][A 16%|█▌        | 73/461 [00:11<00:44,  8.76it/s]
+Computing word embeddings:  16%|█▋        | 19/116 [00:11<00:44,  2.17it/s][A 17%|█▋        | 77/461 [00:11<00:44,  8.65it/s]
+Computing word embeddings:  17%|█▋        | 20/116 [00:12<00:44,  2.16it/s][A 18%|█▊        | 81/461 [00:12<00:44,  8.59it/s]
+Computing word embeddings:  18%|█▊        | 21/116 [00:12<00:44,  2.14it/s][A 18%|█▊        | 85/461 [00:12<00:42,  8.94it/s]
+Computing word embeddings:  19%|█▉        | 22/116 [00:12<00:41,  2.25it/s][A 19%|█▉        | 89/461 [00:13<00:41,  9.01it/s]
+Computing word embeddings:  20%|█▉        | 23/116 [00:13<00:41,  2.25it/s][A 20%|██        | 93/461 [00:13<00:41,  8.82it/s]
+Computing word embeddings:  21%|██        | 24/116 [00:13<00:41,  2.20it/s][A 21%|██        | 97/461 [00:14<00:43,  8.41it/s]
+Computing word embeddings:  22%|██▏       | 25/116 [00:14<00:43,  2.09it/s][A 22%|██▏       | 101/461 [00:14<00:41,  8.66it/s]
+Computing word embeddings:  22%|██▏       | 26/116 [00:14<00:41,  2.19it/s][A 23%|██▎       | 105/461 [00:15<00:41,  8.60it/s]
+Computing word embeddings:  23%|██▎       | 27/116 [00:15<00:41,  2.14it/s][A 24%|██▎       | 109/461 [00:15<00:42,  8.38it/s]
+Computing word embeddings:  24%|██▍       | 28/116 [00:15<00:42,  2.09it/s][A 25%|██▍       | 113/461 [00:16<00:39,  8.87it/s]
+Computing word embeddings:  25%|██▌       | 29/116 [00:16<00:38,  2.24it/s][A 25%|██▌       | 117/461 [00:16<00:35,  9.68it/s]
+Computing word embeddings:  26%|██▌       | 30/116 [00:16<00:35,  2.44it/s][A 26%|██▌       | 121/461 [00:16<00:33, 10.28it/s]
+Computing word embeddings:  27%|██▋       | 31/116 [00:16<00:33,  2.58it/s][A 27%|██▋       | 125/461 [00:17<00:32, 10.37it/s]
+Computing word embeddings:  28%|██▊       | 32/116 [00:17<00:32,  2.60it/s][A 28%|██▊       | 129/461 [00:17<00:34,  9.73it/s]
+Computing word embeddings:  28%|██▊       | 33/116 [00:17<00:34,  2.42it/s][A 29%|██▉       | 133/461 [00:18<00:37,  8.76it/s]
+Computing word embeddings:  29%|██▉       | 34/116 [00:18<00:37,  2.17it/s][A 30%|██▉       | 137/461 [00:18<00:37,  8.58it/s]
+Computing word embeddings:  30%|███       | 35/116 [00:18<00:37,  2.15it/s][A 31%|███       | 141/461 [00:19<00:39,  8.18it/s]
+Computing word embeddings:  31%|███       | 36/116 [00:19<00:39,  2.04it/s][A 31%|███▏      | 145/461 [00:19<00:33,  9.34it/s]
+Computing word embeddings:  32%|███▏      | 37/116 [00:19<00:33,  2.38it/s][A 32%|███▏      | 149/461 [00:19<00:30, 10.37it/s]
+Computing word embeddings:  33%|███▎      | 38/116 [00:19<00:30,  2.60it/s][A 33%|███▎      | 153/461 [00:20<00:32,  9.41it/s]
+Computing word embeddings:  34%|███▎      | 39/116 [00:20<00:32,  2.34it/s][A 34%|███▍      | 157/461 [00:20<00:33,  8.99it/s]
+Computing word embeddings:  34%|███▍      | 40/116 [00:20<00:34,  2.22it/s][A 35%|███▍      | 161/461 [00:21<00:34,  8.74it/s]
+Computing word embeddings:  35%|███▌      | 41/116 [00:21<00:34,  2.18it/s][A 36%|███▌      | 165/461 [00:21<00:35,  8.41it/s]
+Computing word embeddings:  36%|███▌      | 42/116 [00:21<00:35,  2.09it/s][A 37%|███▋      | 169/461 [00:22<00:29,  9.75it/s]
+Computing word embeddings:  37%|███▋      | 43/116 [00:22<00:29,  2.48it/s][A 38%|███▊      | 173/461 [00:22<00:31,  9.10it/s]
+Computing word embeddings:  38%|███▊      | 44/116 [00:22<00:32,  2.24it/s][A 38%|███▊      | 177/461 [00:22<00:31,  9.08it/s]
+Computing word embeddings:  39%|███▉      | 45/116 [00:23<00:31,  2.27it/s][A 39%|███▉      | 181/461 [00:23<00:29,  9.51it/s]
+Computing word embeddings:  40%|███▉      | 46/116 [00:23<00:29,  2.39it/s][A 40%|████      | 185/461 [00:23<00:29,  9.23it/s]
+Computing word embeddings:  41%|████      | 47/116 [00:23<00:30,  2.29it/s][A 41%|████      | 189/461 [00:24<00:29,  9.26it/s]
+Computing word embeddings:  41%|████▏     | 48/116 [00:24<00:29,  2.34it/s][A 42%|████▏     | 193/461 [00:24<00:27,  9.72it/s]
+Computing word embeddings:  42%|████▏     | 49/116 [00:24<00:27,  2.44it/s][A 43%|████▎     | 197/461 [00:25<00:29,  8.82it/s]
+Computing word embeddings:  43%|████▎     | 50/116 [00:25<00:30,  2.16it/s][A 44%|████▎     | 201/461 [00:25<00:30,  8.56it/s]
+Computing word embeddings:  44%|████▍     | 51/116 [00:25<00:30,  2.13it/s][A 44%|████▍     | 205/461 [00:26<00:32,  7.99it/s]
+Computing word embeddings:  45%|████▍     | 52/116 [00:26<00:32,  1.99it/s][A 45%|████▌     | 209/461 [00:26<00:33,  7.63it/s]
+Computing word embeddings:  46%|████▌     | 53/116 [00:26<00:33,  1.91it/s][A 46%|████▌     | 213/461 [00:27<00:31,  7.95it/s]
+Computing word embeddings:  47%|████▋     | 54/116 [00:27<00:31,  2.00it/s][A 47%|████▋     | 217/461 [00:27<00:29,  8.23it/s]
+Computing word embeddings:  47%|████▋     | 55/116 [00:27<00:29,  2.06it/s][A 48%|████▊     | 221/461 [00:28<00:27,  8.58it/s]
+Computing word embeddings:  48%|████▊     | 56/116 [00:28<00:27,  2.15it/s][A 49%|████▉     | 225/461 [00:28<00:26,  8.89it/s]
+Computing word embeddings:  49%|████▉     | 57/116 [00:28<00:26,  2.23it/s][A 50%|████▉     | 229/461 [00:29<00:27,  8.53it/s]
+Computing word embeddings:  50%|█████     | 58/116 [00:29<00:27,  2.13it/s][A 51%|█████     | 233/461 [00:29<00:28,  8.03it/s]
+Computing word embeddings:  51%|█████     | 59/116 [00:29<00:28,  1.99it/s][A 51%|█████▏    | 237/461 [00:30<00:29,  7.56it/s]
+Computing word embeddings:  52%|█████▏    | 60/116 [00:30<00:29,  1.89it/s][A 52%|█████▏    | 241/461 [00:30<00:29,  7.55it/s]
+Computing word embeddings:  53%|█████▎    | 61/116 [00:30<00:28,  1.91it/s][A 53%|█████▎    | 245/461 [00:31<00:28,  7.58it/s]
+Computing word embeddings:  53%|█████▎    | 62/116 [00:31<00:28,  1.88it/s][A 54%|█████▍    | 249/461 [00:31<00:28,  7.50it/s]
+Computing word embeddings:  54%|█████▍    | 63/116 [00:31<00:28,  1.88it/s][A 55%|█████▍    | 253/461 [00:32<00:24,  8.60it/s]
+Computing word embeddings:  55%|█████▌    | 64/116 [00:32<00:23,  2.19it/s][A 56%|█████▌    | 257/461 [00:32<00:24,  8.21it/s]
+Computing word embeddings:  56%|█████▌    | 65/116 [00:32<00:24,  2.06it/s][A 57%|█████▋    | 261/461 [00:33<00:24,  8.04it/s]
+Computing word embeddings:  57%|█████▋    | 66/116 [00:33<00:24,  2.00it/s][A 57%|█████▋    | 265/461 [00:33<00:23,  8.32it/s]
+Computing word embeddings:  58%|█████▊    | 67/116 [00:33<00:23,  2.07it/s][A 58%|█████▊    | 269/461 [00:33<00:20,  9.27it/s]
+Computing word embeddings:  59%|█████▊    | 68/116 [00:33<00:20,  2.33it/s][A 59%|█████▉    | 273/461 [00:34<00:21,  8.67it/s]
+Computing word embeddings:  59%|█████▉    | 69/116 [00:34<00:21,  2.15it/s][A 60%|██████    | 277/461 [00:35<00:22,  8.09it/s]
+Computing word embeddings:  60%|██████    | 70/116 [00:35<00:22,  2.01it/s][A 61%|██████    | 281/461 [00:35<00:19,  9.05it/s]
+Computing word embeddings:  61%|██████    | 71/116 [00:35<00:19,  2.29it/s][A 62%|██████▏   | 285/461 [00:35<00:18,  9.35it/s]
+Computing word embeddings:  62%|██████▏   | 72/116 [00:35<00:18,  2.35it/s][A 63%|██████▎   | 289/461 [00:36<00:19,  8.96it/s]
+Computing word embeddings:  63%|██████▎   | 73/116 [00:36<00:19,  2.23it/s][A 64%|██████▎   | 293/461 [00:36<00:20,  8.30it/s]
+Computing word embeddings:  64%|██████▍   | 74/116 [00:36<00:20,  2.06it/s][A 64%|██████▍   | 297/461 [00:37<00:18,  8.65it/s]
+Computing word embeddings:  65%|██████▍   | 75/116 [00:37<00:18,  2.17it/s][A 65%|██████▌   | 301/461 [00:37<00:19,  8.31it/s]
+Computing word embeddings:  66%|██████▌   | 76/116 [00:37<00:19,  2.07it/s][A 66%|██████▌   | 305/461 [00:38<00:18,  8.48it/s]
+Computing word embeddings:  66%|██████▋   | 77/116 [00:38<00:18,  2.12it/s][A 67%|██████▋   | 309/461 [00:38<00:18,  8.43it/s]
+Computing word embeddings:  67%|██████▋   | 78/116 [00:38<00:18,  2.09it/s][A 68%|██████▊   | 313/461 [00:39<00:18,  7.97it/s]
+Computing word embeddings:  68%|██████▊   | 79/116 [00:39<00:18,  1.98it/s][A 69%|██████▉   | 317/461 [00:39<00:18,  7.74it/s]
+Computing word embeddings:  69%|██████▉   | 80/116 [00:39<00:18,  1.94it/s][A 70%|██████▉   | 321/461 [00:40<00:17,  7.81it/s]
+Computing word embeddings:  70%|██████▉   | 81/116 [00:40<00:17,  1.95it/s][A 70%|███████   | 325/461 [00:40<00:16,  8.24it/s]
+Computing word embeddings:  71%|███████   | 82/116 [00:40<00:16,  2.07it/s][A 71%|███████▏  | 329/461 [00:41<00:16,  7.88it/s]
+Computing word embeddings:  72%|███████▏  | 83/116 [00:41<00:16,  1.97it/s][A 72%|███████▏  | 333/461 [00:41<00:15,  8.31it/s]
+Computing word embeddings:  72%|███████▏  | 84/116 [00:41<00:15,  2.07it/s][A 73%|███████▎  | 337/461 [00:42<00:13,  9.32it/s]
+Computing word embeddings:  73%|███████▎  | 85/116 [00:42<00:13,  2.37it/s][A 74%|███████▍  | 341/461 [00:42<00:13,  8.91it/s]
+Computing word embeddings:  74%|███████▍  | 86/116 [00:42<00:13,  2.22it/s][A 75%|███████▍  | 345/461 [00:43<00:13,  8.42it/s]
+Computing word embeddings:  75%|███████▌  | 87/116 [00:43<00:13,  2.09it/s][A 76%|███████▌  | 349/461 [00:43<00:13,  8.16it/s]
+Computing word embeddings:  76%|███████▌  | 88/116 [00:43<00:13,  2.05it/s][A 77%|███████▋  | 353/461 [00:43<00:11,  9.56it/s]
+Computing word embeddings:  77%|███████▋  | 89/116 [00:43<00:11,  2.43it/s][A 77%|███████▋  | 357/461 [00:44<00:10,  9.71it/s]
+Computing word embeddings:  78%|███████▊  | 90/116 [00:44<00:10,  2.43it/s][A 78%|███████▊  | 361/461 [00:44<00:09, 10.33it/s]
+Computing word embeddings:  78%|███████▊  | 91/116 [00:44<00:09,  2.59it/s][A 79%|███████▉  | 365/461 [00:44<00:09, 10.48it/s]
+Computing word embeddings:  79%|███████▉  | 92/116 [00:44<00:09,  2.63it/s][A 80%|████████  | 369/461 [00:45<00:07, 11.76it/s]
+Computing word embeddings:  80%|████████  | 93/116 [00:45<00:07,  2.97it/s][A 81%|████████  | 373/461 [00:45<00:08,  9.97it/s]
+Computing word embeddings:  81%|████████  | 94/116 [00:45<00:08,  2.45it/s][A 82%|████████▏ | 377/461 [00:46<00:09,  9.25it/s]
+Computing word embeddings:  82%|████████▏ | 95/116 [00:46<00:09,  2.31it/s][A 83%|████████▎ | 381/461 [00:46<00:08,  9.35it/s]
+Computing word embeddings:  83%|████████▎ | 96/116 [00:46<00:08,  2.34it/s][A 84%|████████▎ | 385/461 [00:47<00:08,  8.86it/s]
+Computing word embeddings:  84%|████████▎ | 97/116 [00:47<00:08,  2.20it/s][A 84%|████████▍ | 389/461 [00:47<00:07,  9.27it/s]
+Computing word embeddings:  84%|████████▍ | 98/116 [00:47<00:07,  2.33it/s][A 85%|████████▌ | 393/461 [00:47<00:07,  9.60it/s]
+Computing word embeddings:  85%|████████▌ | 99/116 [00:47<00:07,  2.40it/s][A 86%|████████▌ | 397/461 [00:48<00:05, 11.12it/s]
+Computing word embeddings:  86%|████████▌ | 100/116 [00:48<00:05,  2.82it/s][A 87%|████████▋ | 401/461 [00:48<00:05, 10.24it/s]
+Computing word embeddings:  87%|████████▋ | 101/116 [00:48<00:05,  2.53it/s][A 88%|████████▊ | 405/461 [00:49<00:06,  9.29it/s]
+Computing word embeddings:  88%|████████▊ | 102/116 [00:49<00:06,  2.30it/s][A 89%|████████▊ | 409/461 [00:49<00:05,  8.75it/s]
+Computing word embeddings:  89%|████████▉ | 103/116 [00:49<00:05,  2.19it/s][A 90%|████████▉ | 413/461 [00:50<00:05,  8.86it/s]
+Computing word embeddings:  90%|████████▉ | 104/116 [00:50<00:05,  2.22it/s][A 90%|█████████ | 417/461 [00:50<00:04,  9.39it/s]
+Computing word embeddings:  91%|█████████ | 105/116 [00:50<00:04,  2.34it/s][A 91%|█████████▏| 421/461 [00:51<00:04,  8.46it/s]
+Computing word embeddings:  91%|█████████▏| 106/116 [00:51<00:04,  2.10it/s][A 92%|█████████▏| 425/461 [00:51<00:04,  8.33it/s]
+Computing word embeddings:  92%|█████████▏| 107/116 [00:51<00:04,  2.08it/s][A 93%|█████████▎| 429/461 [00:52<00:03,  8.00it/s]
+Computing word embeddings:  93%|█████████▎| 108/116 [00:52<00:03,  2.00it/s][A 94%|█████████▍| 433/461 [00:52<00:03,  8.45it/s]
+Computing word embeddings:  94%|█████████▍| 109/116 [00:52<00:03,  2.11it/s][A 95%|█████████▍| 437/461 [00:52<00:02,  8.36it/s]
+Computing word embeddings:  95%|█████████▍| 110/116 [00:53<00:02,  2.09it/s][A 96%|█████████▌| 441/461 [00:53<00:02,  8.23it/s]
+Computing word embeddings:  96%|█████████▌| 111/116 [00:53<00:02,  2.08it/s][A 97%|█████████▋| 445/461 [00:53<00:01,  8.55it/s]
+Computing word embeddings:  97%|█████████▋| 112/116 [00:53<00:01,  2.14it/s][A 97%|█████████▋| 449/461 [00:54<00:01,  8.23it/s]
+Computing word embeddings:  97%|█████████▋| 113/116 [00:54<00:01,  2.06it/s][A 98%|█████████▊| 453/461 [00:54<00:00,  8.43it/s]
+Computing word embeddings:  98%|█████████▊| 114/116 [00:54<00:00,  2.11it/s][A 99%|█████████▉| 457/461 [00:55<00:00,  8.81it/s]
+Computing word embeddings:  99%|█████████▉| 115/116 [00:55<00:00,  2.19it/s][A100%|██████████| 461/461 [00:55<00:00, 10.84it/s]100%|██████████| 461/461 [00:55<00:00,  8.31it/s]
+
+Computing word embeddings: 100%|██████████| 116/116 [00:55<00:00,  2.79it/s][AComputing word embeddings: 100%|██████████| 116/116 [00:55<00:00,  2.09it/s]
+[15:19:57 INFO] Preparing extractor: audio
+  0%|          | 0/2 [00:00<?, ?it/s]
+Computing audio embeddings:   0%|          | 0/2 [00:00<?, ?it/s][A 50%|█████     | 1/2 [00:00<00:00,  1.22it/s]
+Computing audio embeddings:  50%|█████     | 1/2 [00:00<00:00,  1.22it/s][A100%|██████████| 2/2 [00:01<00:00,  1.36it/s]100%|██████████| 2/2 [00:01<00:00,  1.33it/s]
+
+Computing audio embeddings: 100%|██████████| 2/2 [00:01<00:00,  1.36it/s][AComputing audio embeddings: 100%|██████████| 2/2 [00:01<00:00,  1.33it/s]
+[15:19:59 INFO] Preparing extractor: subject_id
+2026-05-13 15:19:59 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'default'}. This was probably not intended.
+[15:19:59 INFO] Building dataloader for split all
+2026-05-13 15:19:59 - WARNING - neuralset.segments:759 - 2 segments out of 3 did not contain valid events for event type <class 'neuralset.events.etypes.Audio'>
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 11.52it/s]
+INFO - Predicted 219 / 300 segments (73.0% kept)
+Plotting...:   0%|          | 0/10 [00:00<?, ?it/s]Plotting...:  10%|█         | 1/10 [00:00<00:01,  5.32it/s]Plotting...:  40%|████      | 4/10 [00:00<00:00, 11.20it/s]Plotting...:  60%|██████    | 6/10 [00:00<00:00, 13.83it/s]Plotting...:  80%|████████  | 8/10 [00:00<00:00, 15.69it/s]Plotting...: 100%|██████████| 10/10 [00:00<00:00, 14.56it/s]
+[Analysis] Starting moonshotai/kimi-k2.6 analysis on: /home/ripper/ACTi_cognition/cache/outputs/5bf6dcae5f3b43d194c54907308afb4a.png
+[Analysis] Stimulus: INT. ABANDONED LIBRARY - NIGHT
+
+The heavy oak door groaned as ELENA pushed it open, her flashlight beam cutting through decades of suspended dust. The smell hit her first — vanilla and decay, like sugar left out in the rain. Rows of shelves stretched into darkness, their books warped and bowed as if exhaling all at once.
+
+She stepped inside. The floorboards complained beneath her boots. Somewhere in the dark, a clock she could not see was still ticking, perfectly steady, perfectly wrong.
+
+ELENA (whispering)
+Hello?
+
+No answer came. But the air shifted — not a draft, more like a held breath finally released. She moved her light across the nearest shelf. The titles were stamped in gold, languages she half-recognized: a Latin she had not seen since university, an alphabet that seemed to rearrange itself when she looked away.
+
+Her fingers brushed the spine of a green clothbound volume. It was warm. Not warm like sunlight — warm like skin.
+
+She pulled it down. The book opened itself.
+
+The page was blank, then it was not. Ink rose to the surface like a bruise. Her own handwriting. Today's date. A sentence she had not yet thought of, but recognized the moment she read it: 'I should not have come back.'
+
+She closed the book. The library, which had been silent, was now full of footsteps — soft, patient, coming from every aisle at once.
+[Analysis] Complete. Length: 5844 chars
+INFO:     71.187.174.98:0 - "POST /analysis HTTP/1.1" 200 OK
+INFO:     216.73.217.44:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.217.44:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55776 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     71.187.174.98:0 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     71.187.174.98:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     157.143.84.87:0 - "GET / HTTP/1.1" 200 OK
+INFO:     157.143.84.87:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     157.143.84.87:0 - "GET /assets/js/auth.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /assets/js/qr_modal.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /assets/js/message.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /css/support_parent.css HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /js/lkk_ch.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /manifest.json HTTP/1.1" 200 OK
+INFO:     157.143.84.87:0 - "GET /js/twint_ch.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /static/style/protect/index.js HTTP/1.1" 404 Not Found
+INFO:     216.73.217.44:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.217.44:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET / HTTP/1.1" 200 OK
+INFO:     157.143.84.87:0 - "GET /css/support_parent.css HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /static/style/sys_files/index.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /bot-connect.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /static/style/protect/index.js HTTP/1.1" 404 Not Found
+INFO:     216.73.217.44:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.217.44:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.217.165:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.217.165:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     157.230.142.172:0 - "GET /wp-login.php HTTP/1.1" 404 Not Found
+INFO:     34.142.129.92:0 - "GET / HTTP/1.1" 200 OK
+INFO:     34.142.129.92:0 - "GET /wordpress/ HTTP/1.1" 404 Not Found
+INFO:     216.73.216.163:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.214:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /%22./assets/index-BvBk1Iap.js%22 HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.214:0 - "GET /assets/index-BvBk1Iap.js HTTP/1.1" 200 OK
+INFO:     93.123.109.214:0 - "GET /.env.bak HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /backend/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /admin/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /wp-config.php HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /wp-config.php.old HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /config.php HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /config.php.bak HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /config.js HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /aws-config.js HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /aws.config.js HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     216.73.216.163:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     45.130.203.163:0 - "GET /.git/HEAD HTTP/1.1" 404 Not Found
+INFO:     216.73.216.163:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     45.148.10.120:0 - "GET /wp-json/gravitysmtp/v1/tests/mock-data?page=gravitysmtp-settings HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.boto HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET / HTTP/1.1" 200 OK
+INFO:     195.178.110.199:0 - "GET //.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /..%5C..%5C..%5C..%5C..%5C..%5Cvar/log/apache2/access.log HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /%2A/%5Bslug%5D HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /backend/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET //.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.amplifyrc HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.aws/config HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /%2Aupdate.cgi%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /%2A/%5Bid%5D HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET //backend/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.docker/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.cache HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.docker/config.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.docker/laravel/app/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.dockerignore HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.docker/secrets.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env-example HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env-sample HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.aws HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.dev HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.backup HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.bak HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.config HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.dist HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.docker HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.docker.dev HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.development HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.example HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.live HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.int HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.old HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.prod HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.production HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.project HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.qa HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.sample HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.swp HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env~ HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.test HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.env.testing HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git-askpass.sh HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git-credentials HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git-secret HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/ HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/FETCH_HEAD HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/HEAD HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/COMMIT_EDITMSG HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/ORIG_HEAD HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/config.bak HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/config.old HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/config~ HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/hooks HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/description HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/hooks/post-commit HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/hooks/pre-commit HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/index HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/info HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/info/exclude HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/logs/refs/heads/main HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/logs/HEAD HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/packed-refs HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/objects/info HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/objects/pack HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/logs/refs/remotes/origin/master HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/logs/refs/remotes/origin/main HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/objects HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.gitattributes HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/refs/remotes/origin/HEAD HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/refs/heads/master HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/logs/refs/heads/master HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.git/refs/heads/main HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.github HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.github/ISSUE_TEMPLATE HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.github/CODEOWNERS HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.github/funding.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.github/workflows/ci.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.github/workflows HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.gitlab-ci HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.github/workflows/main.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.github/stale.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.gitlab HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.gitlab-ci.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.github/PULL_REQUEST_TEMPLATE.md HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.gitignore HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.github/dependabot.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.gitlab/issue_templates HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.gitlab/merge_request_templates HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.gitmodules HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.stripe/ HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.netlify/functions/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.s3cfg HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.terraform.lock.hcl HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.well-known/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.terraform.tfstate HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.terraform/credentials.tfrc.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.vercel/functions/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.well-known/stripe.txt HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.well-known/stripe/ HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /.wp-config.php.swp HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /?pp=env&pp=env HTTP/1.1" 200 OK
+INFO:     195.178.110.199:0 - "GET /ADMIN/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /API.md HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /?phpinfo=1 HTTP/1.1" 200 OK
+INFO:     195.178.110.199:0 - "GET /API/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /API/common.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /API/config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /API/config/common.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /API/config/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /API/config/database.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /API/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /Api/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /APP/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /BACK/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /BE/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /BACKEND/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /BackEnd/config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /Backend/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /DOCS.md HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /Dockerfile HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /Docker.md HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /IAM.md HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /LOG.md HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /Be/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /NOTES.md HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /README.md HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /%5B...catchAll%5D HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /%5B%5B...optional%5D%5D HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /%5Bid%5D HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /%5Blocale%5D/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /%5Bslug%5D HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /%5Btenant%5D/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /__nextjs_action/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /__nextjs_action HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /_layouts/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /_layouts/15/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /%5Bworkspace%5D/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /__debug HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /_api/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /_next/data/%2A/about.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /_next/data/%2A/%2A.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /_next/data/%2A/index.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /_next/static/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /_profiler/phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /_react/action/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /_profiler/phpinfo HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /_react/data/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /_vercel/insights HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /_vti_bin/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /about HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /_waku/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /actions/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /admin-app/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /admin.html HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /admin/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /admin/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /admin/config/common.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /admin/config/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /admin/config/database.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /admin/constant.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /admin/config?cmd=cat%20/root/.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /admin/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /admin/phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /admin/server.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /admin/utils.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /admin_phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /administrator/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api-backend/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api-node/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /amplify/team-provider-info.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/auth/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/common.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/config/common.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/config/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/constant.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/credentials HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/data/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/env.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/info.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/login HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/node/common.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/node/config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/node/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/node/constant.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/server.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/serverless/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/users/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/settings.py HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/user HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/v1/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/v1/credentials HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/v1/executions HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/v1/workflows HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /api/webhook/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /apis/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /apis/index.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/.env.local HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/.terraform/terraform.tfstate HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/.git/config HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/.env.production HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/amplify.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/amplify.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/config/development.ini HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/config/parameters.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/config/parameters.yml.dist HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/docker-compose.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/netlify.toml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/next.config.mjs HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/next.config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/nuxt.config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/package.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/serverless.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/terraform.tfstate HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/serverless.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /app/vercel.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /application/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /apps/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /appsettings.Development.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /appsettings.Production.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /appsettings.Local.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /appsettings.QA.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /appsettings.Staging.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /appsettings.Test.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /appsettings.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /articles/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /auth/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /attacker/docker-compose.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws-codecommit/ HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws-ses.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws.env.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws.properties HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws/bucket HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws/buckets HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws/config/s3.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws/metadata HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws/s3/credentials HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws/s3/env.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws_credentials.ini HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws/ses/smtp.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws_s3_config.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /aws_s3_bucket HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /back-api/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /back-end/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /back/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /backend-api/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /backend/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /backend/config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /backend/config/common.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /backend/config/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /backend/constant.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /backend/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /backend/env.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /backend/index.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /backend/node/common.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /backend/node/config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /backend/node/constant.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /backend/node/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /be/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /backup/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /beta/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /billing/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /blog HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /cart HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /blog/%5Byear%5D/%5Bmonth%5D/%5Bslug%5D HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /chat HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /chat/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /circle.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /checkout HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /client/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /client/stripe.config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /cms/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /cms/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /conf.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /compose.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config.prod.ini HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config.rb HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config.ts HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/app.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/application.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/aws.ini HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/aws.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/aws.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/aws.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/common.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/config.inc.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/config.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/config.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/constant.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/env.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/env.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/env.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/environment.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/module.config.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/environment.rb HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/secrets.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/parameters.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/nexmo.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/server.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/stripe.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/stripe.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/stripe.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/test.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /configs/application.ini HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /config/utils.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /console/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /constant.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /constants.ini HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /constants.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /constants.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /contact HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /content/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /controller.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /controlpanel HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /credentials.csv HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /credentials.go HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /credentials.ini HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /credentials.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /crm/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /credentials.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /cron/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /current/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /dashboard/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /demo/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /deploy.sh HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /dev/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /dev/env.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /develop/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /developer/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /development/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /dnscfg.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /docker-cloud.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /docker-compose.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /docker/overlay/config.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     195.178.110.199:0 - "GET /docker/registry/config.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /editor/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /elasticsearch.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /en/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /elasticsearch_cluster_yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /env.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /env.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /env.rb HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /env.txt HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /env.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /erp/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /error/ HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /etc/boto.cfg HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /etc/apache2/apache2.conf HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /fe/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /form HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /form-test/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /fr/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /form/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /front/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /frontend/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /graphql HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     195.178.110.199:0 - "GET /home/%2A/.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /home/%2A/.git-credentials HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /home/%2A/.netrc HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /home/%2A/.gitconfig HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /index.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /infophp.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /info.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /infos.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /insta-compose.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /integrations/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /laravel/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /lms/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /loaders/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /local/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /login HTTP/1.1" 405 Method Not Allowed
+INFO:     195.178.110.199:0 - "GET /login?pp=enable&pp=env HTTP/1.1" 405 Method Not Allowed
+INFO:     195.178.110.199:0 - "GET /manage/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /market/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /marketing/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /media/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /media/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /messages/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /myproject/settings.py HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /new/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /node-api/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /node/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /node/api/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /node/backend/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /nodeapi/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /nodeweb/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /notifications/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /oauth/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /oauth/authorize HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /old/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /opt/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /old/aws_config HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /opt/mailcow-dockerized/mailcow.conf HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /orders/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /package-updates/ HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /package-updates/%2A.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /package-updates/%2A?*update* HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /package-updates/apt.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /package-updates/download.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /package-updates/index.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /package-updates/perform.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /package-updates/install.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /package-updates/refresh.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /package-updates/save.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /package-updates/update.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /package-updates/yum.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /payment/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /pages/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /payment/stripe.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /php-info.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /payment_gateways/stripe.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /php.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /php_info.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /phpinfo HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /plugins/payments/stripe.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /portal/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /posts/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /proc/index.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /prod/config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /prod/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /production/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /product/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /products HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /profile/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /project/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /projects/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /public-api/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /public/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /public/stripe.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /public/phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /public_html/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /publish/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /qa/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /register HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /readme.md HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /rest/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /rest/credential-translation HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /rest/credentials-for-node HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /rest/executions HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /rest/logout HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /rest/login HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /rest/license HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /rest/node-types HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /rest/oauth1-credential/auth HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /rest/oauth2-credential/auth HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /rest/settings HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /rest/tags HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /rest/users HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /rest/workflows HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /rest/variables HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /rest/workflows/run HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /root/.aws/config HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /root/.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /root/.boto HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /root/.git-credentials HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /root/.gitconfig HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /root/.netrc HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /root/.s3cfg HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /s3.key HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /s3.secret HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /s3.properties HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /s3.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /s3.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /s3/.aws/config HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /s3/.env.bak HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /s3/backup HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /s3/bucket HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /s3/bucket.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /s3/buckets HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /s3/credentials HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /sam-template.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /secrets.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /sendgrid.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /server.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /server/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /server/app.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /server/api/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /server/backend/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /server/config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /server/config/common.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /server/config/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /server/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /server/constant.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /serverless.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /server/env.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /serverless.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /servers/link.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /servers/save.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /service/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /services/environments.ini HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /services/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /settings.ini HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /settings.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /settings.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /settings.py HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /settings/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /shared/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /shop/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /shop/%5Bcategory%5D/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /software/%2A.cgi?*u=* HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /signup HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /software/install-updates.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /software/update.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /src/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /src/FileUpload.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /src/app.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /src/config/common.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /src/config/config.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /src/config/environment.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /src/config/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /src/config/stripe.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /src/config/stripe.ts HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /src/constant.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /src/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /src/env.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /stage/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /srv/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /staging/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /staging/config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /staging/config/common.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /staging/config/config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /staging/config/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /stg/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /stripe-credentials.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /stripe-keys.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /stripe.config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /stripe.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /stripe.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /stripe.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /stripe/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /stripe/config.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /symfony/_profiler/phpinfo HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /sysinfo.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /teams/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /template.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /terraform.tfstate HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /terraform.tfstate.backup HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /terraform.tfvars HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /terraform/terraform.tfvars.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /test/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /test HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /test.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /threads/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /user/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /trpc/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /user/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /v1/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /v1/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /v2/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /v2/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /v3/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/task/amplify.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/task/amplify.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/task/amplify/backend/function/%2A/src/index.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/task/docker-compose.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/task/docker-compose.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/task/netlify.toml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/task/next.config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/task/next.config.mjs HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/task/next.config.ts HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/task/nuxt.config.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/task/nuxt.config.ts HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/task/package.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/task/serverless.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/task/serverless.yaml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/task/serverless.yml HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/task/vercel.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/www/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /var/www/html/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /vercel.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /waku/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /web/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /web/app.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /web/config/common.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /web/config/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /web/constant.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /web/constants.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /web/env.js HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /webhook-test/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /webhook HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /webhook-waiting/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /webhook/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /webhooks/incoming/stripe.json HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /webmin/package-updates/update.cgi HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /workspaces/%2A HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /website/.env HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /wp-config.php HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /wp-config.php.bak HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /wp-config.php.new HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /wp-config.php.old HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /wp-content/debug.log HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /wp-json/wp/v2/users HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /wp-content/mysql.sql HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /wp-json/gravitysmtp/v1/tests/mock-data?page=gravitysmtp-settings HTTP/1.1" 404 Not Found
+INFO:     195.178.110.199:0 - "GET /wp_mail_smtp.ini HTTP/1.1" 404 Not Found
+INFO:     216.73.216.163:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     54.188.239.75:0 - "GET / HTTP/1.1" 200 OK
+INFO:     54.188.239.75:0 - "GET /manifest.json HTTP/1.1" 200 OK
+INFO:     54.188.239.75:0 - "GET /assets/index-BvBk1Iap.js HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     23.27.145.109:0 - "GET / HTTP/1.1" 200 OK
+INFO:     34.148.178.243:0 - "GET / HTTP/1.1" 200 OK
+INFO:     157.143.84.87:0 - "GET / HTTP/1.1" 200 OK
+INFO:     157.143.84.87:0 - "GET /assets/js/qr_modal.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /manifest.json HTTP/1.1" 200 OK
+INFO:     157.143.84.87:0 - "GET /js/lkk_ch.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /static/style/protect/index.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     157.143.84.87:0 - "GET /static/style/sys_files/index.js HTTP/1.1" 404 Not Found
+INFO:     23.27.145.90:0 - "GET / HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/index-CrbFh6qt.css HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/index-BvBk1Iap.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Index-D1pHiZ3X.css HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/ScrollFade.svelte_svelte_type_style_lang-Xm-PLg9E.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/ScrollFade-BXTrLZiw.css HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/html-CdUEtR5E.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/i18n-CMo5lpzy.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/StreamingBar-M0OJiclA.css HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/i18n-CGFL4PZH.css HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Index-BRJ0gETR.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/clone-DaB-S2nH.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Clear-Dgs5UhTO.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/index-Lz7fsHFt.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/snippet-Bl5YVoCg.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/utils.svelte-CYLB_jIA.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/index-BJk8VOjP.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/StreamingBar.svelte_svelte_type_style_lang-CdFIGsJa.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/index-DnoGeqVF.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/index-C7e-J7CF.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /theme.css?v=undefined HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Login-DbEEw7Ia.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/actions-Cit_UA5S.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Textbox-v-cNeNHQ.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/input-C317uaXR.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/BaseForm-0cuxY3Cw.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/BlockTitle-7XQ-8ENg.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Info-BrkJhX6_.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/BaseForm-B79fGGKa.css HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Check-BlnBgjLT.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Image-CDw5qb5O.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Copy-DFFray7x.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Login-CJk1KhUZ.css HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Square-B6INQV79.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Image-DQfoGqtb.css HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Index.svelte_svelte_type_style_lang-C97CbKPo.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Button-CH2w4_A4.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Button-CoUFCYL9.css HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/misc-ByVveAau.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Example-BlSzJhEn.css HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/IconButtonWrapper-Ba0GidgU.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Textbox-DbZXQzbK.css HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Block-Bx3BikCN.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Send-Ee555fP_.js HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/Index-D0q0pAfU.css HTTP/1.1" 200 OK
+INFO:     23.27.145.90:0 - "GET /assets/ImagePreview-CAbFrrhc.css HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     35.224.97.164:0 - "GET / HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     64.226.101.212:0 - "GET / HTTP/1.1" 200 OK
+INFO:     64.226.101.212:0 - "GET /favicon.ico HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.163:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     23.27.145.203:0 - "GET / HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     185.247.137.46:0 - "GET / HTTP/1.1" 200 OK
+INFO:     87.236.176.87:0 - "GET /favicon.ico HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.163:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     103.62.232.34:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.214:0 - "GET /%22./assets/index-BvBk1Iap.js%22 HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.214:0 - "GET /assets/index-BvBk1Iap.js HTTP/1.1" 200 OK
+INFO:     93.123.109.214:0 - "GET /.env.bak HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /backend/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /admin/.env HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /wp-config.php HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /wp-config.php.old HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /config.php HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /config.php.bak HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /config.js HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /aws-config.js HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /aws.config.js HTTP/1.1" 404 Not Found
+INFO:     93.123.109.214:0 - "GET /phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     216.73.216.163:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.163:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     23.27.145.19:0 - "GET / HTTP/1.1" 200 OK
+INFO:     157.143.84.87:0 - "GET / HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     35.200.183.244:0 - "GET / HTTP/1.1" 200 OK
+INFO:     35.200.183.244:0 - "GET //xmlrpc.php?rsd HTTP/1.1" 404 Not Found
+INFO:     35.200.183.244:0 - "GET //blog/wp-includes/wlwmanifest.xml HTTP/1.1" 404 Not Found
+INFO:     35.200.183.244:0 - "GET //wordpress/wp-includes/wlwmanifest.xml HTTP/1.1" 404 Not Found
+INFO:     35.200.183.244:0 - "GET //wp/wp-includes/wlwmanifest.xml HTTP/1.1" 404 Not Found
+INFO:     35.200.183.244:0 - "GET //2018/wp-includes/wlwmanifest.xml HTTP/1.1" 404 Not Found
+INFO:     35.200.183.244:0 - "GET //shop/wp-includes/wlwmanifest.xml HTTP/1.1" 404 Not Found
+INFO:     35.200.183.244:0 - "GET //test/wp-includes/wlwmanifest.xml HTTP/1.1" 404 Not Found
+INFO:     35.200.183.244:0 - "GET //wp2/wp-includes/wlwmanifest.xml HTTP/1.1" 404 Not Found
+INFO:     35.200.183.244:0 - "GET //cms/wp-includes/wlwmanifest.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.163:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.163:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     185.247.137.253:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.57.180.33:0 - "GET / HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     74.7.241.180:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     74.7.243.207:0 - "GET / HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     36.83.116.211:0 - "GET / HTTP/1.1" 200 OK
+INFO:     36.83.116.211:0 - "GET /assets/index-BvBk1Iap.js HTTP/1.1" 200 OK
+INFO:     36.83.116.211:0 - "GET /manifest.json HTTP/1.1" 200 OK
+INFO:     36.83.116.211:0 - "GET /phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     36.83.116.211:0 - "GET /_profiler/phpinfo HTTP/1.1" 404 Not Found
+INFO:     36.83.116.211:0 - "GET /.env/.env.bak HTTP/1.1" 404 Not Found
+INFO:     36.83.116.211:0 - "GET / HTTP/1.1" 200 OK
+INFO:     36.83.116.211:0 - "GET /index.php HTTP/1.1" 404 Not Found
+INFO:     36.83.116.211:0 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     74.7.241.180:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     176.65.139.232:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     147.182.233.247:0 - "GET / HTTP/1.1" 200 OK
+INFO:     147.182.233.247:0 - "GET /favicon.ico HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:37550 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     71.187.174.98:0 - "GET /healthz HTTP/1.1" 200 OK
+INFO - Wrote TTS audio to /home/ripper/ACTi_cognition/cache/tribev2.demo_utils.TextToEvents.get_events,0/text=She-walked-into-the-empty-room-and-froze.-6ab14118/audio.mp3
+Extracting words from audio:   0%|          | 0/1 [00:00<?, ?it/s]Extracting words from audio: 100%|██████████| 1/1 [00:09<00:00,  9.95s/it]Extracting words from audio: 100%|██████████| 1/1 [00:09<00:00,  9.95s/it]
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/events/utils.py:134: UserWarning: The events dataframe contains an `Index` column. This is dangerous, please add drop=True in calls to df.reset_index(). Dropping it automatically.
+  warnings.warn(msg)
+Add context to words:   0%|          | 0/8 [00:00<?, ?it/s]Add context to words: 100%|██████████| 8/8 [00:00<00:00, 93466.38it/s]
+[19:56:01 WARNING] Removing extractor video as there are no corresponding events
+[19:56:01 INFO] Preparing extractor: text
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.08it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  6.20it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.75it/s]
+[19:56:04 INFO] Preparing extractor: audio
+[19:56:05 INFO] Preparing extractor: subject_id
+2026-05-16 19:56:05 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'default'}. This was probably not intended.
+[19:56:05 INFO] Building dataloader for split all
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 60.97it/s]
+INFO - Predicted 4 / 100 segments (4.0% kept)
+Plotting...:   0%|          | 0/1 [00:00<?, ?it/s]Plotting...: 100%|██████████| 1/1 [00:00<00:00,  2.28it/s]Plotting...: 100%|██████████| 1/1 [00:00<00:00,  2.28it/s]
+[Analysis] Starting moonshotai/kimi-k2.6 analysis on: /home/ripper/ACTi_cognition/cache/outputs/a47bf4c9221842c59eea1c4a967ed937.png
+[Analysis] Stimulus: She walked into the empty room and froze.
+[Analysis] Complete. Length: 6181 chars
+INFO:     127.0.0.1:37212 - "POST /analysis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39364 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     71.187.174.98:0 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     92.118.39.29:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     216.73.216.215:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     216.73.216.215:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     176.65.139.236:0 - "GET / HTTP/1.1" 200 OK
+INFO:     74.7.241.180:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     157.143.84.87:0 - "GET / HTTP/1.1" 200 OK
+INFO:     157.143.84.87:0 - "GET /assets/js/auth.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /assets/js/message.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /js/twint_ch.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /js/lkk_ch.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /manifest.json HTTP/1.1" 200 OK
+INFO:     157.143.84.87:0 - "GET /assets/js/qr_modal.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /css/support_parent.css HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /robots.txt HTTP/1.1" 200 OK
+INFO:     157.143.84.87:0 - "GET /static/style/protect/index.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET / HTTP/1.1" 200 OK
+INFO:     157.143.84.87:0 - "GET /assets/js/qr_modal.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /js/lkk_ch.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /manifest.json HTTP/1.1" 200 OK
+INFO:     157.143.84.87:0 - "GET /static/style/sys_files/index.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /assets/js/message.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /bot-connect.js HTTP/1.1" 404 Not Found
+INFO:     157.143.84.87:0 - "GET /assets/js/auth.js HTTP/1.1" 404 Not Found
+INFO:     34.136.8.16:0 - "GET / HTTP/1.1" 200 OK
+INFO:     134.209.100.223:0 - "GET / HTTP/1.1" 200 OK
+INFO:     134.209.100.223:0 - "GET /xmlrpc.php HTTP/1.1" 404 Not Found
+INFO:     134.209.100.223:0 - "GET /wp-login.php HTTP/1.1" 404 Not Found
+INFO:     176.65.139.237:0 - "GET /assets/index-BvBk1Iap.js HTTP/1.1" 200 OK
+INFO:     34.229.69.171:0 - "GET / HTTP/1.1" 200 OK
+INFO:     45.148.10.120:0 - "GET /wp-json/gravitysmtp/v1/tests/mock-data?page=gravitysmtp-settings HTTP/1.1" 404 Not Found
+INFO:     209.38.47.186:0 - "GET /wp-login.php HTTP/1.1" 404 Not Found
+INFO:     2a0e:97c0:3e3:46e::1:0 - "HEAD / HTTP/1.1" 200 OK
+INFO:     2a0e:97c0:3e3:46e::1:0 - "HEAD / HTTP/1.1" 200 OK
+INFO:     2a0e:97c0:3e3:46e::1:0 - "GET / HTTP/1.1" 200 OK
+INFO:     2a0e:97c0:3e3:46e::1:0 - "GET /.git/HEAD HTTP/1.1" 404 Not Found
+INFO:     2a0e:97c0:3e3:46e::1:0 - "GET /assets/index-BvBk1Iap.js HTTP/1.1" 200 OK
+INFO:     2a0e:97c0:3e3:46e::1:0 - "GET /env HTTP/1.1" 404 Not Found
+INFO:     2a0e:97c0:3e3:46e::1:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     2a0e:97c0:3e3:46e::1:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     2a0e:97c0:3e3:46e::1:0 - "GET /.env.production HTTP/1.1" 404 Not Found
+INFO:     2a0e:97c0:3e3:46e::1:0 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     2a0e:97c0:3e3:46e::1:0 - "GET /backend/.env HTTP/1.1" 404 Not Found
+INFO:     2a0e:97c0:3e3:46e::1:0 - "GET /.env.development HTTP/1.1" 404 Not Found
+INFO:     2a0e:97c0:3e3:46e::1:0 - "GET /js/config.js HTTP/1.1" 404 Not Found
+INFO:     2a0e:97c0:3e3:46e::1:0 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     2a0e:97c0:3e3:46e::1:0 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     2a0e:97c0:3e3:46e::1:0 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     2a0e:97c0:3e3:46e::1:0 - "GET /manifest.json HTTP/1.1" 200 OK
+INFO:     34.229.69.171:0 - "GET / HTTP/1.1" 200 OK
+INFO:     45.148.10.62:0 - "GET / HTTP/1.1" 200 OK
+INFO:     45.148.10.62:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     45.148.10.62:0 - "GET /assets/index-BvBk1Iap.js HTTP/1.1" 200 OK
+INFO:     45.148.10.62:0 - "GET / HTTP/1.1" 200 OK
+INFO:     45.148.10.62:0 - "GET /.env.bak HTTP/1.1" 404 Not Found
+INFO:     45.148.10.62:0 - "GET /%22./assets/index-BvBk1Iap.js%22 HTTP/1.1" 404 Not Found
+INFO:     45.148.10.62:0 - "GET /.env.save HTTP/1.1" 404 Not Found
+INFO:     45.148.10.62:0 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     45.148.10.62:0 - "GET /backend/.env HTTP/1.1" 404 Not Found
+INFO:     45.148.10.62:0 - "GET /test.php HTTP/1.1" 404 Not Found
+INFO:     45.148.10.62:0 - "GET /admin/.env HTTP/1.1" 404 Not Found
+INFO:     45.148.10.62:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     45.148.10.62:0 - "GET /wp-config.php HTTP/1.1" 404 Not Found
+INFO:     45.148.10.62:0 - "GET /wp-config.php.old HTTP/1.1" 404 Not Found
+INFO:     45.148.10.62:0 - "GET /config.php HTTP/1.1" 404 Not Found
+INFO:     45.148.10.62:0 - "GET /config.php.bak HTTP/1.1" 404 Not Found
+INFO:     45.148.10.62:0 - "GET /config.js HTTP/1.1" 404 Not Found
+INFO:     45.148.10.62:0 - "GET /aws-config.js HTTP/1.1" 404 Not Found
+INFO:     45.148.10.62:0 - "GET /aws.config.js HTTP/1.1" 404 Not Found
+INFO:     45.148.10.62:0 - "GET /phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     193.143.1.112:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET / HTTP/1.1" 200 OK
+INFO:     45.148.10.5:0 - "GET /asdkjh2k3h4_nonexistent_path HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.env.production HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.env.development HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.env.staging HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.env.test HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /env HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.env.example HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.env.prod HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.env.dev HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.env.backup HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.env.old HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.env.bak HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /config/.env HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /app/.env HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /src/.env HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /backend/.env HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /config.php HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /settings.php HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /wp-config.php HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /config.php.bak HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /wp-config.php.backup HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /wp-config.php.bak HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /wp-config.php.old HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /wp-config.php.save HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /wp-config.php.swp HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /wp-config.php.txt HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /config.yml HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /config.yaml HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /application.yml HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /application.yaml HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /application.properties HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /application-production.properties HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /docker-compose.yml HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /docker-compose.yaml HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.docker.env HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /Dockerfile HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /appsettings.json HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /appsettings.Development.json HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /appsettings.Production.json HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /local.settings.json HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /web.config HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /settings.py HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /local_settings.py HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /settings/production.py HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /config/database.yml HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /config/secrets.yml HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /config/application.yml HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /config/production.json HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /config/development.json HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /logs/error.log HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /logs/application.log HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /storage/logs/laravel.log HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /var/log/app.log HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /database.sql HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /dump.sql HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /backup.sql HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /db.sql HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.git-credentials HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.npmrc HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.yarnrc.yml HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.yarnrc HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /composer.json HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.pypirc HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.vscode/settings.json HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.idea/workspace.xml HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.github/workflows/main.yml HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /Jenkinsfile HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.gitlab-ci.yml HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /next.config.js HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /nuxt.config.js HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /vite.config.js HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /firebase.json HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /amplify.yml HTTP/1.1" 404 Not Found
+INFO:     45.148.10.5:0 - "GET /.firebase/hosting.json HTTP/1.1" 404 Not Found
+INFO:     34.32.157.73:0 - "GET / HTTP/1.1" 200 OK
