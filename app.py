@@ -29,7 +29,7 @@ from typing import Literal
 import numpy as np
 import gradio as gr
 from openai import OpenAI
-from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi import FastAPI, Depends, File, Form, HTTPException, UploadFile, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from pydantic import BaseModel, Field
 
@@ -252,6 +252,27 @@ def analyze_text_endpoint(text, n_timesteps=10, view="left", cmap="fire"):
 
 
 # ---------------------------------------------------------------------------
+# Media (audio / video) -> brain prediction -> LLM analysis.
+# Mirrors analyze_text_endpoint but takes a file path produced from an upload.
+# ---------------------------------------------------------------------------
+def _analyze_media_endpoint(input_type, file_path, n_timesteps, view, cmap):
+    server_key = os.environ.get("OPENROUTER_API_KEY", "").strip()
+    if not server_key:
+        return "Error: Server is missing OPENROUTER_API_KEY in .env."
+
+    image_path, info = run_inference(input_type, str(file_path), n_timesteps, view, cmap)
+    if not image_path:
+        return f"Error: brain prediction failed: {info}"
+
+    return analyze_brain_image(
+        image_path=image_path,
+        stimulus_desc=f"{input_type.capitalize()} stimulus: {Path(file_path).name}",
+        api_key=server_key,
+        model=os.environ.get("OPENROUTER_ANALYSIS_MODEL", "xiaomi/mimo-v2.5-pro"),
+    )
+
+
+# ---------------------------------------------------------------------------
 # Clean REST API surface for external dev / agent integration.
 # A thin FastAPI layer in front of the existing Gradio app.
 # ---------------------------------------------------------------------------
@@ -280,6 +301,46 @@ class AnalysisResponse(BaseModel):
     analysis: str = Field(..., description="Natural-language behavioral interpretation of the predicted brain response.")
 
 
+_AUDIO_SUFFIXES = {".wav", ".mp3", ".flac", ".ogg"}
+_VIDEO_SUFFIXES = {".mp4", ".avi", ".mkv", ".mov", ".webm"}
+_VALID_VIEWS = {"left", "right", "dorsal", "ventral", "medial_left", "medial_right"}
+_VALID_CMAPS = {"fire", "hot", "seismic", "bwr", "coolwarm"}
+
+
+def _save_upload(upload: UploadFile, allowed_suffixes: set[str], kind: str) -> Path:
+    """Stream an UploadFile to CACHE_DIR/uploads with a random name + validated suffix."""
+    import uuid as _uuid
+    src_name = upload.filename or ""
+    suffix = Path(src_name).suffix.lower()
+    if suffix not in allowed_suffixes:
+        raise HTTPException(
+            status_code=422,
+            detail=(
+                f"{kind} file must end with one of {sorted(allowed_suffixes)}, "
+                f"got '{suffix}' (filename='{src_name}')"
+            ),
+        )
+    uploads_dir = CACHE_DIR / "uploads"
+    uploads_dir.mkdir(exist_ok=True)
+    dst = uploads_dir / f"{kind}_{_uuid.uuid4().hex}{suffix}"
+    with dst.open("wb") as f:
+        while True:
+            chunk = upload.file.read(1 << 20)  # 1 MiB
+            if not chunk:
+                break
+            f.write(chunk)
+    return dst
+
+
+def _validate_render_params(n_timesteps: int, view: str, cmap: str) -> None:
+    if not (1 <= n_timesteps <= 30):
+        raise HTTPException(status_code=422, detail=f"n_timesteps must be in [1, 30], got {n_timesteps}")
+    if view not in _VALID_VIEWS:
+        raise HTTPException(status_code=422, detail=f"invalid view '{view}'; allowed: {sorted(_VALID_VIEWS)}")
+    if cmap not in _VALID_CMAPS:
+        raise HTTPException(status_code=422, detail=f"invalid cmap '{cmap}'; allowed: {sorted(_VALID_CMAPS)}")
+
+
 def build_api(gradio_demo):
     app = FastAPI(
         title="TRIBE Brain Analysis API",
@@ -295,6 +356,56 @@ def build_api(gradio_demo):
     )
     def analysis(req: AnalysisRequest):
         result = analyze_text_endpoint(req.text, req.n_timesteps, req.view, req.cmap)
+        if result.startswith("Error:") or result.startswith("Analysis error:"):
+            raise HTTPException(status_code=502, detail=result)
+        return AnalysisResponse(analysis=result)
+
+    @app.post(
+        "/analysis/audio",
+        response_model=AnalysisResponse,
+        dependencies=[Depends(_check_auth)],
+        summary="Predict brain response to uploaded audio and return behavioral analysis",
+    )
+    def analysis_audio(
+        file: UploadFile = File(..., description="Audio file: .wav, .mp3, .flac, or .ogg"),
+        n_timesteps: int = Form(10),
+        view: str = Form("left"),
+        cmap: str = Form("fire"),
+    ):
+        _validate_render_params(n_timesteps, view, cmap)
+        saved = _save_upload(file, _AUDIO_SUFFIXES, "audio")
+        try:
+            result = _analyze_media_endpoint("audio", saved, n_timesteps, view, cmap)
+        finally:
+            try:
+                saved.unlink()
+            except OSError:
+                pass
+        if result.startswith("Error:") or result.startswith("Analysis error:"):
+            raise HTTPException(status_code=502, detail=result)
+        return AnalysisResponse(analysis=result)
+
+    @app.post(
+        "/analysis/video",
+        response_model=AnalysisResponse,
+        dependencies=[Depends(_check_auth)],
+        summary="Predict brain response to uploaded video and return behavioral analysis",
+    )
+    def analysis_video(
+        file: UploadFile = File(..., description="Video file: .mp4, .avi, .mkv, .mov, or .webm"),
+        n_timesteps: int = Form(10),
+        view: str = Form("left"),
+        cmap: str = Form("fire"),
+    ):
+        _validate_render_params(n_timesteps, view, cmap)
+        saved = _save_upload(file, _VIDEO_SUFFIXES, "video")
+        try:
+            result = _analyze_media_endpoint("video", saved, n_timesteps, view, cmap)
+        finally:
+            try:
+                saved.unlink()
+            except OSError:
+                pass
         if result.startswith("Error:") or result.startswith("Analysis error:"):
             raise HTTPException(status_code=502, detail=result)
         return AnalysisResponse(analysis=result)
