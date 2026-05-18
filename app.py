@@ -101,7 +101,12 @@ def run_inference(input_type, input_data, n_timesteps, view, cmap):
             if n == 0:
                 return None, "No non-empty segments found."
 
-            # Visualize
+            # Visualize.
+            # show_stimuli renders a side strip with the original stimulus
+            # (audio waveform / video frame). The DirectTextToEvents fast
+            # path produces no audio events, so for text input that strip
+            # crashes inside moviepy with NoneType.to_soundarray. Disable
+            # it for text; keep it for audio/video where stimuli exist.
             fig = PLOTTER.plot_timesteps(
                 preds[:n],
                 segments=segments[:n],
@@ -109,7 +114,7 @@ def run_inference(input_type, input_data, n_timesteps, view, cmap):
                 norm_percentile=99,
                 vmin=0.6,
                 alpha_cmap=(0, 0.2),
-                show_stimuli=True,
+                show_stimuli=(input_type != "text"),
                 views=view,
             )
 
