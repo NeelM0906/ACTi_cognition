@@ -190,11 +190,12 @@ def analyze_brain_image(image_path, stimulus_desc, api_key, model=None):
         client = OpenAI(
             base_url="https://openrouter.ai/api/v1",
             api_key=api_key.strip(),
+            timeout=240.0,
         )
 
         response = client.chat.completions.create(
             model=resolved_model,
-            max_tokens=25000,
+            max_tokens=4000,
             messages=[
                 {
                     "role": "system",
