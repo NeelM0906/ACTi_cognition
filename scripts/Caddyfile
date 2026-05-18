@@ -1,0 +1,43 @@
+{
+	# Run as the unprivileged ripper user — keep state in /tmp.
+	auto_https off
+	admin off
+	persist_config off
+	log {
+		output file /tmp/tribe-caddy/access.log
+		level INFO
+	}
+}
+
+:7860 {
+	# Long-running media calls (audio 3-6 min, video 6-15 min) plus
+	# half-GB uploads from the media team. Generous timeouts keep
+	# Gradio WebSocket sessions alive through the full pipeline.
+	request_body {
+		max_size 500MB
+	}
+
+	reverse_proxy 127.0.0.1:7861 127.0.0.1:7862 127.0.0.1:7863 127.0.0.1:7864 127.0.0.1:7865 127.0.0.1:7866 127.0.0.1:7867 127.0.0.1:7868 127.0.0.1:7869 127.0.0.1:7870 {
+		# ip_hash pins each client to one worker so Gradio's WebSocket
+		# stays sticky through the session. Different team members
+		# (different IPs) spread across the 10 backend workers.
+		lb_policy ip_hash
+
+		# Active health checks pull failed workers out of rotation.
+		health_uri /healthz
+		health_interval 15s
+		health_timeout 5s
+
+		# Per-request timeouts: long enough for video V-JEPA2 runs.
+		transport http {
+			read_timeout 1200s
+			write_timeout 1200s
+			dial_timeout 5s
+		}
+
+		# Bubble up the real client IP so workers/Gradio see individual users
+		# rather than the loopback caddy connection. (X-Forwarded-For is set
+		# automatically by Caddy's reverse_proxy.)
+		header_up X-Real-IP {remote_host}
+	}
+}

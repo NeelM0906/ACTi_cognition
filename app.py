@@ -586,16 +586,24 @@ if __name__ == "__main__":
     # Build the combined FastAPI app: REST API at the root + Gradio UI mounted under it.
     api_app = build_api(demo)
 
-    # Start ngrok tunnel
-    import ngrok
-    listener = ngrok.forward(
-        7860,
-        authtoken=os.environ.get("NGROK_AUTHTOKEN", ""),
-        domain=os.environ.get("NGROK_DOMAIN", "acti.cognition.ngrok.pro"),
-    )
-    print(f"ngrok tunnel: {listener.url()}")
-    print(f"REST API:    {listener.url()}/analysis")
-    print(f"OpenAPI:     {listener.url()}/docs")
+    # PORT controls which port this worker binds. Multi-worker deployments use
+    # 7861-7870 behind a reverse proxy and disable the in-process tunnel.
+    port = int(os.environ.get("PORT", "7860"))
+
+    # NGROK_DISABLE=1 skips pyngrok. Used when an external ngrok daemon or
+    # reverse proxy already exposes the service publicly.
+    if not os.environ.get("NGROK_DISABLE"):
+        import ngrok
+        listener = ngrok.forward(
+            port,
+            authtoken=os.environ.get("NGROK_AUTHTOKEN", ""),
+            domain=os.environ.get("NGROK_DOMAIN", "acti.cognition.ngrok.pro"),
+        )
+        print(f"ngrok tunnel: {listener.url()}")
+        print(f"REST API:    {listener.url()}/analysis")
+        print(f"OpenAPI:     {listener.url()}/docs")
+    else:
+        print(f"NGROK_DISABLE=1 — running as backend worker on port {port}")
 
     import uvicorn
-    uvicorn.run(api_app, host="0.0.0.0", port=7860, log_level="info")
+    uvicorn.run(api_app, host="0.0.0.0", port=port, log_level="info")
