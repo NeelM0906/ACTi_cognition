@@ -17,6 +17,18 @@
 		max_size 500MB
 	}
 
+	# Auth note: HTTP Basic Auth at the edge breaks the Gradio SPA on
+	# Safari and modern Chrome — main page loads but JS-driven subresource
+	# fetches (assets, /gradio_api/*, WebSocket upgrades) inconsistently
+	# include the Authorization header, leaving the dashboard frozen in a
+	# loading state. Disabled for now. REST endpoints under /analysis*
+	# retain their FastAPI-level Basic Auth via the _check_auth dependency
+	# in app.py, so curl scripts continue to work with user/67420.
+	#
+	# basic_auth {
+	# 	user $2a$14$ynLBXCEE6oWUOvZarBrxteDyhqaAybZ3x3t68TJvIm5xiETNqpajS
+	# }
+
 	reverse_proxy 127.0.0.1:7861 127.0.0.1:7862 127.0.0.1:7863 127.0.0.1:7864 127.0.0.1:7865 127.0.0.1:7866 127.0.0.1:7867 127.0.0.1:7868 127.0.0.1:7869 127.0.0.1:7870 {
 		# ip_hash pins each client to one worker so Gradio's WebSocket
 		# stays sticky through the session. Different team members
