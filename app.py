@@ -439,149 +439,25 @@ def predict_video(video_file, n_timesteps, view, cmap):
 # ---------------------------------------------------------------------------
 # Gradio UI
 # ---------------------------------------------------------------------------
-DESCRIPTION = """\
-# TRIBE v2 - Brain Encoding Dashboard
-
-Predict **fMRI brain responses** to naturalistic stimuli using [TRIBE v2](https://github.com/facebookresearch/tribev2).
-
-Upload text, audio, or video and visualize predicted cortical activity on the **fsaverage5** surface (~20k vertices).
-
-*Inference takes 1-7 minutes depending on input length.*
-"""
-
-with gr.Blocks(title="TRIBE v2", theme=gr.themes.Soft()) as demo:
-    gr.Markdown(DESCRIPTION)
-
-    with gr.Row():
-        n_timesteps = gr.Slider(
-            minimum=1, maximum=30, value=10, step=1,
-            label="Timesteps to visualize",
-        )
-        view = gr.Dropdown(
-            choices=["left", "right", "dorsal", "ventral", "medial_left", "medial_right"],
-            value="left", label="Brain view",
-        )
-        cmap = gr.Dropdown(
-            choices=["fire", "hot", "seismic", "bwr", "coolwarm"],
-            value="fire", label="Colormap",
-        )
-
-    with gr.Tabs():
-        with gr.TabItem("Text"):
-            text_input = gr.Textbox(
-                lines=5,
-                label="Input text",
-                placeholder="Enter text here (e.g. To be or not to be, that is the question...)",
-            )
-            text_btn = gr.Button("Predict Brain Response", variant="primary")
-
-        with gr.TabItem("Audio"):
-            audio_input = gr.File(
-                file_types=[".wav", ".mp3", ".flac", ".ogg"],
-                label="Upload audio file",
-            )
-            audio_btn = gr.Button("Predict Brain Response", variant="primary")
-
-        with gr.TabItem("Video"):
-            video_input = gr.File(
-                file_types=[".mp4", ".avi", ".mkv", ".mov", ".webm"],
-                label="Upload video file",
-            )
-            video_btn = gr.Button("Predict Brain Response", variant="primary")
-
-    status_text = gr.Textbox(label="Status", interactive=False)
-    output_image = gr.Image(label="Brain Activity", type="filepath")
-
-    # --- Behavioral Analysis Section ---
-    gr.Markdown("---")
-    gr.Markdown(
-        "## Behavioral Analysis\n"
-        "Each tab's **Predict Brain Response** button automatically runs the analysis after "
-        "prediction. Leave the API key empty to use the server's configured OpenRouter key."
-    )
-    with gr.Row():
-        api_key_input = gr.Textbox(
-            label="OpenRouter API Key (optional — server key used if empty)",
-            placeholder="sk-or-...  (leave blank to use server key)",
-            type="password",
-            value="",
-            scale=3,
-        )
-        analyze_btn = gr.Button("Re-analyze last brain image", variant="secondary", scale=1)
-    analysis_output = gr.Textbox(
-        label="Behavioral analysis (Markdown)",
-        value="Upload a stimulus above and click Predict — the analysis will appear here.",
-        interactive=False,
-        lines=15,
-    )
-
-    def _gradio_analyze_with_fallback(api_key, stimulus_desc=None):
-        key = (api_key or "").strip() or os.environ.get("OPENROUTER_API_KEY", "")
-        return analyze_brain_image(None, stimulus_desc, key)
-
-    # "Re-analyze" button — uses the most recent output image with the chosen API key.
-    analyze_btn.click(
-        fn=_gradio_analyze_with_fallback,
-        inputs=[api_key_input],
-        outputs=[analysis_output],
-    )
-
-    # --- Hidden API-only endpoint for external devs ---
-    # Single call: text -> TRIBE prediction -> LLM analysis -> return analysis string.
-    # Uses the server's OPENROUTER_API_KEY from .env; no auth-related params from caller.
-    _api_text = gr.Textbox(visible=False)
-    _api_n = gr.Number(value=10, visible=False)
-    _api_view = gr.Textbox(value="left", visible=False)
-    _api_cmap = gr.Textbox(value="fire", visible=False)
-    _api_out = gr.Textbox(visible=False)
-    _api_btn = gr.Button(visible=False)
-    _api_btn.click(
-        fn=analyze_text_endpoint,
-        inputs=[_api_text, _api_n, _api_view, _api_cmap],
-        outputs=[_api_out],
-        api_name="analyze_text",
-    )
-
-    # Wire prediction buttons — each chains into LLM analysis automatically.
-    # The analysis step picks up the most recent output PNG via analyze_brain_image's
-    # fallback, and uses the server's OPENROUTER_API_KEY when the textbox is empty.
-    text_btn.click(
-        predict_text,
-        inputs=[text_input, n_timesteps, view, cmap],
-        outputs=[output_image, status_text],
-        api_name="predict_text",
-    ).then(
-        fn=lambda api_key, stim: _gradio_analyze_with_fallback(api_key, stim or "text stimulus"),
-        inputs=[api_key_input, text_input],
-        outputs=[analysis_output],
-    )
-    audio_btn.click(
-        predict_audio,
-        inputs=[audio_input, n_timesteps, view, cmap],
-        outputs=[output_image, status_text],
-    ).then(
-        fn=lambda api_key, f: _gradio_analyze_with_fallback(
-            api_key, f"Audio stimulus: {Path(f).name}" if f else "audio stimulus"
-        ),
-        inputs=[api_key_input, audio_input],
-        outputs=[analysis_output],
-    )
-    video_btn.click(
-        predict_video,
-        inputs=[video_input, n_timesteps, view, cmap],
-        outputs=[output_image, status_text],
-    ).then(
-        fn=lambda api_key, f: _gradio_analyze_with_fallback(
-            api_key, f"Video stimulus: {Path(f).name}" if f else "video stimulus"
-        ),
-        inputs=[api_key_input, video_input],
-        outputs=[analysis_output],
-    )
+# A/B Simulator Gradio UI lives in tribe_ab_ui.build_ui(); it is constructed
+# in __main__ after the global TRIBE MODEL is loaded so the simulator's
+# in-process TribeInferenceEngine can be wired to our existing model.
 
 
 if __name__ == "__main__":
     multiprocessing.freeze_support()
     _load_globals()
+
+    # Inject our already-loaded TRIBE MODEL into the A/B simulator's engine
+    # so it does not try to re-load facebook/tribev2 on first predict (which
+    # would duplicate 1.5 GB of GPU memory per worker, and would also stall
+    # while contending with the existing model on disk cache locks).
+    import tribe_utils as _tribe_utils
+    _tribe_utils.TribeInferenceEngine._model = MODEL
+
+    # Build the A/B Test Simulator Gradio UI now that the engine has a model.
+    import tribe_ab_ui as _tribe_ab_ui
+    demo = _tribe_ab_ui.build_ui()
 
     # Build the combined FastAPI app: REST API at the root + Gradio UI mounted under it.
     api_app = build_api(demo)
