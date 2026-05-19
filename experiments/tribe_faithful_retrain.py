@@ -198,6 +198,7 @@ def _set_local_infra(config: ConfDict, args: argparse.Namespace) -> None:
             "data.study.infra_timelines.cluster": None,
             "data.study.infra_timelines.version": args.timeline_cache_version,
             "data.neuro.infra.cluster": None,
+            "data.neuro.infra.folder": None,
             "data.neuro.infra.version": args.timeline_cache_version,
             "log_every_n_steps": 1,
             "enable_progress_bar": args.enable_progress_bar,
@@ -264,7 +265,6 @@ def build_config(args: argparse.Namespace, seed: int) -> tuple[ConfDict, dict[st
             "data.study.names": "Algonauts2025",
             "data.study.path": str(args.data_path),
             "data.study.query": query,
-            "data.study.transforms.split": build_episode_split_transform(val_episodes),
             "data.features_to_use": list(args.features_to_use),
             "data.neuro.projection": None,
             "data.batch_size": args.batch_size,
@@ -275,6 +275,11 @@ def build_config(args: argparse.Namespace, seed: int) -> tuple[ConfDict, dict[st
             "save_checkpoints": args.save_checkpoints,
         }
     )
+    transforms = copy.deepcopy(config["data"]["study"]["transforms"])
+    del transforms["split"]
+    transforms["split"] = build_episode_split_transform(val_episodes)
+    del config["data"]["study"]["transforms"]
+    config["data"]["study"]["transforms"] = transforms
     _set_local_infra(config, args)
     _apply_feature_overrides(config, args)
 

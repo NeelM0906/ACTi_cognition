@@ -84,7 +84,9 @@ def test_build_config_uses_defaults_with_episode_split_and_parcel_targets(tmp_pa
     assert config["data"]["study"]["transforms"]["split"]["val_episodes"] == [
         "s01e02"
     ]
+    assert "val_ratio" not in config["data"]["study"]["transforms"]["split"]
     assert config["data"]["neuro"]["projection"] is None
+    assert config["data"]["neuro"]["infra"]["folder"] is None
     assert config["data"]["features_to_use"] == ["text", "audio", "video"]
     assert config["data"]["text_feature"]["infra"]["cluster"] is None
     assert config["data"]["text_feature"]["infra"]["version"] == "feature_test"
