@@ -1,0 +1,209 @@
+/home/ripper/ACTi_cognition-multipart/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-19 03:48:01 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+Seed set to 33
+[03:48:01 INFO] Event summary: 
+                           index  subject  timeline
+study         split type                           
+Algonauts2025 train Audio     30        1         2
+                    Fmri       2        1         2
+                    Text       2        1         2
+                    Video     30        1         2
+                    Word    3229        1         2
+              val   Audio     24        1         2
+                    Fmri       2        1         2
+                    Text       2        1         2
+                    Video     24        1         2
+                    Word    2455        1         2
+[03:48:01 INFO] Preparing extractor: text
+[03:48:02 INFO] Preparing extractor: fmri
+  0%|          | 0/4 [00:00<?, ?it/s]
+Computing fmri data:   0%|          | 0/4 [00:00<?, ?it/s][A2026-05-19 03:48:02 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-19 03:48:02 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-19 03:48:02 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+2026-05-19 03:48:02 - WARNING - neuralset.extractors.neuro:1181 - 1 invalid TR(s) at the end of the timeline due to resampling without interpolation from T=1.49s to T=1.00s. These invalid TRs have been filled with NaNs.
+100%|██████████| 4/4 [00:00<00:00, 51.50it/s]
+Computing fmri data: 100%|██████████| 4/4 [00:00<00:00, 51.50it/s]
+[03:48:02 INFO] Preparing extractor: subject_id
+2026-05-19 03:48:02 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'Algonauts2025/sub-01'}. This was probably not intended.
+[03:48:03 INFO] Building dataloader for split train
+[03:48:03 INFO] Building dataloader for split val
+/home/ripper/ACTi_cognition-multipart/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:439: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+/home/ripper/ACTi_cognition-multipart/venv/lib/python3.12/site-packages/x_transformers/x_transformers.py:461: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+[03:48:03 INFO] Extractor dims: {'text': (2, 3072)}
+[03:48:03 INFO] Input shapes: torch.Size([2, 200, 256])
+[03:48:03 INFO] Target shapes: 1000
+[03:48:03 INFO] Total parameters: 3702485
+[03:48:03 INFO] Loading model from /home/ripper/data/tribe_runs/tribe_faithful_retrain/seed_33/last.ckpt
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+/home/ripper/ACTi_cognition-multipart/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/logger_connector/logger_connector.py:76: Starting from v1.9.0, `tensorboardX` has been removed as a dependency of the `lightning.pytorch` package, due to potential conflicts with other packages in the ML ecosystem. For this reason, `logger=True` will use `CSVLogger` as the default logger, unless the `tensorboard` or `tensorboardX` packages are found. Please `pip install lightning[extra]` or one of them to enable TensorBoard support by default
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+`Trainer(limit_train_batches=1)` was configured so 1 batch per epoch will be used.
+/home/ripper/ACTi_cognition-multipart/venv/lib/python3.12/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:881: Checkpoint directory /home/ripper/data/tribe_runs/tribe_faithful_retrain/seed_33 exists and is not empty.
+Restoring states from the checkpoint path at /home/ripper/data/tribe_runs/tribe_faithful_retrain/seed_33/last.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loading `train_dataloader` to estimate number of stepping batches.
+/home/ripper/ACTi_cognition-multipart/venv/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/home/ripper/ACTi_cognition-multipart/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+┏━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name    ┃ Type             ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ model   │ FmriEncoderModel │  3.7 M │ train │     0 │
+│ 1 │ loss    │ MSELoss          │      0 │ train │     0 │
+│ 2 │ metrics │ ModuleDict       │      0 │ train │     0 │
+└───┴─────────┴──────────────────┴────────┴───────┴───────┘
+Trainable params: 3.7 M                                                         
+Non-trainable params: 0                                                         
+Total params: 3.7 M                                                             
+Total estimated model params size (MB): 14                                      
+Modules in train mode: 65                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+Restored all states from the checkpoint at /home/ripper/data/tribe_runs/tribe_faithful_retrain/seed_33/last.ckpt
+/home/ripper/ACTi_cognition-multipart/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:485: Your `val_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test dataloaders.
+/home/ripper/ACTi_cognition-multipart/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+/home/ripper/ACTi_cognition-multipart/venv/lib/python3.12/site-packages/neuraltrain/metrics/metrics.py:596: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
+  group_preds = preds[mask]
+`Trainer.fit` stopped: `max_epochs=15` reached.
+Restoring states from the checkpoint path at /home/ripper/data/tribe_runs/tribe_faithful_retrain/seed_33/best.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at /home/ripper/data/tribe_runs/tribe_faithful_retrain/seed_33/best.ckpt
+/home/ripper/ACTi_cognition-multipart/venv/lib/python3.12/site-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/home/ripper/ACTi_cognition-multipart/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:485: Your `test_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test dataloaders.
+/home/ripper/ACTi_cognition-multipart/venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃             Test metric              ┃             DataLoader 0              ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│              test/loss               │          0.9740049839019775           │
+│             test/pearson             │         0.0038157387170940638         │
+│         test/retrieval_top1          │                  0.5                  │
+│ test/subj_pearson/Algonauts2025/sub… │         0.0038157387170940638         │
+└──────────────────────────────────────┴───────────────────────────────────────┘
+[03:48:05 INFO] Event summary: 
+                           index  subject  timeline
+study         split type                           
+Algonauts2025 train Audio     30        1         2
+                    Fmri       2        1         2
+                    Text       2        1         2
+                    Video     30        1         2
+                    Word    3229        1         2
+              val   Audio     24        1         2
+                    Fmri       2        1         2
+                    Text       2        1         2
+                    Video     24        1         2
+                    Word    2455        1         2
+[03:48:05 INFO] Preparing extractor: text
+[03:48:05 INFO] Preparing extractor: fmri
+[03:48:06 INFO] Preparing extractor: subject_id
+2026-05-19 03:48:06 - WARNING - neuralset.extractors.base:824 - LabelEncoder has only found one label: {'Algonauts2025/sub-01'}. This was probably not intended.
+[03:48:06 INFO] Building dataloader for split val
+cache/ablation_results/tribe_faithful_retrain_20260519T074758Z.json
+{
+  "created_at": "2026-05-19T07:48:06.688501+00:00",
+  "git_sha": "a9ead79",
+  "git_dirty": true,
+  "command_args": {
+    "data_path": "/home/ripper/data/tribe_benchmarks",
+    "run_root": "/home/ripper/data/tribe_runs",
+    "run_tag": "tribe_faithful_retrain",
+    "studies": [
+      "algonauts2025"
+    ],
+    "subjects": [
+      "sub-01"
+    ],
+    "episodes": [
+      "s01e01",
+      "s01e02"
+    ],
+    "seasons": null,
+    "val_episodes": null,
+    "val_policy": "episode-heldout",
+    "query": null,
+    "seeds": [
+      33
+    ],
+    "epochs": 15,
+    "batch_size": 2,
+    "duration_trs": 100,
+    "limit_train_batches": 1,
+    "num_workers": 0,
+    "features_to_use": [
+      "text"
+    ],
+    "timeline_cache_version": "h001_faithful_retrain_v1",
+    "feature_cache_version": "h001_faithful_retrain_v1",
+    "video_features": "default",
+    "audio_features": "default",
+    "features_source": "default",
+    "text_layer_aggregation": "default",
+    "text_backbone": null,
+    "matmul_precision": "high",
+    "tiny_model": true,
+    "save_checkpoints": true,
+    "enable_progress_bar": false,
+    "out": null,
+    "manifest_out": null
+  },
+  "matmul_precision": "high",
+  "primary_metric": "heldout_val_pearson_mean",
+  "primary_value": 0.0038157387170940638,
+  "gate": "shape (n_TRs, 1000) finite",
+  "gate_passed": true,
+  "runtime_seconds": 7.88168810098432,
+  "runs": [
+    {
+      "seed": 33,
+      "runtime_seconds": 3.7108926470391452,
+      "peak_vram_mb": 162.49951171875,
+      "folder": "/home/ripper/data/tribe_runs/tribe_faithful_retrain/seed_33",
+      "checkpoints": [
+        "/home/ripper/data/tribe_runs/tribe_faithful_retrain/seed_33/best.ckpt",
+        "/home/ripper/data/tribe_runs/tribe_faithful_retrain/seed_33/last.ckpt"
+      ],
+      "metrics": {
+        "test/loss": 0.9740049839019775,
+        "test/pearson": 0.0038157387170940638,
+        "test/retrieval_top1": 0.5,
+        "test/subj_pearson/Algonauts2025/sub-01": 0.0038157387170940638
+      },
+      "shape_summary": {
+        "batch_prediction_shape_bdt": [
+          2,
+          1000,
+          100
+        ],
+        "prediction_shape": [
+          200,
+          1000
+        ],
+        "n_TRs": 200,
+        "n_outputs": 1000,
+        "all_finite": true,
+        "passes_shape_finite_gate": true
+      },
+      "config_hash": "816b635689a0",
+      "metadata": {
+        "subjects": [
+          "sub-01"
+        ],
+        "episodes": [
+          "s01e01",
+          "s01e02"
+        ],
+        "val_episodes": [
+          "s01e02"
+        ],
+        "studies": [
+          "Algonauts2025"
+        ],
+        "query": "subject in ['Algonauts2025/sub-01'] and task == 'friends' and movie in ['s01'] and chunk in ['e01a', 'e01b', 'e01c', 'e01d', 'e02a', 'e02b', 'e02c', 'e02d']",
+        "run_folder": "/home/ripper/data/tribe_runs/tribe_faithful_retrain/seed_33"
+      }
+    }
+  ],
+  "manifest_path": "research/manifests/tribe_faithful_retrain_20260519T074758Z_manifest.json"
+}

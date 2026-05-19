@@ -496,3 +496,12 @@
   produced, so the gate is not cleared. Next action: downgrade the H001-S
   protocol to reuse an audited feature cache or split feature-cache warmup from
   the retrain smoke before rerunning.
+- H001-S text-only protocol downgrade passed as a smoke, not a quality claim.
+  After fixing a result serialization bug in `a9ead79` (`ConfDict.to_dict` is
+  not available in this environment), the run trained the tiny model on
+  `sub-01` `s01e01`, evaluated on held-out `s01e02`, and produced an all-finite
+  validation prediction array with shape `(200,1000)`. Runtime was 7.88 s,
+  `test/pearson` was `0.0038157`, and focused H001-S/event/config tests passed
+  `12/12`. This clears only the downgraded text-only training-pipeline gate;
+  the full multimodal path remains pending behind `H000-VCACHE-SM` and
+  `H001-SM`.

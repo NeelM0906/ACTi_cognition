@@ -1,0 +1,38 @@
+{
+  "created_at": "2026-05-19T07:48:06.688501+00:00",
+  "script": "experiments/tribe_faithful_retrain.py",
+  "result_json": "cache/ablation_results/tribe_faithful_retrain_20260519T074758Z.json",
+  "git_sha": "a9ead79",
+  "git_dirty": true,
+  "host": "ripper-TRX50-AERO-D",
+  "data_path": "/home/ripper/data/tribe_benchmarks",
+  "run_root": "/home/ripper/data/tribe_runs",
+  "cache_policy": "local cached feature/timeline extractors; no hidden labels",
+  "runs": [
+    {
+      "seed": 33,
+      "folder": "/home/ripper/data/tribe_runs/tribe_faithful_retrain/seed_33",
+      "checkpoints": [
+        "/home/ripper/data/tribe_runs/tribe_faithful_retrain/seed_33/best.ckpt",
+        "/home/ripper/data/tribe_runs/tribe_faithful_retrain/seed_33/last.ckpt"
+      ],
+      "shape_summary": {
+        "batch_prediction_shape_bdt": [
+          2,
+          1000,
+          100
+        ],
+        "prediction_shape": [
+          200,
+          1000
+        ],
+        "n_TRs": 200,
+        "n_outputs": 1000,
+        "all_finite": true,
+        "passes_shape_finite_gate": true
+      },
+      "runtime_seconds": 3.7108926470391452,
+      "peak_vram_mb": 162.49951171875
+    }
+  ]
+}
