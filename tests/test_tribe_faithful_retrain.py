@@ -6,6 +6,7 @@ import numpy as np
 from experiments.tribe_faithful_retrain import (
     build_algonauts_query,
     build_config,
+    config_hash,
     default_val_episodes,
     expand_episodes,
     primary_value_from_runs,
@@ -92,6 +93,15 @@ def test_build_config_uses_defaults_with_episode_split_and_parcel_targets(tmp_pa
     assert config["data"]["text_feature"]["infra"]["version"] == "feature_test"
     assert config["brain_model_config"]["hidden"] == 256
     assert config["brain_model_config"]["encoder"]["depth"] == 2
+
+
+def test_config_hash_accepts_exca_confdict(tmp_path):
+    config, _ = build_config(_args(tmp_path), seed=33)
+
+    digest = config_hash(config)
+
+    assert len(digest) == 12
+    assert digest == config_hash(config)
 
 
 def test_primary_value_reports_shape_gate_when_no_metric():

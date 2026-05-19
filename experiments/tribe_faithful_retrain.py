@@ -304,7 +304,7 @@ def build_config(args: argparse.Namespace, seed: int) -> tuple[ConfDict, dict[st
 
 
 def config_hash(config: ConfDict) -> str:
-    payload = json.dumps(_jsonable(config.to_dict()), sort_keys=True)
+    payload = json.dumps(_jsonable(dict(config)), sort_keys=True)
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:12]
 
 
