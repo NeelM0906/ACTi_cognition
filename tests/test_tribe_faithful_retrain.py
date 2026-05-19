@@ -41,6 +41,7 @@ def _args(tmp_path: Path, **overrides):
         "text_backbone": None,
         "matmul_precision": "high",
         "tiny_model": True,
+        "load_checkpoint": False,
         "save_checkpoints": True,
         "enable_progress_bar": False,
         "out": None,
@@ -91,6 +92,7 @@ def test_build_config_uses_defaults_with_episode_split_and_parcel_targets(tmp_pa
     assert config["data"]["features_to_use"] == ["text", "audio", "video"]
     assert config["data"]["text_feature"]["infra"]["cluster"] is None
     assert config["data"]["text_feature"]["infra"]["version"] == "feature_test"
+    assert config["load_checkpoint"] is False
     assert config["brain_model_config"]["hidden"] == 256
     assert config["brain_model_config"]["encoder"]["depth"] == 2
 

@@ -272,6 +272,7 @@ def build_config(args: argparse.Namespace, seed: int) -> tuple[ConfDict, dict[st
             "seed": seed,
             "n_epochs": args.epochs,
             "limit_train_batches": args.limit_train_batches,
+            "load_checkpoint": args.load_checkpoint,
             "save_checkpoints": args.save_checkpoints,
         }
     )
@@ -477,6 +478,11 @@ def parse_args() -> argparse.Namespace:
         default="high",
     )
     parser.add_argument("--tiny-model", action="store_true")
+    parser.add_argument(
+        "--load-checkpoint",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+    )
     parser.add_argument(
         "--save-checkpoints",
         action=argparse.BooleanOptionalAction,
