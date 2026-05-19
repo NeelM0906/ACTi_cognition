@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-05-19T07:32:48Z",
+  "qid": "H001-S",
+  "status": "blocked",
+  "script": "experiments/tribe_faithful_retrain.py",
+  "test": "tests/test_tribe_faithful_retrain.py",
+  "result_json": "cache/ablation_results/tribe_faithful_retrain_H001-S_blocked_20260519T073248Z.json",
+  "logs": [
+    "research/logs/H001-S__20260519T070611Z.log",
+    "research/logs/H001-S__20260519T070710Z.log"
+  ],
+  "commits": {
+    "harness": "61f8f98",
+    "split_config_fix": "eff2247"
+  },
+  "validation": {
+    "focused_tests": "11/11 passed",
+    "test_command": "PYTHONPATH=. /home/ripper/ACTi_cognition/venv/bin/pytest tests/test_tribe_faithful_retrain.py tests/test_event_splits.py tests/test_ablation_harness_config.py"
+  },
+  "cache_policy": {
+    "timeline_cache_version": "h001_faithful_retrain_v1",
+    "feature_cache_version": "h001_faithful_retrain_v1",
+    "cache_state": "cold for this H001 version",
+    "partial_cache_files": 32
+  },
+  "gpu_policy": {
+    "requested": "CUDA_VISIBLE_DEVICES=0",
+    "observed": "research process ran on GPU 0; GPU 1 was not used by the research command"
+  },
+  "reason_blocked": "Full text+audio+video cold feature extraction cannot meet the H001-S 0.5h smoke estimate; video preparation projected beyond the 1h 2x budget ceiling before training."
+}

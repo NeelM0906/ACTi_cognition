@@ -482,3 +482,17 @@
   `8/8` in 3.24 s, TSV schema checks passed for all autoresearch ledgers, and
   the full focused research suite passed `55/55` in 3.33 s. Remaining warnings
   are existing neuralset, Lightning, and x-transformers warnings.
+- H001-S harness work: added `experiments/tribe_faithful_retrain.py` and
+  `tests/test_tribe_faithful_retrain.py`, then fixed a split-transform bug
+  where `ConfDict.update` merged `AssignSplitByEpisode` with the default
+  `SplitEvents` `val_ratio`. Focused tests over the new harness plus event
+  split/config tests passed `11/11`.
+- H001-S smoke attempt is blocked, not passed. The fixed harness built the
+  intended complete-episode split (`s01e01` train, `s01e02` validation) and
+  completed cold text and audio feature extraction under
+  `h001_faithful_retrain_v1`, but cold video extraction projected roughly
+  54 windows x 132 s per window before any training. I stopped the run at
+  1518 s to avoid a certain budget breach. No `(n_TRs, 1000)` model output was
+  produced, so the gate is not cleared. Next action: downgrade the H001-S
+  protocol to reuse an audited feature cache or split feature-cache warmup from
+  the retrain smoke before rerunning.

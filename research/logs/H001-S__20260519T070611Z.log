@@ -1,0 +1,23 @@
+/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/neuralset/extractors/base.py:707: UserWarning: LabelEncoder: event_types has not been set, are you sure you want to apply this extractor to all events?
+  warnings.warn(
+2026-05-19 03:06:14 - WARNING - neuralset.extractors.base:798 - Missing events will be encoded using the default all-zero value (for example, 0 or a zero vector/tensor), which may be indistinguishable from a valid class if that class is also mapped to zeros. Set treat_missing_as_separate_class=True to avoid this.
+2026-05-19 03:06:14 - WARNING - neuralset.extractors.neuro:1130 - FmriExtractor: volumetric fMRI (with projection=None) should not be cached: preprocessing should be fast, and caching will use too much disk space. Please set infra.folder=None
+Traceback (most recent call last):
+  File "/home/ripper/ACTi_cognition-multipart/experiments/tribe_faithful_retrain.py", line 532, in <module>
+    main()
+  File "/home/ripper/ACTi_cognition-multipart/experiments/tribe_faithful_retrain.py", line 504, in main
+    runs = [run_one(args, seed) for seed in args.seeds]
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition-multipart/experiments/tribe_faithful_retrain.py", line 346, in run_one
+    task = TribeExperiment(**config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ripper/ACTi_cognition/venv/lib/python3.12/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for TribeExperiment
+data.study.transforms.list[function-wrap[_discover_study()]]
+  Input should be a valid list [type=list_type, input_value={'extractaudio': {'name':..._episodes': ['s01e02']}}, input_type=ConfDict]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+data.study.transforms.lax-or-strict[lax=function-after[OrderedDict(), dict[str,function-wrap[_discover_study()]]],strict=chain[json-or-python[json=dict[str,function-wrap[_discover_study()]],python=is-instance[OrderedDict]],function-after[OrderedDict(), dict[str,function-wrap[_discover_study()]]]]].split.val_ratio
+  Extra inputs are not permitted [type=extra_forbidden, input_value=0.1, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.12/v/extra_forbidden
