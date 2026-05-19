@@ -32,9 +32,11 @@ from tribe_utils import (
 logging.basicConfig(level=logging.INFO, format="%(levelname)s  %(message)s")
 logger = logging.getLogger(__name__)
 
-TEXT_IMAGE_CHOICES = [
+ALL_MODALITY_CHOICES = [
     ("Text", ModalityMode.TEXT.value),
     ("Image", ModalityMode.IMAGE.value),
+    ("Audio", ModalityMode.AUDIO.value),
+    ("Video", ModalityMode.VIDEO.value),
 ]
 
 engine = TribeInferenceEngine(cache_dir="./cache", device="auto")
@@ -111,11 +113,11 @@ PRESET_NAMES = ["(none)"] + list(PRESETS.keys())
 
 def _toggle_input_groups(mode: str):
     m = (mode or ModalityMode.TEXT.value).lower()
-    show_tx = m == ModalityMode.TEXT.value
-    show_im = m == ModalityMode.IMAGE.value
     return (
-        gr.update(visible=show_tx),
-        gr.update(visible=show_im),
+        gr.update(visible=m == ModalityMode.TEXT.value),
+        gr.update(visible=m == ModalityMode.IMAGE.value),
+        gr.update(visible=m == ModalityMode.AUDIO.value),
+        gr.update(visible=m == ModalityMode.VIDEO.value),
     )
 
 
@@ -158,14 +160,18 @@ def run_ab_test(
     name_a: str,
     text_a: str,
     image_a: Optional[str],
+    audio_a: Optional[str],
+    video_a: Optional[str],
     mode_b: str,
     name_b: str,
     text_b: str,
     image_b: Optional[str],
+    audio_b: Optional[str],
+    video_b: Optional[str],
     progress: gr.Progress = gr.Progress(track_tqdm=True),
 ):
-    spec_a = effective_stimulus_spec(mode_a, None, None, text_a, image_a)
-    spec_b = effective_stimulus_spec(mode_b, None, None, text_b, image_b)
+    spec_a = effective_stimulus_spec(mode_a, video_a, audio_a, text_a, image_a)
+    spec_b = effective_stimulus_spec(mode_b, video_b, audio_b, text_b, image_b)
     err_a = validate_stimulus_spec(spec_a)
     err_b = validate_stimulus_spec(spec_b)
     prev_a = build_input_preview_md("Variant A — stimulus check", spec_a)
@@ -718,7 +724,7 @@ def _variant_column(title_class: str, title_text: str, default_name: str):
     name = gr.Textbox(label="Name (optional)", value=default_name)
     mode = gr.Radio(
         label="Input modality",
-        choices=TEXT_IMAGE_CHOICES,
+        choices=ALL_MODALITY_CHOICES,
         value=ModalityMode.TEXT.value,
     )
     with gr.Group(visible=True) as grp_text:
@@ -729,18 +735,140 @@ def _variant_column(title_class: str, title_text: str, default_name: str):
         )
     with gr.Group(visible=False) as grp_image:
         image = gr.Image(
-            label="Image (.jpg, .png, .webp)",
+            label="Image (.jpg, .png, .webp) — converted to an 8-s static clip",
             type="filepath",
+            sources=["upload"],
+        )
+    with gr.Group(visible=False) as grp_audio:
+        audio = gr.Audio(
+            label="Audio (.wav, .mp3, .flac, .ogg)",
+            type="filepath",
+            sources=["upload"],
+        )
+    with gr.Group(visible=False) as grp_video:
+        video = gr.Video(
+            label="Video (.mp4, .avi, .mkv, .mov, .webm)",
             sources=["upload"],
         )
 
     mode.change(
         _toggle_input_groups,
         inputs=[mode],
-        outputs=[grp_text, grp_image],
+        outputs=[grp_text, grp_image, grp_audio, grp_video],
     )
-    return name, mode, tb, image
+    return name, mode, tb, image, audio, video
 
+
+GUIDE_MARKDOWN = """
+# How to use the TRIBE A/B Brain Simulator
+
+## What this is
+This tool predicts how a typical viewer\'s brain would respond to two creative
+variants. Under the hood it uses **TRIBE v2** (Meta FAIR, d\'Ascoli 2025) - a
+deep neural network that predicts fMRI brain activity from naturalistic video,
+audio, and text stimuli. TRIBE won the 2025 Algonauts brain-encoding competition.
+
+For each variant we simulate ~20,000 cortical surface points across a typical
+viewer\'s brain at 1-second resolution, then aggregate that into the gauges,
+region bars, and brain-surface images you see below.
+
+## How to run a test
+1. For each variant, pick an input modality (Text / Image / Audio / Video).
+2. Provide the stimulus - paste copy, upload an image, an audio file, or a video clip.
+3. Hit **Run A/B Neural Test** and wait.
+
+### Expected latency per test (both variants combined)
+
+| Modality | Wall time |
+|---|---|
+| Text | ~40-80 s |
+| Image | ~2 min (image becomes an 8-s static clip internally) |
+| Audio | ~6-12 min (whisperx ASR is the bottleneck) |
+| Video | ~12-30 min (V-JEPA2 vision encoder is the bottleneck) |
+
+Avoid mixing modalities across A and B - comparing a text variant against
+a video variant is technically possible but the model\'s response patterns
+differ enough that the numbers stop being directly comparable.
+
+## How to read the results
+
+**Winner box** (top): the headline call. Names the winner on the combined
+proxy score, with confidence (High / Medium / Low based on statistical effect
+size). Read this first; everything else is supporting evidence.
+
+**Activation over time** (line chart): mean brain activation per second of
+stimulus exposure. Look for the *shape* of the curve, not just the average:
+
+- Ramp \u2192 sustain \u2192 high finish = sticky
+- Spike \u2192 flatline = "hook then collapse"
+- Flat = the viewer never engaged
+
+**Region comparison** (12 bars, A vs B): average activation per coarse brain
+system. The ones that matter most for production:
+
+| Region | What it tracks | Bigger = |
+|---|---|---|
+| Visual / Occipital | Perception, image detail | Visual is doing work |
+| Auditory / Temporal | Speech, music, sound design | Audio is landing |
+| Language Areas | Semantic word comprehension | Copy is being processed |
+| Prefrontal Cortex | Attention, \"is this for me?\" | The viewer cares |
+| Limbic / Emotional | Emotional load | More likely to be shared |
+| **Default Mode Network** | Mind-wandering, disengagement | **High DMN is bad** - viewer checked out |
+| Attention Network | Focused selective attention | The viewer is locked in |
+
+**ROI systems** (3 bars): the 12 regions collapsed into Visual / Auditory /
+Language. Use this for a quick "did the visual, the sound, or the words do
+the work?" diagnostic.
+
+**Proxy scores (radar + gauges)**:
+
+- **Engagement** - overall cortical activation, weighted toward executive and attention regions.
+- **Attention** - focused-attention regions; penalised by DMN.
+- **Emotion** - limbic system weighted heavily; predicts emotional resonance and sharing likelihood.
+
+These are derived from region activations, not direct TRIBE outputs.
+
+**Brain surface images** (bottom): max-over-time activation on the lateral
+view of a standard cortical surface, one per variant. The hot spots show
+where the stimulus drove the strongest peak response. Useful when discussing
+with a creative director who wants to see *where* in the brain the variant
+lit up.
+
+## Important caveats - read these before pitching results to a client
+
+- **This is a model prediction, not a measurement.** TRIBE was trained on
+  publicly available fMRI from ~4 subjects watching movies and clips.
+  Validation Pearson r is ~0.22 for text-only inputs and ~0.31 for full
+  multimodal (paper section 3.3). Treat numbers as directional, not diagnostic.
+- **No demographic targeting.** Predictions are for a "typical" subject;
+  no controls for age, gender, culture, or audience segment.
+- **Short stimuli are noisier.** Single words or single still images
+  produce shaky time-series. Use at least a sentence, an 8-s clip, or a
+  paragraph.
+- **Not a substitute for actual user testing.** Use it as a fast pre-filter
+  to pick which 2-3 variants to put in front of real eyes - not as a
+  replacement for them.
+
+## What modality should I pick?
+
+| Pick | Best for |
+|---|---|
+| **Text** | Ad copy, headlines, scripts, captions, hooks, narrative beats |
+| **Image** | Hero shots, thumbnails, key visuals, poster comps |
+| **Audio** | VO reads, jingles, music beds, podcast intros |
+| **Video** | 15s-2min finished cuts, animatics, storyboards as motion |
+
+## What to do with a result
+
+- **Big gap, high confidence** \u2192 ship the winner.
+- **Big gap, low confidence** \u2192 run again with related variations to separate
+  "the idea won" from "the wording won".
+- **Small gap, any confidence** \u2192 it\'s a coin flip. Decide on production cost
+  or other criteria. Don\'t relitigate.
+- **Variant with high DMN** \u2192 the brain checks out. Re-cut.
+- **Variant with high Limbic but low Attention** \u2192 emotionally loud but
+  forgettable. Tighten focus.
+"""
 
 def build_ui() -> gr.Blocks:
     _theme = gr.themes.Soft(
@@ -768,57 +896,62 @@ def build_ui() -> gr.Blocks:
             """
         <div class="app-header">
             <h1>🧠 TRIBE A/B Brain Simulator</h1>
-            <p>Text and image brain-response prediction. Running in Demo Mode.</p>
+            <p>Predict how a typical viewer's brain responds to two creative variants — text, image, audio, or video.</p>
         </div>
         """
         )
 
-        with gr.Row():
-            preset_dd = gr.Dropdown(
-                choices=PRESET_NAMES,
-                value="(none)",
-                label="Example preset (fills modes + text)",
-                scale=2,
-            )
-        preset_hint = gr.Markdown("")
-
-        with gr.Row(equal_height=False):
-            with gr.Column(scale=1):
-                name_a, mode_a, text_a, image_a = _variant_column(
-                    "variant-a-label", "Variant A", "Variant A"
-                )
-            with gr.Column(scale=1):
-                name_b, mode_b, text_b, image_b = _variant_column(
-                    "variant-b-label", "Variant B", "Variant B"
-                )
-
-        run_btn = gr.Button("🚀  Run A/B Neural Test", variant="primary", elem_classes=["primary-btn"])
-
-        gr.Markdown("### Results")
-        winner_md = gr.HTML(visible=False, elem_classes=["winner-box"], elem_id="winner-output")
-        with gr.Row():
-            prev_a_md = gr.Markdown(label="Preview A")
-            prev_b_md = gr.Markdown(label="Preview B")
-
-        with gr.Group(visible=False) as results_group:
-            gr.Markdown("### Activation (time-aligned)")
-            timeline_plot = gr.Plot(show_label=False)
-            region_plot = gr.Plot(show_label=False)
-            roi_plot = gr.Plot(show_label=False)
-            radar_plot = gr.Plot(show_label=False)
-            with gr.Row():
-                gauge_eng = gr.Plot(show_label=False)
-                gauge_att = gr.Plot(show_label=False)
-                gauge_emo = gr.Plot(show_label=False)
-            gr.Markdown("### Brain surfaces (max over time)")
-            with gr.Row():
-                with gr.Column():
-                    gr.Markdown("**Variant A**")
-                    brain_a_img = gr.Image(label="", type="pil")
-                with gr.Column():
-                    gr.Markdown("**Variant B**")
-                    brain_b_img = gr.Image(label="", type="pil")
-            export_csv = gr.File(label="CSV export")
+        with gr.Tabs():
+            with gr.Tab("A/B Test"):
+                with gr.Row():
+                    preset_dd = gr.Dropdown(
+                        choices=PRESET_NAMES,
+                        value="(none)",
+                        label="Example preset (fills modes + text)",
+                        scale=2,
+                    )
+                preset_hint = gr.Markdown("")
+        
+                with gr.Row(equal_height=False):
+                    with gr.Column(scale=1):
+                        name_a, mode_a, text_a, image_a, audio_a, video_a = _variant_column(
+                            "variant-a-label", "Variant A", "Variant A"
+                        )
+                    with gr.Column(scale=1):
+                        name_b, mode_b, text_b, image_b, audio_b, video_b = _variant_column(
+                            "variant-b-label", "Variant B", "Variant B"
+                        )
+        
+                run_btn = gr.Button("🚀  Run A/B Neural Test", variant="primary", elem_classes=["primary-btn"])
+        
+                gr.Markdown("### Results")
+                winner_md = gr.HTML(visible=False, elem_classes=["winner-box"], elem_id="winner-output")
+                with gr.Row():
+                    prev_a_md = gr.Markdown(label="Preview A")
+                    prev_b_md = gr.Markdown(label="Preview B")
+        
+                with gr.Group(visible=False) as results_group:
+                    gr.Markdown("### Activation (time-aligned)")
+                    timeline_plot = gr.Plot(show_label=False)
+                    region_plot = gr.Plot(show_label=False)
+                    roi_plot = gr.Plot(show_label=False)
+                    radar_plot = gr.Plot(show_label=False)
+                    with gr.Row():
+                        gauge_eng = gr.Plot(show_label=False)
+                        gauge_att = gr.Plot(show_label=False)
+                        gauge_emo = gr.Plot(show_label=False)
+                    gr.Markdown("### Brain surfaces (max over time)")
+                    with gr.Row():
+                        with gr.Column():
+                            gr.Markdown("**Variant A**")
+                            brain_a_img = gr.Image(label="", type="pil")
+                        with gr.Column():
+                            gr.Markdown("**Variant B**")
+                            brain_b_img = gr.Image(label="", type="pil")
+                    export_csv = gr.File(label="CSV export")
+        
+            with gr.Tab("Guide"):
+                gr.Markdown(GUIDE_MARKDOWN)
 
         # Wiring
         preset_dd.change(
@@ -849,7 +982,10 @@ def build_ui() -> gr.Blocks:
         ]
         run_btn.click(
             fn=run_ab_test,
-            inputs=[mode_a, name_a, text_a, image_a, mode_b, name_b, text_b, image_b],
+            inputs=[
+                mode_a, name_a, text_a, image_a, audio_a, video_a,
+                mode_b, name_b, text_b, image_b, audio_b, video_b,
+            ],
             outputs=ab_outputs,
         )
 
