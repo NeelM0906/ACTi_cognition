@@ -24,8 +24,8 @@ stop_all() {
 	echo "=== stopping TRIBE stack ==="
 	# Stop external ngrok tunnel for acti.cognition
 	pkill -f "ngrok.*acti.cognition.ngrok.pro" 2>/dev/null && echo "  ngrok stopped"
-	# Stop caddy
-	pkill -f "caddy.*tribe-caddy" 2>/dev/null && echo "  caddy stopped"
+	# Stop caddy (match the actual `caddy run --config .../scripts/Caddyfile` cmdline)
+	pkill -f "caddy run.*scripts/Caddyfile" 2>/dev/null && echo "  caddy stopped"
 	# Stop workers (every python3 app.py on this box)
 	pkill -f "python3 app.py" 2>/dev/null && echo "  workers stopped"
 	sleep 2

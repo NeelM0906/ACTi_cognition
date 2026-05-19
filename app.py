@@ -420,7 +420,11 @@ def build_api(gradio_demo):
     def healthz():
         return {"status": "ok", "model_loaded": MODEL is not None}
 
-    return gr.mount_gradio_app(app, gradio_demo, path="/", auth=("user", "67420"))
+    # Gradio auth is handled at the Caddy edge (HTTP Basic) — see
+    # scripts/Caddyfile. Mounting Gradio with its own auth=() on top
+    # broke for some browsers because Gradio 6's cookie flow uses
+    # SameSite=none which third-party-cookie-blocking browsers reject.
+    return gr.mount_gradio_app(app, gradio_demo, path="/")
 
 
 # Tab wrappers
